@@ -6,6 +6,11 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://larici.github.io/edukasitrader/market-analysis/xauusd-cpi-12-agustus-2026.html</loc>
+    <changefreq>never</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://larici.github.io/edukasitrader/about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
