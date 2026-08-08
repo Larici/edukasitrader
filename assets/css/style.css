@@ -23,10 +23,31 @@ body {
   background-image:
     linear-gradient(rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0) 320px),
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-  background-size: 100% 320px, 42px 42px, 42px 42px;
-  background-repeat: no-repeat, repeat, repeat;
-  background-attachment: fixed, fixed, fixed;
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    url('../img/bull-icon.svg'),
+    url('../img/bear-icon.svg');
+  background-position:
+    0 0,
+    0 0,
+    0 0,
+    left -30px bottom -30px,
+    right -30px bottom -30px;
+  background-size:
+    100% 320px, 42px 42px, 42px 42px,
+    280px 280px,
+    280px 280px;
+  background-repeat: no-repeat, repeat, repeat, no-repeat, no-repeat;
+  background-attachment: fixed, fixed, fixed, fixed, fixed;
+}
+
+@media (max-width: 900px) {
+  body {
+    background-image:
+      linear-gradient(rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0) 320px),
+      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    background-size: 100% 320px, 42px 42px, 42px 42px;
+  }
 }
 
 a { color: var(--accent); text-decoration: none; }

@@ -1,0 +1,16 @@
+<svg viewBox="0 0 220 220" xmlns="http://www.w3.org/2000/svg">
+  <g fill="#3ecf8e" opacity="0.16">
+    <!-- horns -->
+    <path d="M85,80 C60,35 20,28 8,55 C35,50 58,62 78,95 Z"/>
+    <path d="M135,80 C160,35 200,28 212,55 C185,50 162,62 142,95 Z"/>
+    <!-- ears -->
+    <ellipse cx="62" cy="105" rx="16" ry="10" transform="rotate(-25 62 105)"/>
+    <ellipse cx="158" cy="105" rx="16" ry="10" transform="rotate(25 158 105)"/>
+    <!-- head -->
+    <path d="M110,88 C145,88 168,115 162,152 C157,182 135,200 110,200 C85,200 63,182 58,152 C52,115 75,88 110,88 Z"/>
+    <!-- snout shade -->
+    <ellipse cx="110" cy="172" rx="26" ry="16" opacity="0.55"/>
+    <!-- upward trend arrow motif -->
+    <path d="M10,210 L60,160 L90,185 L150,110 L170,130" fill="none" stroke="#3ecf8e" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" opacity="0.5"/>
+  </g>
+</svg>
