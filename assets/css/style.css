@@ -19,34 +19,46 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   color: var(--text);
   line-height: 1.6;
+  position: relative;
   background-color: var(--bg);
   background-image:
     linear-gradient(rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0) 320px),
     linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-    url('../img/bull-icon.svg'),
-    url('../img/bear-icon.svg');
-  background-position:
-    0 0,
-    0 0,
-    0 0,
-    left -30px bottom -30px,
-    right -30px bottom -30px;
-  background-size:
-    100% 320px, 42px 42px, 42px 42px,
-    280px 280px,
-    280px 280px;
-  background-repeat: no-repeat, repeat, repeat, no-repeat, no-repeat;
-  background-attachment: fixed, fixed, fixed, fixed, fixed;
+    linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+  background-size: 100% 320px, 42px 42px, 42px 42px;
+  background-repeat: no-repeat, repeat, repeat;
+  background-attachment: fixed, fixed, fixed;
+}
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  bottom: 0;
+  width: 320px;
+  height: 380px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  opacity: 0.22;
+  pointer-events: none;
+  z-index: -1;
+  -webkit-mask-image: linear-gradient(to top, #000 55%, transparent);
+  mask-image: linear-gradient(to top, #000 55%, transparent);
+}
+body::before {
+  left: 0;
+  background-image: url('../img/bull-photo.jpg');
+}
+body::after {
+  right: 0;
+  background-image: url('../img/bear-photo.jpg');
 }
 
 @media (max-width: 900px) {
-  body {
-    background-image:
-      linear-gradient(rgba(212, 175, 55, 0.05), rgba(212, 175, 55, 0) 320px),
-      linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
-    background-size: 100% 320px, 42px 42px, 42px 42px;
+  body::before,
+  body::after {
+    display: none;
   }
 }
 
