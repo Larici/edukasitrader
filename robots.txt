@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://ganti-dengan-domain-anda.example/sitemap.xml
+Sitemap: https://larici.github.io/edukasitrader/sitemap.xml
