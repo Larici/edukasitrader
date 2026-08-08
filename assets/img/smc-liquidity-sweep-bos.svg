@@ -1,0 +1,31 @@
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+  <rect width="720" height="380" rx="12" fill="#161d27"/>
+  <rect x="0.5" y="0.5" width="719" height="379" rx="12" fill="none" stroke="#26303c"/>
+
+  <text x="24" y="34" fill="#e6ebf0" font-size="17" font-weight="700">Liquidity Sweep &amp; Break of Structure (BOS)</text>
+
+  <!-- previous swing high line (to be broken) -->
+  <line x1="40" y1="90" x2="680" y2="90" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="46" y="82" fill="#d4af37" font-size="12">Swing High sebelumnya</text>
+
+  <!-- equal lows line (liquidity resting below) -->
+  <line x1="40" y1="260" x2="480" y2="260" stroke="#9aa7b4" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="46" y="275" fill="#9aa7b4" font-size="12">Equal Lows (liquidity pool)</text>
+
+  <!-- price path: down to equal lows, sweep below, reverse up breaking swing high -->
+  <path d="M 60 150 L 160 255 L 260 258 L 340 300 L 420 255 L 520 130 L 620 60"
+        fill="none" stroke="#e6ebf0" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <circle cx="160" cy="255" r="5" fill="#9aa7b4"/>
+  <circle cx="260" cy="258" r="5" fill="#9aa7b4"/>
+  <circle cx="340" cy="300" r="5" fill="#ff5c5c"/>
+  <circle cx="620" cy="60" r="5" fill="#3ecf8e"/>
+
+  <!-- sweep marker -->
+  <text x="340" y="330" fill="#ff5c5c" font-size="13" font-weight="700" text-anchor="middle">Liquidity Sweep</text>
+  <text x="340" y="346" fill="#ff5c5c" font-size="11" text-anchor="middle">(stop loss diburu di bawah lows)</text>
+
+  <!-- BOS marker -->
+  <text x="620" y="45" fill="#3ecf8e" font-size="13" font-weight="700" text-anchor="middle">BOS ↑</text>
+  <line x1="480" y1="90" x2="680" y2="90" stroke="#3ecf8e" stroke-width="2.5"/>
+</svg>

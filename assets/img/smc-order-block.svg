@@ -1,0 +1,58 @@
+<svg viewBox="0 0 720 380" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+  <rect width="720" height="380" rx="12" fill="#161d27"/>
+  <rect x="0.5" y="0.5" width="719" height="379" rx="12" fill="none" stroke="#26303c"/>
+
+  <text x="24" y="34" fill="#e6ebf0" font-size="17" font-weight="700">Bullish Order Block</text>
+
+  <!-- baseline -->
+  <line x1="40" y1="300" x2="680" y2="300" stroke="#26303c" stroke-width="1"/>
+
+  <!-- candles: down, down(OB), up, up, up, up, retest small -->
+  <!-- candle 1: bearish, minor -->
+  <g>
+    <line x1="90" y1="180" x2="90" y2="260" stroke="#9aa7b4" stroke-width="2"/>
+    <rect x="78" y="195" width="24" height="45" fill="#ff5c5c"/>
+  </g>
+
+  <!-- candle 2: Order Block candle (last down candle before rally) -->
+  <g>
+    <line x1="160" y1="210" x2="160" y2="290" stroke="#ff5c5c" stroke-width="2"/>
+    <rect x="148" y="225" width="24" height="50" fill="#ff5c5c"/>
+  </g>
+
+  <!-- highlight box around OB candle body zone, extended right -->
+  <rect x="140" y="220" width="500" height="60" fill="#d4af37" fill-opacity="0.12" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="150" y="212" fill="#d4af37" font-size="13" font-weight="700">Order Block (zona)</text>
+
+  <!-- rally candles -->
+  <g>
+    <line x1="240" y1="90" x2="240" y2="230" stroke="#3ecf8e" stroke-width="2"/>
+    <rect x="228" y="100" width="24" height="110" fill="#3ecf8e"/>
+  </g>
+  <g>
+    <line x1="320" y1="50" x2="320" y2="150" stroke="#3ecf8e" stroke-width="2"/>
+    <rect x="308" y="60" width="24" height="80" fill="#3ecf8e"/>
+  </g>
+  <g>
+    <line x1="400" y1="30" x2="400" y2="110" stroke="#3ecf8e" stroke-width="2"/>
+    <rect x="388" y="40" width="24" height="60" fill="#3ecf8e"/>
+  </g>
+
+  <!-- price returns to retest OB zone -->
+  <path d="M 430 70 C 520 90, 560 200, 600 250" fill="none" stroke="#e6ebf0" stroke-width="2" stroke-dasharray="4,4" marker-end="url(#arrow)"/>
+
+  <!-- retest candle inside zone -->
+  <g>
+    <line x1="600" y1="235" x2="600" y2="270" stroke="#3ecf8e" stroke-width="2"/>
+    <rect x="588" y="240" width="24" height="25" fill="#3ecf8e"/>
+  </g>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#e6ebf0"/>
+    </marker>
+  </defs>
+
+  <text x="600" y="300" fill="#9aa7b4" font-size="12" text-anchor="middle">Price kembali "retest"</text>
+  <text x="600" y="316" fill="#9aa7b4" font-size="12" text-anchor="middle">ke zona Order Block</text>
+</svg>

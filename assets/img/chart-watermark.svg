@@ -1,0 +1,45 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+  <g stroke-linecap="round">
+    <!-- trend line -->
+    <polyline points="20,380 90,340 150,360 210,290 270,310 330,220 390,250 450,150 510,180 545,90"
+              fill="none" stroke="#d4af37" stroke-width="3" opacity="0.9"/>
+
+    <!-- candlesticks along the trend -->
+    <g stroke="#3ecf8e" fill="#3ecf8e">
+      <line x1="60" y1="300" x2="60" y2="360"/>
+      <rect x="50" y="315" width="20" height="30"/>
+    </g>
+    <g stroke="#ff5c5c" fill="#ff5c5c">
+      <line x1="120" y1="320" x2="120" y2="380"/>
+      <rect x="110" y="335" width="20" height="30"/>
+    </g>
+    <g stroke="#3ecf8e" fill="#3ecf8e">
+      <line x1="180" y1="270" x2="180" y2="340"/>
+      <rect x="170" y="285" width="20" height="35"/>
+    </g>
+    <g stroke="#3ecf8e" fill="#3ecf8e">
+      <line x1="240" y1="250" x2="240" y2="310"/>
+      <rect x="230" y="265" width="20" height="30"/>
+    </g>
+    <g stroke="#ff5c5c" fill="#ff5c5c">
+      <line x1="300" y1="230" x2="300" y2="290"/>
+      <rect x="290" y="245" width="20" height="30"/>
+    </g>
+    <g stroke="#3ecf8e" fill="#3ecf8e">
+      <line x1="360" y1="170" x2="360" y2="250"/>
+      <rect x="350" y="190" width="20" height="40"/>
+    </g>
+    <g stroke="#3ecf8e" fill="#3ecf8e">
+      <line x1="420" y1="130" x2="420" y2="210"/>
+      <rect x="410" y="150" width="20" height="40"/>
+    </g>
+    <g stroke="#ff5c5c" fill="#ff5c5c">
+      <line x1="480" y1="110" x2="480" y2="170"/>
+      <rect x="470" y="125" width="20" height="30"/>
+    </g>
+    <g stroke="#3ecf8e" fill="#3ecf8e">
+      <line x1="530" y1="60" x2="530" y2="140"/>
+      <rect x="520" y="80" width="20" height="40"/>
+    </g>
+  </g>
+</svg>
