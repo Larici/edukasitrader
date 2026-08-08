@@ -1,0 +1,4 @@
+# Ganti baris di bawah ini dengan entri resmi dari dashboard Adsterra
+# (Publisher Panel -> ads.txt) setelah akun Adsterra Anda disetujui.
+# Contoh format:
+# adsterra.com, PUBLISHER_ID, DIRECT
