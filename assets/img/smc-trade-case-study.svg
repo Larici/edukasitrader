@@ -1,0 +1,70 @@
+<svg viewBox="0 0 760 440" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+  <rect width="760" height="440" rx="12" fill="#161d27"/>
+  <rect x="0.5" y="0.5" width="759" height="439" rx="12" fill="none" stroke="#26303c"/>
+  <text x="24" y="34" fill="#e6ebf0" font-size="17" font-weight="700">Studi Kasus: Anatomi Satu Trade dengan SMC</text>
+
+  <line x1="40" y1="380" x2="720" y2="380" stroke="#26303c" stroke-width="1"/>
+
+  <!-- old swing low line (liquidity) -->
+  <line x1="40" y1="300" x2="720" y2="300" stroke="#9aa7b4" stroke-width="1.3" stroke-dasharray="5,4"/>
+  <text x="46" y="294" fill="#9aa7b4" font-size="11">Old Low (liquidity)</text>
+
+  <!-- downtrend candles into the low -->
+  <g stroke="#ff5c5c" fill="#ff5c5c">
+    <line x1="80" y1="150" x2="80" y2="210"/><rect x="68" y="165" width="24" height="35"/>
+  </g>
+  <g stroke="#ff5c5c" fill="#ff5c5c">
+    <line x1="140" y1="190" x2="140" y2="250"/><rect x="128" y="205" width="24" height="35"/>
+  </g>
+  <g stroke="#ff5c5c" fill="#ff5c5c">
+    <line x1="200" y1="230" x2="200" y2="280"/><rect x="188" y="245" width="24" height="30"/>
+  </g>
+
+  <!-- liquidity sweep candle: long lower wick below old low, closes back up -->
+  <g stroke="#3ecf8e" fill="#3ecf8e">
+    <line x1="260" y1="230" x2="260" y2="335"/><rect x="248" y="250" width="24" height="40"/>
+  </g>
+  <text x="260" y="355" fill="#3ecf8e" font-size="11" font-weight="700" text-anchor="middle">Liquidity Sweep</text>
+
+  <!-- bullish order block candle (last down candle before rally) -->
+  <g stroke="#ff5c5c" fill="#ff5c5c">
+    <line x1="320" y1="220" x2="320" y2="270"/><rect x="308" y="235" width="24" height="30"/>
+  </g>
+  <rect x="300" y="230" width="360" height="45" fill="#d4af37" fill-opacity="0.12" stroke="#d4af37" stroke-width="1.3" stroke-dasharray="5,4"/>
+  <text x="322" y="222" fill="#d4af37" font-size="11" font-weight="700">Bullish Order Block</text>
+
+  <!-- CHoCH candle: breaks previous lower high structure upward -->
+  <g stroke="#3ecf8e" fill="#3ecf8e">
+    <line x1="380" y1="150" x2="380" y2="230"/><rect x="368" y="165" width="24" height="55"/>
+  </g>
+  <text x="380" y="140" fill="#3ecf8e" font-size="11" font-weight="700" text-anchor="middle">CHoCH ↑</text>
+
+  <!-- pullback into OB zone -->
+  <path d="M 400 150 C 440 190, 460 230, 470 250" fill="none" stroke="#e6ebf0" stroke-width="2" stroke-dasharray="4,4"/>
+  <g stroke="#3ecf8e" fill="#3ecf8e">
+    <line x1="490" y1="235" x2="490" y2="270"/><rect x="478" y="245" width="24" height="20"/>
+  </g>
+
+  <!-- entry marker -->
+  <circle cx="490" cy="255" r="7" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+  <text x="560" y="252" fill="#d4af37" font-size="12" font-weight="700">Entry (buy)</text>
+
+  <!-- SL below OB -->
+  <line x1="470" y1="278" x2="720" y2="278" stroke="#ff5c5c" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="560" y="292" fill="#ff5c5c" font-size="11">Stop Loss — di bawah Order Block</text>
+
+  <!-- rally candles to TP -->
+  <g stroke="#3ecf8e" fill="#3ecf8e">
+    <line x1="550" y1="140" x2="550" y2="240"/><rect x="538" y="155" width="24" height="65"/>
+  </g>
+  <g stroke="#3ecf8e" fill="#3ecf8e">
+    <line x1="610" y1="90" x2="610" y2="170"/><rect x="598" y="105" width="24" height="45"/>
+  </g>
+  <g stroke="#3ecf8e" fill="#3ecf8e">
+    <line x1="670" y1="60" x2="670" y2="130"/><rect x="658" y="75" width="24" height="40"/>
+  </g>
+
+  <!-- TP line at prior swing high / next liquidity -->
+  <line x1="470" y1="70" x2="720" y2="70" stroke="#3ecf8e" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="560" y="62" fill="#3ecf8e" font-size="11">Take Profit — liquidity/swing high berikutnya</text>
+</svg>

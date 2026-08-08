@@ -1,0 +1,57 @@
+<svg viewBox="0 0 720 420" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif">
+  <rect width="720" height="420" rx="12" fill="#161d27"/>
+  <rect x="0.5" y="0.5" width="719" height="419" rx="12" fill="none" stroke="#26303c"/>
+  <text x="24" y="34" fill="#e6ebf0" font-size="17" font-weight="700">Premium &amp; Discount Zone (Optimal Trade Entry)</text>
+
+  <!-- range box: swing low y=330 to swing high y=90, equilibrium y=210 -->
+  <!-- premium zone (upper half) -->
+  <rect x="60" y="90" width="600" height="120" fill="#ff5c5c" fill-opacity="0.10"/>
+  <!-- discount zone (lower half) -->
+  <rect x="60" y="210" width="600" height="120" fill="#3ecf8e" fill-opacity="0.10"/>
+
+  <line x1="60" y1="90" x2="660" y2="90" stroke="#9aa7b4" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="66" y="82" fill="#9aa7b4" font-size="12">Swing High</text>
+
+  <line x1="60" y1="210" x2="660" y2="210" stroke="#d4af37" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="66" y="203" fill="#d4af37" font-size="12">Equilibrium (50%)</text>
+
+  <line x1="60" y1="330" x2="660" y2="330" stroke="#9aa7b4" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="66" y="345" fill="#9aa7b4" font-size="12">Swing Low</text>
+
+  <text x="640" y="150" fill="#ff5c5c" font-size="14" font-weight="700" text-anchor="end">PREMIUM</text>
+  <text x="640" y="168" fill="#ff5c5c" font-size="11" text-anchor="end">zona cari SELL</text>
+
+  <text x="640" y="270" fill="#3ecf8e" font-size="14" font-weight="700" text-anchor="end">DISCOUNT</text>
+  <text x="640" y="288" fill="#3ecf8e" font-size="11" text-anchor="end">zona cari BUY</text>
+
+  <!-- candlesticks forming the swing: down into discount, then up toward premium -->
+  <g stroke="#ff5c5c" fill="#ff5c5c">
+    <line x1="110" y1="150" x2="110" y2="230"/><rect x="100" y="165" width="20" height="45"/>
+  </g>
+  <g stroke="#ff5c5c" fill="#ff5c5c">
+    <line x1="160" y1="220" x2="160" y2="300"/><rect x="150" y="235" width="20" height="45"/>
+  </g>
+  <g stroke="#ff5c5c" fill="#ff5c5c">
+    <line x1="210" y1="280" x2="210" y2="335"/><rect x="200" y="295" width="20" height="30"/>
+  </g>
+  <g stroke="#3ecf8e" fill="#3ecf8e">
+    <line x1="260" y1="270" x2="260" y2="325"/><rect x="250" y="285" width="20" height="25"/>
+  </g>
+  <g stroke="#3ecf8e" fill="#3ecf8e">
+    <line x1="310" y1="230" x2="310" y2="300"/><rect x="300" y="245" width="20" height="40"/>
+  </g>
+  <g stroke="#3ecf8e" fill="#3ecf8e">
+    <line x1="360" y1="180" x2="360" y2="250"/><rect x="350" y="195" width="20" height="40"/>
+  </g>
+  <g stroke="#3ecf8e" fill="#3ecf8e">
+    <line x1="410" y1="140" x2="410" y2="210"/><rect x="400" y="155" width="20" height="40"/>
+  </g>
+  <g stroke="#3ecf8e" fill="#3ecf8e">
+    <line x1="460" y1="110" x2="460" y2="180"/><rect x="450" y="125" width="20" height="40"/>
+  </g>
+
+  <!-- entry marker in discount zone -->
+  <circle cx="210" cy="300" r="7" fill="none" stroke="#d4af37" stroke-width="2.5"/>
+  <text x="210" y="360" fill="#d4af37" font-size="12" text-anchor="middle" font-weight="700">Entry di Discount</text>
+  <text x="210" y="376" fill="#9aa7b4" font-size="11" text-anchor="middle">(bias uptrend/beli)</text>
+</svg>
