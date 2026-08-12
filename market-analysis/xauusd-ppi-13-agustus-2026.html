@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XAUUSD Briefing - PPI 13 Agustus 2026 — EdukasiTrader</title>
+<meta name="description" content="Catatan riset pribadi menjelang rilis PPI AS - momentum bullish XAUUSD pasca ATH baru, konteks makro, dan level teknikal. Opini, bukan ajakan bertransaksi.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  html{ height:auto; overflow-y:auto; }
+  :root{
+    --p-bg:#0b0e14;
+    --p-bg-2:#080a0f;
+    --p-panel:#141922;
+    --p-panel-2:#1b212c;
+    --p-border:#262d3a;
+    --p-gold:#c9a24d;
+    --p-gold-bright:#e8c774;
+    --p-bullish:#33c48a;
+    --p-bullish-dim:#1f4d3c;
+    --p-bearish:#e5566b;
+    --p-bearish-dim:#4d232b;
+    --p-amber:#d99a3f;
+    --p-amber-dim:#4a3a1e;
+    --p-text:#eef0f3;
+    --p-muted:#8b93a3;
+    --p-muted-2:#5b6472;
+  }
+
+  *{box-sizing:border-box;}
+  html,.poster-container{margin:0;padding:0;}
+  .poster-container{
+    background:
+      radial-gradient(ellipse 900px 500px at 15% -5%, rgba(201,162,77,0.08), transparent 60%),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.018) 0px, rgba(255,255,255,0.018) 1px, transparent 1px, transparent 64px),
+      var(--p-bg);
+    color:var(--p-text);
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    justify-content:center;
+    padding:32px 16px 64px;
+  }
+
+  .display{
+    font-family:"Arial Black","Archivo Black","Helvetica Neue Condensed","Franklin Gothic Heavy",Arial,sans-serif;
+    letter-spacing:-0.01em;
+  }
+  .mono{
+    font-family:ui-monospace,"SFMono-Regular","Cascadia Mono","IBM Plex Mono",Consolas,"Liberation Mono",monospace;
+    font-variant-numeric:tabular-nums;
+  }
+
+  .poster{
+    width:100%;
+    max-width:880px;
+    background:linear-gradient(180deg, var(--p-panel) 0%, var(--p-bg-2) 100%);
+    border:1px solid var(--p-border);
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 30px 80px -30px rgba(0,0,0,0.7);
+  }
+
+  /* ===== Masthead ===== */
+  .masthead{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+    padding:18px 28px;
+    border-bottom:1px solid var(--p-border);
+    background:
+      linear-gradient(90deg, rgba(201,162,77,0.12), transparent 55%);
+  }
+  .masthead-left{display:flex;align-items:baseline;gap:12px;}
+  .ticker{
+    font-family:"Arial Black","Archivo Black",Arial,sans-serif;
+    font-size:26px;
+    letter-spacing:0.01em;
+    color:var(--p-gold-bright);
+  }
+  .masthead-sub{
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--p-muted);
+  }
+  .masthead-right{
+    text-align:right;
+    font-size:12px;
+    color:var(--p-muted);
+    line-height:1.5;
+  }
+  .masthead-right b{color:var(--p-text);font-weight:600;}
+
+  /* ===== Importance bar ===== */
+  .importance{
+    display:flex;
+    align-items:center;
+    gap:18px;
+    padding:14px 28px;
+    background:var(--p-panel-2);
+    border-bottom:1px solid var(--p-border);
+  }
+  .imp-badge{
+    font-size:11px;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    background:var(--p-amber-dim);
+    color:#f4d9a8;
+    border:1px solid rgba(217,154,63,0.4);
+    padding:4px 10px;
+    border-radius:999px;
+    white-space:nowrap;
+    font-weight:600;
+  }
+  .imp-meter{display:flex;gap:3px;flex:1;}
+  .imp-seg{height:8px;flex:1;border-radius:2px;background:var(--p-amber);}
+  .imp-seg.off{background:var(--p-border);}
+  .imp-score{font-size:13px;color:var(--p-muted);white-space:nowrap;}
+  .imp-score b{color:var(--p-text);font-family:ui-monospace,monospace;}
+
+  /* ===== Hero verdict ===== */
+  .hero{
+    display:grid;
+    grid-template-columns:200px 1fr;
+    gap:28px;
+    align-items:center;
+    padding:32px 28px 24px;
+  }
+  .gauge-wrap{position:relative;width:200px;height:200px;}
+  .gauge-center{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+  }
+  .gauge-pct{
+    font-family:"Arial Black","Archivo Black",Arial,sans-serif;
+    font-size:44px;
+    color:var(--p-bullish);
+    line-height:1;
+  }
+  .gauge-label{
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--p-muted);
+    margin-top:4px;
+  }
+  .hero-verdict-title{
+    font-family:"Arial Black","Archivo Black",Arial,sans-serif;
+    font-size:34px;
+    text-wrap:balance;
+    color:var(--p-text);
+    line-height:1.05;
+    margin:0 0 8px;
+  }
+  .hero-verdict-title .accent{color:var(--p-bullish);}
+  .hero-verdict-desc{
+    font-size:14px;
+    color:var(--p-muted);
+    line-height:1.6;
+    max-width:52ch;
+  }
+  .hero-legend{
+    display:flex;gap:18px;margin-top:14px;font-size:12px;color:var(--p-muted);
+  }
+  .legend-dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:6px;position:relative;top:-1px;}
+
+  /* ===== Section label ===== */
+  .section{padding:22px 28px;border-top:1px solid var(--p-border);}
+  .section-title{
+    font-size:11px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--p-gold);
+    font-weight:700;
+    margin:0 0 14px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .section-title::after{
+    content:"";flex:1;height:1px;background:var(--p-border);
+  }
+
+  /* ===== Data tiles ===== */
+  .tiles{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:12px;
+  }
+  .tile{
+    background:var(--p-panel-2);
+    border:1px solid var(--p-border);
+    border-radius:10px;
+    padding:14px;
+  }
+  .tile.key{border-color:rgba(201,162,77,0.5);background:linear-gradient(160deg, rgba(201,162,77,0.1), var(--p-panel-2));}
+  .tile-label{font-size:11px;color:var(--p-muted);text-transform:uppercase;letter-spacing:0.06em;margin-bottom:10px;}
+  .tile-flow{display:flex;align-items:center;gap:8px;font-size:19px;}
+  .tile-flow .prev{color:var(--p-muted-2);}
+  .tile-flow .arrow{font-size:13px;color:var(--p-muted-2);}
+  .tile-flow .fc{font-weight:700;}
+  .tile-flow .fc.down{color:var(--p-bullish);}
+  .tile-flow .fc.up{color:var(--p-amber);}
+  .tile-note{font-size:11px;color:var(--p-muted-2);margin-top:8px;line-height:1.5;}
+  .tile-tag{
+    display:inline-block;font-size:9.5px;letter-spacing:0.08em;text-transform:uppercase;
+    background:rgba(201,162,77,0.18);color:var(--p-gold-bright);border-radius:4px;padding:2px 6px;margin-bottom:8px;font-weight:700;
+  }
+
+  /* ===== Macro grid ===== */
+  .macro-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:8px;
+  }
+  .chip{
+    display:flex;align-items:center;gap:8px;
+    background:var(--p-panel-2);
+    border:1px solid var(--p-border);
+    border-radius:8px;
+    padding:9px 10px;
+    font-size:12px;
+  }
+  .chip .dot{width:9px;height:9px;min-width:9px;border-radius:50%;}
+  .dot.g{background:var(--p-bullish);box-shadow:0 0 8px rgba(51,196,138,0.6);}
+  .dot.r{background:var(--p-bearish);box-shadow:0 0 8px rgba(229,86,107,0.6);}
+  .dot.a{background:var(--p-amber);box-shadow:0 0 8px rgba(217,154,63,0.5);}
+  .dot.p{background:transparent;border:1.5px solid var(--p-gold);}
+  .chip-name{color:var(--p-text);font-weight:600;}
+  .chip-sub{color:var(--p-muted-2);font-size:10.5px;margin-left:auto;white-space:nowrap;}
+
+  .macro-callout{
+    margin-top:14px;
+    padding:12px 14px;
+    background:var(--p-amber-dim);
+    border:1px solid rgba(217,154,63,0.4);
+    border-radius:8px;
+    font-size:12.5px;
+    color:#f4d9a8;
+    line-height:1.6;
+  }
+  .macro-callout b{color:var(--p-gold-bright);}
+
+  /* ===== Scenarios ===== */
+  .scenarios{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+  .scenario{
+    border-radius:10px;
+    padding:16px;
+    border:1px solid var(--p-border);
+    background:var(--p-panel-2);
+    position:relative;
+  }
+  .scenario.a{border-top:3px solid var(--p-bullish);}
+  .scenario.b{border-top:3px solid var(--p-amber);}
+  .scenario.c{border-top:3px solid var(--p-bearish);}
+  .scenario-prob{
+    font-family:ui-monospace,monospace;
+    font-size:26px;
+    font-weight:700;
+  }
+  .scenario.a .scenario-prob{color:var(--p-bullish);}
+  .scenario.b .scenario-prob{color:var(--p-amber);}
+  .scenario.c .scenario-prob{color:var(--p-bearish);}
+  .scenario-name{font-size:12px;font-weight:700;color:var(--p-text);margin:6px 0 8px;}
+  .scenario-cond{font-size:11.5px;color:var(--p-muted);line-height:1.5;margin-bottom:10px;min-height:44px;}
+  .scenario-impact{font-size:11.5px;color:var(--p-muted-2);border-top:1px dashed var(--p-border);padding-top:8px;line-height:1.5;}
+  .scenario-impact b{color:var(--p-text);}
+
+  /* ===== Footer ===== */
+  .poster-footer{
+    display:grid;
+    grid-template-columns:1fr 1fr auto;
+    gap:24px;
+    padding:22px 28px 26px;
+    border-top:1px solid var(--p-border);
+    background:var(--p-panel-2);
+    align-items:start;
+  }
+  .footer-block-title{font-size:10.5px;letter-spacing:0.1em;text-transform:uppercase;color:var(--p-muted);margin-bottom:8px;font-weight:700;}
+  .poster-footer ul{margin:0;padding-left:16px;font-size:12px;color:var(--p-muted);line-height:1.7;}
+  .conf-wrap{text-align:center;min-width:110px;}
+  .conf-ring{width:76px;height:76px;margin:0 auto 6px;position:relative;}
+  .conf-num{
+    position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+    font-family:ui-monospace,monospace;font-size:18px;font-weight:700;color:var(--p-gold-bright);
+  }
+  .conf-label{font-size:10px;color:var(--p-muted);text-transform:uppercase;letter-spacing:0.08em;}
+
+  .poster-disclaimer{
+    grid-column:1 / -1;
+    margin-top:4px;
+    font-size:10.5px;
+    color:var(--p-muted-2);
+    border-top:1px solid var(--p-border);
+    padding-top:14px;
+    display:flex;
+    justify-content:space-between;
+    gap:16px;
+    flex-wrap:wrap;
+  }
+
+  @media print{
+    @page{ size:238mm 450mm; margin:0; }
+    .poster-container{ padding:0; }
+    .poster{ max-width:none; border-radius:0; border:none; box-shadow:none; }
+  }
+
+  @media (max-width:640px){
+    .hero{grid-template-columns:1fr;text-align:center;}
+    .hero-legend{justify-content:center;}
+    .tiles{grid-template-columns:repeat(2,1fr);}
+    .macro-grid{grid-template-columns:repeat(2,1fr);}
+    .scenarios{grid-template-columns:1fr;}
+    .poster-footer{grid-template-columns:1fr;}
+    .masthead{flex-direction:column;align-items:flex-start;}
+    .masthead-right{text-align:left;}
+  }
+
+  .compliance-notice{
+    max-width:880px;
+    margin:0 auto 20px;
+    padding:16px 20px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-dim);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    color:var(--text-dim);
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+  .compliance-notice strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Edukasi<span>Trader</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Beranda</a>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Privasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="max-width: 960px;">
+
+    <div class="compliance-notice">
+      <strong>Bukan ajakan bertransaksi.</strong> Konten di bawah ini adalah catatan analisis pasar pribadi yang kami bagikan sebagai referensi publik — berisi opini terhadap data makro dan level teknikal saat disusun, bukan sinyal trading resmi, rekomendasi personal, atau ajakan untuk membuka posisi tertentu. Pasar bisa bergerak sangat berbeda dari skenario yang dibahas. Selalu lakukan riset dan pertimbangan risiko sendiri.
+    </div>
+
+    <div class="ad-slot">
+      <script>
+        atOptions = {
+          'key' : '95130429aa13b28790da6b9e46158bfc',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/95130429aa13b28790da6b9e46158bfc/invoke.js"></script>
+    </div>
+
+    <div class="poster-container">
+
+<div class="poster">
+
+  <div class="masthead">
+    <div class="masthead-left">
+      <span class="ticker">XAUUSD</span>
+      <span class="masthead-sub">Gold Market Briefing</span>
+    </div>
+    <div class="masthead-right">
+      <div><b>PPI &amp; Core PPI</b> · Tier 2 Economic News</div>
+      <div>13 Agustus 2026 · 19:30 WIB</div>
+    </div>
+  </div>
+
+  <div class="importance">
+    <span class="imp-badge">Tinggi</span>
+    <div class="imp-meter" aria-hidden="true">
+      <div class="imp-seg"></div><div class="imp-seg"></div><div class="imp-seg"></div><div class="imp-seg"></div><div class="imp-seg"></div><div class="imp-seg"></div>
+      <div class="imp-seg off"></div><div class="imp-seg off"></div><div class="imp-seg off"></div><div class="imp-seg off"></div>
+    </div>
+    <span class="imp-score">Market Importance <b>6/10</b> · Estimasi 20–50 poin</span>
+  </div>
+
+  <div class="hero">
+    <div class="gauge-wrap">
+      <svg viewBox="0 0 200 200" width="200" height="200">
+        <circle cx="100" cy="100" r="80" fill="none" stroke="#1c2230" stroke-width="18"/>
+        <g transform="rotate(-90 100 100)">
+          <circle cx="100" cy="100" r="80" fill="none" stroke="#e5566b" stroke-width="18"
+                  stroke-dasharray="210.9 502.4" stroke-dashoffset="-291.4" stroke-linecap="round" opacity="0.9"/>
+          <circle cx="100" cy="100" r="80" fill="none" stroke="#33c48a" stroke-width="18"
+                  stroke-dasharray="291.4 502.4" stroke-dashoffset="0" stroke-linecap="round"/>
+        </g>
+      </svg>
+      <div class="gauge-center">
+        <div class="gauge-pct mono">58%</div>
+        <div class="gauge-label">Bullish · 42% Bearish</div>
+      </div>
+    </div>
+    <div>
+      <h1 class="hero-verdict-title display">Masih <span class="accent">BULLISH</span>, sekarang dengan momentum ATH baru</h1>
+      <p class="hero-verdict-desc">Rilis CPI-2026-08-12 persis sesuai forecast di semua metrik — tidak ada info makro baru, jadi angka probabilitas tetap 58% (disiplin data makro, bukan reaksi harga). Tapi reaksi pasar sangat kuat: whipsaw ke pivot $4.383 lalu breakout ke ATH baru $4.441. PPI-2026-08-13 berperan sebagai konfirmasi lanjutan, bukan penggerak baru.</p>
+      <div class="hero-legend">
+        <span><span class="legend-dot" style="background:var(--p-bullish)"></span>Mendukung Gold</span>
+        <span><span class="legend-dot" style="background:var(--p-bearish)"></span>Menahan Gold</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0;border-top:none;">
+    <div class="macro-callout" style="background:rgba(201,162,77,0.1);border-color:rgba(201,162,77,0.35);color:var(--p-text);">
+      <b>Cara kita menghitung angka ini:</b> Baseline tetap ~85% dari chain 5 data yang kompak melemah (NFP, ADP, JOLTS, GDP Q2, Existing Home Sales). Tapi 5 kategori kontra masih aktif semua: manufaktur AS kuat, Ketua Fed Warsh tetap hawkish (dissenter Hammack &amp; Kashkari), imbal hasil obligasi belum turun, belanja masyarakat diperkirakan naik, dan tarif terus dilempar ke konsumen. <b>Rilis CPI-2026-08-12 persis forecast</b> — tidak menambah atau mengurangi kategori manapun, jadi angka tetap <b>58%</b> sesuai disiplin "probabilitas dari data makro saja, reaksi harga masuk ke Confidence Score bukan ke angka arah". <i>(Riwayat: 55% → 70% → 58% → 60% → 58%, konsisten sejak rilis CPI-2026-08-12.)</i>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Forecast vs Previous</p>
+    <div class="tiles">
+      <div class="tile key">
+        <span class="tile-tag">Paling Penting</span>
+        <div class="tile-label">PPI YoY</div>
+        <div class="tile-flow mono"><span class="prev">5.5</span><span class="arrow">→</span><span class="fc down">≤5.1</span></div>
+        <div class="tile-note">Estimasi pasar tersebar, belum ada satu angka solid.</div>
+      </div>
+      <div class="tile">
+        <div class="tile-label">PPI MoM</div>
+        <div class="tile-flow mono"><span class="prev">−0.3</span><span class="arrow">→</span><span class="fc up">0.2</span></div>
+        <div class="tile-note">Rebound wajar setelah gasoline turun tajam di Juni.</div>
+      </div>
+      <div class="tile">
+        <div class="tile-label">Core PPI YoY (Jun aktual)</div>
+        <div class="tile-flow mono"><span class="prev">5.2 fc</span><span class="arrow">→</span><span class="fc down">4.7</span></div>
+        <div class="tile-note">Juni meleset di bawah forecast — forecast Juli belum solid.</div>
+      </div>
+      <div class="tile">
+        <div class="tile-label">Core PPI MoM (Jun aktual)</div>
+        <div class="tile-flow mono"><span class="prev">0.3 fc</span><span class="arrow">→</span><span class="fc down">0.2</span></div>
+        <div class="tile-note">Sama, di bawah forecast — forecast Juli belum solid.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Gambaran Besar — 17 Data yang Kita Pantau</p>
+    <div class="macro-grid">
+      <div class="chip"><span class="dot a"></span><span class="chip-name">FOMC</span><span class="chip-sub">Warsh hawkish</span></div>
+      <div class="chip"><span class="dot g"></span><span class="chip-name">CPI</span><span class="chip-sub">3.4% ✓ in-line</span></div>
+      <div class="chip"><span class="dot g"></span><span class="chip-name">Core CPI</span><span class="chip-sub">2.5% ✓ in-line</span></div>
+      <div class="chip"><span class="dot g"></span><span class="chip-name">Core PCE</span><span class="chip-sub">3.3% ✓</span></div>
+      <div class="chip"><span class="dot g"></span><span class="chip-name">NFP</span><span class="chip-sub">−23K ★★★</span></div>
+      <div class="chip"><span class="dot g"></span><span class="chip-name">ADP</span><span class="chip-sub">44K</span></div>
+      <div class="chip"><span class="dot g"></span><span class="chip-name">JOLTS</span><span class="chip-sub">7.359M</span></div>
+      <div class="chip"><span class="dot r"></span><span class="chip-name">ISM Mfg</span><span class="chip-sub">55.6 ⚠</span></div>
+      <div class="chip"><span class="dot a"></span><span class="chip-name">ISM Svc</span><span class="chip-sub">54.1</span></div>
+      <div class="chip"><span class="dot p"></span><span class="chip-name">PPI</span><span class="chip-sub">rilis ini</span></div>
+      <div class="chip"><span class="dot r"></span><span class="chip-name">Retail Sales</span><span class="chip-sub">fc 0.4% ⚠</span></div>
+      <div class="chip"><span class="dot g"></span><span class="chip-name">GDP Q2</span><span class="chip-sub">1.5% (miss)</span></div>
+      <div class="chip"><span class="dot r"></span><span class="chip-name">10Y Yield</span><span class="chip-sub">~4.6%</span></div>
+      <div class="chip"><span class="dot g"></span><span class="chip-name">DXY</span><span class="chip-sub">melemah</span></div>
+      <div class="chip"><span class="dot r"></span><span class="chip-name">Claims 4-Wk</span><span class="chip-sub">membaik ⚠</span></div>
+      <div class="chip"><span class="dot r"></span><span class="chip-name">Oil WTI</span><span class="chip-sub">$80,42 ⚠</span></div>
+      <div class="chip"><span class="dot r"></span><span class="chip-name">Tarif</span><span class="chip-sub">pass-through naik ⚠</span></div>
+    </div>
+    <div class="macro-callout">
+      <b>Rilis CPI-2026-08-12 resmi masuk kategori "in-line" (hijau)</b> — tidak mengubah skor kontra/konfirmasi apapun, tapi reaksi pasar (whipsaw ke pivot 4.383 lalu ATH baru $4.441) jadi validasi kuat untuk metodologi kita. 5 kategori kontra (Manufaktur, Fed, Yield, Retail Sales, Tarif) masih utuh — itu sebabnya angka tetap 58%, bukan naik, meski momentum teknikal sangat kuat.
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Level Teknikal Kunci (Live via MCP)</p>
+    <div class="tiles">
+      <div class="tile key">
+        <span class="tile-tag">Spot Live</span>
+        <div class="tile-label">XAUUSD</div>
+        <div class="tile-flow mono"><span class="fc down">4.431,88</span></div>
+        <div class="tile-note">ATH baru $4.441,21 — BOS Daily akhirnya terkonfirmasi penuh pasca-CPI.</div>
+      </div>
+      <div class="tile">
+        <div class="tile-label">OB Terdekat</div>
+        <div class="tile-flow mono"><span class="fc down">4.407,65–4.416,77</span></div>
+        <div class="tile-note">Konsolidasi sebelum impuls besar reaksi CPI.</div>
+      </div>
+      <div class="tile">
+        <div class="tile-label">Liquidity Berikutnya</div>
+        <div class="tile-flow mono"><span class="fc down">4.450</span></div>
+        <div class="tile-note">Level psikologis — belum ada resistance historis di atas ATH.</div>
+      </div>
+      <div class="tile">
+        <div class="tile-label">Invalidasi</div>
+        <div class="tile-flow mono"><span class="fc up">4.383</span></div>
+        <div class="tile-note">Pivot Daily — breakdown displacement di sini batalkan bias bullish jangka pendek.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-title">Tiga Skenario</p>
+    <div class="scenarios">
+      <div class="scenario a">
+        <div class="scenario-prob mono">35%</div>
+        <div class="scenario-name">Bullish (Dingin)</div>
+        <div class="scenario-cond">PPI/Core PPI YoY di bawah forecast — konfirmasi disinflasi dari sisi produsen juga.</div>
+        <div class="scenario-impact"><b>Lanjutkan rally ke 4.450, ekstensi 4.475.</b> Cari BUY setelah koreksi dulu.</div>
+      </div>
+      <div class="scenario b">
+        <div class="scenario-prob mono">40%</div>
+        <div class="scenario-name">Netral (Sesuai Forecast)</div>
+        <div class="scenario-cond">Hasilnya persis perkiraan — momentum dari rilis CPI-2026-08-12 kemungkinan tetap dominan.</div>
+        <div class="scenario-impact"><b>Choppy di range 4.407–4.441.</b> Sabar dulu sebelum ambil posisi.</div>
+      </div>
+      <div class="scenario c">
+        <div class="scenario-prob mono">25%</div>
+        <div class="scenario-name">Bearish (Panas)</div>
+        <div class="scenario-cond">PPI YoY jauh di atas forecast — kemungkinan whipsaw dulu ke pivot 4.383 sebelum turun beneran (pola baru dari rilis CPI-2026-08-12).</div>
+        <div class="scenario-impact"><b>Koreksi ke 4.383, lanjut 4.357.</b> Tunggu konfirmasi breakdown, jangan short di candle pertama.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="poster-footer">
+    <div>
+      <div class="footer-block-title">Trading Plan</div>
+      <ul>
+        <li>Jangan buka posisi baru 15–30 menit sebelum rilis</li>
+        <li>Antisipasi whipsaw ke level kunci dulu (pola tervalidasi di rilis CPI-2026-08-12)</li>
+        <li>Sabar 2–5 menit, jangan ikut-ikutan candle pertama</li>
+        <li>BUY retest 4.407,65–4.416,77 · SL 4.400 · TP1 4.441,21 / TP2 4.450</li>
+        <li>SELL kalau breakdown displacement di bawah 4.383 · SL 4.400 · TP1 4.357 / TP2 4.332</li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-block-title">Yang Bisa Bikin Analisis Ini Berubah</div>
+      <ul>
+        <li>PPI YoY actual jauh di atas forecast (≥5.3–5.5%)</li>
+        <li>Breakdown displacement di bawah pivot 4.383 (bukan cuma wick)</li>
+        <li>Kalau Yield dan Dolar AS malah ikut menguat setelah rilis</li>
+      </ul>
+    </div>
+    <div class="conf-wrap">
+      <div class="conf-ring">
+        <svg viewBox="0 0 76 76" width="76" height="76">
+          <circle cx="38" cy="38" r="30" fill="none" stroke="#1c2230" stroke-width="7"/>
+          <g transform="rotate(-90 38 38)">
+            <circle cx="38" cy="38" r="30" fill="none" stroke="#c9a24d" stroke-width="7"
+                    stroke-dasharray="150.8 188.5" stroke-linecap="round"/>
+          </g>
+        </svg>
+        <div class="conf-num">8.0</div>
+      </div>
+      <div class="conf-label">Confidence /10</div>
+    </div>
+    <div class="poster-disclaimer">
+      <span>Update terakhir 12 Agustus 2026 (data live via MCP TradingView) · Masih menunggu rilis · Tercatat sebagai PPI-2026-08-13 di News Database</span>
+      <span>Ini alat bantu mikir, bukan nasihat keuangan resmi — keputusan tetap di tangan kamu</span>
+    </div>
+  </div>
+
+</div>
+
+    </div>
+
+    <div class="ad-slot">
+      <script async="async" data-cfasync="false" src="https://pl30756138.effectivecpmnetwork.com/4a3f1dc3807941e53dfe4463a21a0e4e/invoke.js"></script>
+      <div id="container-4a3f1dc3807941e53dfe4463a21a0e4e"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Kebijakan Privasi</a>
+      <a href="https://www.effectivecpmnetwork.com/setnp40u3t?key=fe8199ed8dd693be00f1924c13a1b7ec" target="_blank" rel="noopener sponsored">Rekomendasi</a>
+    </div>
+    <div>&copy; 2026 EdukasiTrader.</div>
+  </div>
+</footer>
+
+</body>
+</html>
