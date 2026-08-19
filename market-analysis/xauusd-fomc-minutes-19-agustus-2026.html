@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XAUUSD Briefing — FOMC Minutes 19 Agustus 2026 — EdukasiTrader</title>
+<meta name="description" content="Catatan riset menjelang rilis notulen FOMC 19 Agustus — bertumpuk dengan rally geopolitik Iran/Selat Hormuz. Konteks makro, level teknikal live, dan skenario harga emas.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  html{ height:auto; overflow-y:auto; }
+  :root{
+    --p-ink:#0b0c0e;
+    --p-ink-2:#050506;
+    --p-panel:#17181b;
+    --p-panel-2:#1d1f23;
+    --p-rule:#2a2c31;
+    --p-rule-bright:#3a3d44;
+    --p-parchment:#f4f2ec;
+    --p-muted:#9a9ba0;
+    --p-muted-2:#616268;
+    --p-bullion:#e8ab2e;
+    --p-bullion-bright:#ffce5c;
+    --p-bullion-dim:#2b2311;
+    --p-steel:#3f7fa8;
+    --p-steel-bright:#6ec3ee;
+    --p-steel-dim:#101f2b;
+    --p-flare:#e0632a;
+    --p-flare-bright:#ff9257;
+    --p-flare-dim:#2c1710;
+  }
+
+  *{box-sizing:border-box;}
+  html,.poster-container{margin:0;padding:0;}
+  .poster-container{
+    background:
+      radial-gradient(ellipse 1000px 520px at 12% -8%, rgba(232,171,46,0.08), transparent 62%),
+      radial-gradient(ellipse 700px 420px at 100% 15%, rgba(63,127,168,0.09), transparent 60%),
+      var(--p-ink);
+    color:var(--p-parchment);
+    font-family:ui-serif,Georgia,"Iowan Old Style","Times New Roman",serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    justify-content:center;
+    padding:32px 16px 64px;
+  }
+
+  .display{
+    font-family:"Arial Black","Archivo Black","Helvetica Neue Condensed",Arial,sans-serif;
+    letter-spacing:-0.015em;
+  }
+  .sans{ font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; }
+  .mono{
+    font-family:ui-monospace,"SFMono-Regular","Cascadia Mono","IBM Plex Mono",Consolas,monospace;
+    font-variant-numeric:tabular-nums;
+  }
+  .eyebrow{
+    font-family:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+    font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700;
+  }
+
+  .poster{
+    width:100%;
+    max-width:900px;
+    background:var(--p-ink);
+    border:1px solid var(--p-rule);
+    overflow:hidden;
+    box-shadow:0 40px 90px -30px rgba(0,0,0,0.8);
+  }
+
+  /* ===== Masthead ===== */
+  .masthead{
+    display:flex; align-items:flex-end; justify-content:space-between; gap:16px;
+    padding:22px 30px 16px;
+    border-bottom:3px solid var(--p-bullion);
+  }
+  .masthead-left{display:flex;flex-direction:column;gap:2px;}
+  .wordmark{ font-size:30px; color:var(--p-parchment); line-height:1; }
+  .wordmark .accent{color:var(--p-bullion-bright);}
+  .kicker{ color:var(--p-muted); margin-top:6px; }
+  .masthead-right{ text-align:right; font-family:-apple-system,"Segoe UI",Arial,sans-serif; }
+  .masthead-right .tag{
+    display:inline-block; font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; font-weight:700;
+    color:var(--p-ink); background:var(--p-bullion); padding:3px 9px; margin-bottom:6px;
+  }
+  .masthead-right .when{ font-size:12.5px; color:var(--p-muted); line-height:1.5; }
+  .masthead-right .when b{color:var(--p-parchment);font-weight:600;}
+
+  /* ===== Breaking strip ===== */
+  .breaking{
+    display:flex; align-items:center; gap:12px;
+    padding:10px 30px; background:var(--p-flare-dim); border-bottom:1px solid rgba(224,99,42,0.4);
+  }
+  .breaking-tag{
+    font-family:-apple-system,"Segoe UI",Arial,sans-serif; font-size:10px; font-weight:800; letter-spacing:0.1em;
+    color:var(--p-ink); background:var(--p-flare-bright); padding:3px 8px; white-space:nowrap;
+    animation:pulse 2s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce){ .breaking-tag{ animation:none; } }
+  @keyframes pulse{ 0%,100%{opacity:1;} 50%{opacity:0.6;} }
+  .breaking-text{ font-size:12.5px; color:#f5d3ba; line-height:1.5; }
+  .breaking-text b{ color:var(--p-flare-bright); }
+  .breaking-text i{ color:var(--p-muted); font-style:normal; }
+
+  /* ===== Hero split bar ===== */
+  .hero{ padding:0; }
+  .split-bar{ display:flex; width:100%; height:15px; }
+  .split-seg.bull{ background:linear-gradient(90deg, var(--p-bullion), var(--p-bullion-bright)); }
+  .split-seg.bear{ background:linear-gradient(90deg, var(--p-steel-bright), var(--p-steel)); }
+
+  .splash{
+    display:flex; align-items:stretch; border-bottom:1px solid var(--p-rule);
+  }
+  .splash-num{
+    display:flex; flex-direction:column; justify-content:center; align-items:center;
+    padding:22px 10px; min-width:180px;
+  }
+  .splash-num.bull{ background:var(--p-bullion-dim); border-right:1px solid var(--p-rule); }
+  .splash-num.bear{ background:var(--p-steel-dim); }
+  .splash-num .big{ font-size:76px; line-height:0.85; }
+  .splash-num.bull .big{ color:var(--p-bullion-bright); }
+  .splash-num.bear .big{ color:var(--p-steel-bright); }
+  .splash-num .lbl{ margin-top:8px; color:var(--p-muted); }
+
+  .splash-verdict{ flex:1; padding:28px 30px; min-width:0; }
+  .verdict-title{
+    font-size:33px; line-height:1.06; margin:0 0 12px; color:var(--p-parchment); text-wrap:balance;
+  }
+  .verdict-title .u{color:var(--p-bullion-bright);}
+  .verdict-desc{ font-size:15px; color:var(--p-muted); line-height:1.65; max-width:58ch; }
+  .verdict-meta{
+    display:flex; gap:18px; margin-top:14px; flex-wrap:wrap;
+    font-family:-apple-system,"Segoe UI",Arial,sans-serif; font-size:11px; color:var(--p-muted-2);
+  }
+  .verdict-meta b{color:var(--p-flare-bright); font-weight:700;}
+
+  /* ===== Section ===== */
+  .section{ padding:26px 30px; border-top:1px solid var(--p-rule); }
+  .section-head{ display:flex; align-items:baseline; gap:12px; margin-bottom:16px; }
+  .section-num{ color:var(--p-muted-2); font-size:12px; min-width:20px; }
+  .section-title{ color:var(--p-bullion-bright); }
+  .section-rule{ flex:1; height:1px; background:var(--p-rule); }
+
+  /* ===== Pull quote / callout ===== */
+  .pull{
+    display:flex; gap:16px; padding:18px 20px;
+    background:var(--p-panel); border-left:3px solid var(--p-bullion);
+  }
+  .pull-mark{ font-size:52px; line-height:0.6; color:var(--p-bullion); font-family:Georgia,serif; }
+  .pull-.poster-container{ font-size:14px; color:var(--p-muted); line-height:1.7; }
+  .pull-body b{ color:var(--p-parchment); font-weight:600; }
+  .pull-body i{ color:var(--p-flare-bright); font-style:normal; }
+
+  /* ===== Known / Unknown strip ===== */
+  .kv-row{ display:grid; grid-template-columns:repeat(4,1fr); }
+  .kv{ padding:16px 18px; border-right:1px solid var(--p-rule); }
+  .kv:last-child{ border-right:none; }
+  .kv.key{ background:var(--p-panel); }
+  .kv-eyebrow{ color:var(--p-muted-2); margin-bottom:10px; }
+  .kv-eyebrow.hot{ color:var(--p-flare-bright); }
+  .kv-val{ font-size:21px; color:var(--p-parchment); }
+  .kv-val .arw{ color:var(--p-muted-2); margin:0 6px; font-size:14px; }
+  .kv-val .up{ color:var(--p-flare-bright); }
+  .kv-val .neutral{ color:var(--p-muted); font-size:16px; }
+  .kv-note{ font-size:11.5px; color:var(--p-muted-2); margin-top:9px; line-height:1.55; }
+
+  /* ===== Ticker rail ===== */
+  .ticker-rail{
+    display:flex; flex-wrap:wrap; border:1px solid var(--p-rule);
+  }
+  .ticker-item{
+    display:flex; align-items:center; gap:7px;
+    padding:9px 12px; border-right:1px solid var(--p-rule); border-bottom:1px solid var(--p-rule);
+    font-family:-apple-system,"Segoe UI",Arial,sans-serif; font-size:12px; flex:1 0 auto;
+  }
+  .ticker-dot{ width:7px; height:7px; min-width:7px; border-radius:50%; }
+  .ticker-dot.g{ background:var(--p-bullion); }
+  .ticker-dot.r{ background:var(--p-steel); }
+  .ticker-dot.a{ background:var(--p-flare); }
+  .ticker-dot.p{ background:transparent; border:1.5px solid var(--p-muted-2); }
+  .ticker-name{ color:var(--p-parchment); font-weight:600; white-space:nowrap; }
+  .ticker-val{ color:var(--p-muted-2); font-family:ui-monospace,monospace; white-space:nowrap; }
+
+  .synth{
+    margin-top:14px; padding:14px 16px; background:var(--p-flare-dim);
+    border:1px solid rgba(201,122,61,0.4); font-size:13px; color:#f0cba8; line-height:1.65;
+  }
+  .synth b{ color:var(--p-flare-bright); }
+
+  /* ===== Price ladder ===== */
+  .ladder{ display:flex; flex-direction:column; gap:0; border-left:2px solid var(--p-rule); margin-left:6px; }
+  .rung{ display:flex; align-items:center; gap:16px; padding:12px 0 12px 20px; position:relative; }
+  .rung::before{
+    content:""; position:absolute; left:-7px; top:50%; transform:translateY(-50%);
+    width:12px; height:12px; border-radius:50%; background:var(--p-ink); border:2px solid var(--p-muted-2);
+  }
+  .rung.spot::before{ border-color:var(--p-bullion); background:var(--p-bullion); box-shadow:0 0 10px rgba(203,154,60,0.7); }
+  .rung.up::before{ border-color:var(--p-flare); }
+  .rung.down::before{ border-color:var(--p-steel); }
+  .rung-price{ font-size:20px; min-width:130px; }
+  .rung-price.spot{ color:var(--p-bullion-bright); }
+  .rung-price.up{ color:var(--p-flare-bright); }
+  .rung-price.down{ color:var(--p-steel-bright); }
+  .rung-.poster-container{ flex:1; }
+  .rung-label{ font-family:-apple-system,"Segoe UI",Arial,sans-serif; font-size:11px; letter-spacing:0.06em; text-transform:uppercase; color:var(--p-muted); font-weight:700; }
+  .rung-note{ font-size:12.5px; color:var(--p-muted-2); margin-top:2px; }
+
+  /* ===== Scenarios — proportional width ===== */
+  .scenario-row{ display:flex; gap:2px; align-items:stretch; }
+  .scen{ padding:18px 16px; display:flex; flex-direction:column; min-width:0; }
+  .scen.hawk{ background:var(--p-steel-dim); border-top:3px solid var(--p-steel); }
+  .scen.neutral{ background:var(--p-panel); border-top:3px solid var(--p-muted-2); }
+  .scen.dove{ background:var(--p-bullion-dim); border-top:3px solid var(--p-bullion); }
+  .scen-pct{ font-size:30px; }
+  .scen.hawk .scen-pct{ color:var(--p-steel-bright); }
+  .scen.neutral .scen-pct{ color:var(--p-muted); }
+  .scen.dove .scen-pct{ color:var(--p-bullion-bright); }
+  .scen-name{ font-family:-apple-system,"Segoe UI",Arial,sans-serif; font-size:11.5px; letter-spacing:0.06em; text-transform:uppercase; font-weight:700; color:var(--p-parchment); margin:6px 0 10px; }
+  .scen-cond{ font-size:12.5px; color:var(--p-muted); line-height:1.55; margin-bottom:12px; flex:1; }
+  .scen-impact{ font-size:12px; color:var(--p-muted-2); border-top:1px dashed var(--p-rule); padding-top:10px; line-height:1.55; }
+  .scen-impact b{ color:var(--p-parchment); }
+
+  /* ===== Footer ===== */
+  .poster-footer{
+    display:grid; grid-template-columns:1fr 1fr 200px;
+    gap:0; border-top:1px solid var(--p-rule); background:var(--p-ink-2);
+  }
+  .foot-col{ padding:22px 26px; border-right:1px solid var(--p-rule); }
+  .foot-title{ color:var(--p-bullion-bright); margin-bottom:10px; }
+  .foot-col ul{ margin:0; padding-left:16px; font-size:13px; color:var(--p-muted); line-height:1.75; }
+  .conf-block{ padding:22px 26px; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; }
+  .conf-num{ font-size:46px; color:var(--p-flare-bright); line-height:1; }
+  .conf-num span{ font-size:18px; color:var(--p-muted-2); }
+  .conf-lbl{ color:var(--p-muted); margin-top:6px; }
+
+  .poster-disclaimer{
+    grid-column:1 / -1; padding:14px 26px; border-top:1px solid var(--p-rule);
+    font-family:-apple-system,"Segoe UI",Arial,sans-serif; font-size:10.5px; color:var(--p-muted-2);
+    display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap;
+  }
+
+  @media print{
+    @page{ size:238mm 480mm; margin:0; }
+    .poster-container{ padding:0; }
+    .poster{ max-width:none; border:none; box-shadow:none; }
+  }
+
+  @media (max-width:680px){
+    .splash{flex-direction:column;}
+    .splash-num{flex-direction:row;gap:10px;padding:14px;min-width:0;}
+    .splash-num .big{font-size:40px;}
+    .splash-num.bull{border-right:none;border-bottom:1px solid var(--p-rule);}
+    .verdict-title{font-size:26px;}
+    .kv-row{grid-template-columns:repeat(2,1fr);}
+    .kv:nth-child(2){border-right:none;}
+    .kv{border-bottom:1px solid var(--p-rule);}
+    .ticker-item{flex:1 1 45%;}
+    .scenario-row{flex-direction:column;}
+    .poster-footer{grid-template-columns:1fr;}
+    .foot-col{border-right:none;border-bottom:1px solid var(--p-rule);}
+  }
+
+  .compliance-notice{
+    max-width:880px;
+    margin:0 auto 20px;
+    padding:16px 20px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-dim);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    color:var(--text-dim);
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+  .compliance-notice strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Edukasi<span>Trader</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Beranda</a>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Privasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="max-width: 960px;">
+
+    <div class="compliance-notice">
+      <strong>Bukan ajakan bertransaksi.</strong> Konten di bawah ini adalah catatan analisis pasar pribadi yang kami bagikan sebagai referensi publik — berisi opini terhadap data makro dan level teknikal saat disusun, bukan sinyal trading resmi, rekomendasi personal, atau ajakan untuk membuka posisi tertentu. Pasar bisa bergerak sangat berbeda dari skenario yang dibahas. Selalu lakukan riset dan pertimbangan risiko sendiri.
+    </div>
+
+    <div class="ad-slot">
+      <script>
+        atOptions = {
+          'key' : '95130429aa13b28790da6b9e46158bfc',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/95130429aa13b28790da6b9e46158bfc/invoke.js"></script>
+    </div>
+
+    <div class="poster-container">
+
+<div class="poster">
+
+  <div class="masthead">
+    <div class="masthead-left">
+      <div class="wordmark display">XAU<span class="accent">/</span>USD</div>
+      <div class="kicker eyebrow">Gold Market Briefing</div>
+    </div>
+    <div class="masthead-right">
+      <div class="tag">FOMC Minutes · Tier 1</div>
+      <div class="when">19 Agustus 2026, 20:50 WIB · Rilis <b>≈01:00 WIB</b> (20 Agt dini hari)</div>
+    </div>
+  </div>
+
+  <div class="breaking">
+    <span class="breaking-tag">BREAKING</span>
+    <span class="breaking-text"><b>Gold melonjak +$91 (+2,1%)</b> dalam 75 menit (19:30–20:47 WIB) ke $4.446 — diduga dipicu eskalasi Iran/Selat Hormuz, <i>bukan</i> Minutes (belum rilis). Volume 2x lipat, bertahan di level baru — bukan wick sesaat. Level di poster ini sudah disesuaikan ke harga terkini.</span>
+  </div>
+
+  <div class="hero">
+    <div class="split-bar" aria-hidden="true">
+      <div class="split-seg bull" style="flex:57;"></div>
+      <div class="split-seg bear" style="flex:43;"></div>
+    </div>
+    <div class="splash">
+      <div class="splash-num bull">
+        <div class="big display">57</div>
+        <div class="lbl eyebrow">Bullish</div>
+      </div>
+      <div class="splash-verdict">
+        <h1 class="verdict-title display">Masih <span class="u">BULLISH</span> tipis — sekarang bertumpuk dengan rally geopolitik</h1>
+        <p class="verdict-desc">57% ini murni dari data makro &amp; Minutes malam ini — rentetan data lemah (NFP, Retail Sales, Michigan Sentiment) menahan gold, ditahan 3 sinyal kontra (ISM Manufacturing panas, yield dekat puncak 19 tahun, komposisi FOMC condong hawkish). Di luar itu, rally Hormuz sore ini sudah duluan mendorong harga +2% — dua katalis independen di malam yang sama.</p>
+        <div class="verdict-meta">
+          <span>MARKET IMPORTANCE <b>9/10</b></span>
+          <span>ESTIMASI <b>40–80+ POIN</b></span>
+          <span>CONFIDENCE <b>5.5/10</b> — diturunkan</span>
+        </div>
+      </div>
+      <div class="splash-num bear">
+        <div class="big display">43</div>
+        <div class="lbl eyebrow">Bearish</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="pull">
+      <div class="pull-mark">&ldquo;</div>
+      <div class="pull-body">Rapat 29 Juli: hold 3,50-3,75%, tapi <b>3 dissenter resmi (Logan, Hammack, Kashkari) minta HIKE</b>, Ketua Warsh hawkish. Chain data dovish (NFP −23K vs 80K fc, Retail Sales −0,6%, Michigan Sentiment 51 vs 54,5, GDP Q2 1,5% vs 2,1% fc) — baseline ~85% lewat Confirmation Chaining. Tapi <b>3 kategori kontra independen</b> menahan: komposisi FOMC 9/18 dukung hike, ISM Manufacturing tertinggi sejak 2022, dan Treasury Yield naik tajam (30Y puncak 19 tahun). Diskon → <b>57%</b>. <i>Minutes ini juga backward-looking — merekam suasana sebelum rentetan data lemah masuk, DAN sebelum rally Hormuz sore ini.</i></div>
+    </div>
+  </div>
+
+  <div class="kv-row">
+    <div class="kv">
+      <div class="kv-eyebrow eyebrow">Fed Funds Rate</div>
+      <div class="kv-val mono">3,50–3,75<span class="arw">→</span><span class="neutral">Hold</span></div>
+      <div class="kv-note">Diputuskan 29 Juli, sudah publik.</div>
+    </div>
+    <div class="kv key">
+      <div class="kv-eyebrow eyebrow hot">Paling Ditunggu</div>
+      <div class="kv-val mono up">9 / 18</div>
+      <div class="kv-note">Anggota dukung hike tahun ini — 6 di antaranya dukung 2x hike. Minutes ungkap detail argumennya.</div>
+    </div>
+    <div class="kv">
+      <div class="kv-eyebrow eyebrow">Treasury Yield 10Y / 30Y</div>
+      <div class="kv-val mono up">4,72% / 19-thn tinggi</div>
+      <div class="kv-note">30Y di puncak 19 tahun — kemungkinan tekanan fiskal.</div>
+    </div>
+    <div class="kv">
+      <div class="kv-eyebrow eyebrow hot">Spot Live Sekarang</div>
+      <div class="kv-val mono up">$4.446,83</div>
+      <div class="kv-note">+$91 dari sore ini, dipicu rally Hormuz — bukan Minutes.</div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><span class="section-num mono">01</span><span class="section-title eyebrow">Gambaran Besar — 15 Data yang Kita Pantau</span><span class="section-rule"></span></div>
+    <div class="ticker-rail">
+      <div class="ticker-item"><span class="ticker-dot a"></span><span class="ticker-name">FOMC</span><span class="ticker-val">hold, 3 dissenter minta hike</span></div>
+      <div class="ticker-item"><span class="ticker-dot g"></span><span class="ticker-name">CPI YoY</span><span class="ticker-val">3,4% in-line</span></div>
+      <div class="ticker-item"><span class="ticker-dot g"></span><span class="ticker-name">Core CPI</span><span class="ticker-val">2,5% in-line</span></div>
+      <div class="ticker-item"><span class="ticker-dot g"></span><span class="ticker-name">PCE YoY</span><span class="ticker-val">3,7% (dari 4,1%)</span></div>
+      <div class="ticker-item"><span class="ticker-dot g"></span><span class="ticker-name">Core PCE</span><span class="ticker-val">3,3% (Jun)</span></div>
+      <div class="ticker-item"><span class="ticker-dot g"></span><span class="ticker-name">NFP</span><span class="ticker-val">−23K vs 80K fc ★★★</span></div>
+      <div class="ticker-item"><span class="ticker-dot g"></span><span class="ticker-name">ADP</span><span class="ticker-val">44K vs 70K fc</span></div>
+      <div class="ticker-item"><span class="ticker-dot g"></span><span class="ticker-name">JOLTS</span><span class="ticker-val">7,359M vs 7,4M fc</span></div>
+      <div class="ticker-item"><span class="ticker-dot r"></span><span class="ticker-name">ISM Mfg</span><span class="ticker-val">55,6 ⚠</span></div>
+      <div class="ticker-item"><span class="ticker-dot g"></span><span class="ticker-name">ISM Svc</span><span class="ticker-val">54,1 vs 54,5 fc</span></div>
+      <div class="ticker-item"><span class="ticker-dot a"></span><span class="ticker-name">PPI</span><span class="ticker-val">0% headline, inti +0,4% ⚠</span></div>
+      <div class="ticker-item"><span class="ticker-dot g"></span><span class="ticker-name">Retail Sales</span><span class="ticker-val">−0,6% vs 0,1% fc ★★★</span></div>
+      <div class="ticker-item"><span class="ticker-dot g"></span><span class="ticker-name">GDP Q2</span><span class="ticker-val">1,5% vs 2,1% fc</span></div>
+      <div class="ticker-item"><span class="ticker-dot r"></span><span class="ticker-name">10Y/30Y Yield</span><span class="ticker-val">4,72% / 19-thn tinggi ⚠</span></div>
+      <div class="ticker-item"><span class="ticker-dot g"></span><span class="ticker-name">DXY</span><span class="ticker-val">~99,5, dekat 2mo low</span></div>
+      <div class="ticker-item"><span class="ticker-dot g"></span><span class="ticker-name">Michigan Sentiment</span><span class="ticker-val">51 vs 54,5</span></div>
+      <div class="ticker-item"><span class="ticker-dot a"></span><span class="ticker-name">Geopolitik</span><span class="ticker-val">Iran/Hormuz eskalasi 🔥</span></div>
+    </div>
+    <div class="synth"><b>Data "lunak" vs data "keras" tarik-menarik.</b> Tenaga kerja, konsumsi, sentimen konsumen kompak melemah — tapi manufaktur, pasar obligasi, dan komposisi FOMC sendiri menahan cerita "ekonomi melemah tajam". Malam ini ditambah katalis ke-3 yang independen: eskalasi Hormuz yang sudah duluan mendorong rally sebelum Minutes sempat bicara.</div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><span class="section-num mono">02</span><span class="section-title eyebrow">Tangga Harga — Level Teknikal Live (Pasca-Rally)</span><span class="section-rule"></span></div>
+    <div class="ladder">
+      <div class="rung up">
+        <div class="rung-price up mono">4.500</div>
+        <div class="rung-body"><div class="rung-label">Target Psikologis</div><div class="rung-note">Kalau rally Hormuz + Minutes dovish berlanjut bersamaan.</div></div>
+      </div>
+      <div class="rung up">
+        <div class="rung-price up mono">4.466</div>
+        <div class="rung-body"><div class="rung-label">Puncak Sesi Ini</div><div class="rung-note">Tertinggi sejak rally dimulai ~19:30 WIB.</div></div>
+      </div>
+      <div class="rung spot">
+        <div class="rung-price spot mono">4.446,83</div>
+        <div class="rung-body"><div class="rung-label">Spot Live (via MCP)</div><div class="rung-note">ATH lama $4.441 (12 Agt) sudah tertembus — price discovery zone baru.</div></div>
+      </div>
+      <div class="rung">
+        <div class="rung-price mono" style="color:var(--p-parchment);">4.420–4.440</div>
+        <div class="rung-body"><div class="rung-label">Support Baru (area breakout)</div><div class="rung-note">Kandidat BUY on dip — tunggu retest, jangan kejar harga sekarang.</div></div>
+      </div>
+      <div class="rung down">
+        <div class="rung-price down mono">4.398</div>
+        <div class="rung-body"><div class="rung-label">Invalidasi Rally</div><div class="rung-note">Breakdown di bawah ini = indikasi rally Hormuz gagal bertahan.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-bottom:0;">
+    <div class="section-head"><span class="section-num mono">03</span><span class="section-title eyebrow">Tiga Skenario — Lebar Kolom = Probabilitas</span><span class="section-rule"></span></div>
+  </div>
+  <div class="scenario-row">
+    <div class="scen hawk" style="flex:40;">
+      <div class="scen-pct mono">40%</div>
+      <div class="scen-name">Hawkish ATAU Hormuz Mereda</div>
+      <div class="scen-cond">Dissent lebih kuat dari dugaan, ATAU eskalasi geopolitik tiba-tiba mereda (de-eskalasi) — dua jalur berbeda ke hasil yang sama.</div>
+      <div class="scen-impact"><b>Koreksi tajam mungkin</b> kembali ke 4.380–4.400. Beri sebagian gain rally hari ini.</div>
+    </div>
+    <div class="scen neutral" style="flex:40;">
+      <div class="scen-pct mono">40%</div>
+      <div class="scen-name">Netral — Keduanya Stabil</div>
+      <div class="scen-cond">Minutes sesuai ekspektasi, Hormuz tidak berubah signifikan malam ini.</div>
+      <div class="scen-impact">Konsolidasi <b>4.420–4.466</b>, cari arah dari price action lanjutan.</div>
+    </div>
+    <div class="scen dove" style="flex:20;">
+      <div class="scen-pct mono">20%</div>
+      <div class="scen-name">Dovish + Hormuz Eskalasi</div>
+      <div class="scen-cond">Minutes dovish DAN geopolitik terus memanas — dua katalis searah menguat bersamaan.</div>
+      <div class="scen-impact">Breakout lanjut ke <b>4.500+</b>, psikologis tertembus.</div>
+    </div>
+  </div>
+
+  <div class="poster-footer">
+    <div class="foot-col">
+      <div class="foot-title eyebrow">Trading Plan</div>
+      <ul>
+        <li>Jangan kejar BUY di harga sekarang — tunggu retest dulu</li>
+        <li>BUY retest 4.420–4.440 · SL 4.398 · TP1 4.466 / TP2 4.500</li>
+        <li>SELL kalau breakdown displacement &lt;4.398 · SL 4.420 · TP1 4.360</li>
+        <li>Pantau berita Hormuz &amp; Minutes paralel — dua katalis, whipsaw ekstra</li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <div class="foot-title eyebrow">Yang Bisa Membatalkan Analisis</div>
+      <ul>
+        <li>Dissent eksplisit mayoritas komite dukung hike September</li>
+        <li>Pernyataan eksplisit soal kekhawatiran resesi/pelemahan tajam</li>
+        <li>Breakout/breakdown besar sebelum rilis tanpa katalis jelas</li>
+      </ul>
+    </div>
+    <div class="conf-block">
+      <div class="conf-num mono">5.5<span>/10</span></div>
+      <div class="conf-lbl eyebrow">Confidence</div>
+    </div>
+    <div class="poster-disclaimer">
+      <span>Diperbarui 19 Agustus 2026, 20:50 WIB (data live via MCP TradingView) · Tercatat sebagai FOMCMINUTES-2026-08-19 di News Database</span>
+      <span>Alat bantu mikir, bukan nasihat keuangan resmi — keputusan tetap di tangan kamu</span>
+    </div>
+  </div>
+
+</div>
+
+    </div>
+
+    <div class="ad-slot">
+      <script async="async" data-cfasync="false" src="https://pl30756138.effectivecpmnetwork.com/4a3f1dc3807941e53dfe4463a21a0e4e/invoke.js"></script>
+      <div id="container-4a3f1dc3807941e53dfe4463a21a0e4e"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Kebijakan Privasi</a>
+      <a href="https://www.effectivecpmnetwork.com/setnp40u3t?key=fe8199ed8dd693be00f1924c13a1b7ec" target="_blank" rel="noopener sponsored">Rekomendasi</a>
+    </div>
+    <div>&copy; 2026 EdukasiTrader.</div>
+  </div>
+</footer>
+
+</body>
+</html>
