@@ -29,8 +29,29 @@ Dari folder `adsterra-blog`, jalankan lewat PowerShell:
   -SourcePath "D:\Danu\Trade\posters\NFP-2026-09-05.html" `
   -Slug "xauusd-nfp-5-september-2026" `
   -Title "XAUUSD Briefing — NFP 5 September 2026" `
-  -Excerpt "Catatan riset menjelang rilis Non-Farm Payrolls — konteks makro dan level teknikal emas."
+  -Excerpt "Gold breakout ke ATH baru jelang NFP 5 September — apakah data tenaga kerja malam ini jadi pemicu lanjutan, atau titik balik? Cek breakdown skenario dan level kunci sebelum rilis."
 ```
+
+### Menulis `-Excerpt` yang Bagus (Hook, Bukan Cuma Ringkasan)
+
+`-Excerpt` dipakai di dua tempat sekaligus: `<meta name="description">` halaman
+(muncul di hasil pencarian Google) dan card di homepage (yang menentukan orang
+klik atau lewat). Jangan cuma daftar isi ("membahas X, Y, Z") — tulis sebagai
+**hook**:
+
+- Buka dengan fakta/angka paling menarik dari poster (harga bergerak berapa,
+  bias engine berapa persen, level kunci berapa).
+- Ciptakan rasa ingin tahu — pertanyaan terbuka soal apa yang akan terjadi
+  saat rilis biasanya efektif ("apakah lanjut turun, atau rebound?").
+- Tetap jujur pada isi poster — hook boleh menarik, tapi jangan clickbait
+  yang isinya tidak sesuai.
+- Idealnya 1–2 kalimat, muat di card homepage tanpa terlalu panjang.
+
+Contoh nyata dari poster yang sudah live:
+> "Gold ambruk ke $4.468 usai pidato hawkish Jackson Hole — apakah ISM
+> Manufacturing & JOLTS malam ini jadi lanjutan pelemahan, atau pemicu
+> rebound? Market Bias Engine kami baca 63% Bearish. Cek breakdown 15 data
+> makro, 3 skenario harga, dan level kunci sebelum rilis."
 
 Setelah selesai, cek hasilnya di browser, lalu commit & push seperti biasa:
 
@@ -47,7 +68,7 @@ git push
 | `-SourcePath` | Ya | Path lengkap ke file poster sumber |
 | `-Slug` | Ya | Nama file output (jadi bagian URL), contoh: `xauusd-nfp-5-september-2026` |
 | `-Title` | Tidak | Kalau dikosongkan, diambil otomatis dari `<title>` file sumber |
-| `-Excerpt` | Tidak | Ringkasan untuk meta description & card homepage. Ada default generik kalau dikosongkan |
+| `-Excerpt` | Tidak | Hook + resume singkat untuk meta description & card homepage (lihat panduan di atas). Ada default generik kalau dikosongkan — sebaiknya selalu diisi manual |
 | `-CardTag` | Tidak | Label kecil di card homepage. Default: `Analisis Harian` |
 | `-SkipHomepage` | Tidak | Kalau dipakai, halaman dibuat tapi TIDAK otomatis masuk homepage/sitemap |
 
