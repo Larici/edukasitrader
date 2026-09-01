@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XAUUSD — Kalender News September 2026 — EdukasiTrader</title>
+<meta name="description" content="September ini gold harus lewati 5 rilis besar sebelum sampai ke puncaknya: FOMC Meeting + Dot Plot 15-16 September. NFP 4 September dan CPI 11 September bisa jadi penentu arah duluan sebelum keputusan rate itu turun. Cek jadwal lengkap per minggu, tier kepentingan tiap rilis, dan jam-jam paling berbahaya buka posisi baru.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  html{ height:auto; overflow-y:auto; }
+  :root{
+    --p-bg:#0a1016;
+    --p-bg-2:#060a0e;
+    --p-panel:#121b24;
+    --p-panel-2:#182430;
+    --p-border:#263444;
+    --p-steel:#4fa8d8;
+    --p-steel-bright:#8ed4f0;
+    --p-steel-dim:#1c3345;
+    --p-copper:#c9814f;
+    --p-copper-bright:#e6a877;
+    --p-copper-dim:#3f2c1d;
+    --p-bullish:#29c78f;
+    --p-bullish-dim:#153c31;
+    --p-bearish:#ef5468;
+    --p-bearish-dim:#4a2029;
+    --p-amber:#dba43f;
+    --p-amber-dim:#3f3016;
+    --p-text:#eef3f6;
+    --p-muted:#8ea0ad;
+    --p-muted-2:#566a78;
+  }
+
+  *{box-sizing:border-box;}
+  html,.poster-container{margin:0;padding:0;}
+  .poster-container{
+    background:
+      radial-gradient(ellipse 900px 460px at 85% -5%, rgba(79,168,216,0.10), transparent 60%),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.014) 0px, rgba(255,255,255,0.014) 1px, transparent 1px, transparent 48px),
+      var(--p-bg);
+    color:var(--p-text);
+    font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    justify-content:center;
+    padding:32px 16px 64px;
+  }
+
+  .display{ font-weight:800; letter-spacing:-0.01em; }
+  .mono{ font-family:ui-monospace,"Cascadia Mono","IBM Plex Mono",Consolas,"Liberation Mono",monospace; font-variant-numeric:tabular-nums; }
+  .instrument{ font-family:ui-monospace,"Cascadia Mono","IBM Plex Mono",Consolas,"Liberation Mono",monospace; text-transform:uppercase; }
+
+  .poster{
+    width:100%;
+    max-width:880px;
+    background:linear-gradient(180deg, var(--p-panel) 0%, var(--p-bg-2) 100%);
+    border:1px solid var(--p-border);
+    border-radius:6px;
+    overflow:hidden;
+    box-shadow:0 30px 80px -30px rgba(0,0,0,0.75);
+    position:relative;
+  }
+  .poster::before, .poster::after, .corner-bl, .corner-br{
+    content:"";
+    position:absolute;
+    width:14px;height:14px;
+    z-index:2;
+  }
+  .poster::before{ top:8px; left:8px; border-top:2px solid var(--p-steel); border-left:2px solid var(--p-steel); opacity:0.55; }
+  .poster::after{ top:8px; right:8px; border-top:2px solid var(--p-steel); border-right:2px solid var(--p-steel); opacity:0.55; }
+  .corner-bl{ bottom:8px; left:8px; border-bottom:2px solid var(--p-steel); border-left:2px solid var(--p-steel); opacity:0.55; }
+  .corner-br{ bottom:8px; right:8px; border-bottom:2px solid var(--p-steel); border-right:2px solid var(--p-steel); opacity:0.55; }
+
+  .ruler{
+    height:10px;
+    background-image:repeating-linear-gradient(90deg, var(--p-border) 0, var(--p-border) 1px, transparent 1px, transparent 24px),
+                      repeating-linear-gradient(90deg, var(--p-muted-2) 0, var(--p-muted-2) 1px, transparent 1px, transparent 96px);
+    background-position:0 100%, 0 100%;
+    background-size:100% 5px, 100% 9px;
+    background-repeat:repeat-x;
+    border-bottom:1px solid var(--p-border);
+    opacity:0.7;
+  }
+
+  .masthead{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:20px 30px 16px; border-bottom:1px solid var(--p-border); }
+  .masthead-left{display:flex;align-items:center;gap:10px;}
+  .status-led{ width:8px;height:8px;border-radius:2px; background:var(--p-copper); box-shadow:0 0 8px rgba(201,129,79,0.8); }
+  .ticker-wrap{display:flex;flex-direction:column;}
+  .ticker{ font-size:22px; font-weight:800; letter-spacing:0.04em; color:var(--p-steel-bright); }
+  .masthead-sub{ font-size:10.5px; letter-spacing:0.16em; color:var(--p-muted); }
+  .masthead-right{ text-align:right; font-size:12px; color:var(--p-muted); line-height:1.6; }
+  .masthead-right b{color:var(--p-text);font-weight:700;}
+
+  .summary{ display:flex; align-items:center; gap:20px; padding:13px 30px; background:var(--p-panel-2); border-bottom:1px solid var(--p-border); flex-wrap:wrap; }
+  .summary-item{display:flex;align-items:center;gap:7px;font-size:11.5px;color:var(--p-muted);}
+  .summary-item .sw{width:8px;height:8px;}
+  .sw.t1{background:var(--p-copper);}
+  .sw.t2{background:var(--p-steel);}
+  .sw.t3{background:var(--p-muted-2);}
+  .summary-item b{color:var(--p-text);font-weight:700;}
+  .summary-count{margin-left:auto;font-size:11.5px;color:var(--p-muted);}
+  .summary-count b{color:var(--p-steel-bright);}
+
+  .hero{ padding:26px 30px 22px; display:flex; gap:20px; align-items:center; }
+  .hero-badge{
+    min-width:84px;height:84px;border:2px solid var(--p-copper);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    background:var(--p-copper-dim);
+  }
+  .hero-badge .d{font-size:26px;font-weight:800;color:var(--p-copper-bright);line-height:1;}
+  .hero-badge .m{font-size:9px;color:var(--p-copper-bright);letter-spacing:0.08em;margin-top:2px;}
+  .hero-title{font-size:22px;line-height:1.2;margin:0 0 6px;text-wrap:balance;}
+  .hero-title .accent{color:var(--p-copper-bright);}
+  .hero-desc{font-size:13px;color:var(--p-muted);line-height:1.6;max-width:56ch;}
+
+  .section{padding:20px 30px;border-top:1px solid var(--p-border);}
+  .week-label{
+    font-size:11px; letter-spacing:0.1em; color:var(--p-steel-bright); font-weight:700;
+    margin:0 0 12px; padding-left:10px; border-left:2px solid var(--p-steel);
+    display:flex; align-items:center; gap:10px;
+  }
+  .week-label .range{color:var(--p-muted-2);font-weight:500;letter-spacing:0.04em;}
+
+  .event-row{
+    display:flex; gap:14px; align-items:center;
+    padding:11px 14px; background:var(--p-panel-2); border:1px solid var(--p-border);
+    border-left:3px solid var(--p-muted-2); margin-bottom:8px;
+  }
+  .event-row.t1{border-left-color:var(--p-copper);}
+  .event-row.t2{border-left-color:var(--p-steel);}
+  .event-row.t3{border-left-color:var(--p-muted-2);}
+  .event-row.highlight{background:linear-gradient(90deg, rgba(201,129,79,0.12), var(--p-panel-2) 40%); border-color:rgba(201,129,79,0.4);}
+  .event-date{min-width:56px;text-align:center;}
+  .event-date .day{font-size:19px;font-weight:800;color:var(--p-text);line-height:1;}
+  .event-date .dow{font-size:9px;color:var(--p-muted-2);letter-spacing:0.06em;margin-top:2px;}
+  .event-.poster-container{flex:1;min-width:0;}
+  .event-name{font-weight:700;font-size:13px;color:var(--p-text);}
+  .event-time{font-size:10px;color:var(--p-muted-2);margin-left:8px;}
+  .event-note{font-size:11.5px;color:var(--p-muted);margin-top:3px;line-height:1.5;}
+  .event-right{display:flex;flex-direction:column;align-items:flex-end;gap:6px;white-space:nowrap;}
+  .tier-badge{font-size:9px;padding:2px 8px;font-weight:700;letter-spacing:0.05em;}
+  .tier-badge.t1{background:var(--p-copper-dim);color:var(--p-copper-bright);}
+  .tier-badge.t2{background:var(--p-steel-dim);color:var(--p-steel-bright);}
+  .tier-badge.t3{background:transparent;border:1px solid var(--p-border);color:var(--p-muted-2);}
+  .status-pill{font-size:9.5px;padding:2px 8px;font-weight:700;letter-spacing:0.04em;}
+  .status-pill.done{background:var(--p-bullish-dim);color:var(--p-bullish);}
+  .status-pill.pending{background:var(--p-amber-dim);color:var(--p-amber);}
+
+  .poster-footer{ padding:20px 30px 26px; border-top:1px solid var(--p-border); background:var(--p-panel-2); }
+  .footer-title{font-size:10.5px;letter-spacing:0.08em;color:var(--p-muted);margin-bottom:8px;font-weight:700;}
+  .poster-footer ul{margin:0;padding-left:16px;font-size:12px;color:var(--p-muted);line-height:1.7;}
+  .poster-disclaimer{ margin-top:14px; font-size:10.5px; color:var(--p-muted-2); border-top:1px solid var(--p-border); padding-top:14px; display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+
+  @media print{
+    @page{ size:238mm 460mm; margin:0; }
+    .poster-container{ padding:0; }
+    .poster{ max-width:none; border-radius:0; border:none; box-shadow:none; }
+  }
+
+  @media (max-width:640px){
+    .masthead{flex-direction:column;align-items:flex-start;gap:10px;}
+    .masthead-right{text-align:left;}
+    .hero{flex-direction:column;align-items:flex-start;}
+    .event-row{flex-wrap:wrap;}
+    .event-right{flex-direction:row;margin-left:70px;}
+  }
+
+  .compliance-notice{
+    max-width:880px;
+    margin:0 auto 20px;
+    padding:16px 20px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-dim);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    color:var(--text-dim);
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+  .compliance-notice strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Edukasi<span>Trader</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Beranda</a>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Privasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="max-width: 960px;">
+
+    <div class="compliance-notice">
+      <strong>Bukan ajakan bertransaksi.</strong> Konten di bawah ini adalah catatan analisis pasar pribadi yang kami bagikan sebagai referensi publik — berisi opini terhadap data makro dan level teknikal saat disusun, bukan sinyal trading resmi, rekomendasi personal, atau ajakan untuk membuka posisi tertentu. Pasar bisa bergerak sangat berbeda dari skenario yang dibahas. Selalu lakukan riset dan pertimbangan risiko sendiri.
+    </div>
+
+    <div class="ad-slot">
+      <script>
+        atOptions = {
+          'key' : '95130429aa13b28790da6b9e46158bfc',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/95130429aa13b28790da6b9e46158bfc/invoke.js"></script>
+    </div>
+
+    <div class="poster-container">
+
+<div class="poster">
+  <span class="corner-bl"></span><span class="corner-br"></span>
+
+  <div class="masthead">
+    <div class="masthead-left">
+      <span class="status-led"></span>
+      <div class="ticker-wrap">
+        <span class="ticker instrument">XAUUSD</span>
+        <span class="masthead-sub instrument">Economic Calendar</span>
+      </div>
+    </div>
+    <div class="masthead-right">
+      <div><b>September 2026</b></div>
+      <div>Waktu ditampilkan WIB (UTC+7)</div>
+    </div>
+  </div>
+  <div class="ruler" aria-hidden="true"></div>
+
+  <div class="summary">
+    <span class="summary-item"><span class="sw t1"></span>Tier 1 — <b>penggerak utama</b></span>
+    <span class="summary-item"><span class="sw t2"></span>Tier 2 — <b>konfirmasi</b></span>
+    <span class="summary-item"><span class="sw t3"></span>Tier 3 — <b>latar belakang</b></span>
+    <span class="summary-count">5 event utama · <b>0 sudah rilis</b> · 5 akan datang</span>
+  </div>
+
+  <div class="hero">
+    <div class="hero-badge">
+      <div class="d mono">15-16</div>
+      <div class="m instrument">September</div>
+    </div>
+    <div>
+      <h2 class="hero-title display">Sorotan bulan ini: <span class="accent">FOMC Meeting + Dot Plot</span></h2>
+      <p class="hero-desc">Keputusan rate Fed 16 September (≈01:00 WIB, 17 Sept) plus Summary of Economic Projections (dot plot) — inilah tujuan akhir semua data sejak Jackson Hole. Pidato hawkish Warsh (28 Agustus) sudah menaikkan odds hike ke ~50%; setiap data di antara sekarang dan tanggal ini (ISM, JOLTS, ADP, NFP, CPI) langsung jadi input buat keputusan tersebut.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="week-label instrument">Minggu 1 <span class="range">1-6 September</span></p>
+    <div class="event-row t2">
+      <div class="event-date"><div class="day mono">1</div><div class="dow instrument">Sel</div></div>
+      <div class="event-body">
+        <span class="event-name">ISM Manufacturing PMI + JOLTS <span class="event-time mono">21:00 WIB</span></span>
+        <div class="event-note">Rilis bareng jam yang sama. Data besar pertama pasca pidato Warsh — dibaca sebagai konfirmasi/bantahan pertama terhadap nada hawkish itu.</div>
+      </div>
+      <div class="event-right"><span class="tier-badge t2 instrument">Tier 2</span><span class="status-pill pending instrument">Pending</span></div>
+    </div>
+    <div class="event-row t2">
+      <div class="event-date"><div class="day mono">2</div><div class="dow instrument">Rab</div></div>
+      <div class="event-body">
+        <span class="event-name">ADP National Employment <span class="event-time mono">19:15 WIB</span></span>
+        <div class="event-note">Leading indicator sebelum NFP — sering meleset dari NFP resmi, jangan overweight sendirian.</div>
+      </div>
+      <div class="event-right"><span class="tier-badge t2 instrument">Tier 2</span><span class="status-pill pending instrument">Pending</span></div>
+    </div>
+    <div class="event-row t1 highlight">
+      <div class="event-date"><div class="day mono">4</div><div class="dow instrument">Jum</div></div>
+      <div class="event-body">
+        <span class="event-name">NFP (Employment Situation) <span class="event-time mono">19:30 WIB</span></span>
+        <div class="event-note">Data tenaga kerja paling berbobot bulan ini — rilis pertama pasca NFP Annual Revision (-79K) dan sell-off Jackson Hole. Krusial buat konfirmasi arah sebelum CPI &amp; FOMC.</div>
+      </div>
+      <div class="event-right"><span class="tier-badge t1 instrument">Tier 1</span><span class="status-pill pending instrument">Pending</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="week-label instrument">Minggu 2 <span class="range">7-13 September</span></p>
+    <div class="event-row t3">
+      <div class="event-date"><div class="day mono">7</div><div class="dow instrument">Sen</div></div>
+      <div class="event-body">
+        <span class="event-name">Labor Day (Bursa AS Libur)</span>
+        <div class="event-note">Hari libur federal — volume trading gold biasanya tipis di sesi ini.</div>
+      </div>
+      <div class="event-right"><span class="tier-badge t3 instrument">Tier 3</span><span class="status-pill pending instrument">Pending</span></div>
+    </div>
+    <div class="event-row t1">
+      <div class="event-date"><div class="day mono">11</div><div class="dow instrument">Jum</div></div>
+      <div class="event-body">
+        <span class="event-name">CPI + Core CPI <span class="event-time mono">19:30 WIB</span></span>
+        <div class="event-note">Inflasi utama, 4 hari sebelum FOMC — kemungkinan besar jadi penentu terakhir arah keputusan rate.</div>
+      </div>
+      <div class="event-right"><span class="tier-badge t1 instrument">Tier 1</span><span class="status-pill pending instrument">Pending</span></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="week-label instrument">Minggu 3 <span class="range">14-20 September</span></p>
+    <div class="event-row t1 highlight">
+      <div class="event-date"><div class="day mono">15-16</div><div class="dow instrument">Sel-Rab</div></div>
+      <div class="event-body">
+        <span class="event-name">FOMC Meeting — Keputusan + Dot Plot (SEP) <span class="event-time mono">Keputusan ≈01:00 WIB, 17 Sept</span></span>
+        <div class="event-note">Salah satu dari 4 meeting/tahun dengan Summary of Economic Projections. Bukan cuma keputusan hold/hike, tapi juga proyeksi resmi Fed ke depan — puncak dari semua data sejak Jackson Hole.</div>
+      </div>
+      <div class="event-right"><span class="tier-badge t1 instrument">Tier 1</span><span class="status-pill pending instrument">Pending</span></div>
+    </div>
+  </div>
+
+  <div class="poster-footer">
+    <div class="footer-title instrument">Cara Pakai Kalender Ini</div>
+    <ul>
+      <li>Tier 1 = hindari buka posisi baru 15-30 menit sebelum &amp; sesudah rilis (whipsaw tinggi)</li>
+      <li>Tier 2 = tetap waspada, tapi biasanya tidak sebesar Tier 1</li>
+      <li>Tier 3 = jarang jadi penggerak sendirian, tapi bisa jadi konfirmasi arah chain makro</li>
+      <li>Setiap event Tier 1/2 akan dapat analisis 14-section terpisah di News Database saat mendekati tanggal rilis</li>
+    </ul>
+    <div class="poster-disclaimer">
+      <span>Dibuat dari kalender resmi BLS/BEA/Fed (NY Fed Economic Indicators Calendar, FedRateCalc) · Referensi: system/06_NEWS_DATABASE.md</span>
+      <span>Ini alat bantu mikir, bukan nasihat keuangan resmi — keputusan tetap di tangan kamu</span>
+    </div>
+  </div>
+
+</div>
+
+    </div>
+
+    <div class="ad-slot">
+      <script async="async" data-cfasync="false" src="https://pl30756138.effectivecpmnetwork.com/4a3f1dc3807941e53dfe4463a21a0e4e/invoke.js"></script>
+      <div id="container-4a3f1dc3807941e53dfe4463a21a0e4e"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Kebijakan Privasi</a>
+      <a href="https://www.effectivecpmnetwork.com/setnp40u3t?key=fe8199ed8dd693be00f1924c13a1b7ec" target="_blank" rel="noopener sponsored">Rekomendasi</a>
+    </div>
+    <div>&copy; 2026 EdukasiTrader.</div>
+  </div>
+</footer>
+
+</body>
+</html>
