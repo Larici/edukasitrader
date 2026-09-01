@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XAUUSD Bulletin — ISM Manufacturing + JOLTS 1 September 2026 — EdukasiTrader</title>
+<meta name="description" content="Bulletin pra-rilis XAUUSD menjelang ISM Manufacturing PMI dan JOLTS Job Openings (1 September 2026) yang dirilis bersamaan. Membahas konteks pasca pidato hawkish Fed di Jackson Hole, cross-check 15 data makro, breakdown probabilitas Market Bias Engine (37% Bullish / 63% Bearish), tiga skenario harga, dan pembacaan struktur teknikal 6 timeframe dengan level support-resistance kunci.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  :root{
+    --p-paper:#ece6d6;
+    --p-paper-2:#e2dac2;
+    --p-paper-3:#d8ceb0;
+    --p-ink:#211d14;
+    --p-ink-dim:#5c5644;
+    --p-ink-faint:#847d67;
+    --p-rule:#b6ab88;
+    --p-rule-strong:#8c8163;
+    --p-brass:#7d5a24;
+    --p-brass-bright:#9c7530;
+    --p-bearish:#7c2e26;
+    --p-bearish-bg:#e6d2c9;
+    --p-bearish-line:#b06657;
+    --p-bullish:#2c5f45;
+    --p-bullish-bg:#d9e3d3;
+    --p-bullish-line:#5e9270;
+  }
+
+  *{box-sizing:border-box;}
+  html,.poster-container{margin:0;padding:0;}
+  .poster-container{
+    background:var(--p-paper-3);
+    color:var(--p-ink);
+    font-family:"Source Serif 4", Georgia, "Times New Roman", serif;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    justify-content:center;
+    padding:36px 16px 64px;
+  }
+
+  .mono{ font-family:"IBM Plex Mono", ui-monospace, Consolas, monospace; font-variant-numeric:tabular-nums; }
+  .small-caps{ font-variant:small-caps; letter-spacing:0.06em; }
+  .label{ font-family:"IBM Plex Mono", monospace; text-transform:uppercase; letter-spacing:0.11em; font-size:10.5px; color:var(--p-ink-dim); }
+
+  .poster{
+    width:100%;
+    max-width:760px;
+    background:var(--p-paper);
+    border:1px solid var(--p-rule-strong);
+    box-shadow:0 24px 60px -24px rgba(33,29,20,0.45), inset 0 0 0 5px var(--p-paper), inset 0 0 0 6px var(--p-rule);
+    position:relative;
+    padding:38px 42px 30px;
+  }
+
+  /* ===== Masthead ===== */
+  .masthead{ text-align:center; padding-bottom:16px; }
+  .masthead .kicker{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:10.5px;
+    letter-spacing:0.28em;
+    text-transform:uppercase;
+    color:var(--p-brass-bright);
+    margin-bottom:10px;
+  }
+  .masthead h1{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:700;
+    font-size:clamp(2rem, 7vw, 2.7rem);
+    letter-spacing:-0.01em;
+    margin:0 0 8px;
+    text-wrap:balance;
+    line-height:1.02;
+  }
+  .masthead .dateline{
+    font-family:"IBM Plex Mono", monospace;
+    font-size:11px;
+    letter-spacing:0.08em;
+    color:var(--p-ink-dim);
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .masthead .dateline b{ color:var(--p-ink); }
+
+  .rule-thick{ height:3px; background:var(--p-ink); margin:16px 0 4px; }
+  .rule-thin{ height:1px; background:var(--p-rule-strong); margin:4px 0 18px; }
+
+  /* ===== Importance meter ===== */
+  .importance{ display:flex; align-items:center; gap:14px; margin-bottom:20px; flex-wrap:wrap; }
+  .imp-badge{
+    font-family:"IBM Plex Mono", monospace; font-size:10px; letter-spacing:0.08em; text-transform:uppercase;
+    border:1px solid var(--p-brass); color:var(--p-brass); padding:3px 9px; font-weight:600; white-space:nowrap;
+  }
+  .imp-ticks{ display:flex; gap:2px; flex:1; min-width:120px; }
+  .imp-tick{ height:6px; flex:1; background:var(--p-ink); }
+  .imp-tick.off{ background:var(--p-rule); }
+  .imp-score{ font-family:"IBM Plex Mono", monospace; font-size:11px; color:var(--p-ink-dim); white-space:nowrap; }
+  .imp-score b{ color:var(--p-ink); }
+  .rule-mid{ border:none; border-top:1px solid var(--p-rule); margin:22px 0; }
+  .rule-double{ border:none; border-top:1px solid var(--p-ink); border-bottom:1px solid var(--p-ink); height:3px; margin:20px 0 22px; }
+
+  /* ===== Lede / verdict ===== */
+  .lede{ padding:2px 0 6px; }
+  .lede-eyebrow{ font-family:"IBM Plex Mono", monospace; font-size:10.5px; letter-spacing:0.12em; text-transform:uppercase; color:var(--p-bearish); font-weight:600; margin-bottom:8px; }
+  .lede-verdict{
+    font-family:"Fraunces", Georgia, serif;
+    font-style:italic;
+    font-weight:600;
+    font-size:clamp(1.35rem, 4.6vw, 1.75rem);
+    line-height:1.28;
+    text-wrap:balance;
+    margin:0 0 14px;
+  }
+  .lede-verdict .num{ font-style:normal; color:var(--p-bearish); }
+  .split-bar{ display:flex; height:10px; border:1px solid var(--p-ink); margin-bottom:8px; }
+  .split-bar .bull{ background:var(--p-bullish); }
+  .split-bar .bear{ background:var(--p-bearish); }
+  .split-caption{ display:flex; justify-content:space-between; font-family:"IBM Plex Mono", monospace; font-size:10.5px; color:var(--p-ink-dim); margin-bottom:16px; }
+  .lede-.poster-container{ font-size:15px; line-height:1.68; color:var(--p-ink); max-width:64ch; }
+  .lede-body b{ color:var(--p-ink); font-weight:600; }
+
+  /* ===== Section ===== */
+  .section-head{
+    display:flex; align-items:baseline; gap:10px;
+    margin:0 0 14px;
+  }
+  .section-num{ font-family:"IBM Plex Mono", monospace; font-size:11px; color:var(--p-brass-bright); font-weight:600; }
+  .section-head h2{
+    font-family:"Fraunces", Georgia, serif;
+    font-weight:600;
+    font-size:16.5px;
+    letter-spacing:0.01em;
+    margin:0;
+    text-transform:uppercase;
+  }
+
+  /* ===== Ledger table ===== */
+  .ledger{ width:100%; border-collapse:collapse; margin-bottom:6px; }
+  .ledger th{
+    text-align:left; font-family:"IBM Plex Mono", monospace; font-size:10px; letter-spacing:0.08em;
+    text-transform:uppercase; color:var(--p-ink-dim); font-weight:600;
+    border-bottom:1.5px solid var(--p-ink); padding:0 8px 7px 0;
+  }
+  .ledger td{ padding:9px 8px 9px 0; border-bottom:1px solid var(--p-rule); font-size:13.5px; vertical-align:top; }
+  .ledger tr:last-child td{ border-bottom:1px solid var(--p-ink); }
+  .ledger .num{ font-family:"IBM Plex Mono", monospace; font-weight:600; white-space:nowrap; }
+  .ledger .up{ color:var(--p-bearish); }
+  .ledger .down{ color:var(--p-bullish); }
+  .ledger .note{ color:var(--p-ink-dim); font-size:12px; line-height:1.55; }
+
+  /* ===== Callout ===== */
+  .callout{
+    border-left:3px solid var(--p-brass);
+    background:var(--p-paper-2);
+    padding:13px 16px;
+    font-size:13px;
+    line-height:1.65;
+    color:var(--p-ink);
+    margin:10px 0 20px;
+  }
+  .callout b{ color:var(--p-ink); font-weight:600; }
+  .callout.bad{ border-left-color:var(--p-bearish); }
+  .callout.bad b{ color:var(--p-bearish); }
+
+  /* ===== Scenario columns ===== */
+  .scenario-table{ width:100%; border-collapse:collapse; }
+  .scenario-table th{
+    font-family:"IBM Plex Mono", monospace; font-size:10px; letter-spacing:0.06em; text-transform:uppercase;
+    color:var(--p-ink-dim); text-align:left; border-bottom:1.5px solid var(--p-ink); padding:0 10px 7px 0;
+  }
+  .scenario-table td{ border-bottom:1px solid var(--p-rule); padding:11px 10px 11px 0; font-size:12.8px; line-height:1.55; vertical-align:top; }
+  .scenario-table tr:last-child td{ border-bottom:1px solid var(--p-ink); }
+  .scenario-table .prob{ font-family:"IBM Plex Mono", monospace; font-weight:700; font-size:16px; white-space:nowrap; }
+  .scenario-table .prob.a{ color:var(--p-bullish); }
+  .scenario-table .prob.b{ color:var(--p-brass-bright); }
+  .scenario-table .prob.c{ color:var(--p-bearish); }
+  .scenario-table .sname{ font-weight:600; margin-bottom:3px; }
+  .scenario-table .simpact{ color:var(--p-ink-dim); font-style:italic; margin-top:5px; }
+
+  /* ===== Technical readout ===== */
+  .tf-grid{ display:grid; grid-template-columns:64px 1fr; gap:2px 14px; margin-bottom:16px; }
+  .tf-tag{ font-family:"IBM Plex Mono", monospace; font-weight:700; font-size:12px; color:var(--p-ink); border:1px solid var(--p-ink); text-align:center; padding:3px 0; align-self:start; margin-top:2px; }
+  .tf-desc{ font-size:12.8px; line-height:1.6; color:var(--p-ink); border-bottom:1px dotted var(--p-rule); padding-bottom:10px; margin-bottom:2px; }
+  .tf-desc b{ color:var(--p-brass); }
+  .levels-row{ display:flex; gap:18px; flex-wrap:wrap; font-family:"IBM Plex Mono", monospace; font-size:12.5px; margin-top:6px; }
+  .levels-row .lv{ display:flex; align-items:center; gap:6px; }
+  .levels-row .sw{ width:9px; height:9px; display:inline-block; }
+  .sw.res{ background:var(--p-bearish); }
+  .sw.sup{ background:var(--p-bullish); }
+
+  /* ===== Footer ===== */
+  .footer-cols{ display:grid; grid-template-columns:1fr 1fr; gap:26px; margin-bottom:18px; }
+  .footer-cols h3{ font-family:"IBM Plex Mono", monospace; font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--p-ink-dim); margin:0 0 8px; }
+  .footer-cols ul{ margin:0; padding-left:16px; font-size:12.3px; line-height:1.65; color:var(--p-ink); }
+  .colophon{
+    display:flex; justify-content:space-between; align-items:flex-end; gap:16px; flex-wrap:wrap;
+    font-family:"IBM Plex Mono", monospace; font-size:10px; color:var(--p-ink-dim); line-height:1.6;
+  }
+  .stamp{
+    border:2px solid var(--p-bearish); color:var(--p-bearish); font-weight:700;
+    padding:5px 10px; letter-spacing:0.1em; font-size:11px; transform:rotate(-2deg);
+    white-space:nowrap;
+  }
+
+  @media (max-width:600px){
+    .poster{ padding:26px 20px 22px; }
+    .footer-cols{ grid-template-columns:1fr; }
+    .tf-grid{ grid-template-columns:52px 1fr; }
+  }
+
+  .compliance-notice{
+    max-width:880px;
+    margin:0 auto 20px;
+    padding:16px 20px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-dim);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    color:var(--text-dim);
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+  .compliance-notice strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Edukasi<span>Trader</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Beranda</a>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Privasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="max-width: 960px;">
+
+    <div class="compliance-notice">
+      <strong>Bukan ajakan bertransaksi.</strong> Konten di bawah ini adalah catatan analisis pasar pribadi yang kami bagikan sebagai referensi publik — berisi opini terhadap data makro dan level teknikal saat disusun, bukan sinyal trading resmi, rekomendasi personal, atau ajakan untuk membuka posisi tertentu. Pasar bisa bergerak sangat berbeda dari skenario yang dibahas. Selalu lakukan riset dan pertimbangan risiko sendiri.
+    </div>
+
+    <div class="ad-slot">
+      <script>
+        atOptions = {
+          'key' : '95130429aa13b28790da6b9e46158bfc',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/95130429aa13b28790da6b9e46158bfc/invoke.js"></script>
+    </div>
+
+    <div class="poster-container">
+
+<div class="poster">
+
+  <div class="masthead">
+    <div class="kicker">Gold Market Bulletin &middot; Edisi Pra-Rilis</div>
+    <h1>XAUUSD</h1>
+    <div class="dateline">
+      <span>1 September 2026</span>
+      <span>&middot;</span>
+      <span>21:00 WIB</span>
+      <span>&middot;</span>
+      <span>Tier <b>2</b></span>
+      <span>&middot;</span>
+      <span style="color:var(--p-brass-bright);font-weight:600;">⏳ PENDING</span>
+    </div>
+  </div>
+  <div class="rule-thick"></div>
+  <div class="rule-thin"></div>
+
+  <div class="importance">
+    <span class="imp-badge">Sedang&ndash;Tinggi</span>
+    <div class="imp-ticks" aria-hidden="true">
+      <div class="imp-tick"></div><div class="imp-tick"></div><div class="imp-tick"></div><div class="imp-tick"></div><div class="imp-tick"></div><div class="imp-tick"></div>
+      <div class="imp-tick off"></div><div class="imp-tick off"></div><div class="imp-tick off"></div><div class="imp-tick off"></div>
+    </div>
+    <span class="imp-score">Market Importance <b class="mono">6/10</b> &middot; Estimasi 15&ndash;40 poin</span>
+  </div>
+
+  <div class="lede">
+    <div class="lede-eyebrow">ISM Manufacturing PMI + JOLTS Job Openings — Rilis Bersamaan</div>
+    <p class="lede-verdict">Momentum masih condong bearish pasca Jackson Hole — Market Bias Engine membaca <span class="num">37% Bullish / 63% Bearish</span> menjelang rilis besok.</p>
+    <div class="split-bar"><div class="bull" style="flex:37;"></div><div class="bear" style="flex:63;"></div></div>
+    <div class="split-caption"><span><span class="sw sup" style="display:inline-block;width:8px;height:8px;margin-right:5px;"></span>Mendukung Gold &middot; 37%</span><span>Menahan Gold &middot; 63%<span class="sw res" style="display:inline-block;width:8px;height:8px;margin-left:5px;"></span></span></div>
+    <p class="lede-body">Dua data rilis di jam yang sama — data besar pertama sejak pidato hawkish Ketua Fed Warsh di Jackson Hole (28 Agustus) menjatuhkan gold dari ~$4.600 ke $4.468,93. Rilis ini jadi cross-check pertama: apakah pelemahan ekonomi cukup kuat menahan laju hawkish, atau justru menambah amunisi ke arah hike September.</p>
+  </div>
+
+  <hr class="rule-mid">
+
+  <div class="callout bad">
+    <b>Konteks pasca Jackson Hole (28 Agustus) —</b> Pidato Warsh: "inflasi masih terlalu tinggi", odds hike September naik ke <b>~50%</b> (dari ~38%). NFP Annual Revision Prelim -79K sebenarnya dovish-miss vs konsensus ekonom (+183K), tapi kalah pengaruh dari pidato Warsh. Gold ambruk ke <b>$4.468,93</b> (-2,34% dalam 24 jam) — trend day bersih, bukan whipsaw. Struktur D1/H4 jebol invalidasi $4.594,78 untuk pertama kalinya sejak rally dimulai.
+  </div>
+
+  <div class="callout">
+    <b>Rantai berita sebelumnya —</b> Chain 13+ data makro (NFP, ADP, JOLTS, CPI/PPI, Retail Sales, Michigan Sentiment, dst) dominan dovish sejak pertengahan Agustus, mendorong rally gold +7% dalam 10 hari ke level tertinggi $4.696,76 (25 Agt). Retakan pertama muncul di <b>PCE Cluster (26 Agustus)</b> — Core PCE sesuai forecast, tapi Personal Income/Spending/Durable Goods sama-sama mengalahkan forecast 2x lipat+, jadi kontra-sinyal hawkish pertama sejak NFP (satu-satunya prediksi SALAH sistem sejauh ini, 13/14 benar). Jackson Hole memperkuat kontra ini jadi tren 2 event beruntun. ISM+JOLTS besok jadi penentu: apakah chain dovish lama masih relevan, atau tren hawkish jangka pendek yang menang.
+  </div>
+
+  <div class="section-head"><span class="section-num">01</span><h2>Forecast vs Previous</h2></div>
+  <table class="ledger">
+    <tr><th>Data</th><th>Previous</th><th>Forecast</th><th>Catatan</th></tr>
+    <tr>
+      <td><b>ISM Manufacturing PMI</b><br><span class="note">Data Agustus</span></td>
+      <td class="num">55,6</td>
+      <td class="num down">55,3</td>
+      <td class="note">Turun tipis dari tertinggi 4 tahun. Sejalan proxy S&amp;P Global PMI (53,9→53,2).</td>
+    </tr>
+    <tr>
+      <td><b>JOLTS Job Openings</b><br><span class="note">Data Juli</span></td>
+      <td class="num">7,359jt</td>
+      <td class="num up">7,39jt</td>
+      <td class="note">Ekspektasi rebound kecil — BUKAN lanjut tren turun Mei→Juni (7,6jt→7,359jt).</td>
+    </tr>
+  </table>
+
+  <hr class="rule-mid">
+
+  <div class="section-head"><span class="section-num">02</span><h2>15 Data Makro &mdash; Cross-Check Wajib</h2></div>
+  <table class="ledger">
+    <tr><th>Data</th><th>Previous</th><th>Forecast</th><th>Actual</th><th>Sinyal</th></tr>
+    <tr><td>FOMC</td><td class="note">Hold 3,50&ndash;3,75%</td><td class="note">15&ndash;16 Sept</td><td class="note">Jackson Hole (28 Agt): Warsh hawkish, odds hike ~50%</td><td class="note">Hawkish</td></tr>
+    <tr><td>CPI</td><td class="num">3,5%</td><td class="num">3,4%</td><td class="num">3,4%</td><td class="note">Netral</td></tr>
+    <tr><td>Core CPI</td><td class="num">2,6%</td><td class="num">2,5%</td><td class="num">2,5%</td><td class="note">Netral</td></tr>
+    <tr><td>PCE (headline)</td><td class="note">&mdash;</td><td class="note">&mdash;</td><td class="note">Tak terpisah dari Core PCE</td><td class="note">&mdash;</td></tr>
+    <tr><td>Core PCE</td><td class="num">0,1%</td><td class="num">0,2%</td><td class="num">0,2%</td><td class="note">Netral*</td></tr>
+    <tr><td>NFP</td><td class="num">20K</td><td class="num">80K</td><td class="num down">-23K</td><td class="note">Sangat dovish</td></tr>
+    <tr><td>ADP</td><td class="note">&mdash;</td><td class="num">70K</td><td class="num down">44K</td><td class="note">Dovish</td></tr>
+    <tr><td>JOLTS</td><td class="num">7,6jt</td><td class="note">&mdash;</td><td class="num down">7,359jt</td><td class="note">Dovish</td></tr>
+    <tr><td>ISM Manufacturing</td><td class="num">53,3</td><td class="num">54,0</td><td class="num up">55,6</td><td class="note">Hawkish</td></tr>
+    <tr><td>ISM Services</td><td class="num">54,0</td><td class="num">54,5</td><td class="num down">54,1</td><td class="note">Dovish ringan</td></tr>
+    <tr><td>PPI</td><td class="num">5,5%</td><td class="num">&le;5,1%</td><td class="num down">5,0%</td><td class="note">Dovish</td></tr>
+    <tr><td>Retail Sales</td><td class="num">0,2%</td><td class="num">0,1%</td><td class="num down">-0,6%</td><td class="note">Sangat dovish</td></tr>
+    <tr><td>GDP (Q2, 2nd Est)</td><td class="num">2,1%</td><td class="num">1,5%</td><td class="num">1,5%</td><td class="note">Netral, melambat</td></tr>
+    <tr><td>Treasury Yield</td><td class="note">&mdash;</td><td class="note">&mdash;</td><td class="note">30Y 5,31% (17 Agt)</td><td class="note">Hawkish</td></tr>
+    <tr><td>DXY</td><td class="note">&mdash;</td><td class="note">&mdash;</td><td class="note">98,82 (pra-Jackson Hole)</td><td class="note">Dovish, mungkin berbalik</td></tr>
+  </table>
+  <p style="font-size:11.5px;color:var(--p-ink-dim);margin:8px 0 0;">*Core PCE sendiri sesuai forecast, tapi data lain di rilis yang sama (Income/Spending/Durable Goods) hawkish &mdash; lihat <b style="color:var(--p-ink);">PCECLUSTER-2026-08-26</b>. <b>Sintesis</b>: 9 dovish/netral-dovish vs 3 hawkish (ISM Manufacturing, Treasury Yield, FOMC-tone) vs 2 belum terukur terpisah &mdash; chain lama masih dovish, tapi 2 kontra ini sejalan dengan bias 63% Bearish di bawah.</p>
+
+  <hr class="rule-mid">
+
+  <div class="section-head"><span class="section-num">03</span><h2>Probabilitas &mdash; Market Bias Engine</h2></div>
+  <table class="ledger">
+    <tr><th>Faktor</th><th>Bobot</th><th>Skor Dovish-Lean</th><th>Kontribusi</th></tr>
+    <tr>
+      <td>Kebijakan Fed (nada Warsh, aktual)</td>
+      <td class="num">20%</td>
+      <td class="note">30% <span style="color:var(--p-ink-faint);">(turun dari 42% &mdash; pidato aktual terkonfirmasi hawkish, odds hike ~50%)</span></td>
+      <td class="num">6,00</td>
+    </tr>
+    <tr>
+      <td>Inflasi</td>
+      <td class="num">20%</td>
+      <td class="note">35% <span style="color:var(--p-ink-faint);">(tidak berubah, belum ada data baru)</span></td>
+      <td class="num">7,00</td>
+    </tr>
+    <tr>
+      <td>Tenaga Kerja (+NFP Revision, +JOLTS forecast)</td>
+      <td class="num">15%</td>
+      <td class="note">60% <span style="color:var(--p-ink-faint);">(turun dari 80% &mdash; revisi NFP dovish-miss vs konsensus, tapi forecast JOLTS ekspektasi rebound)</span></td>
+      <td class="num">9,00</td>
+    </tr>
+    <tr>
+      <td>Pertumbuhan &amp; Konsumsi (ISM forecast 55,3)</td>
+      <td class="num">15%</td>
+      <td class="note">20% <span style="color:var(--p-ink-faint);">(tidak berubah &mdash; masih dekat tertinggi 4 tahun)</span></td>
+      <td class="num">3,00</td>
+    </tr>
+    <tr>
+      <td>Treasury Yield</td>
+      <td class="num">15%</td>
+      <td class="note">45% <span style="color:var(--p-ink-faint);">(turun dari 55% &mdash; yield kemungkinan naik pasca pidato hawkish)</span></td>
+      <td class="num">6,75</td>
+    </tr>
+    <tr>
+      <td>DXY</td>
+      <td class="num">10%</td>
+      <td class="note">40% <span style="color:var(--p-ink-faint);">(turun dari 68% &mdash; dolar kemungkinan menguat pasca gold ambruk)</span></td>
+      <td class="num">4,00</td>
+    </tr>
+    <tr>
+      <td>Struktur Teknikal D1/H4</td>
+      <td class="num">5%</td>
+      <td class="note">20% <span style="color:var(--p-ink-faint);">(turun tajam dari 60% &mdash; CHoCH bearish terkonfirmasi penuh)</span></td>
+      <td class="num">1,00</td>
+    </tr>
+    <tr>
+      <td><b>Total</b></td>
+      <td class="num"><b>100%</b></td>
+      <td></td>
+      <td class="num"><b>36,75%</b></td>
+    </tr>
+  </table>
+  <p style="font-size:12px;color:var(--p-ink-dim);margin:-2px 0 0;">Hasil: <b style="color:var(--p-ink);">37% Bullish XAUUSD / 63% Bearish</b> &mdash; lebih bearish dari estimasi kasar sebelumnya (40%/60%), terutama karena struktur teknikal yang sudah flip total dan nada Fed yang sekarang pakai data aktual pidato, bukan estimasi pra-pidato.</p>
+
+  <hr class="rule-mid">
+
+  <div class="section-head"><span class="section-num">04</span><h2>Tiga Skenario</h2></div>
+  <table class="scenario-table">
+    <tr><th style="width:56px;">Peluang</th><th>Kondisi</th><th>Dampak</th></tr>
+    <tr>
+      <td class="prob a">30%</td>
+      <td><div class="sname">Bullish — Miss di Bawah Forecast</div>ISM &lt;55,3 dan/atau JOLTS &lt;7,39jt (gagal capai rebound yang diharapkan pasar).</td>
+      <td>Rebound dari oversold, target awal <b>$4.520&ndash;4.540</b>.</td>
+    </tr>
+    <tr>
+      <td class="prob b">35%</td>
+      <td><div class="sname">Netral — Sesuai Forecast</div>ISM &asymp;55,3 dan JOLTS &asymp;7,39jt, tanpa kejutan berarti.</td>
+      <td>Konsolidasi <b>$4.440&ndash;4.500</b>, volatilitas rendah-sedang.</td>
+    </tr>
+    <tr>
+      <td class="prob c">35%</td>
+      <td><div class="sname">Bearish — Beat di Atas Forecast</div>ISM &gt;55,3 dan/atau JOLTS &gt;7,39jt (ekonomi lebih kuat dari ekspektasi).</td>
+      <td>Lanjut turun ke <b>$4.400&ndash;4.420</b>.</td>
+    </tr>
+  </table>
+
+  <hr class="rule-mid">
+
+  <div class="section-head"><span class="section-num">05</span><h2>Baca Teknikal Manual &mdash; 6 Timeframe</h2></div>
+  <p style="font-size:12px;color:var(--p-ink-dim);margin:-8px 0 14px;">Ditarik langsung dari candle live (harga saat ditulis: <b class="mono" style="color:var(--p-ink);">$4.430,70</b>, beberapa jam sebelum rilis) &mdash; bukan output indikator otomatis.</p>
+  <div class="tf-grid">
+    <div class="tf-tag">D1</div>
+    <div class="tf-desc"><b>CHoCH bearish terkonfirmasi</b>, tapi mulai coiling. LH $4.673,73 (26 Agt) &rarr; breakdown Jackson Hole close $4.454,37 &rarr; low $4.396,52 (31 Agt) &rarr; hari ini sempat reclaim ke $4.461,49 lalu ditolak lagi ke $4.430,53.</div>
+
+    <div class="tf-tag">H4</div>
+    <div class="tf-desc"><b>Segitiga menyempit (coiling).</b> 4 kali percobaan tembus resistance $4.455&ndash;4.472 ($4.472,09 / $4.464,08 / $4.455,90 / $4.461,49) &mdash; semua ditolak. Tapi low-nya naik bertahap ($4.396&rarr;$4.415&rarr;$4.416&rarr;$4.424&rarr;$4.427) &mdash; resistance flat + higher lows, klasik pola menunggu katalis.</div>
+
+    <div class="tf-tag">H1</div>
+    <div class="tf-desc">Konfirmasi pola sama, range makin sempit beberapa jam terakhir ($4.424&ndash;4.456).</div>
+
+    <div class="tf-tag">M15</div>
+    <div class="tf-desc">Sempat sweep ke $4.424,02 lalu mental cepat ke $4.443,65 &mdash; stop hunt dua arah, ciri khas jam-jam sebelum rilis besar.</div>
+
+    <div class="tf-tag">M5</div>
+    <div class="tf-desc">Range ketat, mengikuti pola M15, tanpa BOS/CHoCH baru.</div>
+
+    <div class="tf-tag">M1</div>
+    <div class="tf-desc" style="border-bottom:none;padding-bottom:0;">Noise murni di sekitar $4.430. Semua TF kompak: pasar coiling, menunggu displacement dari rilis malam ini.</div>
+  </div>
+
+  <div class="callout">
+    <b>Kesimpulan struktur:</b> segitiga menyempit antara resistance keras $4.455&ndash;4.472 (teruji 4x) dan support naik bertahap ($4.396&rarr;$4.427). Begitu ISM+JOLTS rilis malam ini, kemungkinan besar salah satu sisi jebol dengan displacement jelas &mdash; bukan tes tipis seperti beberapa jam terakhir.
+  </div>
+  <div class="levels-row">
+    <span class="lv"><span class="sw res"></span>Resistance keras $4.455&ndash;4.472 (teruji 4x, belum body-close tembus)</span>
+    <span class="lv"><span class="sw sup"></span>Support naik bertahap $4.396&rarr;$4.424&ndash;4.427</span>
+  </div>
+  <p style="font-size:12px;color:var(--p-ink-dim);margin-top:10px;">Belum ada Order Block resmi tervalidasi (perlu BOS+FVG) di kedua zona &mdash; baru jadi kandidat kalau struktur bertahan pasca rilis.</p>
+
+  <hr class="rule-double">
+
+  <div class="footer-cols">
+    <div>
+      <h3>Trading Plan</h3>
+      <ul>
+        <li>Jangan entry 15&ndash;30 menit pertama &mdash; dua data bareng jam sama, risiko whipsaw tinggi</li>
+        <li>Tunggu 1&ndash;2 jam, cari konfirmasi BOS+retest M15/M5</li>
+        <li>Prioritas baca: ISM Manufacturing di atas JOLTS kalau sinyal bertentangan</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Yang Perlu Diawasi</h3>
+      <ul>
+        <li>Apakah JOLTS gagal capai forecast rebound 7,39jt (sinyal dovish tersembunyi)</li>
+        <li>Apakah $4.455&ndash;4.464 tertembus dengan displacement (CHoCH bullish H1)</li>
+        <li>Reaksi lanjutan dari sell-off Jackson Hole &mdash; $4.396 support atau lanjut jebol</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="colophon">
+    <span>Confidence <b class="mono" style="color:var(--p-ink);">5.0/10</b> &middot; Forecast resmi terkonfirmasi widget, level teknikal live 31 Agustus &middot; ISMJOLTS-2026-09-01 &middot; News Database</span>
+    <span class="stamp">PRA-RILIS</span>
+  </div>
+  <p style="font-size:10.5px;color:var(--p-ink-faint);margin-top:14px;border-top:1px solid var(--p-rule);padding-top:12px;">Ini alat bantu mikir, bukan nasihat keuangan resmi &mdash; keputusan tetap di tangan kamu.</p>
+
+</div>
+
+    </div>
+
+    <div class="ad-slot">
+      <script async="async" data-cfasync="false" src="https://pl30756138.effectivecpmnetwork.com/4a3f1dc3807941e53dfe4463a21a0e4e/invoke.js"></script>
+      <div id="container-4a3f1dc3807941e53dfe4463a21a0e4e"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Kebijakan Privasi</a>
+      <a href="https://www.effectivecpmnetwork.com/setnp40u3t?key=fe8199ed8dd693be00f1924c13a1b7ec" target="_blank" rel="noopener sponsored">Rekomendasi</a>
+    </div>
+    <div>&copy; 2026 EdukasiTrader.</div>
+  </div>
+</footer>
+
+</body>
+</html>
