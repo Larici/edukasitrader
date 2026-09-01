@@ -265,6 +265,7 @@ if (-not $SkipHomepage) {
   if (-not $sectionMatch.Success) {
     Write-Warning "Section #riset-harian tidak ditemukan di index.html — card tidak ditambahkan otomatis. Tambahkan manual."
   } else {
+    # Card baru disisipkan di ATAS (paling baru tampil paling awal).
     $newCard = @"
 
 
@@ -275,7 +276,7 @@ if (-not $SkipHomepage) {
           <a class="read-more" href="market-analysis/$Slug.html">Baca selengkapnya →</a>
         </article>
 "@
-    $updatedInner = $sectionMatch.Groups[2].Value + $newCard
+    $updatedInner = $newCard + $sectionMatch.Groups[2].Value
     $indexContent = $indexContent.Remove($sectionMatch.Index, $sectionMatch.Length).Insert(
       $sectionMatch.Index,
       $sectionMatch.Groups[1].Value + $updatedInner + $sectionMatch.Groups[3].Value

@@ -15,8 +15,9 @@ perlu adaptasi manual satu-satu.
    "Bukan ajakan bertransaksi", dan kode iklan Adsterra standar
    (Banner 300x250 di atas, Native Banner di bawah).
 4. Menyimpan hasilnya ke `market-analysis/<slug>.html`.
-5. Menambahkan card baru ke section "Riset & Analisis Harian" di
-   `index.html` (termasuk update angka "(N catatan)"), dan entry baru ke
+5. Menambahkan card baru di posisi **paling atas** section "Riset &
+   Analisis Harian" di `index.html` (jadi urutan tampilan selalu terbaru
+   di atas), termasuk update angka "(N catatan)", dan entry baru ke
    `sitemap.xml` — kecuali dipanggil dengan `-SkipHomepage`.
 
 ## Cara Pakai
