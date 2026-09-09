@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XAUUSD Calibration Certificate  —  PPI 10 September 2026  —  EdukasiTrader</title>
+<meta name="description" content="Emas sempat anjlok ke $4.341 — cuma 18 poin dari target teknikal kami — dipicu serangan Houthi ke fasilitas minyak Saudi, sebelum rebound tajam ke $4.401. Market Bias Engine kami baca 70% Bearish menjelang PPI Agustus 10 September. Cek breakdown lengkap data makro, tiga skenario harga, dan level kunci sebelum rilis.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  :root{
+    --p-ground:#EFF1EE;
+    --p-panel:#FFFFFF;
+    --p-panel-2:#F7F8F6;
+    --p-ink:#15181B;
+    --p-ink-2:#3D464C;
+    --p-muted:#6E7A81;
+    --p-rule:#D4D9D4;
+    --p-rule-strong:#A8B0AC;
+    --p-accent:#1F5C8B;
+    --p-accent-soft:#E4EDF4;
+    --p-hot:#A8281E;
+    --p-hot-soft:#F7E5E3;
+    --p-cool:#1B6640;
+    --p-cool-soft:#E2F0E8;
+    --p-warn:#9A5B0C;
+    --p-warn-soft:#F7ECDD;
+    --p-shadow:0 1px 0 rgba(21,24,27,.04), 0 2px 10px rgba(21,24,27,.05);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --p-ground:#111417;
+      --p-panel:#181C20;
+      --p-panel-2:#1E2328;
+      --p-ink:#E8EDEA;
+      --p-ink-2:#B9C3C6;
+      --p-muted:#8B979C;
+      --p-rule:#2C3339;
+      --p-rule-strong:#414A51;
+      --p-accent:#6FAAD6;
+      --p-accent-soft:#1B2A36;
+      --p-hot:#E4796D;
+      --p-hot-soft:#331D1A;
+      --p-cool:#63BC8C;
+      --p-cool-soft:#152B20;
+      --p-warn:#D69B52;
+      --p-warn-soft:#2E2417;
+      --p-shadow:0 1px 0 rgba(0,0,0,.3), 0 2px 12px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"]{
+    --p-ground:#111417;
+    --p-panel:#181C20;
+    --p-panel-2:#1E2328;
+    --p-ink:#E8EDEA;
+    --p-ink-2:#B9C3C6;
+    --p-muted:#8B979C;
+    --p-rule:#2C3339;
+    --p-rule-strong:#414A51;
+    --p-accent:#6FAAD6;
+    --p-accent-soft:#1B2A36;
+    --p-hot:#E4796D;
+    --p-hot-soft:#331D1A;
+    --p-cool:#63BC8C;
+    --p-cool-soft:#152B20;
+    --p-warn:#D69B52;
+    --p-warn-soft:#2E2417;
+    --p-shadow:0 1px 0 rgba(0,0,0,.3), 0 2px 12px rgba(0,0,0,.35);
+  }
+
+  *{box-sizing:border-box}
+  .poster-container{
+    background:var(--p-ground);
+    color:var(--p-ink);
+    font-family:"Barlow",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:15px;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  .sheet{
+    max-width:1040px;
+    margin:0 auto;
+    padding:28px 20px 64px;
+    display:flex;
+    flex-direction:column;
+    gap:22px;
+  }
+  .mono{font-family:"Space Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+  .num{font-variant-numeric:tabular-nums}
+
+  /* ---- masthead: calibration certificate header ---- */
+  .masthead{
+    background:var(--p-panel);
+    border:1px solid var(--p-rule-strong);
+    box-shadow:var(--p-shadow);
+  }
+  .masthead-top{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:flex-end;
+    justify-content:space-between;
+    gap:16px;
+    padding:20px 24px 16px;
+    border-bottom:1px solid var(--p-rule);
+  }
+  .doc-label{
+    font-family:"Space Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--p-muted);
+    margin-bottom:6px;
+  }
+  h1{
+    font-family:"Saira Condensed",sans-serif;
+    font-weight:700;
+    font-size:clamp(30px,5.4vw,46px);
+    line-height:1.02;
+    letter-spacing:.005em;
+    margin:0;
+    text-wrap:balance;
+    text-transform:uppercase;
+  }
+  .subject{
+    font-family:"Saira Condensed",sans-serif;
+    font-weight:500;
+    font-size:clamp(15px,2.4vw,19px);
+    letter-spacing:.03em;
+    color:var(--p-accent);
+    text-transform:uppercase;
+    margin-top:4px;
+  }
+  .stamp{
+    border:1.5px solid var(--p-hot);
+    color:var(--p-hot);
+    background:var(--p-hot-soft);
+    font-family:"Saira Condensed",sans-serif;
+    font-weight:700;
+    font-size:13px;
+    letter-spacing:.14em;
+    text-transform:uppercase;
+    padding:7px 13px;
+    transform:rotate(-1.5deg);
+    white-space:nowrap;
+  }
+  .specline{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(148px,1fr));
+  }
+  .spec{
+    padding:11px 24px 13px;
+    border-right:1px solid var(--p-rule);
+  }
+  .spec:last-child{border-right:none}
+  .spec dt{
+    font-family:"Space Mono",monospace;
+    font-size:9.5px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--p-muted);
+  }
+  .spec dd{
+    margin:2px 0 0;
+    font-family:"Saira Condensed",sans-serif;
+    font-weight:600;
+    font-size:19px;
+    letter-spacing:.01em;
+    font-variant-numeric:tabular-nums;
+  }
+
+  /* ---- gauge ---- */
+  .reading{
+    display:grid;
+    grid-template-columns:minmax(240px,300px) 1fr;
+    gap:0;
+    background:var(--p-panel);
+    border:1px solid var(--p-rule-strong);
+    box-shadow:var(--p-shadow);
+  }
+  @media (max-width:720px){ .reading{grid-template-columns:1fr} }
+  .gauge-cell{
+    padding:22px 20px 18px;
+    border-right:1px solid var(--p-rule);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:4px;
+    background:var(--p-panel-2);
+  }
+  @media (max-width:720px){ .gauge-cell{border-right:none;border-bottom:1px solid var(--p-rule)} }
+  .gauge-cap{
+    font-family:"Space Mono",monospace;
+    font-size:9.5px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--p-muted);
+    text-align:center;
+  }
+  .gauge-val{
+    font-family:"Saira Condensed",sans-serif;
+    font-weight:700;
+    font-size:40px;
+    line-height:1;
+    color:var(--p-hot);
+    font-variant-numeric:tabular-nums;
+  }
+  .gauge-val small{font-size:16px;font-weight:600;letter-spacing:.06em}
+  .pillars{padding:20px 22px 22px}
+  .pillars h2, .card h2{
+    font-family:"Saira Condensed",sans-serif;
+    font-weight:600;
+    font-size:13px;
+    letter-spacing:.15em;
+    text-transform:uppercase;
+    color:var(--p-muted);
+    margin:0 0 12px;
+    padding-bottom:7px;
+    border-bottom:1px solid var(--p-rule);
+  }
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:6px 8px 6px 0;border-bottom:1px solid var(--p-rule)}
+  th{
+    font-family:"Space Mono",monospace;
+    font-size:9.5px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    color:var(--p-muted);
+    font-weight:400;
+    padding-bottom:7px;
+  }
+  td.n,th.n{text-align:right;padding-right:0;font-variant-numeric:tabular-nums}
+  tr:last-child td{border-bottom:none}
+  .bar{
+    display:block;
+    height:5px;
+    background:var(--p-rule);
+    position:relative;
+    min-width:54px;
+  }
+  .bar i{display:block;height:100%;background:var(--p-accent)}
+  .total-row td{
+    border-top:2px solid var(--p-rule-strong);
+    border-bottom:none;
+    padding-top:9px;
+    font-weight:600;
+    font-family:"Saira Condensed",sans-serif;
+    font-size:15px;
+    letter-spacing:.03em;
+  }
+
+  /* ---- generic card ---- */
+  .card{
+    background:var(--p-panel);
+    border:1px solid var(--p-rule-strong);
+    box-shadow:var(--p-shadow);
+    padding:20px 22px 22px;
+  }
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+  @media (max-width:800px){ .grid-2{grid-template-columns:1fr} }
+  .sec-no{
+    font-family:"Space Mono",monospace;
+    font-size:9.5px;
+    letter-spacing:.14em;
+    color:var(--p-accent);
+    margin-right:9px;
+  }
+  .scroll{overflow-x:auto}
+  .scroll table{min-width:520px}
+
+  .tag{
+    display:inline-block;
+    font-family:"Space Mono",monospace;
+    font-size:9.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    padding:2px 6px;
+    border:1px solid currentColor;
+    white-space:nowrap;
+  }
+  .t-hot{color:var(--p-hot);background:var(--p-hot-soft)}
+  .t-cool{color:var(--p-cool);background:var(--p-cool-soft)}
+  .t-flat{color:var(--p-muted);background:var(--p-panel-2)}
+  .t-warn{color:var(--p-warn);background:var(--p-warn-soft)}
+
+  /* ---- scenarios ---- */
+  .scen{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--p-rule-strong)}
+  @media (max-width:800px){ .scen{grid-template-columns:1fr} }
+  .scen>div{padding:16px 17px 18px;border-right:1px solid var(--p-rule);background:var(--p-panel)}
+  .scen>div:last-child{border-right:none}
+  @media (max-width:800px){
+    .scen>div{border-right:none;border-bottom:1px solid var(--p-rule)}
+    .scen>div:last-child{border-bottom:none}
+  }
+  .scen-hd{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px}
+  .scen-name{
+    font-family:"Saira Condensed",sans-serif;
+    font-weight:700;
+    font-size:17px;
+    letter-spacing:.05em;
+    text-transform:uppercase;
+  }
+  .scen-p{
+    font-family:"Saira Condensed",sans-serif;
+    font-weight:700;
+    font-size:26px;
+    font-variant-numeric:tabular-nums;
+    line-height:1;
+  }
+  .scen p{margin:0 0 8px;font-size:13.5px;color:var(--p-ink-2)}
+  .scen .lv{
+    font-family:"Space Mono",monospace;
+    font-size:11.5px;
+    color:var(--p-ink);
+    border-top:1px dashed var(--p-rule);
+    padding-top:8px;
+    margin-top:2px;
+  }
+
+  ul{margin:0;padding-left:17px}
+  li{margin-bottom:7px;color:var(--p-ink-2)}
+  li strong{color:var(--p-ink)}
+  p{margin:0 0 11px}
+  .lede{font-size:15.5px;color:var(--p-ink-2)}
+
+  .gate{
+    border:1px solid var(--p-warn);
+    background:var(--p-warn-soft);
+    padding:15px 18px 16px;
+  }
+  .gate .score{
+    font-family:"Saira Condensed",sans-serif;
+    font-weight:700;
+    font-size:30px;
+    color:var(--p-warn);
+    font-variant-numeric:tabular-nums;
+    line-height:1;
+  }
+  .lvl-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:1px;
+    background:var(--p-rule);
+    border:1px solid var(--p-rule);
+  }
+  .lvl{background:var(--p-panel);padding:10px 12px 11px}
+  .lvl b{
+    display:block;
+    font-family:"Space Mono",monospace;
+    font-size:16px;
+    font-variant-numeric:tabular-nums;
+    letter-spacing:-.01em;
+  }
+  .lvl span{
+    font-family:"Space Mono",monospace;
+    font-size:9.5px;
+    letter-spacing:.1em;
+    text-transform:uppercase;
+    color:var(--p-muted);
+  }
+
+  .note{
+    border-left:3px solid var(--p-accent);
+    background:var(--p-accent-soft);
+    padding:12px 15px 13px;
+    font-size:13.5px;
+    color:var(--p-ink-2);
+  }
+  .note b{color:var(--p-ink)}
+
+  footer{
+    border-top:1px solid var(--p-rule-strong);
+    padding-top:14px;
+    font-size:12px;
+    color:var(--p-muted);
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    justify-content:space-between;
+  }
+  .disc{
+    font-family:"Space Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.06em;
+    line-height:1.7;
+    max-width:62ch;
+  }
+
+  .compliance-notice{
+    max-width:880px;
+    margin:0 auto 20px;
+    padding:16px 20px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-dim);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    color:var(--text-dim);
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+  .compliance-notice strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Edukasi<span>Trader</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Beranda</a>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Privasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="max-width: 960px;">
+
+    <div class="compliance-notice">
+      <strong>Bukan ajakan bertransaksi.</strong> Konten di bawah ini adalah catatan analisis pasar pribadi yang kami bagikan sebagai referensi publik  —  berisi opini terhadap data makro dan level teknikal saat disusun, bukan sinyal trading resmi, rekomendasi personal, atau ajakan untuk membuka posisi tertentu. Pasar bisa bergerak sangat berbeda dari skenario yang dibahas. Selalu lakukan riset dan pertimbangan risiko sendiri.
+    </div>
+
+    <div class="ad-slot">
+      <script>
+        atOptions = {
+          'key' : '95130429aa13b28790da6b9e46158bfc',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/95130429aa13b28790da6b9e46158bfc/invoke.js"></script>
+    </div>
+
+    <div class="poster-container">
+
+<div class="sheet">
+
+  <!-- ============ MASTHEAD ============ -->
+  <header class="masthead">
+    <div class="masthead-top">
+      <div>
+        <div class="doc-label">Lembar Kalibrasi Bias &middot; No. PPICLAIMS-2026-09-10</div>
+        <h1>Producer Pressure Reading</h1>
+        <div class="subject">PPI Agustus + Jobless Claims &middot; XAUUSD</div>
+      </div>
+      <div class="stamp">Pending &middot; H-1</div>
+    </div>
+    <dl class="specline">
+      <div class="spec"><dt>Rilis</dt><dd>Kam 10 Sep</dd></div>
+      <div class="spec"><dt>Waktu</dt><dd class="num">19:30 WIB</dd></div>
+      <div class="spec"><dt>Tier</dt><dd>2 &middot; &#9733;7/10</dd></div>
+      <div class="spec"><dt>Harga Terkini</dt><dd class="num">$4.401,96</dd></div>
+      <div class="spec"><dt>Confidence</dt><dd class="num">5/10</dd></div>
+    </dl>
+  </header>
+
+  <!-- ============ 1. GAUGE + PILLARS ============ -->
+  <section class="reading">
+    <div class="gauge-cell">
+      <div class="gauge-cap">Pembobotan Bias Pasar</div>
+      <svg viewBox="0 0 200 118" width="100%" style="max-width:230px" role="img" aria-label="Meter bias pasar menunjukkan 70 persen bearish, mendominasi 30 persen bullish">
+        <path d="M20 105 A 80 80 0 0 1 53 40.3" fill="none" stroke="var(--p-cool)" stroke-width="13" stroke-linecap="butt"/>
+        <path d="M53 40.3 A 80 80 0 0 1 180 105" fill="none" stroke="var(--p-hot)" stroke-width="13" stroke-linecap="butt"/>
+        <g class="mono" fill="var(--p-muted)" font-size="9" letter-spacing="1">
+          <text x="16" y="117">0</text>
+          <text x="93" y="17">50</text>
+          <text x="172" y="117">100</text>
+        </g>
+        <line x1="100" y1="105" x2="61.8" y2="52.4" stroke="var(--p-ink)" stroke-width="3.5" stroke-linecap="round"/>
+        <circle cx="100" cy="105" r="6" fill="var(--p-panel)" stroke="var(--p-ink)" stroke-width="2.5"/>
+      </svg>
+      <div class="gauge-val">70<small>% BEARISH</small></div>
+      <div class="gauge-cap"><span style="color:var(--p-cool)">30% Bullish tersisa</span> &middot; pembacaan paling bearish sejauh ini</div>
+    </div>
+
+    <div class="pillars">
+      <h2><span class="sec-no">&sect;06</span>Tujuh Pilar &mdash; Dibangun Ulang, Bukan Disalin</h2>
+      <table>
+        <thead>
+          <tr><th>Pilar</th><th class="n">Bobot</th><th class="n">Sebelum</th><th class="n">Sekarang</th><th style="width:70px">&nbsp;</th><th class="n">Kontrib.</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Kebijakan Fed</td><td class="n">20%</td><td class="n">40%</td><td class="n">32%</td><td><span class="bar"><i style="width:32%"></i></span></td><td class="n">6,40</td></tr>
+          <tr><td>Inflasi</td><td class="n">20%</td><td class="n">30%</td><td class="n">25%</td><td><span class="bar"><i style="width:25%"></i></span></td><td class="n">5,00</td></tr>
+          <tr><td>Tenaga Kerja</td><td class="n">15%</td><td class="n">66%</td><td class="n"><b>35%</b></td><td><span class="bar"><i style="width:35%"></i></span></td><td class="n">5,25</td></tr>
+          <tr><td>Pertumbuhan &amp; Konsumsi</td><td class="n">15%</td><td class="n">12%</td><td class="n">16%</td><td><span class="bar"><i style="width:16%"></i></span></td><td class="n">2,40</td></tr>
+          <tr><td>Treasury Yield</td><td class="n">15%</td><td class="n">38%</td><td class="n">35%</td><td><span class="bar"><i style="width:35%"></i></span></td><td class="n">5,25</td></tr>
+          <tr><td>DXY</td><td class="n">10%</td><td class="n">40%</td><td class="n">40%</td><td><span class="bar"><i style="width:40%"></i></span></td><td class="n">4,00</td></tr>
+          <tr><td>Struktur Teknikal D1/H4</td><td class="n">5%</td><td class="n">65%</td><td class="n"><b>35%</b></td><td><span class="bar"><i style="width:35%"></i></span></td><td class="n">1,75</td></tr>
+          <tr class="total-row"><td>Total</td><td class="n">100%</td><td class="n">38,65</td><td class="n">&mdash;</td><td>&nbsp;</td><td class="n">30,05</td></tr>
+        </tbody>
+      </table>
+      <div class="note" style="margin-top:14px">
+        <b>Dua perubahan besar, dua-duanya wajib beralasan (Rule 14).</b> <b>Tenaga Kerja 66%&rarr;35%</b>: tesis &ldquo;kontraksi tenaga kerja&rdquo; runtuh &mdash; NFP Agustus +162K (konsensus 56K) dan Juli direvisi dari &minus;23K jadi <b>+21K</b>, berbalik tanda. <b>Teknikal 65%&rarr;25%</b>: CHoCH bullish yang membenarkan skor 65 sudah patah, H4 kini mencetak tujuh <i>lower high</i> beruntun. Empat pilar lain hanya bergeser 0&ndash;8 poin karena datanya memang cuma bergerak tipis.
+      </div>
+      <div class="note" style="margin-top:10px">
+        <b>Analisa ulang keseluruhan (H-1, refresh kedua).</b> <b>Pertumbuhan &amp; Konsumsi 12%&rarr;16%</b>: NFIB Business Optimism 98,7 (di bawah forecast 99,3) &mdash; penjualan terendah sejak November 2025. <b>Teknikal 25%&rarr;30%</b>: harga sempat menembus OB dua kali dan mendekati invalidasi. Total sempat kembali ke 30,00, persis angka analisa pertama.
+      </div>
+      <div class="note" style="margin-top:10px;border-left-color:var(--p-hot);background:var(--p-hot-soft)">
+        <b>Analisa ulang (9 September) &mdash; guncangan baru: serangan Houthi ke fasilitas energi Saudi.</b> <b>Teknikal 30%&rarr;35%</b>: harga sempat sweep ke $4.341,35 (18 poin dari Target Lanjutan 4.322,95) lalu rebound tajam &mdash; struktur makin choppy, ada minat beli nyata di level bawah. <b>Treasury Yield tetap 35%</b>: laporan pasar menyebut "yield riil naik" sebagai pendorong, tapi TVC:US10Y (nominal) yang kita verifikasi nyaris tidak bergerak &mdash; klaim itu tidak diverifikasi dari instrumen kita, jadi skor tidak diubah. Sebagian besar pergerakan yang kita proyeksikan sebagai skenario &ldquo;Panas&rdquo; ternyata <b>sudah terjadi duluan</b> sebelum PPI rilis, dipicu Houthi/yield &mdash; lihat koreksi penting soal Inflasi di catatan berikutnya.
+      </div>
+      <div class="note" style="margin-top:10px;border-left-color:var(--p-warn);background:var(--p-warn-soft)">
+        <b>Koreksi metodologi &mdash; klaim Houthi&rarr;PPI terlalu kuat.</b> Sebelumnya skor Inflasi diturunkan ke 23% dengan alasan "guncangan minyak Houthi memperkuat risiko PPI panas" &mdash; klaim ini <b>mengabaikan timing</b>. Serangan Houthi terjadi <b>8 September</b>, sementara PPI yang rilis besok mengukur data <b>Agustus</b> &mdash; sebelum serangan terjadi. Lonjakan minyak akibat Houthi <b>tidak masuk secara mekanis</b> ke angka PPI Agustus; efeknya baru relevan untuk laporan PPI September (rilis Oktober). <b>Direvisi: Inflasi 23%&rarr;25%</b> &mdash; efek sentimen tetap ada tapi jauh lebih lemah dari klaim sebelumnya. Ditemukan juga pandangan analis yang berlawanan dengan odds panas 61% (Lines.com): sejumlah analis memperkirakan kemungkinan <i>"milder print after recent elevated readings"</i> &mdash; pasar belum sepenuhnya sepakat ke arah panas. Total direvisi ke <b>30,05</b> &mdash; kesimpulan tetap di kisaran 30/70.
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. FORECAST VS PREVIOUS ============ -->
+  <section class="card">
+    <h2><span class="sec-no">&sect;02</span>Forecast vs Previous &mdash; Sepuluh Sub-Data Rilis Bersamaan</h2>
+    <div class="scroll">
+      <table>
+        <thead>
+          <tr><th>Data</th><th class="n">Previous</th><th class="n">Forecast</th><th>Interpretasi</th><th>Untuk Gold</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><b>PPI MoM</b></td><td class="n">0,0%</td><td class="n">0,3%</td><td>Akselerasi dari titik nol</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td><b>Core PPI MoM</b></td><td class="n">0,2%</td><td class="n">0,3%</td><td>Inti ikut memanas</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td>PPI YoY</td><td class="n">4,7%</td><td class="n">&mdash;</td><td>Base effect energi 2025 tidak menguntungkan</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td>Core PPI YoY</td><td class="n">4,2%</td><td class="n">&mdash;</td><td>Masih lengket di atas 4%</td><td><span class="tag t-warn">Netral&ndash;bearish</span></td></tr>
+          <tr><td>PPI ex Food, Energy &amp; Trade MoM</td><td class="n">0,4%</td><td class="n">&mdash;</td><td>&ldquo;Inti-dari-inti&rdquo;, pemasok utama Core PCE</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td>PPI ex Food, Energy &amp; Trade YoY</td><td class="n">4,7%</td><td class="n">&mdash;</td><td>Tekanan jasa persisten</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td>PPI (indeks)</td><td class="n">156,563</td><td class="n">&mdash;</td><td>Level indeks, bukan sinyal arah</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td><b>Initial Jobless Claims</b></td><td class="n">206K</td><td class="n">205K</td><td>Naik dari 189K (Jul) tapi level masih sangat rendah</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td>Continuing Claims</td><td class="n">1.779K</td><td class="n">&mdash;</td><td>Yang kena PHK makin lama cari kerja</td><td><span class="tag t-cool">Bullish tipis</span></td></tr>
+          <tr><td>Claims rata-rata 4 minggu</td><td class="n">207,25K</td><td class="n">&mdash;</td><td>Tren perlahan naik, bukan lonjakan</td><td><span class="tag t-cool">Bullish tipis</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:15px">
+      <b>Perhatikan jebakan definisi &ldquo;sesuai forecast&rdquo;.</b> Konsensus 0,3% itu sendiri sudah berarti <i>akselerasi</i> dari 0,0%. Jadi hasil yang &ldquo;pas forecast&rdquo; tetap menandakan inflasi produsen memanas &mdash; secara substansi hawkish, meski secara kejutan netral. Jangan baca angka 0,3% sebagai kabar baik untuk gold hanya karena cocok dengan ekspektasi.
+    </div>
+  </section>
+
+  <!-- ============ 3. KENAPA PENTING ============ -->
+  <section class="card">
+    <h2><span class="sec-no">&sect;01 &middot; &sect;03</span>Kenapa Rilis Tier 2 Ini Diberi &#9733;7/10</h2>
+    <p class="lede">PPI biasanya peristiwa kelas dua. Tiga hal mengangkat yang satu ini ke batas atas Tier 2 &mdash; bukan isi datanya, tapi <b>posisinya di kalender</b>.</p>
+    <ul>
+      <li><b>Rilis 24 jam sebelum CPI.</b> PPI mengukur harga di tingkat produsen, CPI di tingkat konsumen. Yang naik di pabrik hari ini cenderung muncul di rak toko berikutnya, jadi pasar memakai PPI sebagai bocoran arah CPI keesokan harinya. Reaksi Kamis sering sudah memuat taruhan untuk Jumat.</li>
+      <li><b>The Fed sudah masuk masa tenang.</b> Sejak awal minggu ini tidak ada lagi pejabat Fed yang boleh bicara sampai keputusan 17 September. Artinya PPI dan CPI adalah <b>satu-satunya</b> hal yang masih bisa menggeser ekspektasi suku bunga. Tidak ada lagi komentar pejabat yang bisa meredam atau memperkuat reaksi pasar.</li>
+      <li><b>Gubernur Waller menyebut jendela ini secara eksplisit.</b> Ia menyatakan condong mempertahankan suku bunga <i>apabila tren penurunan inflasi berlanjut dalam dua minggu ke depan</i>. Dua minggu itu, secara harfiah, adalah PPI Kamis dan CPI Jumat. Data ini bukan sekadar masukan &mdash; ia adalah syarat yang sudah disebutkan di depan umum.</li>
+    </ul>
+    <div class="note">
+      <b>Yang menahan skor tetap di 7, bukan 8+:</b> catatan kita sendiri dari PPI 13 Agustus. Waktu itu keempat sub-komponen kompak dovish, tapi pergerakannya tetap kecil &mdash; PPI secara struktural memang berdampak lebih ringan daripada CPI atau NFP. Arah data yang bersih tidak otomatis berarti pergerakan besar.
+    </div>
+  </section>
+
+  <!-- ============ 4. LANSKAP MAKRO ============ -->
+  <section class="card">
+    <h2><span class="sec-no">&sect;04 &middot; &sect;05</span>Lima Belas Data Makro &mdash; Papan Kondisi</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Data</th><th class="n">Terakhir</th><th>Catatan</th><th>Sinyal</th></tr></thead>
+        <tbody>
+          <tr><td>FOMC</td><td class="n">Tahan</td><td>Rapat berikut 17 Sep 01:00 WIB &middot; odds naik ~58%</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>CPI YoY</td><td class="n">3,4%</td><td>Juli, persis forecast</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td>Core CPI YoY</td><td class="n">2,5%</td><td>Juli, persis forecast</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td>PCE</td><td class="n">&mdash;</td><td>Rilis 26 Agt, tidak memberi kejutan arah</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td>Core PCE MoM</td><td class="n">0,2%</td><td>Terkendali</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td><b>NFP</b></td><td class="n">+162K</td><td>Konsensus 56K &middot; Juli direvisi &minus;23K &rarr; <b>+21K</b></td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>ADP</td><td class="n">+38K</td><td>Terlemah sejak Januari 2026</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>JOLTS</td><td class="n">7,271jt</td><td>Lowongan menyusut</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>ISM Manufacturing</td><td class="n">&mdash;</td><td>Prices Paid 71,1 &mdash; biaya input masih panas</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>ISM Services</td><td class="n">54,6</td><td>New Orders anjlok ke 53,7</td><td><span class="tag t-warn">Terbelah</span></td></tr>
+          <tr><td>PPI YoY</td><td class="n">4,7%</td><td>Juli, meleset ke bawah dari konsensus 4,9%</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>Retail Sales</td><td class="n">&minus;0,6%</td><td>Konsumsi melemah</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>GDP</td><td class="n">1,5%</td><td>Tumbuh pelan</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td><b>Treasury Yield 10Y</b></td><td class="n">4,784%</td><td>Diverifikasi langsung TVC:US10Y &middot; naik 2bps dari 4,764%</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td><b>DXY</b></td><td class="n">99,147</td><td>Diverifikasi langsung TVC:DXY &middot; menahan penguatan pasca-NFP</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px"><b>Sintesis:</b> lima belas data ini <b>tidak kompak</b>. Sisi permintaan tenaga kerja dan konsumsi tetap melunak (ADP, JOLTS, Retail Sales), tapi tiga penentu harga gold yang paling langsung &mdash; odds suku bunga, imbal hasil obligasi, dan dolar &mdash; ketiganya bergerak melawan gold sekaligus. Perpecahan ini yang menahan Confidence di 5/10, bukan lebih tinggi.</p>
+    <div class="note">
+      <b>Ketidakcocokan data PPI Juli &mdash; sudah diverifikasi (7 September).</b> Catatan lama kita sempat mencatat PPI YoY Juli di 5,0% dan Core PPI YoY 4,5% (dari widget 13 Agustus), berbeda dari <i>previous</i> <b>4,7%</b> dan <b>4,2%</b> yang dipakai di tabel Section 4 di atas. Dicek langsung ke rilis resmi BLS: PPI final demand YoY Juli memang <b>4,7%</b>, dan ukuran ex food/energy/trade YoY <b>4,7%</b> &mdash; cocok persis dengan angka yang kita pakai di sini. Kesimpulannya: catatan 13 Agustus yang keliru, bukan revisi data. Angka di poster ini <b>sudah benar</b>, tidak ada perubahan ke kesimpulan manapun.
+    </div>
+    <div class="note" style="margin-top:12px;border-left-color:var(--p-hot);background:var(--p-hot-soft)">
+      <b>Konteks baru di luar 15 data tetap (9 September) &mdash; serangan Houthi ke fasilitas energi Saudi.</b> Rudal &amp; drone Houthi menghantam kilang Saudi Aramco di Jazan (400.000 barel/hari) pada 8 September, 73 orang terluka, operasi sempat dihentikan. Brent mendekati <b>$100/barel</b>. <b>Koreksi timing:</b> serangan ini terjadi 8 September, sementara PPI besok mengukur data <b>Agustus</b> &mdash; sebelum serangan terjadi. Lonjakan minyak ini <b>tidak masuk secara mekanis</b> ke angka besok; efeknya baru relevan untuk laporan PPI September (rilis Oktober). Dipakai hanya sebagai konteks sentimen inflasi umum, bukan pendorong langsung.
+    </div>
+  </section>
+
+  <!-- ============ 5. TIGA SKENARIO ============ -->
+  <section>
+    <h2 style="font-family:'Saira Condensed',sans-serif;font-weight:600;font-size:13px;letter-spacing:.15em;text-transform:uppercase;color:var(--p-muted);margin:0 0 12px;padding-bottom:7px;border-bottom:1px solid var(--p-rule)">
+      <span class="sec-no">&sect;07</span>Tiga Skenario
+    </h2>
+    <div class="scen">
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-hot)">Panas</span><span class="scen-p" style="color:var(--p-hot)">40%</span></div>
+        <p>PPI MoM &ge;0,4% dan/atau YoY tembus 5,1%. Didukung minyak di kisaran $87 dan base effect yang tidak menguntungkan. Pasar taruhan sudah condong ke sini.</p>
+        <p><b>Gold turun</b>, tapi ruangnya terbatas &mdash; sebagian besar sudah masuk harga sejak NFP.</p>
+        <div class="lv">Target: 4.385 &rarr; 4.365 &rarr; 4.323<br>Estimasi &minus;50 s/d &minus;90 poin</div>
+      </div>
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-muted)">Sesuai</span><span class="scen-p" style="color:var(--p-muted)">30%</span></div>
+        <p>PPI MoM 0,3%, Core 0,3%, claims sekitar 205K. Pasar menunda keputusan sampai CPI Jumat.</p>
+        <p><b>Konsolidasi</b> &mdash; tapi ingat, 0,3% tetap akselerasi, jadi bias tipis tetap ke bawah.</p>
+        <div class="lv">Rentang 4.385 &ndash; 4.440<br>Estimasi &plusmn;30 poin</div>
+      </div>
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-cool)">Dingin</span><span class="scen-p" style="color:var(--p-cool)">30%</span></div>
+        <p>PPI MoM &le;0,1% dan/atau Core &le;0,2%, claims di atas 215K. Juli sudah meleset ke bawah sekali; bisa berulang.</p>
+        <p><b>Ini skenario dengan ruang gerak terbesar</b> &mdash; langsung memenuhi syarat yang disebut Waller, dan posisi pasar paling tidak siap menghadapinya.</p>
+        <div class="lv">Target: 4.419 &rarr; 4.435 &rarr; 4.449 &rarr; 4.470<br>Estimasi +60 s/d +120 poin</div>
+      </div>
+    </div>
+    <div class="note" style="margin-top:16px">
+      <b>Probabilitas dan magnitudo bukan hal yang sama.</b> Skenario paling mungkin (Panas, 40%) justru punya ruang gerak paling sempit, karena pasar sudah memposisikan diri ke arah itu setelah NFP. Skenario paling kecil peluangnya (Dingin, 30%) punya potensi pergerakan terbesar. Kalau ikut arah mayoritas, imbalannya tipis; kalau salah arah melawan mayoritas, kerugiannya besar.
+    </div>
+  </section>
+
+  <!-- ============ 6. TEKNIKAL ============ -->
+  <section class="card">
+    <h2><span class="sec-no">&sect;11</span>Pembacaan Manual Enam Timeframe</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>TF</th><th>Struktur</th><th>Bacaan</th><th>Bias</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">D1</td><td>Segitiga menyempit</td><td><i>Lower high</i> 4.510,84 &rarr; 4.490,77 &rarr; 4.435,21 bertemu <i>higher low</i> 4.282,57 &rarr; 4.365,58 &rarr; 4.385,35. Titik temunya jatuh persis di jendela PPI&ndash;CPI.</td><td><span class="tag t-warn">Kompresi</span></td></tr>
+          <tr><td class="mono">H4</td><td>Tujuh lower high beruntun</td><td>4.510,84 &rarr; 4.490,77 &rarr; 4.476,45 &rarr; 4.449,01 &rarr; 4.438,45 &rarr; 4.419,05 &rarr; 4.394,73. Rantai sebersih ini jarang muncul.</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td class="mono">H1</td><td>Lower high + lower low</td><td>Puncak 4.419,05 &rarr; 4.413,27 &rarr; 4.394,73; dasar 4.402,97 &rarr; 4.393,16 &rarr; 4.385,35.</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td class="mono">M15</td><td>Penolakan tajam</td><td>Ditolak di 4.413,27, jatuh ke 4.385,35 tanpa jeda berarti.</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td class="mono">M5</td><td>Dasar ganda</td><td>4.385,35 dan 4.385,42 &mdash; ada pembeli yang menahan di situ.</td><td><span class="tag t-cool">Pantulan</span></td></tr>
+          <tr><td class="mono">M1</td><td>CHoCH mikro naik</td><td>4.389,38 &rarr; 4.391,28 &rarr; 4.393,27 &rarr; 4.393,85.</td><td><span class="tag t-cool">Pantulan</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:15px">
+      <b>Pantulan M5/M1 bukan sinyal beli.</b> Aturan kita dari insiden kena SL sebelumnya berlaku persis di sini: sinyal timeframe rendah tidak boleh membatalkan peringatan timeframe tinggi yang belum selesai. H4 masih mencetak <i>lower high</i>, jadi pantulan dari 4.385 diperlakukan sebagai koreksi di dalam tren turun &mdash; sampai ada penutupan badan candle H4 di atas 4.449,01.
+    </div>
+    <div class="note" style="margin-top:12px;border-left-color:var(--p-warn);background:var(--p-warn-soft)">
+      <b>Update H-1 &mdash; gambaran lengkap, termasuk bagian yang meleset dari dugaan awal.</b> Leg pertama sesuai skrip: harga masuk OB, tag $4.423,88, ditolak, sapu ke 4.385,35. Tapi setelah itu harga <b>tidak berhenti di situ</b> &mdash; menembus lebih jauh sampai $4.440,78 lalu $4.443,00 (cuma 6 poin dari invalidasi 4.449,01), sebelum akhirnya ditolak keras dan sapu ulang. Total OB sudah ditembus <b>dua kali</b>.
+    </div>
+    <div class="note" style="margin-top:12px;border-left-color:var(--p-hot);background:var(--p-hot-soft)">
+      <b>Update 9 September &mdash; BOS ke bawah, lalu rebound tajam.</b> Setelah range choppy 4.381&ndash;4.443, harga <b>menembus jauh lebih dalam</b> ke $4.345,93 lalu low baru <b>$4.341,35</b> &mdash; cuma 18 poin dari Target Lanjutan 4.322,95, dipicu serangan Houthi ke fasilitas energi Saudi (lihat Section 4). Sebagian besar target skenario &ldquo;Panas&rdquo; kita <b>sudah tercapai duluan</b>, sebelum PPI rilis. Lalu harga <b>rebound tajam</b> kembali ke $4.387,64 (harga sekarang) &mdash; ada minat beli nyata di level bawah, bukan free-fall searah. Invalidasi keras 4.449,01 tetap belum tersentuh sama sekali sejak awal analisa.
+    </div>
+  </section>
+
+  <!-- ============ 7. LEVEL & PLAN ============ -->
+  <section class="card">
+    <h2><span class="sec-no">&sect;10</span>Level Kunci &amp; Gerbang Kualitas Setup</h2>
+    <div class="lvl-list" style="margin-bottom:18px">
+      <div class="lvl"><span>Invalidasi bearish</span><b>4.449,01</b></div>
+      <div class="lvl"><span>High tertinggi teruji</span><b>4.443,00</b></div>
+      <div class="lvl"><span>Order Block H4</span><b>4.416&ndash;4.438</b></div>
+      <div class="lvl"><span>Ekuilibrium D1</span><b>4.396,71</b></div>
+      <div class="lvl"><span>Harga sekarang</span><b>4.387,64</b></div>
+      <div class="lvl"><span>Swing low NFP</span><b>4.365,58</b></div>
+      <div class="lvl"><span>Low terendah baru</span><b>4.341,35</b></div>
+      <div class="lvl"><span>Target lanjutan</span><b>4.322,95</b></div>
+      <div class="lvl"><span>Dasar besar</span><b>4.282,57</b></div>
+    </div>
+    <p class="diagram-cap" style="text-align:left;padding:0 0 16px;font-size:13.5px;color:var(--p-ink-2)">
+      <b>Update H-1:</b> sejak analisa awal, OB (4.416&ndash;4.438) sudah <b>ditembus dua kali</b> (tag 4.440,78 dan 4.443,00 &mdash; cuma 6 poin dari invalidasi), dan zona 4.385 sudah <b>disapu 4 kali</b> (terendah 4.381,17). Struktur sekarang lebih tepat dibaca sebagai <b>range choppy 4.381&ndash;4.443</b>, bukan tren turun bersih &mdash; tapi invalidasi keras 4.449,01 tetap belum tersentuh sama sekali.
+    </p>
+
+    <div class="gate">
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:10px">
+        <span class="score">30<span style="font-size:17px;color:var(--p-ink-2)">/50</span></span>
+        <b style="font-family:'Saira Condensed',sans-serif;letter-spacing:.06em;text-transform:uppercase;font-size:15px">Di bawah ambang 35 &mdash; tidak ada posisi sebelum rilis</b>
+      </div>
+      <table style="font-size:13px">
+        <tbody>
+          <tr><td>Keselarasan bias timeframe tinggi</td><td class="n">8/10</td></tr>
+          <tr><td>Kejelasan struktur (BOS/CHoCH)</td><td class="n">6/10</td></tr>
+          <tr><td>Kualitas zona (Order Block)</td><td class="n">6/10</td></tr>
+          <tr><td>Kejelasan likuiditas</td><td class="n">6/10</td></tr>
+          <tr><td><b>Risiko waktu</b> &mdash; dua rilis besar berturut-turut dalam 24 jam</td><td class="n"><b>4/10</b></td></tr>
+        </tbody>
+      </table>
+      <p style="margin:11px 0 0;font-size:13.5px">Skor turun dari 34 ke 30 dibanding analisa awal &mdash; bukan karena waktu (masih 4/10, tidak berubah), tapi karena tiga dimensi lain ikut turun: strukturnya sudah terbukti choppy (bukan tren bersih), OB sudah ditembus dua kali (bukan zona perawan), dan likuiditas 4.385 sudah disapu berulang. Kesimpulannya sama seperti sebelumnya &mdash; tidak ada posisi pra-rilis &mdash; tapi sekarang dengan alasan yang lebih kuat.</p>
+    </div>
+
+    <div class="grid-2" style="margin-top:20px">
+      <div>
+        <h2 style="margin-bottom:10px">Jika Panas &mdash; Cari Jual</h2>
+        <ul style="font-size:13.5px">
+          <li>Tunggu pullback ke <b>4.416&ndash;4.438</b> (OB H4) &mdash; <i>catatan: zona ini sudah ditembus dua kali sejak dipetakan, jadi bukan lagi zona perawan, tetap dipakai karena invalidasi di atasnya belum tersentuh.</i></li>
+          <li>SL di atas <b>4.449,01</b>.</li>
+          <li>TP bertahap 4.365,58 &rarr; 4.341,35 &rarr; 4.322,95. <i>Catatan: level 4.341,35 sudah pernah tersentuh 9 September, sebelum PPI rilis.</i></li>
+          <li>Batalkan jika badan candle H4 menutup di atas 4.449,01.</li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="margin-bottom:10px">Jika Dingin &mdash; Cari Beli</h2>
+        <ul style="font-size:13.5px">
+          <li><b>Syarat mutlak:</b> penutupan badan candle H4 di atas <b>4.438,45</b>. Tanpa itu, tidak ada beli.</li>
+          <li>Entry pada retest zona yang baru direbut.</li>
+          <li>TP bertahap 4.449 &rarr; 4.470 &rarr; 4.490.</li>
+          <li>Jangan pakai sinyal M5/M1 sebagai pengganti konfirmasi H4 &mdash; itu justru kesalahan yang dulu membuat kita kena SL.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 8. PRIORITAS & CONFIDENCE ============ -->
+  <section class="grid-2">
+    <div class="card">
+      <h2><span class="sec-no">&sect;08</span>Urutan Membaca Angkanya</h2>
+      <ul style="font-size:13.5px">
+        <li><b>1. Core PPI YoY</b> &mdash; pemasok utama Core PCE, ukuran inflasi favorit The Fed.</li>
+        <li><b>2. Core PPI MoM</b> &mdash; momentum terkini, bebas dari distorsi base effect.</li>
+        <li><b>3. PPI ex Food, Energy &amp; Trade MoM</b> &mdash; &ldquo;inti-dari-inti&rdquo;, bagian yang paling sulit turun.</li>
+        <li><b>4. PPI YoY</b> &mdash; ambang psikologis pasar ada di 5,1%.</li>
+        <li><b>5. PPI MoM</b> &mdash; angka utama, tapi paling gampang terdistorsi energi.</li>
+        <li><b>6. Initial Jobless Claims</b> &mdash; baca <i>arah</i>-nya, bukan levelnya. 205K itu masih sangat rendah secara historis.</li>
+        <li><b>7. Reaksi US10Y, lalu DXY</b> &mdash; baru setelah itu simpulkan arah gold.</li>
+      </ul>
+      <p style="font-size:13px;margin-top:12px;color:var(--p-muted)"><b>Kenapa YoY di atas MoM bulan ini:</b> base effect adalah inti ceritanya. Penurunan harga energi sepanjang 2025 sedang keluar dari perhitungan tahunan, sehingga YoY bisa melonjak walaupun MoM adem.</p>
+    </div>
+    <div class="card">
+      <h2><span class="sec-no">&sect;12</span>Confidence Score &mdash; 5/10</h2>
+      <table>
+        <tbody>
+          <tr><td>Fundamental</td><td class="n">&#9733;&#9733;&#9733;&#9734;&#9734;</td></tr>
+          <tr><td>Teknikal</td><td class="n">&#9733;&#9733;&#9733;&#9733;&#9734;</td></tr>
+          <tr><td>Sentimen</td><td class="n">&#9733;&#9733;&#9734;&#9734;&#9734;</td></tr>
+        </tbody>
+      </table>
+      <p style="font-size:13.5px;margin-top:13px"><b>Naik tipis dari 4/10 di analisis NFP</b> karena struktur teknikalnya jauh lebih bersih dan arah antar pilar lebih sepakat. Tapi ditahan di 5, tidak lebih tinggi, karena tiga alasan:</p>
+      <ul style="font-size:13.5px">
+        <li>Angka odds kenaikan suku bunga <b>berbeda-beda antar sumber</b> &mdash; rentangnya melebar dari 37% sampai 70% dalam satu minggu terakhir, bukannya menyempit mendekati rilis.</li>
+        <li>Pilar Tenaga Kerja baru dibangun ulang beberapa hari lalu, <b>belum teruji</b> oleh rilis apapun.</li>
+        <li>Magnitudo Tier 2 punya rekam jejak buruk di sistem kita &mdash; pernah <b>meleset ke dua arah</b>: terlalu tinggi di PPI 13 Agustus, terlalu rendah di ISM+JOLTS 1 September.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ 9. KESIMPULAN ============ -->
+  <section class="card">
+    <h2><span class="sec-no">&sect;13</span>Kesimpulan Sistem</h2>
+    <p class="lede">Bias fundamental <b>bearish</b>. Bias teknikal <b>bearish</b>. Perhitungan tujuh pilar: <b>30% Bullish / 70% Bearish</b> &mdash; pembacaan paling bearish yang pernah saya hitung sejauh ini. Tapi kesimpulannya bukan &ldquo;jual sekarang&rdquo;.</p>
+    <ul>
+      <li><b>Arah dan waktu adalah dua keputusan terpisah.</b> Arahnya jelas ke bawah; waktunya justru buruk. Gerbang kualitas setup memberi 30/50 dan menolak posisi pra-rilis  —  bukan cuma karena dua rilis biner berurutan dalam 24 jam, tapi sekarang juga karena struktur yang sudah terbukti choppy dan zona kunci yang sudah berulang kali disapu.</li>
+      <li><b>Yang paling mungkin terjadi bukan yang paling menguntungkan.</b> Skenario panas 40% tapi ruangnya sempit; skenario dingin 30% tapi ruangnya dua kali lipat. Ini alasan kuat untuk menunggu, bukan mendahului.</li>
+      <li><b>PPI adalah separuh cerita, bukan keseluruhannya.</b> CPI menyusul 24 jam kemudian, dan FOMC enam hari sesudahnya. Reaksi Kamis bisa dibatalkan total oleh angka Jumat.</li>
+      <li><b>Yang membatalkan analisis ini:</b> penutupan badan candle H4 di atas <b>4.449,01</b>. Di atas level itu, rantai <i>lower high</i> putus dan seluruh bagian teknikal harus dihitung ulang dari awal.</li>
+    </ul>
+    <div class="note" style="border-left-color:var(--p-warn);background:var(--p-warn-soft)">
+      <b>Catatan Rule 7 &mdash; jangan menilai terlalu cepat.</b> Status rilis ini <b>tidak boleh</b> difinalkan sebelum minimal 3&ndash;4 jam pasca-19:30 WIB, idealnya menunggu sesi New York tutup. Pelajaran dari ISM+JOLTS masih berlaku: jam pertama menunjukkan &minus;5 poin, jam kedua <b>+7,6 poin ke arah berlawanan</b>, dan hasil akhirnya &minus;82,8 poin. Menilai di jam pertama akan menghasilkan kesimpulan yang salah arah.
+    </div>
+  </section>
+
+  <footer>
+    <div class="disc">
+      <b>NOT FINANCIAL ADVICE.</b> Lembar ini catatan riset dan evaluasi sistem pribadi, bukan rekomendasi transaksi untuk siapapun. Trading emas dan forex berisiko tinggi dan dapat mengakibatkan kerugian total. Lakukan riset sendiri sebelum mengambil keputusan finansial apapun.
+    </div>
+    <div class="mono" style="font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;text-align:right">
+      Disusun 7 Sep, diperbarui 9 Sep 2026<br>
+      Harga &amp; struktur: TradingView<br>
+      VANTAGE:XAUUSD &middot; TVC:DXY &middot; TVC:US10Y
+    </div>
+  </footer>
+
+</div>
+
+    </div>
+
+    <div class="ad-slot">
+      <script async="async" data-cfasync="false" src="https://pl30756138.effectivecpmnetwork.com/4a3f1dc3807941e53dfe4463a21a0e4e/invoke.js"></script>
+      <div id="container-4a3f1dc3807941e53dfe4463a21a0e4e"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Kebijakan Privasi</a>
+      <a href="https://www.effectivecpmnetwork.com/setnp40u3t?key=fe8199ed8dd693be00f1924c13a1b7ec" target="_blank" rel="noopener sponsored">Rekomendasi</a>
+    </div>
+    <div>&copy; 2026 EdukasiTrader.</div>
+  </div>
+</footer>
+
+</body>
+</html>

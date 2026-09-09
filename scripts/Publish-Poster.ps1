@@ -105,11 +105,21 @@ if ($sIdx -lt 0 -or $eIdx -lt 0) {
 }
 $styleBlock = $raw.Substring($sIdx + $styleStartTag.Length, $eIdx - ($sIdx + $styleStartTag.Length))
 
-$posterStartTag = '<div class="poster">'
-$pIdx = $raw.IndexOf($posterStartTag)
+# Div pembungkus konten utama namanya bisa berbeda-beda tiap tema poster
+# (poster, sheet, board, dst) — deteksi div pertama setelah blok <style>
+# alih-alih mengunci ke satu nama class tertentu.
+$searchFrom = $eIdx + $styleEndTag.Length
+$wrapperMatch = [regex]::Match($raw.Substring($searchFrom), '<div\s+class="[^"]*">')
+if (-not $wrapperMatch.Success) {
+  throw 'Tidak menemukan div pembungkus konten (<div class="...">) setelah blok <style>. Pastikan formatnya sesuai template poster standar.'
+}
+$pIdx = $searchFrom + $wrapperMatch.Index
+
+# Poster gaya Artifact (tanpa <html>/<body>) tidak selalu punya tag </body> —
+# kalau tidak ada, pakai akhir file sebagai batasnya.
 $bodyEndIdx = $raw.LastIndexOf('</body>')
-if ($pIdx -lt 0 -or $bodyEndIdx -lt 0) {
-  throw 'Tidak menemukan <div class="poster">...</div> sebelum </body>. Pastikan formatnya sesuai template poster standar.'
+if ($bodyEndIdx -lt 0) {
+  $bodyEndIdx = $raw.Length
 }
 $posterBlock = $raw.Substring($pIdx, $bodyEndIdx - $pIdx).TrimEnd()
 
