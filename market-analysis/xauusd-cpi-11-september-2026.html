@@ -1,0 +1,598 @@
+﻿<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XAUUSD Split Ledger — CPI 11 September 2026 — EdukasiTrader</title>
+<meta name="description" content="CPI Agustus rilis besok malam — dan setup-nya kebalikan dari PPI. Headline panas dari energi, tapi core CPI justru diperkirakan turun ke 2,4%. Market Bias Engine kami baca 31% Bullish / 69% Bearish, tapi asimetrinya condong bullish untuk gold: skenario merugikan butuh kejutan panas, dua skenario lain (65%) menguntungkan emas. Cek breakdown lengkap, tiga skenario, dan level kunci.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  :root{
+    --p-paper:#EDEFEA;
+    --p-panel:#FBFCF9;
+    --p-rule:#D3D8CE;
+    --p-rule-faint:#E6E0D8;
+    --p-ink:#191C18;
+    --p-ink-2:#41473F;
+    --p-muted:#6C7365;
+    --p-spine:#2B2F28;
+    --p-cool:#1C6B4E;
+    --p-cool-soft:#E0EEE7;
+    --p-hot:#A63328;
+    --p-hot-soft:#F4E3E0;
+    --p-warn:#8A5A12;
+    --p-warn-soft:#F3E9D8;
+    --p-accent:#3B5C7A;
+    --p-accent-soft:#E1E9F0;
+    --p-shadow:0 1px 0 rgba(25,28,24,.04), 0 3px 14px rgba(25,28,24,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --p-paper:#14160F;
+      --p-panel:#1B1E16;
+      --p-rule:#2E3328;
+      --p-rule-faint:#262A20;
+      --p-ink:#E9ECE3;
+      --p-ink-2:#BAC0B0;
+      --p-muted:#868D79;
+      --p-spine:#C4CBB6;
+      --p-cool:#5FC299;
+      --p-cool-soft:#14271F;
+      --p-hot:#E08477;
+      --p-hot-soft:#2E1B18;
+      --p-warn:#D6A153;
+      --p-warn-soft:#2C2414;
+      --p-accent:#7CA8CC;
+      --p-accent-soft:#1A2732;
+      --p-shadow:0 1px 0 rgba(0,0,0,.3), 0 3px 16px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --p-paper:#14160F;
+    --p-panel:#1B1E16;
+    --p-rule:#2E3328;
+    --p-rule-faint:#262A20;
+    --p-ink:#E9ECE3;
+    --p-ink-2:#BAC0B0;
+    --p-muted:#868D79;
+    --p-spine:#C4CBB6;
+    --p-cool:#5FC299;
+    --p-cool-soft:#14271F;
+    --p-hot:#E08477;
+    --p-hot-soft:#2E1B18;
+    --p-warn:#D6A153;
+    --p-warn-soft:#2C2414;
+    --p-accent:#7CA8CC;
+    --p-accent-soft:#1A2732;
+    --p-shadow:0 1px 0 rgba(0,0,0,.3), 0 3px 16px rgba(0,0,0,.4);
+  }
+
+  *{box-sizing:border-box}
+  .poster-container{
+    background:
+      repeating-linear-gradient(var(--p-paper) 0 31px, var(--p-rule-faint) 31px 32px),
+      var(--p-paper);
+    color:var(--p-ink);
+    font-family:"Public Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:15px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+  .num{font-variant-numeric:tabular-nums}
+
+  .sheet{
+    max-width:1060px;
+    margin:0 auto;
+    padding:26px 18px 60px;
+    display:flex;
+    flex-direction:column;
+    gap:20px;
+  }
+
+  .card{
+    background:var(--p-panel);
+    border:1px solid var(--p-rule);
+    box-shadow:var(--p-shadow);
+  }
+
+  /* ---- masthead ---- */
+  .masthead{padding:22px 24px 20px;border-top:3px solid var(--p-spine)}
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:10.5px;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--p-muted);
+    margin-bottom:8px;
+  }
+  h1{
+    font-family:"Zilla Slab",serif;
+    font-weight:700;
+    font-size:clamp(34px,6vw,52px);
+    line-height:1;
+    letter-spacing:-.01em;
+    margin:0;
+    text-wrap:balance;
+  }
+  .sub{
+    font-family:"Zilla Slab",serif;
+    font-weight:500;
+    font-size:clamp(15px,2.3vw,19px);
+    color:var(--p-ink-2);
+    margin-top:6px;
+  }
+  .specline{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(140px,1fr));
+    margin-top:16px;
+    border-top:1px solid var(--p-rule);
+  }
+  .spec{padding:11px 0 2px;border-right:1px solid var(--p-rule);padding-right:16px;margin-right:16px}
+  .spec:last-child{border-right:none;margin-right:0}
+  .spec dt{
+    font-family:"IBM Plex Mono",monospace;
+    font-size:9.5px;letter-spacing:.13em;text-transform:uppercase;color:var(--p-muted);
+  }
+  .spec dd{
+    margin:2px 0 0;font-family:"Zilla Slab",serif;font-weight:600;font-size:19px;
+    font-variant-numeric:tabular-nums;
+  }
+  .stamp{
+    display:inline-block;margin-top:14px;
+    border:1.5px solid var(--p-warn);color:var(--p-warn);background:var(--p-warn-soft);
+    font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;
+    letter-spacing:.12em;text-transform:uppercase;padding:5px 11px;
+  }
+
+  h2{
+    font-family:"Zilla Slab",serif;font-weight:600;font-size:14px;
+    letter-spacing:.03em;text-transform:uppercase;color:var(--p-muted);
+    margin:0 0 13px;padding-bottom:8px;border-bottom:1px solid var(--p-rule);
+  }
+  .sec-no{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;color:var(--p-accent);margin-right:9px}
+  .pad{padding:20px 22px 22px}
+
+  /* ---- THE LEDGER (hero split) ---- */
+  .ledger{
+    display:grid;grid-template-columns:1fr 2px 1fr;
+    background:var(--p-panel);border:1px solid var(--p-rule);box-shadow:var(--p-shadow);
+  }
+  @media (max-width:720px){ .ledger{grid-template-columns:1fr;gap:0} .ledger .spine{display:none} }
+  .col{padding:20px 20px 22px}
+  .col-cool{background:linear-gradient(180deg,var(--p-cool-soft),transparent 40%)}
+  .col-hot{background:linear-gradient(180deg,var(--p-hot-soft),transparent 40%)}
+  .spine{background:var(--p-spine)}
+  @media (max-width:720px){
+    .col-hot{border-top:2px solid var(--p-spine)}
+  }
+  .col-head{
+    font-family:"Zilla Slab",serif;font-weight:700;font-size:19px;
+    letter-spacing:.02em;text-transform:uppercase;margin-bottom:3px;
+  }
+  .col-cool .col-head{color:var(--p-cool)}
+  .col-hot .col-head{color:var(--p-hot)}
+  .col-tag{
+    font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--p-muted);margin-bottom:14px;
+  }
+  .entry{
+    display:flex;justify-content:space-between;gap:12px;align-items:baseline;
+    padding:9px 0;border-bottom:1px solid var(--p-rule-faint);
+  }
+  .entry:last-child{border-bottom:none}
+  .entry-label{font-size:13.5px;color:var(--p-ink-2)}
+  .entry-val{font-family:"IBM Plex Mono",monospace;font-weight:600;font-size:15px;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .col-cool .entry-val{color:var(--p-cool)}
+  .col-hot .entry-val{color:var(--p-hot)}
+  .col-foot{
+    margin-top:14px;padding-top:12px;border-top:2px solid currentColor;
+    font-size:13px;line-height:1.55;
+  }
+  .col-cool .col-foot{color:var(--p-cool)}
+  .col-hot .col-foot{color:var(--p-hot)}
+  .col-foot b{color:var(--p-ink)}
+
+  .verdict-bar{
+    background:var(--p-panel);border:1px solid var(--p-rule);border-top:none;
+    box-shadow:var(--p-shadow);padding:16px 22px;
+    display:flex;gap:14px;align-items:baseline;flex-wrap:wrap;
+  }
+  .verdict-bar .big{
+    font-family:"Zilla Slab",serif;font-weight:700;font-size:26px;color:var(--p-hot);
+    font-variant-numeric:tabular-nums;line-height:1;
+  }
+  .verdict-bar .small{font-size:13.5px;color:var(--p-ink-2)}
+
+  /* ---- tables ---- */
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:7px 8px 7px 0;border-bottom:1px solid var(--p-rule-faint)}
+  th{
+    font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--p-muted);font-weight:400;
+  }
+  td.n,th.n{text-align:right;padding-right:0;font-variant-numeric:tabular-nums}
+  tr:last-child td{border-bottom:none}
+  .total-row td{border-top:2px solid var(--p-rule);border-bottom:none;padding-top:9px;font-weight:600;font-family:"Zilla Slab",serif;font-size:15px}
+  .bar{display:block;height:5px;background:var(--p-rule);min-width:52px;position:relative}
+  .bar i{display:block;height:100%;background:var(--p-accent)}
+  .scroll{overflow-x:auto}
+  .scroll table{min-width:520px}
+
+  .tag{
+    display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
+    letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;border:1px solid currentColor;white-space:nowrap;
+  }
+  .t-hot{color:var(--p-hot);background:var(--p-hot-soft)}
+  .t-cool{color:var(--p-cool);background:var(--p-cool-soft)}
+  .t-flat{color:var(--p-muted);background:var(--p-panel)}
+  .t-warn{color:var(--p-warn);background:var(--p-warn-soft)}
+
+  .note{border-left:3px solid var(--p-accent);background:var(--p-accent-soft);padding:12px 15px;font-size:13.5px;color:var(--p-ink-2);margin-top:14px}
+  .note b{color:var(--p-ink)}
+  .note.cool{border-left-color:var(--p-cool);background:var(--p-cool-soft)}
+  .note.hot{border-left-color:var(--p-hot);background:var(--p-hot-soft)}
+  .note.warn{border-left-color:var(--p-warn);background:var(--p-warn-soft)}
+
+  /* ---- scenarios: the balance tips ---- */
+  .scen{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--p-rule)}
+  @media (max-width:800px){ .scen{grid-template-columns:1fr} }
+  .scen>div{padding:16px 17px 18px;border-right:1px solid var(--p-rule);background:var(--p-panel)}
+  .scen>div:last-child{border-right:none}
+  @media (max-width:800px){ .scen>div{border-right:none;border-bottom:1px solid var(--p-rule)} .scen>div:last-child{border-bottom:none} }
+  .scen-hd{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px}
+  .scen-name{font-family:"Zilla Slab",serif;font-weight:700;font-size:17px;letter-spacing:.03em;text-transform:uppercase}
+  .scen-p{font-family:"Zilla Slab",serif;font-weight:700;font-size:25px;font-variant-numeric:tabular-nums;line-height:1}
+  .scen p{margin:0 0 8px;font-size:13px;color:var(--p-ink-2)}
+  .scen .lv{font-family:"IBM Plex Mono",monospace;font-size:11px;color:var(--p-ink);border-top:1px dashed var(--p-rule);padding-top:8px;margin-top:2px}
+
+  ul{margin:0;padding-left:17px}
+  li{margin-bottom:7px;color:var(--p-ink-2)}
+  li strong,li b{color:var(--p-ink)}
+  p{margin:0 0 11px}
+  .lede{font-size:15.5px;color:var(--p-ink-2)}
+
+  .lvl-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--p-rule);border:1px solid var(--p-rule)}
+  .lvl{background:var(--p-panel);padding:10px 12px}
+  .lvl b{display:block;font-family:"IBM Plex Mono",monospace;font-size:15px;font-variant-numeric:tabular-nums}
+  .lvl span{font-family:"IBM Plex Mono",monospace;font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--p-muted)}
+
+  .gate{border:1px solid var(--p-warn);background:var(--p-warn-soft);padding:15px 18px}
+  .gate .score{font-family:"Zilla Slab",serif;font-weight:700;font-size:30px;color:var(--p-warn);font-variant-numeric:tabular-nums;line-height:1}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media (max-width:800px){ .grid-2{grid-template-columns:1fr} }
+
+  footer{border-top:1px solid var(--p-rule);padding-top:14px;font-size:12px;color:var(--p-muted);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+  .disc{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.04em;line-height:1.7;max-width:64ch}
+
+  .compliance-notice{
+    max-width:880px;
+    margin:0 auto 20px;
+    padding:16px 20px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-dim);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    color:var(--text-dim);
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+  .compliance-notice strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Edukasi<span>Trader</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Beranda</a>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Privasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="max-width: 960px;">
+
+    <div class="compliance-notice">
+      <strong>Bukan ajakan bertransaksi.</strong> Konten di bawah ini adalah catatan analisis pasar pribadi yang kami bagikan sebagai referensi publik — berisi opini terhadap data makro dan level teknikal saat disusun, bukan sinyal trading resmi, rekomendasi personal, atau ajakan untuk membuka posisi tertentu. Pasar bisa bergerak sangat berbeda dari skenario yang dibahas. Selalu lakukan riset dan pertimbangan risiko sendiri.
+    </div>
+
+    <div class="ad-slot">
+      <script>
+        atOptions = {
+          'key' : '95130429aa13b28790da6b9e46158bfc',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/95130429aa13b28790da6b9e46158bfc/invoke.js"></script>
+    </div>
+
+    <div class="poster-container">
+
+<div class="sheet">
+
+  <!-- ====== MASTHEAD ====== -->
+  <header class="card masthead">
+    <div class="eyebrow">Lembar Kalibrasi Bias &middot; No. CPI-2026-09-11 &middot; H-1</div>
+    <h1>Split Ledger</h1>
+    <div class="sub">CPI Agustus &middot; XAUUSD &middot; data inflasi terakhir sebelum FOMC</div>
+    <dl class="specline">
+      <div class="spec"><dt>Rilis</dt><dd>Jum 11 Sep</dd></div>
+      <div class="spec"><dt>Waktu</dt><dd class="num">19:30 WIB</dd></div>
+      <div class="spec"><dt>Tier</dt><dd>1 &middot; &#9733;8/10</dd></div>
+      <div class="spec"><dt>Harga Terkini</dt><dd class="num">$4.351</dd></div>
+      <div class="spec"><dt>Confidence</dt><dd class="num">4&ndash;5/10</dd></div>
+    </dl>
+    <div class="stamp">Pending &middot; H-1</div>
+  </header>
+
+  <!-- ====== THE LEDGER: forecast split ====== -->
+  <section>
+    <h2 style="border:none;margin-bottom:10px"><span class="sec-no">&sect;02</span>Buku Besar &mdash; Forecast Agustus, Dibelah Dua</h2>
+    <div class="ledger">
+      <div class="col col-cool">
+        <div class="col-head">Yang Mendingin</div>
+        <div class="col-tag">Sisi inti &middot; yang paling dilihat Fed</div>
+        <div class="entry"><span class="entry-label">Core CPI YoY</span><span class="entry-val">2,4% &darr;</span></div>
+        <div class="entry"><span class="entry-label">&nbsp;&nbsp;dari (Juli)</span><span class="entry-val" style="color:var(--p-muted)">2,5%</span></div>
+        <div class="entry"><span class="entry-label">Core CPI MoM</span><span class="entry-val">0,2% =</span></div>
+        <div class="entry"><span class="entry-label">Pendorong</span><span class="entry-val" style="font-size:12px">harga barang &darr;</span></div>
+        <div class="col-foot">
+          Mobil bekas, pakaian, perabot &mdash; harga barang menyeret inflasi inti turun. Polymarket: <b>42%</b> peluang core 2,4%, <b>34%</b> peluang 2,3%. <b>Kalau ini yang terjadi, mild dovish untuk gold.</b>
+        </div>
+      </div>
+      <div class="spine"></div>
+      <div class="col col-hot">
+        <div class="col-head">Yang Memanas</div>
+        <div class="col-tag">Sisi headline &middot; volatil, sering didiskon pasar</div>
+        <div class="entry"><span class="entry-label">CPI MoM</span><span class="entry-val">0,4% &uarr;</span></div>
+        <div class="entry"><span class="entry-label">&nbsp;&nbsp;dari (Juli)</span><span class="entry-val" style="color:var(--p-muted)">0,1%</span></div>
+        <div class="entry"><span class="entry-label">CPI YoY</span><span class="entry-val">3,4% =</span></div>
+        <div class="entry"><span class="entry-label">Pendorong</span><span class="entry-val" style="font-size:12px">energi &uarr;</span></div>
+        <div class="col-foot">
+          Akselerasi headline datang dari energi &mdash; pola yang sama persis dengan PPI kemarin. Jasa &amp; shelter tetap lengket. <b>Bagian ini biasanya didiskon pasar</b> kecuali jasa ikut memanas.
+        </div>
+      </div>
+    </div>
+    <div class="verdict-bar">
+      <span class="big">31 / 69</span>
+      <span class="small"><b>Bullish / Bearish</b> untuk XAUUSD (Market Bias Engine, dibangun dari nol). Masih bearish-condong karena backdrop yield &amp; dolar &mdash; tapi <b>kurang bearish dari PPI (29/71)</b>. Bedanya: sisi inti CPI genuinely mendingin.</span>
+    </div>
+    <div class="note warn">
+      <b>&#9888; Ketidakcocokan forecast Core CPI MoM.</b> Widget menunjukkan <b>0,2%</b>, satu sumber web menyebut <b>0,4%</b>. Dipakai angka widget. <b>Kalau ternyata 0,4%, itu hot</b> &mdash; wajib cross-check begitu angka rilis.
+    </div>
+  </section>
+
+  <!-- ====== 1. IMPORTANCE + why CPI is opposite of PPI ====== -->
+  <section class="card pad">
+    <h2><span class="sec-no">&sect;01 &middot; &sect;03</span>Kenapa Setup CPI Ini Kebalikan dari PPI</h2>
+    <p class="lede">PPI kemarin panas <i>dan</i> itu genuine beat (YoY 5,4% vs konsensus 5,1%) &rarr; bearish bersih, prediksi kita terbukti benar. CPI besok punya struktur yang berbeda.</p>
+    <div class="grid-2">
+      <div>
+        <h2 style="color:var(--p-hot)">PPI (10 Sep) &mdash; sudah lewat</h2>
+        <ul style="font-size:13.5px">
+          <li>Headline panas <b>dan</b> beat konsensus</li>
+          <li>Core juga lengket (4,7% YoY, tidak turun)</li>
+          <li>Sinyal bersih ke satu arah &rarr; gold jatuh $50 ke $4.324</li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="color:var(--p-cool)">CPI (11 Sep) &mdash; besok malam</h2>
+        <ul style="font-size:13.5px">
+          <li>Headline panas (energi) <b>tapi</b> cuma sesuai forecast</li>
+          <li><b>Core justru diperkirakan turun</b> ke 2,4% &mdash; prioritas #1 di framework kita</li>
+          <li>Sinyal terbelah &rarr; kalau sesuai forecast, mild dovish untuk gold</li>
+        </ul>
+      </div>
+    </div>
+    <div class="note hot">
+      <b>Komplikasi yang menahan bias tetap bearish:</b> (1) PPI panas kemarin feeds Core PCE &mdash; favorit Fed sesungguhnya &mdash; jadi CPI core lembut mungkin tidak sepenuhnya menetralkan. (2) Pasar sudah <b>sangat</b> hawkish-positioned: US10Y 4,90% (dekat tinggi 1 tahun), DXY 99, gold sudah dihajar. (3) Odds hike Fed ~60&ndash;63% pasca-PPI. FOMC cuma 6 hari lagi (17 Sep), Fed sudah blackout &mdash; CPI ini input resmi terakhir.
+    </div>
+  </section>
+
+  <!-- ====== 6. Market Bias Engine ====== -->
+  <section class="card pad">
+    <h2><span class="sec-no">&sect;06</span>Tujuh Pilar &mdash; Dibangun dari Nol untuk CPI</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Pilar</th><th class="n">Bobot</th><th class="n">Skor</th><th style="width:64px">&nbsp;</th><th class="n">Kontrib.</th><th>Alasan</th></tr></thead>
+        <tbody>
+          <tr><td>Kebijakan Fed</td><td class="n">20%</td><td class="n">30%</td><td><span class="bar"><i style="width:30%"></i></span></td><td class="n">6,00</td><td>Odds hike ~60&ndash;63% post-PPI. CPI bisa jadi circuit-breaker sebelum FOMC</td></tr>
+          <tr><td><b>Inflasi</b></td><td class="n">20%</td><td class="n"><b>42%</b></td><td><span class="bar"><i style="width:42%"></i></span></td><td class="n">8,40</td><td>Forecast core CPI YoY membaik ke 2,4% &mdash; jauh lebih dovish dari PPI (24%)</td></tr>
+          <tr><td>Tenaga Kerja</td><td class="n">15%</td><td class="n">35%</td><td><span class="bar"><i style="width:35%"></i></span></td><td class="n">5,25</td><td>Tidak ada rilis baru sejak NFP</td></tr>
+          <tr><td>Pertumbuhan &amp; Konsumsi</td><td class="n">15%</td><td class="n">16%</td><td><span class="bar"><i style="width:16%"></i></span></td><td class="n">2,40</td><td>NFIB miss, Retail Sales &minus;0,6% &mdash; tidak berubah</td></tr>
+          <tr><td>Treasury Yield</td><td class="n">15%</td><td class="n">28%</td><td><span class="bar"><i style="width:28%"></i></span></td><td class="n">4,20</td><td>US10Y 4,90% &mdash; dekat tinggi 1 tahun, hawkish</td></tr>
+          <tr><td>DXY</td><td class="n">10%</td><td class="n">35%</td><td><span class="bar"><i style="width:35%"></i></span></td><td class="n">3,50</td><td>99,06 &mdash; firm, turun tipis dari 99,18 post-PPI</td></tr>
+          <tr><td>Struktur Teknikal D1/H4</td><td class="n">5%</td><td class="n">25%</td><td><span class="bar"><i style="width:25%"></i></span></td><td class="n">1,25</td><td>Range 4.375&ndash;4.434 patah ke bawah, tapi rejection dari low 4.324</td></tr>
+          <tr class="total-row"><td>Total</td><td class="n">100%</td><td class="n">&mdash;</td><td>&nbsp;</td><td class="n">31,00</td><td>&nbsp;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note cool">
+      <b>Kenapa pilar Inflasi 42% (vs 24% di PPI).</b> Di PPI, bahkan core-nya lengket di 4,7% YoY &mdash; tidak ada disinflasi. Di CPI, core YoY justru diperkirakan <b>turun</b> ke 2,4% dari 2,5%, dan itu metrik yang paling dilihat Fed. Ini satu-satunya alasan bias CPI kurang bearish dari PPI meski backdrop yield/DXY sama-sama menekan.
+    </div>
+  </section>
+
+  <!-- ====== 4. 15-data dashboard ====== -->
+  <section class="card pad">
+    <h2><span class="sec-no">&sect;04 &middot; &sect;05</span>Lima Belas Data Makro &mdash; Papan Kondisi</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Data</th><th class="n">Terakhir</th><th>Catatan</th><th>Sinyal</th></tr></thead>
+        <tbody>
+          <tr><td>FOMC</td><td class="n">Tahan</td><td>Rapat 17 Sep 01:00 WIB &middot; odds hike ~60&ndash;63%</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td><b>PPI YoY</b></td><td class="n">5,4%</td><td>Agustus &mdash; beat konsensus 5,1%, hot</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>PPI Core YoY (ex food/energy/trade)</td><td class="n">4,7%</td><td>Datar &mdash; core PPI jinak</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td>CPI YoY</td><td class="n">3,4%</td><td>Juli &middot; forecast Agustus 3,4% (datar)</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td><b>Core CPI YoY</b></td><td class="n">2,5%</td><td>Juli &middot; <b>forecast Agustus 2,4% (turun)</b></td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>Core PCE MoM</td><td class="n">0,2%</td><td>Terkendali (tapi PPI hot bisa dorong naik)</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td><b>NFP</b></td><td class="n">+162K</td><td>Konsensus 56K &middot; Juli direvisi ke +21K</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>ADP</td><td class="n">+38K</td><td>Terlemah sejak Januari 2026</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>JOLTS</td><td class="n">7,271jt</td><td>Lowongan menyusut</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>ISM Manufacturing</td><td class="n">&mdash;</td><td>Prices Paid 71,1 &mdash; biaya input panas</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>ISM Services</td><td class="n">54,6</td><td>New Orders anjlok ke 53,7</td><td><span class="tag t-warn">Terbelah</span></td></tr>
+          <tr><td>Retail Sales</td><td class="n">&minus;0,6%</td><td>Konsumsi melemah</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>NFIB Business Optimism</td><td class="n">98,7</td><td>Miss (99,3) &middot; penjualan terendah sejak Nov 2025</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td><b>Treasury Yield 10Y</b></td><td class="n">4,901%</td><td>TVC:US10Y &middot; dekat tinggi 1 tahun</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td><b>DXY</b></td><td class="n">99,063</td><td>TVC:DXY &middot; firm di sekitar 99</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px"><b>Sintesis:</b> data ini <b>terbelah</b>. Sisi inflasi inti (CPI core) dan permintaan (NFIB, Retail, ADP, JOLTS) melunak; tapi PPI headline, NFP, yield, dan DXY semuanya hawkish. Perpecahan ini yang menahan Confidence di 4&ndash;5/10 dan bikin reaksi CPI cenderung <b>dua-arah</b>, bukan searah seperti PPI.</p>
+  </section>
+
+  <!-- ====== 7. Scenarios ====== -->
+  <section>
+    <h2 style="border:none;margin-bottom:12px"><span class="sec-no">&sect;07</span>Tiga Skenario &mdash; Timbangan Bisa Miring ke Dua Arah</h2>
+    <div class="scen">
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-hot)">Hot</span><span class="scen-p" style="color:var(--p-hot)">35%</span></div>
+        <p>Core CPI YoY &ge;2,5% (tidak membaik) dan/atau Core MoM &ge;0,3% dan/atau headline MoM &ge;0,5%.</p>
+        <p>Konfirmasi sinyal hawkish PPI. Gold tembus $4.324 lanjut turun.</p>
+        <div class="lv">Target: 4.322,95 &rarr; 4.288,59 &rarr; 4.282,57<br>Estimasi &minus;50 s/d &minus;110 poin</div>
+      </div>
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-muted)">Sesuai</span><span class="scen-p" style="color:var(--p-muted)">40%</span></div>
+        <p>Core CPI YoY 2,4% (persis forecast), Core MoM 0,2%.</p>
+        <p>Forecast-nya sendiri mild dovish &rarr; gold <b>relief bounce</b>, rebut 4.375&ndash;4.400.</p>
+        <div class="lv">Rentang: 4.360 &ndash; 4.400<br>Estimasi +30 s/d +70 poin</div>
+      </div>
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-cool)">Dovish</span><span class="scen-p" style="color:var(--p-cool)">25%</span></div>
+        <p>Core CPI YoY &le;2,3%, Core MoM &le;0,1%.</p>
+        <p><b>Short covering tajam</b> melawan positioning hawkish. Gold rip ke 4.420+.</p>
+        <div class="lv">Target: 4.400 &rarr; 4.416 &rarr; 4.438 &rarr; 4.450<br>Estimasi +70 s/d +140 poin</div>
+      </div>
+    </div>
+    <div class="note cool" style="margin-top:16px">
+      <b>Asimetri CPI condong bullish untuk gold &mdash; kebalikan PPI.</b> Untuk PPI, forecast panas + pasar siap bearish. Untuk CPI: forecast-nya mild dovish (core membaik), dan pasar sudah sangat hawkish-positioned setelah PPI. Skenario terburuk untuk gold (Hot, 35%) butuh <i>upside surprise</i> di core &mdash; bukan sekadar "sesuai forecast". Dua skenario lain (65% gabungan) menguntungkan gold.
+    </div>
+  </section>
+
+  <!-- ====== 8. reading priority + 11 technical ====== -->
+  <section class="grid-2">
+    <div class="card pad">
+      <h2><span class="sec-no">&sect;08</span>Urutan Membaca Angkanya</h2>
+      <ul style="font-size:13.5px">
+        <li><b>1. Core CPI YoY</b> &mdash; metrik terpenting. Forecast 2,4%. Di 2,4% atau bawah = dovish; 2,5%+ = hot.</li>
+        <li><b>2. Core CPI MoM</b> &mdash; momentum terkini. Forecast 0,2% (cek: bukan 0,4%). 0,3%+ = hot.</li>
+        <li><b>3. Shelter / services</b> di rincian &mdash; kalau jasa memanas, perbaikan sisi barang bisa tertutup.</li>
+        <li><b>4. CPI YoY headline</b> &mdash; forecast 3,4%, ambang psikologis.</li>
+        <li><b>5. CPI MoM headline</b> &mdash; forecast 0,4%, tapi paling gampang terdistorsi energi.</li>
+        <li><b>6. Reaksi US10Y, lalu DXY</b> &mdash; kalau yield tembus 5%, tekanan tambahan apapun angka CPI-nya.</li>
+      </ul>
+    </div>
+    <div class="card pad">
+      <h2><span class="sec-no">&sect;11</span>Technical (live, tanpa LSS-SMC)</h2>
+      <ul style="font-size:13.5px">
+        <li><b>D1/H4</b>: range 4.375&ndash;4.434 <b>patah ke bawah</b> pasca-PPI (low 4.324,09). Struktur bearish &mdash; tapi candle PPI = <i>long lower wick</i>, close 4.349 (rejection dari 4.324).</li>
+        <li><b>H1</b>: candle news PPI red besar, lalu bounce ke ~$4.351. Sekarang konsolidasi.</li>
+        <li><b>Bawah</b>: 4.324,09 (low PPI) &rarr; 4.322,95 &rarr; 4.288,59 &rarr; 4.282,57 (dasar besar)</li>
+        <li><b>Atas</b>: 4.375 (range floor, kini resistance) &rarr; 4.394&ndash;4.400 &rarr; OB 4.416&ndash;4.438 &rarr; <b>4.449,01 invalidasi</b></li>
+      </ul>
+      <div class="note" style="margin-top:11px">
+        <b>M15/M5/M1</b> belum dibaca untuk CPI &mdash; pembacaan 10 September pasti basi, wajib refresh sebelum 19:30 WIB Jumat.
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 10. levels + gate ====== -->
+  <section class="card pad">
+    <h2><span class="sec-no">&sect;10</span>Level Kunci &amp; Gerbang Kualitas Setup</h2>
+    <div class="lvl-list" style="margin-bottom:18px">
+      <div class="lvl"><span>Invalidasi bearish</span><b>4.449,01</b></div>
+      <div class="lvl"><span>Order Block H4</span><b>4.416&ndash;4.438</b></div>
+      <div class="lvl"><span>Range floor (kini resist)</span><b>4.375</b></div>
+      <div class="lvl"><span>Harga sekarang</span><b>4.351</b></div>
+      <div class="lvl"><span>Low PPI</span><b>4.324,09</b></div>
+      <div class="lvl"><span>Target bawah 1</span><b>4.322,95</b></div>
+      <div class="lvl"><span>Target bawah 2</span><b>4.288,59</b></div>
+      <div class="lvl"><span>Dasar besar</span><b>4.282,57</b></div>
+    </div>
+    <div class="gate">
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:10px">
+        <span class="score">~30<span style="font-size:17px;color:var(--p-ink-2)">/50</span></span>
+        <b style="font-family:'Zilla Slab',serif;letter-spacing:.04em;text-transform:uppercase;font-size:15px">Estimasi H-1 &mdash; tidak ada posisi sebelum rilis</b>
+      </div>
+      <p style="margin:0;font-size:13.5px">Struktur bearish tapi choppy pasca-breakdown PPI, reaksi CPI dua-arah, dan risiko waktu tinggi (CPI + FOMC 6 hari lagi). Skor final dihitung ulang saat refresh menjelang rilis.</p>
+    </div>
+    <div class="grid-2" style="margin-top:18px">
+      <div>
+        <h2 style="color:var(--p-hot)">Jika Hot &mdash; Cari Jual</h2>
+        <ul style="font-size:13.5px">
+          <li>Tunggu pullback ke <b>4.375&ndash;4.394</b>.</li>
+          <li>SL di atas <b>4.416</b>.</li>
+          <li>TP bertahap 4.322,95 &rarr; 4.288,59 &rarr; 4.282,57.</li>
+        </ul>
+      </div>
+      <div>
+        <h2 style="color:var(--p-cool)">Jika Dovish &mdash; Cari Beli</h2>
+        <ul style="font-size:13.5px">
+          <li><b>Syarat:</b> reclaim tegas di atas <b>4.375</b> (body close H1/H4).</li>
+          <li>Entry di retest 4.375&ndash;4.380.</li>
+          <li>TP bertahap 4.400 &rarr; 4.416 &rarr; 4.438.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ====== 13. conclusion ====== -->
+  <section class="card pad">
+    <h2><span class="sec-no">&sect;12 &middot; &sect;13</span>Kesimpulan Sistem</h2>
+    <p class="lede">Bias fundamental <b>bearish tipis</b> (31% Bullish / 69% Bearish). Bias teknikal <b>bearish</b> (struktur patah ke bawah). Tapi <b>prediksi utamanya bukan "lanjut jatuh"</b>.</p>
+    <ul>
+      <li><b>Prediksi: gold cenderung BOUNCE atau stabil di CPI besok</b>, kecuali core CPI mengejutkan panas (Core YoY ≥2,5% atau Core MoM ≥0,3%). Berbeda dari PPI di mana bias jelas ke bawah.</li>
+      <li><b>Weighted number tetap bearish</b> karena backdrop yield 4,90% + DXY 99, tapi event CPI-nya sendiri &mdash; dengan core yang diperkirakan mendingin &mdash; lebih ramah gold daripada PPI.</li>
+      <li><b>Asimetri:</b> skenario merugikan (Hot, 35%) butuh <i>upside surprise</i>; skenario menguntungkan gold (Sesuai + Dovish, 65%) cuma butuh core sesuai forecast atau lebih baik.</li>
+      <li><b>Yang membatalkan bias bearish:</b> body close H4 di atas 4.449,01. Yang mengonfirmasi lanjutan bearish: close H4 di bawah 4.322,95.</li>
+    </ul>
+    <div class="note warn">
+      <b>&#9888; Rule 7 BERLAKU untuk CPI.</b> Pengecualian kemarin hanya untuk PPI. Status CPI tidak akan difinalkan sebelum minimal 3&ndash;4 jam pasca-19:30 WIB, idealnya menunggu penutupan sesi New York.
+    </div>
+  </section>
+
+  <footer>
+    <div class="disc">
+      <b>NOT FINANCIAL ADVICE.</b> Lembar ini catatan riset dan evaluasi sistem pribadi, bukan rekomendasi transaksi untuk siapapun. Trading emas dan forex berisiko tinggi dan dapat mengakibatkan kerugian total. Lakukan riset sendiri sebelum mengambil keputusan finansial apapun.
+    </div>
+    <div class="mono" style="font-size:10px;letter-spacing:.08em;text-transform:uppercase;text-align:right">
+      Disusun 10 Sep 2026 (H-1)<br>
+      Harga &amp; struktur: TradingView<br>
+      VANTAGE:XAUUSD &middot; TVC:DXY &middot; TVC:US10Y
+    </div>
+  </footer>
+
+</div>
+
+    </div>
+
+    <div class="ad-slot">
+      <script async="async" data-cfasync="false" src="https://pl30756138.effectivecpmnetwork.com/4a3f1dc3807941e53dfe4463a21a0e4e/invoke.js"></script>
+      <div id="container-4a3f1dc3807941e53dfe4463a21a0e4e"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Kebijakan Privasi</a>
+      <a href="https://www.effectivecpmnetwork.com/setnp40u3t?key=fe8199ed8dd693be00f1924c13a1b7ec" target="_blank" rel="noopener sponsored">Rekomendasi</a>
+    </div>
+    <div>&copy; 2026 EdukasiTrader.</div>
+  </div>
+</footer>
+
+</body>
+</html>
