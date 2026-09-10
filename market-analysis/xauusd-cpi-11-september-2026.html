@@ -150,7 +150,6 @@
     letter-spacing:.03em;text-transform:uppercase;color:var(--p-muted);
     margin:0 0 13px;padding-bottom:8px;border-bottom:1px solid var(--p-rule);
   }
-  .sec-no{font-family:"IBM Plex Mono",monospace;font-size:10px;letter-spacing:.12em;color:var(--p-accent);margin-right:9px}
   .pad{padding:20px 22px 22px}
 
   /* ---- THE LEDGER (hero split) ---- */
@@ -349,9 +348,9 @@
     <div class="stamp">Pending &middot; H-1</div>
   </header>
 
-  <!-- ====== THE LEDGER: forecast split ====== -->
+  <!-- ====== 2. Forecast (the ledger) ====== -->
   <section>
-    <h2 style="border:none;margin-bottom:10px"><span class="sec-no">&sect;02</span>Buku Besar &mdash; Forecast Agustus, Dibelah Dua</h2>
+    <h2 style="border:none;margin-bottom:10px">Buku Besar &mdash; Forecast Agustus, Dibelah Dua</h2>
     <div class="ledger">
       <div class="col col-cool">
         <div class="col-head">Yang Mendingin</div>
@@ -392,9 +391,9 @@
     </div>
   </section>
 
-  <!-- ====== 1. IMPORTANCE + why CPI is opposite of PPI ====== -->
+  <!-- ====== 1 + 3. Importance / interpretation ====== -->
   <section class="card pad">
-    <h2><span class="sec-no">&sect;01 &middot; &sect;03</span>Kenapa Setup CPI Ini Kebalikan dari PPI</h2>
+    <h2>Kenapa Setup CPI Ini Kebalikan dari PPI</h2>
     <p class="lede">PPI tadi malam panas <i>dan</i> itu genuine beat (YoY 5,4% vs konsensus 5,1%) &rarr; bearish bersih, prediksi kita terbukti benar. CPI besok punya struktur yang berbeda.</p>
     <div class="grid-2">
       <div>
@@ -419,38 +418,37 @@
     </div>
   </section>
 
-  <!-- ====== FOMC linkage ====== -->
-  <section class="card pad" style="border-color:var(--p-accent)">
-    <h2><span class="sec-no">&sect;09</span>Kenapa CPI Ini Penentu FOMC 17 September</h2>
+  <!-- ====== 4 + 5. 15-data dashboard ====== -->
+  <section class="card pad">
+    <h2>Lima Belas Data Makro &mdash; Papan Kondisi</h2>
     <div class="scroll">
       <table>
-        <thead><tr><th>Faktor</th><th>Detail</th></tr></thead>
+        <thead><tr><th>Data</th><th class="n">Terakhir</th><th>Catatan</th><th>Sinyal</th></tr></thead>
         <tbody>
-          <tr><td>Jadwal</td><td>Rapat 16&ndash;17 Sep, keputusan ~01:00 WIB 17 Sep &middot; blackout sejak 5 Sep</td></tr>
-          <tr><td>Dot plot Juni</td><td>Hawkish &mdash; 9 dari 18 dots ingin &ge;1 hike 2026, median rate 3,8%</td></tr>
-          <tr><td>Core PCE Agustus</td><td>Rilis <b>setelah</b> FOMC &mdash; CPI + PPI adalah satu-satunya baca inflasi Agustus yang Fed punya sebelum memutuskan</td></tr>
-          <tr><td>Odds hike</td><td>CME FedWatch ~56&ndash;60% &middot; <b>Kalshi 48% / Polymarket 49%</b> &mdash; pasar prediksi masih coin-flip, belum fully priced</td></tr>
+          <tr><td>FOMC</td><td class="n">Tahan</td><td>Rapat 17 Sep 01:00 WIB &middot; odds hike ~60&ndash;63%</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td><b>PPI YoY</b></td><td class="n">5,4%</td><td>Agustus &mdash; beat konsensus 5,1%, hot</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>PPI Core YoY (ex food/energy/trade)</td><td class="n">4,7%</td><td>Datar &mdash; core PPI jinak</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td>CPI YoY</td><td class="n">3,4%</td><td>Juli &middot; forecast Agustus 3,4% (datar)</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td><b>Core CPI YoY</b></td><td class="n">2,5%</td><td>Juli &middot; <b>forecast Agustus 2,4% (turun)</b></td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>Core PCE MoM</td><td class="n">0,2%</td><td>Terkendali (tapi PPI hot bisa dorong naik)</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td><b>NFP</b></td><td class="n">+162K</td><td>Konsensus 56K &middot; Juli direvisi ke +21K</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>ADP</td><td class="n">+38K</td><td>Terlemah sejak Januari 2026</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>JOLTS</td><td class="n">7,271jt</td><td>Lowongan menyusut</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>ISM Manufacturing</td><td class="n">&mdash;</td><td>Prices Paid 71,1 &mdash; biaya input panas</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>ISM Services</td><td class="n">54,6</td><td>New Orders anjlok ke 53,7</td><td><span class="tag t-warn">Terbelah</span></td></tr>
+          <tr><td>Retail Sales</td><td class="n">&minus;0,6%</td><td>Konsumsi melemah</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>NFIB Business Optimism</td><td class="n">98,7</td><td>Miss (99,3) &middot; penjualan terendah sejak Nov 2025</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td><b>Treasury Yield 10Y</b></td><td class="n">4,901%</td><td>TVC:US10Y &middot; dekat tinggi 1 tahun</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td><b>DXY</b></td><td class="n">99,063</td><td>TVC:DXY &middot; firm di sekitar 99</td><td><span class="tag t-hot">Hawkish</span></td></tr>
         </tbody>
       </table>
     </div>
-    <div class="grid-2" style="margin-top:14px">
-      <div>
-        <h2 style="color:var(--p-cool)">Jika CPI core &le;2,4%</h2>
-        <p style="font-size:13.5px;color:var(--p-ink-2)">Amunisi untuk kubu dovish. Digabung tenaga kerja lembut (ADP, JOLTS, NFIB) + konsumsi lemah (Retail &minus;0,6%), kasus "tahan dan tunggu" menguat. Odds hike bisa turun kembali ke coin-flip. <b>Gold supportive menuju FOMC.</b></p>
-      </div>
-      <div>
-        <h2 style="color:var(--p-hot)">Jika CPI core &ge;2,5%</h2>
-        <p style="font-size:13.5px;color:var(--p-ink-2)">Digabung PPI headline panas, kubu hawkish punya kasus bersih untuk hike. Odds lompat ke 70%+. <b>Gold tembus bawah, tekanan berlanjut menembus FOMC.</b></p>
-      </div>
-    </div>
-    <div class="note">
-      <b>Dot plot / SEP lebih penting dari keputusan rate-nya.</b> Walau Fed tahan, dot plot hawkish (hikes masih di meja) bisa tekan gold. Walau Fed hike, sinyal "one and done" bisa dibaca dovish. CPI besok menentukan ke arah mana ekspektasi itu bergerak dalam 6 hari sebelum keputusan.
-    </div>
+    <p style="margin-top:14px"><b>Sintesis:</b> data ini <b>terbelah</b>. Sisi inflasi inti (CPI core) dan permintaan (NFIB, Retail, ADP, JOLTS) melunak; tapi PPI headline, NFP, dan yield hawkish &mdash; sementara DXY sudah mulai melemah. Perpecahan ini yang menahan Confidence di 5/10 dan bikin reaksi CPI cenderung <b>dua-arah</b>, bukan searah seperti PPI.</p>
   </section>
 
   <!-- ====== 6. Market Bias Engine ====== -->
   <section class="card pad">
-    <h2><span class="sec-no">&sect;06</span>Tujuh Pilar &mdash; Dibangun dari Nol untuk CPI</h2>
+    <h2>Tujuh Pilar &mdash; Dibangun dari Nol untuk CPI</h2>
     <div class="scroll">
       <table class="pillars">
         <thead><tr><th>Pilar</th><th class="n">Bobot</th><th class="n">Skor</th><th class="barcol">&nbsp;</th><th class="n">Kontrib.</th></tr></thead>
@@ -483,37 +481,9 @@
     </div>
   </section>
 
-  <!-- ====== 4. 15-data dashboard ====== -->
-  <section class="card pad">
-    <h2><span class="sec-no">&sect;04 &middot; &sect;05</span>Lima Belas Data Makro &mdash; Papan Kondisi</h2>
-    <div class="scroll">
-      <table>
-        <thead><tr><th>Data</th><th class="n">Terakhir</th><th>Catatan</th><th>Sinyal</th></tr></thead>
-        <tbody>
-          <tr><td>FOMC</td><td class="n">Tahan</td><td>Rapat 17 Sep 01:00 WIB &middot; odds hike ~60&ndash;63%</td><td><span class="tag t-hot">Hawkish</span></td></tr>
-          <tr><td><b>PPI YoY</b></td><td class="n">5,4%</td><td>Agustus &mdash; beat konsensus 5,1%, hot</td><td><span class="tag t-hot">Hawkish</span></td></tr>
-          <tr><td>PPI Core YoY (ex food/energy/trade)</td><td class="n">4,7%</td><td>Datar &mdash; core PPI jinak</td><td><span class="tag t-flat">Netral</span></td></tr>
-          <tr><td>CPI YoY</td><td class="n">3,4%</td><td>Juli &middot; forecast Agustus 3,4% (datar)</td><td><span class="tag t-flat">Netral</span></td></tr>
-          <tr><td><b>Core CPI YoY</b></td><td class="n">2,5%</td><td>Juli &middot; <b>forecast Agustus 2,4% (turun)</b></td><td><span class="tag t-cool">Dovish</span></td></tr>
-          <tr><td>Core PCE MoM</td><td class="n">0,2%</td><td>Terkendali (tapi PPI hot bisa dorong naik)</td><td><span class="tag t-flat">Netral</span></td></tr>
-          <tr><td><b>NFP</b></td><td class="n">+162K</td><td>Konsensus 56K &middot; Juli direvisi ke +21K</td><td><span class="tag t-hot">Hawkish</span></td></tr>
-          <tr><td>ADP</td><td class="n">+38K</td><td>Terlemah sejak Januari 2026</td><td><span class="tag t-cool">Dovish</span></td></tr>
-          <tr><td>JOLTS</td><td class="n">7,271jt</td><td>Lowongan menyusut</td><td><span class="tag t-cool">Dovish</span></td></tr>
-          <tr><td>ISM Manufacturing</td><td class="n">&mdash;</td><td>Prices Paid 71,1 &mdash; biaya input panas</td><td><span class="tag t-hot">Hawkish</span></td></tr>
-          <tr><td>ISM Services</td><td class="n">54,6</td><td>New Orders anjlok ke 53,7</td><td><span class="tag t-warn">Terbelah</span></td></tr>
-          <tr><td>Retail Sales</td><td class="n">&minus;0,6%</td><td>Konsumsi melemah</td><td><span class="tag t-cool">Dovish</span></td></tr>
-          <tr><td>NFIB Business Optimism</td><td class="n">98,7</td><td>Miss (99,3) &middot; penjualan terendah sejak Nov 2025</td><td><span class="tag t-cool">Dovish</span></td></tr>
-          <tr><td><b>Treasury Yield 10Y</b></td><td class="n">4,901%</td><td>TVC:US10Y &middot; dekat tinggi 1 tahun</td><td><span class="tag t-hot">Hawkish</span></td></tr>
-          <tr><td><b>DXY</b></td><td class="n">99,063</td><td>TVC:DXY &middot; firm di sekitar 99</td><td><span class="tag t-hot">Hawkish</span></td></tr>
-        </tbody>
-      </table>
-    </div>
-    <p style="margin-top:14px"><b>Sintesis:</b> data ini <b>terbelah</b>. Sisi inflasi inti (CPI core) dan permintaan (NFIB, Retail, ADP, JOLTS) melunak; tapi PPI headline, NFP, dan yield hawkish &mdash; sementara DXY sudah mulai melemah. Perpecahan ini yang menahan Confidence di 5/10 dan bikin reaksi CPI cenderung <b>dua-arah</b>, bukan searah seperti PPI.</p>
-  </section>
-
   <!-- ====== 7. Scenarios ====== -->
   <section>
-    <h2 style="border:none;margin-bottom:12px"><span class="sec-no">&sect;07</span>Tiga Skenario &mdash; Timbangan Bisa Miring ke Dua Arah</h2>
+    <h2 style="border:none;margin-bottom:12px">Tiga Skenario &mdash; Timbangan Bisa Miring ke Dua Arah</h2>
     <div class="scen">
       <div>
         <div class="scen-hd"><span class="scen-name" style="color:var(--p-hot)">Hot</span><span class="scen-p" style="color:var(--p-hot)">30%</span></div>
@@ -539,10 +509,9 @@
     </div>
   </section>
 
-  <!-- ====== 8. reading priority + 11 technical ====== -->
-  <section class="grid-2">
-    <div class="card pad">
-      <h2><span class="sec-no">&sect;08</span>Urutan Membaca Angkanya</h2>
+  <!-- ====== 8. Reading priority ====== -->
+  <section class="card pad">
+      <h2>Urutan Membaca Angkanya</h2>
       <ul style="font-size:13.5px">
         <li><b>1. Core CPI YoY</b> &mdash; metrik terpenting. Forecast 2,4%. Di 2,4% atau bawah = dovish; 2,5%+ = hot.</li>
         <li><b>2. Core CPI MoM</b> &mdash; momentum terkini. Forecast 0,2% (cek: bukan 0,4%). 0,3%+ = hot.</li>
@@ -551,24 +520,40 @@
         <li><b>5. CPI MoM headline</b> &mdash; forecast 0,4%, tapi paling gampang terdistorsi energi.</li>
         <li><b>6. Reaksi US10Y, lalu DXY</b> &mdash; kalau yield tembus 5%, tekanan tambahan apapun angka CPI-nya.</li>
       </ul>
+  </section>
+
+  <!-- ====== 9. Impact / FOMC linkage ====== -->
+  <section class="card pad" style="border-color:var(--p-accent)">
+    <h2>Kenapa CPI Ini Penentu FOMC 17 September</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Faktor</th><th>Detail</th></tr></thead>
+        <tbody>
+          <tr><td>Jadwal</td><td>Rapat 16&ndash;17 Sep, keputusan ~01:00 WIB 17 Sep &middot; blackout sejak 5 Sep</td></tr>
+          <tr><td>Dot plot Juni</td><td>Hawkish &mdash; 9 dari 18 dots ingin &ge;1 hike 2026, median rate 3,8%</td></tr>
+          <tr><td>Core PCE Agustus</td><td>Rilis <b>setelah</b> FOMC &mdash; CPI + PPI adalah satu-satunya baca inflasi Agustus yang Fed punya sebelum memutuskan</td></tr>
+          <tr><td>Odds hike</td><td>CME FedWatch ~56&ndash;60% &middot; <b>Kalshi 48% / Polymarket 49%</b> &mdash; pasar prediksi masih coin-flip, belum fully priced</td></tr>
+        </tbody>
+      </table>
     </div>
-    <div class="card pad">
-      <h2><span class="sec-no">&sect;11</span>Technical (live, tanpa LSS-SMC)</h2>
-      <ul style="font-size:13.5px">
-        <li><b>D1/H4</b>: range 4.375&ndash;4.434 <b>patah ke bawah</b> pasca-PPI (low 4.324,09). Struktur bearish &mdash; tapi candle PPI = <i>long lower wick</i>, close 4.349 (rejection dari 4.324).</li>
-        <li><b>H1</b>: candle news PPI red besar, lalu bounce ke ~$4.351. Sekarang konsolidasi.</li>
-        <li><b>Bawah</b>: 4.324,09 (low PPI) &rarr; 4.322,95 &rarr; 4.288,59 &rarr; 4.282,57 (dasar besar)</li>
-        <li><b>Atas</b>: 4.375 (range floor, kini resistance) &rarr; 4.394&ndash;4.400 &rarr; OB 4.416&ndash;4.438 &rarr; <b>4.449,01 invalidasi</b></li>
-      </ul>
-      <div class="note" style="margin-top:11px">
-        <b>M15/M5/M1</b> belum dibaca untuk CPI &mdash; pembacaan 10 September pasti basi, wajib refresh sebelum 19:30 WIB Jumat.
+    <div class="grid-2" style="margin-top:14px">
+      <div>
+        <h2 style="color:var(--p-cool)">Jika CPI core &le;2,4%</h2>
+        <p style="font-size:13.5px;color:var(--p-ink-2)">Amunisi untuk kubu dovish. Digabung tenaga kerja lembut (ADP, JOLTS, NFIB) + konsumsi lemah (Retail &minus;0,6%), kasus "tahan dan tunggu" menguat. Odds hike bisa turun kembali ke coin-flip. <b>Gold supportive menuju FOMC.</b></p>
       </div>
+      <div>
+        <h2 style="color:var(--p-hot)">Jika CPI core &ge;2,5%</h2>
+        <p style="font-size:13.5px;color:var(--p-ink-2)">Digabung PPI headline panas, kubu hawkish punya kasus bersih untuk hike. Odds lompat ke 70%+. <b>Gold tembus bawah, tekanan berlanjut menembus FOMC.</b></p>
+      </div>
+    </div>
+    <div class="note">
+      <b>Dot plot / SEP lebih penting dari keputusan rate-nya.</b> Walau Fed tahan, dot plot hawkish (hikes masih di meja) bisa tekan gold. Walau Fed hike, sinyal "one and done" bisa dibaca dovish. CPI besok menentukan ke arah mana ekspektasi itu bergerak dalam 6 hari sebelum keputusan.
     </div>
   </section>
 
-  <!-- ====== 10. levels + gate ====== -->
+  <!-- ====== 10. Levels + gate + plan ====== -->
   <section class="card pad">
-    <h2><span class="sec-no">&sect;10</span>Level Kunci &amp; Gerbang Kualitas Setup</h2>
+    <h2>Level Kunci &amp; Gerbang Kualitas Setup</h2>
     <div class="lvl-list" style="margin-bottom:18px">
       <div class="lvl"><span>Invalidasi bearish</span><b>4.449,01</b></div>
       <div class="lvl"><span>Order Block H4</span><b>4.416&ndash;4.438</b></div>
@@ -606,9 +591,23 @@
     </div>
   </section>
 
-  <!-- ====== 13. conclusion ====== -->
+  <!-- ====== 11. Technical ====== -->
   <section class="card pad">
-    <h2><span class="sec-no">&sect;12 &middot; &sect;13</span>Kesimpulan Sistem</h2>
+      <h2>Technical (live, tanpa LSS-SMC)</h2>
+      <ul style="font-size:13.5px">
+        <li><b>D1/H4</b>: range 4.375&ndash;4.434 <b>patah ke bawah</b> pasca-PPI (low 4.324,09). Struktur bearish &mdash; tapi candle PPI = <i>long lower wick</i>, close 4.349 (rejection dari 4.324).</li>
+        <li><b>H1</b>: candle news PPI red besar, lalu bounce ke ~$4.351. Sekarang konsolidasi.</li>
+        <li><b>Bawah</b>: 4.324,09 (low PPI) &rarr; 4.322,95 &rarr; 4.288,59 &rarr; 4.282,57 (dasar besar)</li>
+        <li><b>Atas</b>: 4.375 (range floor, kini resistance) &rarr; 4.394&ndash;4.400 &rarr; OB 4.416&ndash;4.438 &rarr; <b>4.449,01 invalidasi</b></li>
+      </ul>
+      <div class="note" style="margin-top:11px">
+        <b>M15/M5/M1</b> belum dibaca untuk CPI &mdash; pembacaan 10 September pasti basi, wajib refresh sebelum 19:30 WIB Jumat.
+      </div>
+  </section>
+
+  <!-- ====== 12 + 13. Conclusion ====== -->
+  <section class="card pad">
+    <h2>Kesimpulan Sistem</h2>
     <p class="lede">Bias fundamental <b>bearish tipis</b> (33% Bullish / 67% Bearish). Bias teknikal <b>bearish tapi rapuh</b> (struktur patah, tapi bounce 42 poin retest 4.375). Tapi <b>prediksi utamanya bukan "lanjut jatuh"</b>.</p>
     <ul>
       <li><b>Prediksi: gold cenderung BOUNCE atau stabil di CPI besok</b>, kecuali core CPI mengejutkan panas (Core YoY ≥2,5% atau Core MoM ≥0,3%). Berbeda dari PPI di mana bias jelas ke bawah.</li>
