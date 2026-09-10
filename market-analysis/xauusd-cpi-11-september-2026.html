@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>XAUUSD Split Ledger — CPI 11 September 2026 — EdukasiTrader</title>
-<meta name="description" content="PPI baru rilis tadi malam dan keluar panas — prediksi kami benar. Tapi untuk CPI besok malam, prediksi kami justru kebalikan: emas cenderung mantul naik. Angka inti CPI diperkirakan turun ke 2,4%, reaksi negatif ke PPI sudah reda, dan alat perkiraan Cleveland Fed malah lebih rendah dari perkiraan umum. Sistem skor kami baca 33% peluang naik / 67% turun, tapi untuk reaksi ke CPI-nya sendiri lebih menguntungkan emas.">
+<meta name="description" content="PPI baru rilis tadi malam dan keluar panas — prediksi kami benar. Tapi untuk CPI besok malam, prediksi kami justru kebalikan: emas cenderung mantul naik. Angka inti CPI diperkirakan turun ke 2,4%, reaksi negatif ke PPI sudah reda. Sistem skor kami baca 33% peluang naik / 67% turun, tapi untuk reaksi ke CPI-nya sendiri lebih menguntungkan emas.">
 <link rel="stylesheet" href="../assets/css/style.css">
 <style>
   :root{
@@ -214,10 +214,25 @@
   td.n,th.n{text-align:right;padding-right:0;font-variant-numeric:tabular-nums}
   tr:last-child td{border-bottom:none}
   .total-row td{border-top:2px solid var(--p-rule);border-bottom:none;padding-top:9px;font-weight:600;font-family:"Zilla Slab",serif;font-size:15px}
-  .bar{display:block;height:5px;background:var(--p-rule);min-width:52px;position:relative}
+  .bar{display:block;height:5px;background:var(--p-rule);width:100%;position:relative}
   .bar i{display:block;height:100%;background:var(--p-accent)}
   .scroll{overflow-x:auto}
   .scroll table{min-width:520px}
+
+  /* ---- pillar table: give number columns room ---- */
+  .pillars{min-width:440px}
+  .pillars th, .pillars td{padding:8px 0 8px 14px}
+  .pillars th:first-child, .pillars td:first-child{padding-left:0}
+  .pillars .n{width:52px;white-space:nowrap}
+  .pillars .barcol{width:88px;padding-left:16px}
+
+  .alasan-hd{
+    font-family:"IBM Plex Mono",monospace;font-size:9.5px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--p-muted);margin-bottom:9px;
+  }
+  ul.alasan{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+  ul.alasan li{font-size:13px;line-height:1.5;color:var(--p-ink-2);padding-left:12px;border-left:2px solid var(--p-rule);margin:0}
+  ul.alasan li b{color:var(--p-ink)}
 
   .tag{
     display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:9.5px;
@@ -437,22 +452,34 @@
   <section class="card pad">
     <h2><span class="sec-no">&sect;06</span>Tujuh Pilar &mdash; Dibangun dari Nol untuk CPI</h2>
     <div class="scroll">
-      <table>
-        <thead><tr><th>Pilar</th><th class="n">Bobot</th><th class="n">Skor</th><th style="width:64px">&nbsp;</th><th class="n">Kontrib.</th><th>Alasan</th></tr></thead>
+      <table class="pillars">
+        <thead><tr><th>Pilar</th><th class="n">Bobot</th><th class="n">Skor</th><th class="barcol">&nbsp;</th><th class="n">Kontrib.</th></tr></thead>
         <tbody>
-          <tr><td>Kebijakan Fed</td><td class="n">20%</td><td class="n">32%</td><td><span class="bar"><i style="width:32%"></i></span></td><td class="n">6,40</td><td>Odds CME ~56&ndash;60%, tapi Kalshi/Polymarket ~49% &mdash; belum fully priced. CPI = circuit-breaker</td></tr>
-          <tr><td><b>Inflasi</b></td><td class="n">20%</td><td class="n"><b>45%</b></td><td><span class="bar"><i style="width:45%"></i></span></td><td class="n">9,00</td><td>Nowcast Cleveland Fed konfirmasi + sedikit lembut (Core YoY 2,38%), trajektori terus turun</td></tr>
-          <tr><td>Tenaga Kerja</td><td class="n">15%</td><td class="n">35%</td><td><span class="bar"><i style="width:35%"></i></span></td><td class="n">5,25</td><td>Tidak ada rilis baru sejak NFP</td></tr>
-          <tr><td>Pertumbuhan &amp; Konsumsi</td><td class="n">15%</td><td class="n">16%</td><td><span class="bar"><i style="width:16%"></i></span></td><td class="n">2,40</td><td>NFIB miss, Retail Sales &minus;0,6% &mdash; tidak berubah</td></tr>
-          <tr><td>Treasury Yield</td><td class="n">15%</td><td class="n">28%</td><td><span class="bar"><i style="width:28%"></i></span></td><td class="n">4,20</td><td>US10Y 4,90% &mdash; dekat tinggi 1 tahun, hawkish</td></tr>
-          <tr><td>DXY</td><td class="n">10%</td><td class="n">38%</td><td><span class="bar"><i style="width:38%"></i></span></td><td class="n">3,80</td><td>98,94 &mdash; MELEMAH dari 99,18, tidak konfirmasi kenaikan yield</td></tr>
-          <tr><td>Struktur Teknikal D1/H4</td><td class="n">5%</td><td class="n">30%</td><td><span class="bar"><i style="width:30%"></i></span></td><td class="n">1,50</td><td>Bounce 42 poin dari low 4.324, retest 4.375 &mdash; potensi failed breakdown</td></tr>
-          <tr class="total-row"><td>Total</td><td class="n">100%</td><td class="n">&mdash;</td><td>&nbsp;</td><td class="n">32,50</td><td>&nbsp;</td></tr>
+          <tr><td>Kebijakan Fed</td><td class="n">20%</td><td class="n">32%</td><td class="barcol"><span class="bar"><i style="width:32%"></i></span></td><td class="n">6,40</td></tr>
+          <tr><td><b>Inflasi</b></td><td class="n">20%</td><td class="n"><b>45%</b></td><td class="barcol"><span class="bar"><i style="width:45%"></i></span></td><td class="n">9,00</td></tr>
+          <tr><td>Tenaga Kerja</td><td class="n">15%</td><td class="n">35%</td><td class="barcol"><span class="bar"><i style="width:35%"></i></span></td><td class="n">5,25</td></tr>
+          <tr><td>Pertumbuhan &amp; Konsumsi</td><td class="n">15%</td><td class="n">16%</td><td class="barcol"><span class="bar"><i style="width:16%"></i></span></td><td class="n">2,40</td></tr>
+          <tr><td>Treasury Yield</td><td class="n">15%</td><td class="n">28%</td><td class="barcol"><span class="bar"><i style="width:28%"></i></span></td><td class="n">4,20</td></tr>
+          <tr><td>DXY</td><td class="n">10%</td><td class="n">38%</td><td class="barcol"><span class="bar"><i style="width:38%"></i></span></td><td class="n">3,80</td></tr>
+          <tr><td>Struktur Teknikal D1/H4</td><td class="n">5%</td><td class="n">30%</td><td class="barcol"><span class="bar"><i style="width:30%"></i></span></td><td class="n">1,50</td></tr>
+          <tr class="total-row"><td>Total</td><td class="n">100%</td><td class="n">&mdash;</td><td class="barcol">&nbsp;</td><td class="n">32,50</td></tr>
         </tbody>
       </table>
     </div>
+    <div style="margin-top:16px">
+      <div class="alasan-hd">Alasan tiap skor</div>
+      <ul class="alasan">
+        <li><b>Kebijakan Fed &mdash; 32%.</b> Peluang naik suku bunga ~56&ndash;60% (CME), tapi pasar prediksi lain (Kalshi, Polymarket) cuma ~49% &mdash; belum sepenuhnya diperhitungkan pasar. CPI besok bisa jadi penentu.</li>
+        <li><b>Inflasi &mdash; 45%.</b> Alat perkiraan Cleveland Fed mengkonfirmasi, malah sedikit lebih lembut (angka inti 2,38%), dan trennya terus turun.</li>
+        <li><b>Tenaga Kerja &mdash; 35%.</b> Tidak ada rilis ketenagakerjaan baru sejak NFP.</li>
+        <li><b>Pertumbuhan &amp; Konsumsi &mdash; 16%.</b> NFIB meleset, Retail Sales &minus;0,6% &mdash; tidak berubah.</li>
+        <li><b>Treasury Yield &mdash; 28%.</b> Imbal hasil obligasi 10 tahun 4,90% &mdash; dekat tertinggi setahun, menekan emas.</li>
+        <li><b>DXY (indeks dolar) &mdash; 38%.</b> 98,94 &mdash; melemah dari 99,18, tidak ikut menguat seperti imbal hasil obligasi.</li>
+        <li><b>Struktur Teknikal &mdash; 30%.</b> Emas sudah mantul 42 poin dari titik terendah $4.324 dan menguji $4.375 &mdash; ada potensi penurunan tadi malam cuma jebakan.</li>
+      </ul>
+    </div>
     <div class="note cool">
-      <b>Kenapa pilar Inflasi 45% (vs 24% di PPI).</b> Di PPI, bahkan core-nya lengket di 4,7% YoY &mdash; tidak ada disinflasi. Di CPI, core YoY diperkirakan <b>turun</b> ke 2,4% (nowcast Cleveland Fed malah 2,38%, September 2,32%), dan itu metrik yang paling dilihat Fed. Ini alasan utama bias CPI kurang bearish dari PPI meski backdrop yield sama-sama menekan.
+      <b>Kenapa pilar Inflasi 45% (vs 24% di PPI).</b> Di PPI, bahkan angka intinya masih menempel tinggi di 4,7% &mdash; tidak ada tanda melambat. Di CPI, angka inti justru diperkirakan <b>turun</b> ke 2,4% (perkiraan Cleveland Fed malah 2,38%, bulan depan 2,32%), dan itu angka yang paling dilihat The Fed. Ini alasan utama bias CPI kurang menekan emas dibanding PPI, meski kondisi imbal hasil obligasi sama-sama berat.
     </div>
   </section>
 
