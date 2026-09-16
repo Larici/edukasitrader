@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>XAUUSD Storm Track — FOMC 17 September 2026 — EdukasiTrader</title>
-<meta name="description" content="FOMC malam ini: Market Bias Engine baca 74% Bearish, tapi setelah audit lintas-sumber prediksi reaksi harga dikalibrasi ke 50/50. Termasuk breakdown whipsaw per jendela waktu: menit pertama relatif bersih (~15-20%), tapi risiko whipsaw sebenarnya (~60-65%) baru muncul 30-90 menit kemudian, saat press conference Warsh.">
+<meta name="description" content="FOMC malam ini: Market Bias Engine baca 74% Bearish, tapi setelah audit lintas-sumber prediksi reaksi harga dikalibrasi ke 50/50. Analisa lengkap 14-section: forecast vs previous, dashboard 15 data makro, dot plot vs jalur Juni, divergensi bank besar, 7 pilar, prioritas pembacaan data, dampak terhadap, breakdown whipsaw per jendela waktu, dan confidence score.">
 <link rel="stylesheet" href="../assets/css/style.css">
 <style>
   :root{
@@ -219,6 +219,24 @@
     </div>
   </section>
 
+  <!-- FORECAST VS PREVIOUS -->
+  <section class="card pad">
+    <h2>Forecast vs Previous</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Data</th><th>Previous</th><th>Forecast</th><th>Interpretasi</th><th>Arah USD</th></tr></thead>
+        <tbody>
+          <tr><td><b>Fed Funds Rate</b></td><td class="n mono">3,75%</td><td class="n mono">4,00%</td><td>Hike 25bp &mdash; sudah 90%+ priced</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>Dot Plot 2026 (median)</td><td class="n mono">3,8%</td><td class="n mono">?</td><td>Pertanyaan sebenarnya malam ini</td><td><span class="tag t-warn">Wildcard</span></td></tr>
+          <tr><td>Dot Plot 2027</td><td class="n mono">3,6%</td><td class="n mono">?</td><td>Revisi naik = hawkish genuine</td><td><span class="tag t-warn">Wildcard</span></td></tr>
+          <tr><td>Dot Plot 2028</td><td class="n mono">3,4%</td><td class="n mono">?</td><td>Jalur pemotongan Juni</td><td><span class="tag t-warn">Wildcard</span></td></tr>
+          <tr><td>Dot Plot 2029 / Longer-run</td><td class="n mono">3,1%</td><td class="n mono">?</td><td>Neutral rate jangka panjang</td><td><span class="tag t-warn">Wildcard</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px;font-size:13.5px"><b>Kunci pembacaan:</b> baris pertama (Fed Funds Rate) sudah nyaris pasti dan sudah ter-price. Empat baris dot plot di bawahnya adalah wildcard sesungguhnya &mdash; belum ada forecast konsensus resmi karena ini murni proyeksi internal FOMC, baru terlihat begitu SEP dirilis 01:00 WIB.</p>
+  </section>
+
   <!-- DOT PLOT TRAJECTORY -->
   <section class="card pad">
     <h2>Jalur Dot Plot Juni &mdash; Pertanyaan Sebenarnya Malam Ini</h2>
@@ -271,6 +289,34 @@
       </svg>
     </div>
     <p style="font-size:13px;color:var(--p-muted);margin-top:4px">Titik oranye = 2026 (malam ini). Garis abu = jalur dot plot Juni yang sudah diketahui publik. Kipas = dua arah revisi yang mungkin terjadi pada dot plot baru.</p>
+  </section>
+
+  <!-- 15-DATA DASHBOARD -->
+  <section class="card pad">
+    <h2>Dashboard 15 Data Makro</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Data</th><th class="n">Terakhir</th><th>Catatan</th><th>Sinyal</th></tr></thead>
+        <tbody>
+          <tr><td>Fed Funds Rate</td><td class="n mono">3,75%&rarr;4,00%</td><td>Hike malam ini, sudah priced</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>Dot Plot 2026 (baseline Juni)</td><td class="n mono">3,8%</td><td>Wildcard revisi &mdash; lihat di atas</td><td><span class="tag t-warn">Wildcard</span></td></tr>
+          <tr><td>CPI YoY (headline)</td><td class="n mono">3,4%</td><td>In-line, flat</td><td><span class="tag t-flat">Netral</span></td></tr>
+          <tr><td><b>Core CPI YoY</b></td><td class="n mono">2,4%</td><td>Disinflasi dari 2,5%</td><td><span class="tag t-cool">Dovish tipis</span></td></tr>
+          <tr><td>Core CPI MoM</td><td class="n mono">0,3%</td><td>Beat dari forecast 0,2%</td><td><span class="tag t-hot">Hawkish tipis</span></td></tr>
+          <tr><td>PPI YoY</td><td class="n mono">5,4%</td><td>Beat dari konsensus 5,1%</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td><b>NFP</b></td><td class="n mono">+162K</td><td>Beat dari konsensus 56K</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>Retail Sales Agustus</td><td class="n mono">&mdash;</td><td>Rilis 19:30 WIB malam ini &mdash; sebelum keputusan</td><td><span class="tag t-warn">Pending</span></td></tr>
+          <tr><td>NFIB Business Optimism</td><td class="n mono">98,7</td><td>Miss dari forecast 99,3</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>ISM Services New Orders</td><td class="n mono">53,7</td><td>Miss dari forecast 57,0</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>GDP Q2 (advance)</td><td class="n mono">1,5%</td><td>Miss dari forecast 2,1%</td><td><span class="tag t-cool">Dovish</span></td></tr>
+          <tr><td>WTI / Brent</td><td class="n mono">~$99 / ~$108</td><td>+15% MTD &mdash; pipa Saudi masih tertutup</td><td><span class="tag t-hot">Hawkish (via inflasi)</span></td></tr>
+          <tr><td><b>UST10Y</b></td><td class="n mono">5,000%</td><td>Tertinggi sejak 2023</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td>UST02Y</td><td class="n mono">4,661%</td><td>Naik, kurva mulai selaras</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+          <tr><td><b>DXY</b></td><td class="n mono">99,72</td><td>Terus menguat</td><td><span class="tag t-hot">Hawkish</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px;font-size:13.5px"><b>Sintesis:</b> dataset <b>terbelah</b>. Inflasi/tenaga kerja/yield/dolar/minyak kompak hawkish, tapi Pertumbuhan &amp; Konsumsi (NFIB, ISM New Orders, GDP) konsisten menunjuk ekonomi melemah &mdash; ini yang menjaga pilar Pertumbuhan &amp; Konsumsi di 56% (satu-satunya pilar bullish di Market Bias Engine).</p>
   </section>
 
   <!-- BANK DIVERGENCE -->
@@ -344,6 +390,18 @@
     </div>
   </section>
 
+  <!-- READING PRIORITY -->
+  <section class="card pad">
+    <h2>Prioritas Pembacaan Data</h2>
+    <ul style="font-size:13.5px">
+      <li><b>1. Dot plot 2027-2029</b> &mdash; revisi vs jalur Juni (3,6%/3,4%/3,1%) menentukan arah, bukan keputusan rate.</li>
+      <li><b>2. Vote count / dissent</b> &mdash; perpecahan komite (9-3 di Juli) bisa melebar atau menyempit.</li>
+      <li><b>3. Statement language</b> &mdash; Warsh sengaja pendek (~130 kata), sedikit sinyal baru di sini.</li>
+      <li><b>4. Nada press conference (01:30)</b> &mdash; penentu asli karena statement minim forward guidance.</li>
+      <li><b>5. Retail Sales 19:30 WIB</b> &mdash; data terakhir Pertumbuhan &amp; Konsumsi sebelum voting.</li>
+    </ul>
+  </section>
+
   <!-- SCENARIOS -->
   <section>
     <h2 style="border:none;margin-bottom:12px;padding-bottom:0">Tiga Skenario &mdash; Dikalibrasi Ulang</h2>
@@ -366,6 +424,21 @@
     </div>
     <div class="note" style="margin-top:14px">
       <b>Dua dari tiga skenario (50%) menguntungkan gold.</b> Sesuai kalibrasi bank besar (2 dari 4 "cukup segini") &mdash; ini yang mendasari prediksi reaksi 50/50, bukan 74/26 dari Market Bias Engine mentah.
+    </div>
+  </section>
+
+  <!-- IMPACT -->
+  <section class="card pad">
+    <h2>Dampak Terhadap</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Instrumen</th><th>Revisi Hawkish (50%)</th><th>Konfirmasi/Dovish (35%+15%)</th></tr></thead>
+        <tbody>
+          <tr><td><b>DXY</b></td><td>Breakout di atas 99,7</td><td>Turun ke 99,0-99,3</td></tr>
+          <tr><td><b>UST10Y</b></td><td>Tembus tegas 5,0%</td><td>Turun ke 4,85-4,90%</td></tr>
+          <tr><td><b>XAUUSD</b></td><td>Uji $4.253 &rarr; $4.229,75</td><td>Reclaim $4.317 &rarr; $4.375+</td></tr>
+        </tbody>
+      </table>
     </div>
   </section>
 
@@ -406,6 +479,25 @@
       <p style="margin:0;font-size:13.5px">Event binary Tier 1 tertinggi + positioning ekstrem + prediksi reaksi genuinely 50/50 &mdash; bukan waktu untuk masuk posisi sebelum tahu arahnya.</p>
     </div>
     <p style="margin-top:14px;font-size:13.5px"><b>Rencana:</b> tunggu dot plot + press conference selesai (~01:30-02:00 WIB), baca reaksi H1 SETELAH press conference (bukan cuma rate decision), fokus ke arah revisi dot plot vs jalur Juni. Rule 7 penuh berlaku &mdash; finalisasi status tidak sebelum 3-4 jam pasca-press conference (~04:30-05:30 WIB).</p>
+  </section>
+
+  <!-- CONFIDENCE -->
+  <section class="card pad">
+    <h2>Confidence Score &mdash; 5/10</h2>
+    <div class="scroll">
+      <table>
+        <tbody>
+          <tr><td>Fundamental</td><td class="n">&#9733;&#9733;&#9733;&#9734;&#9734;</td></tr>
+          <tr><td>Teknikal</td><td class="n">&#9733;&#9733;&#9733;&#9734;&#9734;</td></tr>
+          <tr><td>Sentimen</td><td class="n">&#9733;&#9733;&#9734;&#9734;&#9734;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <ul style="font-size:13.5px;margin-top:12px">
+      <li><b>Fundamental ★★★☆☆</b> &mdash; backdrop hawkish jelas, tapi dot plot genuinely 50/50, bukan satu arah.</li>
+      <li><b>Teknikal ★★★☆☆</b> &mdash; downtrend D1/H4 jelas, tapi bullish divergence momentum baru terdeteksi melemahkan keyakinan arah lanjutan.</li>
+      <li><b>Sentimen ★★☆☆☆</b> &mdash; divergensi bank besar 2-2, positioning ekstrem crowded, risiko sell-the-fact nyata.</li>
+    </ul>
   </section>
 
   <!-- CONCLUSION -->
