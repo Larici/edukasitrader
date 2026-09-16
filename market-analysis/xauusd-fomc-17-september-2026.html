@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XAUUSD Storm Track — FOMC 17 September 2026 — EdukasiTrader</title>
+<meta name="description" content="FOMC malam ini: Market Bias Engine baca 74% Bearish, tapi setelah audit lintas-sumber (divergensi 4 bank besar, konfirmasi teknikal independen), prediksi reaksi harga dikalibrasi ke 50/50. Hike 25bp sudah sesuai dot plot Juni - yang menentukan adalah apakah dot plot September merevisi jalur 2027-2029 lebih hawkish atau cuma konfirmasi.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  :root{
+    --p-ground:#EEF1F3; --p-panel:#FFFFFF; --p-panel-2:#F5F7F8;
+    --p-ink:#12161C; --p-ink-2:#3C4650; --p-muted:#6C7684;
+    --p-rule:#D6DCE1; --p-rule-strong:#AEB8C0;
+    --p-accent:#B4650F; --p-accent-soft:#F5E6D3;
+    --p-hot:#B23B27; --p-hot-soft:#F6E1DC;
+    --p-cool:#1E7A6C; --p-cool-soft:#DCEFEB;
+    --p-warn:#8A5A12; --p-warn-soft:#F3E7CE;
+    --p-shadow:0 1px 0 rgba(18,22,28,.05), 0 3px 16px rgba(18,22,28,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --p-ground:#0E1217; --p-panel:#161B22; --p-panel-2:#1B212A;
+      --p-ink:#E7ECF1; --p-ink-2:#B7C1CB; --p-muted:#7C8896;
+      --p-rule:#2A323C; --p-rule-strong:#3C4854;
+      --p-accent:#E0A050; --p-accent-soft:#2E2412;
+      --p-hot:#E2836E; --p-hot-soft:#301C18;
+      --p-cool:#63C7B6; --p-cool-soft:#122B27;
+      --p-warn:#D6A153; --p-warn-soft:#2C2414;
+      --p-shadow:0 1px 0 rgba(0,0,0,.35), 0 3px 20px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --p-ground:#0E1217; --p-panel:#161B22; --p-panel-2:#1B212A;
+    --p-ink:#E7ECF1; --p-ink-2:#B7C1CB; --p-muted:#7C8896;
+    --p-rule:#2A323C; --p-rule-strong:#3C4854;
+    --p-accent:#E0A050; --p-accent-soft:#2E2412;
+    --p-hot:#E2836E; --p-hot-soft:#301C18;
+    --p-cool:#63C7B6; --p-cool-soft:#122B27;
+    --p-warn:#D6A153; --p-warn-soft:#2C2414;
+    --p-shadow:0 1px 0 rgba(0,0,0,.35), 0 3px 20px rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box}
+  .poster-container{
+    background:var(--p-ground); color:var(--p-ink);
+    font-family:"Work Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+  .num{font-variant-numeric:tabular-nums}
+  .sheet{max-width:1040px;margin:0 auto;padding:26px 18px 60px;display:flex;flex-direction:column;gap:20px}
+  .card{background:var(--p-panel);border:1px solid var(--p-rule-strong);box-shadow:var(--p-shadow)}
+  .pad{padding:22px 24px 24px}
+
+  .masthead{padding:22px 24px 20px;border-top:3px solid var(--p-accent)}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--p-muted);margin-bottom:8px}
+  h1{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:clamp(34px,6.5vw,54px);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:0;text-wrap:balance}
+  .sub{font-size:clamp(14.5px,2.2vw,17px);color:var(--p-ink-2);margin-top:6px;max-width:60ch}
+  .specline{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-top:16px;border-top:1px solid var(--p-rule)}
+  .spec{padding:11px 0 2px;border-right:1px solid var(--p-rule);padding-right:14px;margin-right:14px}
+  .spec:last-child{border-right:none}
+  .spec dt{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--p-muted)}
+  .spec dd{margin:2px 0 0;font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:20px}
+  .stamp{display:inline-block;margin-top:14px;border:1.5px solid var(--p-accent);color:var(--p-accent);background:var(--p-accent-soft);font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px}
+
+  h2{font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:15px;letter-spacing:.05em;text-transform:uppercase;color:var(--p-ink);margin:0 0 14px;padding-bottom:9px;border-bottom:1px solid var(--p-rule)}
+  p{margin:0 0 11px;color:var(--p-ink-2)}
+  .lede{font-size:15.5px}
+  ul{margin:0;padding-left:18px}
+  li{margin-bottom:8px;color:var(--p-ink-2)}
+  li b{color:var(--p-ink)}
+
+  /* Hero readout */
+  .readout{display:grid;grid-template-columns:1.05fr 1fr;gap:0}
+  @media (max-width:760px){ .readout{grid-template-columns:1fr} }
+  .readout-cell{padding:22px 24px}
+  .readout-cell + .readout-cell{border-left:1px solid var(--p-rule)}
+  @media (max-width:760px){ .readout-cell + .readout-cell{border-left:none;border-top:1px solid var(--p-rule)} }
+  .rd-label{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.13em;text-transform:uppercase;color:var(--p-muted);margin-bottom:6px}
+  .rd-value{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:clamp(46px,8vw,66px);line-height:.95;color:var(--p-hot)}
+  .rd-value small{font-size:.36em;font-weight:700;letter-spacing:.03em;margin-left:4px}
+  .rd-value.balanced{color:var(--p-warn)}
+  .rd-note{font-size:13px;color:var(--p-muted);margin-top:6px;max-width:34ch}
+
+  /* Forecast cone chart */
+  .cone-wrap{padding:6px 4px 2px}
+  svg text{font-family:"JetBrains Mono",monospace}
+
+  .note{border-left:3px solid var(--p-accent);background:var(--p-accent-soft);padding:13px 16px;font-size:13.5px;color:var(--p-ink-2)}
+  .note b{color:var(--p-ink)}
+  .note.hot{border-left-color:var(--p-hot);background:var(--p-hot-soft)}
+  .note.cool{border-left-color:var(--p-cool);background:var(--p-cool-soft)}
+  .note.warn{border-left-color:var(--p-warn);background:var(--p-warn-soft)}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:8px 10px 8px 0;border-bottom:1px solid var(--rule-faint,var(--p-rule))}
+  th{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--p-muted);font-weight:500}
+  td.n,th.n{text-align:right;padding-right:0;font-variant-numeric:tabular-nums}
+  tr:last-child td{border-bottom:none}
+  .total-row td{border-top:2px solid var(--p-rule-strong);border-bottom:none;padding-top:10px;font-weight:700;font-family:"Big Shoulders Display",sans-serif;font-size:16px}
+  .scroll{overflow-x:auto}
+  .scroll table{min-width:520px}
+  .bar{display:block;height:6px;background:var(--p-rule);width:100%}
+  .bar i{display:block;height:100%;background:var(--p-accent)}
+
+  .tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border:1px solid currentColor;white-space:nowrap}
+  .t-hot{color:var(--p-hot);background:var(--p-hot-soft)}
+  .t-cool{color:var(--p-cool);background:var(--p-cool-soft)}
+  .t-warn{color:var(--p-warn);background:var(--p-warn-soft)}
+
+  .scen{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--p-rule-strong)}
+  @media (max-width:800px){ .scen{grid-template-columns:1fr} }
+  .scen>div{padding:16px 17px 18px;border-right:1px solid var(--p-rule);background:var(--p-panel)}
+  .scen>div:last-child{border-right:none}
+  @media (max-width:800px){ .scen>div{border-right:none;border-bottom:1px solid var(--p-rule)} .scen>div:last-child{border-bottom:none} }
+  .scen-hd{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px}
+  .scen-name{font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:17px;letter-spacing:.02em;text-transform:uppercase}
+  .scen-p{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:27px}
+  .scen p{margin:0 0 8px;font-size:13px;color:var(--p-ink-2)}
+  .scen .lv{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--p-ink);border-top:1px dashed var(--p-rule);padding-top:8px;margin-top:2px}
+
+  .lvl-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1px;background:var(--p-rule);border:1px solid var(--p-rule)}
+  .lvl{background:var(--p-panel);padding:10px 12px}
+  .lvl b{display:block;font-family:"JetBrains Mono",monospace;font-size:15px}
+  .lvl span{font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--p-muted)}
+
+  .gate{border:1px solid var(--p-warn);background:var(--p-warn-soft);padding:15px 18px}
+  .gate .score{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:32px;color:var(--p-warn)}
+
+  .grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+  @media (max-width:760px){ .grid-2{grid-template-columns:1fr} }
+
+  footer{border-top:1px solid var(--p-rule-strong);padding-top:14px;font-size:12px;color:var(--p-muted);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+  .disc{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.03em;line-height:1.7;max-width:62ch}
+
+  .compliance-notice{
+    max-width:880px;
+    margin:0 auto 20px;
+    padding:16px 20px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-dim);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    color:var(--text-dim);
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+  .compliance-notice strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Edukasi<span>Trader</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Beranda</a>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Privasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="max-width: 960px;">
+
+    <div class="compliance-notice">
+      <strong>Bukan ajakan bertransaksi.</strong> Konten di bawah ini adalah catatan analisis pasar pribadi yang kami bagikan sebagai referensi publik — berisi opini terhadap data makro dan level teknikal saat disusun, bukan sinyal trading resmi, rekomendasi personal, atau ajakan untuk membuka posisi tertentu. Pasar bisa bergerak sangat berbeda dari skenario yang dibahas. Selalu lakukan riset dan pertimbangan risiko sendiri.
+    </div>
+
+    <div class="ad-slot">
+      <script>
+        atOptions = {
+          'key' : '95130429aa13b28790da6b9e46158bfc',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/95130429aa13b28790da6b9e46158bfc/invoke.js"></script>
+    </div>
+
+    <div class="poster-container">
+
+<div class="sheet">
+
+  <!-- MASTHEAD -->
+  <header class="card masthead">
+    <div class="eyebrow">Rate Path Forecast &middot; FOMC-2026-09-17 &middot; H-1</div>
+    <h1>Storm Track</h1>
+    <div class="sub">FOMC Rate Decision + Dot Plot + Press Conference Warsh &middot; XAUUSD</div>
+    <dl class="specline">
+      <div class="spec"><dt>Keputusan</dt><dd class="num">01:00 WIB</dd></div>
+      <div class="spec"><dt>Press Conf.</dt><dd class="num">01:30 WIB</dd></div>
+      <div class="spec"><dt>Tier</dt><dd>1 &middot; &#9733;10/10</dd></div>
+      <div class="spec"><dt>Spot</dt><dd class="num">$4.286</dd></div>
+      <div class="spec"><dt>Confidence</dt><dd class="num">5/10</dd></div>
+    </dl>
+    <div class="stamp">Pending &middot; H-1</div>
+  </header>
+
+  <!-- HERO READOUT -->
+  <section class="card">
+    <div class="readout">
+      <div class="readout-cell">
+        <div class="rd-label">Market Bias Engine &mdash; backdrop score</div>
+        <div class="rd-value">74<small>% BEARISH</small></div>
+        <div class="rd-note">Tujuh pilar, seberapa hawkish backdrop yang SUDAH ter-price. Bukan probabilitas reaksi harga malam ini.</div>
+      </div>
+      <div class="readout-cell">
+        <div class="rd-label">Prediksi reaksi harga malam ini</div>
+        <div class="rd-value balanced">50<small>/</small>50<small> BEARISH/BULLISH</small></div>
+        <div class="rd-note">Dikalibrasi ulang dari divergensi 4 bank besar &amp; momentum teknikal &mdash; jauh lebih seimbang dari 74/26.</div>
+      </div>
+    </div>
+    <div class="note warn" style="margin:0 22px 22px">
+      <b>Kenapa dua angka berbeda?</b> Kebijakan Fed + Treasury Yield + DXY (45% bobot) causally berurutan dan MALAM INI semuanya di rekor ekstrem bersamaan (odds 90%, yield 5%, dolar multi-minggu tertinggi) &mdash; tanpa divergensi, satu narasi (Fed hawkish akibat minyak) ter-hitung tiga kali. 74% itu valid sebagai ukuran backdrop, tapi bukan ukuran probabilitas reaksi. Untuk itu kami pakai kalibrasi silang dari sumber independen di bawah.
+    </div>
+  </section>
+
+  <!-- DOT PLOT TRAJECTORY -->
+  <section class="card pad">
+    <h2>Jalur Dot Plot Juni &mdash; Pertanyaan Sebenarnya Malam Ini</h2>
+    <p class="lede">Fed Funds Rate forecast malam ini <b>4,00%</b> (dari 3,75%) &mdash; hike 25bp ini <b>sudah sesuai</b> median dot plot Juni untuk 2026 (3,8%). Bukan kejutan. Yang benar-benar baru: <b>apakah dot plot September merevisi jalur ini, atau cuma mengonfirmasinya.</b></p>
+    <div class="cone-wrap">
+      <svg viewBox="0 0 700 230" width="100%" role="img" aria-label="Grafik jalur dot plot Juni dari 2026 ke proyeksi jangka panjang, dengan kipas ketidakpastian di titik 2026 untuk revisi September">
+        <!-- gridlines -->
+        <g stroke="var(--p-rule)" stroke-width="1">
+          <line x1="60" y1="30" x2="60" y2="180"/>
+          <line x1="60" y1="180" x2="660" y2="180"/>
+        </g>
+        <g fill="var(--p-muted)" font-size="10">
+          <text x="20" y="45">4.0%</text>
+          <text x="20" y="85">3.7%</text>
+          <text x="20" y="125">3.4%</text>
+          <text x="20" y="165">3.1%</text>
+        </g>
+        <!-- known June path: 2026=3.8 -> 2027=3.6 -> 2028=3.4 -> 2029=3.1 -> LR=3.1 -->
+        <!-- y mapping: 4.0->40, 3.7->80(actually let's just place manually) -->
+        <polyline points="140,55 280,72 420,122 560,171 640,171" fill="none" stroke="var(--p-ink-2)" stroke-width="2.5"/>
+        <g fill="var(--p-ink-2)">
+          <circle cx="140" cy="55" r="5"/>
+          <circle cx="280" cy="72" r="5"/>
+          <circle cx="420" cy="122" r="5"/>
+          <circle cx="560" cy="171" r="5"/>
+          <circle cx="640" cy="171" r="5"/>
+        </g>
+        <!-- uncertainty fan from 2026 point -->
+        <polygon points="140,55 280,20 280,72" fill="var(--p-hot)" opacity="0.18"/>
+        <polygon points="140,55 280,72 280,118" fill="var(--p-cool)" opacity="0.18"/>
+        <line x1="140" y1="55" x2="280" y2="20" stroke="var(--p-hot)" stroke-width="2" stroke-dasharray="5 4"/>
+        <line x1="140" y1="55" x2="280" y2="118" stroke="var(--p-cool)" stroke-width="2" stroke-dasharray="5 4"/>
+        <circle cx="140" cy="55" r="7" fill="var(--p-accent)"/>
+        <!-- labels -->
+        <g font-size="12" font-weight="700">
+          <text x="118" y="205" fill="var(--p-ink)">2026</text>
+          <text x="258" y="205" fill="var(--p-ink)">2027</text>
+          <text x="398" y="205" fill="var(--p-ink)">2028</text>
+          <text x="538" y="205" fill="var(--p-ink)">2029</text>
+          <text x="605" y="205" fill="var(--p-muted)" font-size="10">Longer</text>
+        </g>
+        <g font-size="11" font-family="JetBrains Mono, monospace">
+          <text x="112" y="48" fill="var(--p-accent)">3,8%</text>
+          <text x="252" y="65" fill="var(--p-ink-2)">3,6%</text>
+          <text x="392" y="115" fill="var(--p-ink-2)">3,4%</text>
+          <text x="532" y="164" fill="var(--p-ink-2)">3,1%</text>
+        </g>
+        <text x="284" y="16" fill="var(--p-hot)" font-size="11" font-weight="700">&uarr; revisi hawkish (2027 naik dari 3,6%)</text>
+        <text x="284" y="132" fill="var(--p-cool)" font-size="11" font-weight="700">&darr; konfirmasi/dovish (2027 tetap/turun)</text>
+      </svg>
+    </div>
+    <p style="font-size:13px;color:var(--p-muted);margin-top:4px">Titik oranye = 2026 (malam ini). Garis abu = jalur dot plot Juni yang sudah diketahui publik. Kipas = dua arah revisi yang mungkin terjadi pada dot plot baru.</p>
+  </section>
+
+  <!-- BANK DIVERGENCE -->
+  <section class="card pad">
+    <h2>Divergensi Bank Besar &mdash; Bukan Soal Hike, Tapi Soal Berapa Banyak Lagi</h2>
+    <p class="lede">Semua bank besar sepakat: hike terjadi malam ini. Yang mereka bedakan: <b>total pengetatan 2026</b> &mdash; ini pertanyaan dot plot yang sesungguhnya.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Bank</th><th>Total kenaikan 2026</th><th>Tersirat</th></tr></thead>
+        <tbody>
+          <tr><td>Goldman Sachs</td><td class="n mono">+25bp</td><td><span class="tag t-cool">Cukup segini</span></td></tr>
+          <tr><td>JPMorgan</td><td class="n mono">+25bp</td><td><span class="tag t-cool">Cukup segini</span></td></tr>
+          <tr><td>Citigroup</td><td class="n mono">+50bp</td><td><span class="tag t-hot">Masih panjang</span></td></tr>
+          <tr><td>Deutsche Bank</td><td class="n mono">+75bp</td><td><span class="tag t-hot">Masih panjang</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:14px">
+      <b>2 dari 4 bank besar</b> condong "cukup segini", <b>2 dari 4</b> condong "masih panjang" &mdash; genuinely coin-flip di kalangan profesional. Catatan tambahan: Goldman sendiri membingkai hike ini sebagai <i>"respons ke dinamika pasar"</i>, bukan murni keyakinan fundamental baru &mdash; memperkuat kecurigaan dinamika <b>sell the fact</b>.
+    </div>
+  </section>
+
+  <!-- MARKET BIAS ENGINE -->
+  <section class="card pad">
+    <h2>Market Bias Engine &mdash; 7 Pilar (Rebuild Penuh, Tier 1)</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Pilar</th><th class="n">Bobot</th><th class="n">Skor</th><th style="width:90px">&nbsp;</th><th class="n">Kontrib.</th></tr></thead>
+        <tbody>
+          <tr><td>Kebijakan Fed</td><td class="n">20%</td><td class="n">13%</td><td><span class="bar"><i style="width:13%"></i></span></td><td class="n">2,60</td></tr>
+          <tr><td>Inflasi</td><td class="n">20%</td><td class="n">28%</td><td><span class="bar"><i style="width:28%"></i></span></td><td class="n">5,60</td></tr>
+          <tr><td>Tenaga Kerja</td><td class="n">15%</td><td class="n">35%</td><td><span class="bar"><i style="width:35%"></i></span></td><td class="n">5,25</td></tr>
+          <tr><td><b>Pertumbuhan &amp; Konsumsi</b></td><td class="n">15%</td><td class="n"><b>56%</b></td><td><span class="bar"><i style="width:56%"></i></span></td><td class="n">8,40</td></tr>
+          <tr><td>Treasury Yield</td><td class="n">15%</td><td class="n">10%</td><td><span class="bar"><i style="width:10%"></i></span></td><td class="n">1,50</td></tr>
+          <tr><td>DXY</td><td class="n">10%</td><td class="n">20%</td><td><span class="bar"><i style="width:20%"></i></span></td><td class="n">2,00</td></tr>
+          <tr><td>Struktur Teknikal</td><td class="n">5%</td><td class="n">14%</td><td><span class="bar"><i style="width:14%"></i></span></td><td class="n">0,70</td></tr>
+          <tr class="total-row"><td>Total</td><td class="n">100%</td><td class="n">&mdash;</td><td>&nbsp;</td><td class="n">26,05</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="margin-top:14px">
+      <ul style="font-size:13.5px">
+        <li><b>Kebijakan Fed 13%.</b> CME FedWatch ~90-91%, bertahan sejak Jumat. Hike sudah sesuai dot Juni &mdash; bukan kejutan lagi, tapi odds numerik tetap ekstrem.</li>
+        <li><b>Inflasi 28%.</b> WTI +15% bulan ini ke ~$99, pipa Saudi masih tertutup. Core CPI disinflasi tetap ada tapi kalah bobot vs energi yang makin panas.</li>
+        <li><b>Pertumbuhan &amp; Konsumsi 56% &mdash; satu-satunya pilar bullish.</b> Data melemah (NFIB, ISM New Orders, GDP miss) belum berubah. Retail Sales Agustus rilis 19:30 WIB malam ini, sebelum keputusan &mdash; wajib refresh begitu keluar.</li>
+        <li><b>Treasury Yield 10%.</b> UST10Y persis 5,000% &mdash; psikologis, tertinggi sejak 2023.</li>
+        <li><b>DXY 20%.</b> 99,72, terus menguat dari 99,47 kemarin.</li>
+        <li><b>Struktur Teknikal 14%.</b> Descending consolidation, retest low siklus semalam, FVG ditinggalkan bukan diisi penuh.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- TECHNICAL -->
+  <section class="card pad">
+    <h2>Technical &mdash; Multi-Timeframe + Konfirmasi Independen</h2>
+    <ul style="font-size:13.5px">
+      <li><b>D1</b>: downtrend utuh sejak puncak $4.510,84 (3 Sep). Low siklus baru $4.253,62 (Senin), retest $4.261 semalam.</li>
+      <li><b>H4</b>: ditolak 2x di $4.315-4.317 &mdash; gagal capai Order Block bearish $4.334-4.355. Range konsolidasi bergeser turun bertahap (descending consolidation).</li>
+      <li><b>FVG $4.297-4.322</b> dari breakdown Senin ditinggalkan, bukan diisi penuh &mdash; bounce cuma likuiditas parsial.</li>
+    </ul>
+    <div class="note cool" style="margin-top:6px">
+      <b>Konfirmasi independen (EBC Financial Group dkk):</b> level mereka cocok hampir persis dengan kita &mdash; resistance $4.318 (kita: $4.317), support $4.258,66 (kita: ~$4.253-4.261), structure-shift zone $4.227,86 (kita: $4.229,75). <b>Temuan baru</b>: higher low + bullish divergence momentum setelah liquidity sweep &mdash; tenaga jual mulai melemah meski indikator trend-following masih "strong sell". Klasik bounce koreksi dalam downtrend, bukan reversal penuh.
+    </div>
+    <div class="lvl-list" style="margin-top:16px">
+      <div class="lvl"><span>Invalidasi jauh</span><b>$4.449</b></div>
+      <div class="lvl"><span>Order Block</span><b>$4.334-355</b></div>
+      <div class="lvl"><span>Resistance dekat</span><b>$4.317</b></div>
+      <div class="lvl"><span>Spot</span><b>$4.286</b></div>
+      <div class="lvl"><span>Support dekat</span><b>$4.253-261</b></div>
+      <div class="lvl"><span>Support HTF</span><b>$4.229,75</b></div>
+    </div>
+  </section>
+
+  <!-- SCENARIOS -->
+  <section>
+    <h2 style="border:none;margin-bottom:12px;padding-bottom:0">Tiga Skenario &mdash; Dikalibrasi Ulang</h2>
+    <div class="scen">
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-hot)">Revisi Hawkish</span><span class="scen-p" style="color:var(--p-hot)">50%</span></div>
+        <p>2026 direvisi di atas 3,8-4,0%, dan/atau 2027 naik dari 3,6%. Sinyal masih ada hike lagi.</p>
+        <div class="lv">Target: $4.253 &rarr; $4.229,75<br>Est. &minus;50 s/d &minus;180 poin</div>
+      </div>
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-muted)">Konfirmasi Juni</span><span class="scen-p" style="color:var(--p-muted)">35%</span></div>
+        <p>2026 tetap ~3,8-4,0%, 2027 tetap ~3,6% &mdash; tanpa revisi berarti. Sudah diketahui sejak Juni.</p>
+        <div class="lv">Target: $4.317 &rarr; $4.348<br>Est. +50 s/d +150 poin</div>
+      </div>
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-cool)">Revisi Dovish</span><span class="scen-p" style="color:var(--p-cool)">15%</span></div>
+        <p>2026-2027 direvisi turun, atau Warsh melunak di press conference, atau kejutan hold.</p>
+        <div class="lv">Target: $4.375 &rarr; $4.449<br>Est. +150 s/d +300 poin</div>
+      </div>
+    </div>
+    <div class="note" style="margin-top:14px">
+      <b>Dua dari tiga skenario (50%) menguntungkan gold.</b> Sesuai kalibrasi bank besar (2 dari 4 "cukup segini") &mdash; ini yang mendasari prediksi reaksi 50/50, bukan 74/26 dari Market Bias Engine mentah.
+    </div>
+  </section>
+
+  <!-- SETUP QUALITY -->
+  <section class="card pad">
+    <h2>Setup Quality Gate</h2>
+    <div class="gate">
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:10px">
+        <span class="score">27<span style="font-size:16px;color:var(--p-ink-2)">/50</span></span>
+        <b style="font-family:'Big Shoulders Display',sans-serif;letter-spacing:.04em;text-transform:uppercase;font-size:15px">Di bawah ambang 35 &mdash; tidak ada posisi pra-keputusan</b>
+      </div>
+      <p style="margin:0;font-size:13.5px">Event binary Tier 1 tertinggi + positioning ekstrem + prediksi reaksi genuinely 50/50 &mdash; bukan waktu untuk masuk posisi sebelum tahu arahnya.</p>
+    </div>
+    <p style="margin-top:14px;font-size:13.5px"><b>Rencana:</b> tunggu dot plot + press conference selesai (~01:30-02:00 WIB), baca reaksi H1 SETELAH press conference (bukan cuma rate decision), fokus ke arah revisi dot plot vs jalur Juni. Rule 7 penuh berlaku &mdash; finalisasi status tidak sebelum 3-4 jam pasca-press conference (~04:30-05:30 WIB).</p>
+  </section>
+
+  <!-- CONCLUSION -->
+  <section class="card pad">
+    <h2>Kesimpulan Sistem</h2>
+    <ul>
+      <li><b>Dua angka, dua pertanyaan berbeda.</b> 74% Bearish = seberapa hawkish backdrop yang sudah ter-price (Fed+Yield+DXY, 45% bobot, bergerak searah tanpa divergensi &mdash; berisiko triple-counting satu narasi). 50/50 = prediksi reaksi harga malam ini, dikalibrasi silang dari divergensi bank besar + momentum teknikal.</li>
+      <li><b>Yang menentukan bukan hike-nya</b> &mdash; sudah 90%+ priced dan sesuai dot Juni. Yang menentukan: apakah dot plot baru merevisi jalur 2027-2029 lebih hawkish, atau cuma mengonfirmasi jalur yang sudah diketahui sejak Juni.</li>
+      <li><b>Pelajaran histori sistem sendiri</b>: dua kali sebelumnya skor "paling bearish sejauh ini" (71% PPI, 68% CPI) tidak pernah semulus angkanya &mdash; satu dikoreksi, satu jadi whipsaw. 74% sekarang rekor baru lagi, layak dibaca dengan kehati-hatian yang sama.</li>
+    </ul>
+    <div class="note warn">
+      <b>&#9888; Rule 7 berlaku penuh.</b> Tidak ada pengecualian untuk event Tier 1 tertinggi ini. Finalisasi status tunggu minimal 3-4 jam pasca-press conference.
+    </div>
+  </section>
+
+  <footer>
+    <div class="disc">
+      <b>NOT FINANCIAL ADVICE.</b> Lembar ini catatan riset dan evaluasi sistem pribadi, bukan rekomendasi transaksi untuk siapapun. Trading emas dan forex berisiko tinggi dan dapat mengakibatkan kerugian total. Lakukan riset sendiri sebelum mengambil keputusan finansial apapun.
+    </div>
+    <div class="mono" style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;text-align:right">
+      Disusun 14 Sep, diperbarui 16 Sep 2026 (H-1)<br>
+      Harga &amp; struktur: TradingView<br>
+      VANTAGE:XAUUSD &middot; TVC:DXY &middot; TVC:US10Y &middot; TVC:US02Y
+    </div>
+  </footer>
+
+</div>
+
+    </div>
+
+    <div class="ad-slot">
+      <script async="async" data-cfasync="false" src="https://pl30756138.effectivecpmnetwork.com/4a3f1dc3807941e53dfe4463a21a0e4e/invoke.js"></script>
+      <div id="container-4a3f1dc3807941e53dfe4463a21a0e4e"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Kebijakan Privasi</a>
+      <a href="https://www.effectivecpmnetwork.com/setnp40u3t?key=fe8199ed8dd693be00f1924c13a1b7ec" target="_blank" rel="noopener sponsored">Rekomendasi</a>
+    </div>
+    <div>&copy; 2026 EdukasiTrader.</div>
+  </div>
+</footer>
+
+</body>
+</html>
