@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XAUUSD Briefing — JOLTS + Consumer Confidence 29 September 2026 — EdukasiTrader</title>
+<meta name="description" content="Data lowongan kerja dan sentimen konsumen pertama sejak FOMC 17 September, di tengah breakdown gold ke level terendah 7 minggu akibat eskalasi Iran dan odds hike Oktober yang naik tajam.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  :root{
+    --p-ground:#EEF0F3; --p-panel:#FFFFFF; --p-panel-2:#F5F6F8;
+    --p-ink:#12161D; --p-ink-2:#3D4552; --p-muted:#6E7686;
+    --p-rule:#D8DCE3; --p-rule-strong:#B2B9C4;
+    --p-accent:#2C4A78; --p-accent-soft:#DEE6F1;
+    --p-hot:#B23B27; --p-hot-soft:#F6E1DC;
+    --p-cool:#1E7A6C; --p-cool-soft:#DCEFEB;
+    --p-warn:#8A5A12; --p-warn-soft:#F3E7CE;
+    --p-shadow:0 1px 0 rgba(18,22,29,.05), 0 3px 16px rgba(18,22,29,.06);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --p-ground:#0F1319; --p-panel:#171C24; --p-panel-2:#1C222B;
+      --p-ink:#E8ECF2; --p-ink-2:#B9C1CD; --p-muted:#7C8695;
+      --p-rule:#2B323D; --p-rule-strong:#3D4652;
+      --p-accent:#7FA3D6; --p-accent-soft:#1C2C42;
+      --p-hot:#E2836E; --p-hot-soft:#301C18;
+      --p-cool:#63C7B6; --p-cool-soft:#122B27;
+      --p-warn:#D6A153; --p-warn-soft:#2C2414;
+      --p-shadow:0 1px 0 rgba(0,0,0,.35), 0 3px 20px rgba(0,0,0,.4);
+    }
+  }
+  :root[data-theme="dark"]{
+    --p-ground:#0F1319; --p-panel:#171C24; --p-panel-2:#1C222B;
+    --p-ink:#E8ECF2; --p-ink-2:#B9C1CD; --p-muted:#7C8695;
+    --p-rule:#2B323D; --p-rule-strong:#3D4652;
+    --p-accent:#7FA3D6; --p-accent-soft:#1C2C42;
+    --p-hot:#E2836E; --p-hot-soft:#301C18;
+    --p-cool:#63C7B6; --p-cool-soft:#122B27;
+    --p-warn:#D6A153; --p-warn-soft:#2C2414;
+    --p-shadow:0 1px 0 rgba(0,0,0,.35), 0 3px 20px rgba(0,0,0,.4);
+  }
+  *{box-sizing:border-box}
+  .poster-container{
+    background:var(--p-ground); color:var(--p-ink);
+    font-family:"Work Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+  .num{font-variant-numeric:tabular-nums}
+  .sheet{max-width:1040px;margin:0 auto;padding:26px 18px 60px;display:flex;flex-direction:column;gap:20px}
+  .card{background:var(--p-panel);border:1px solid var(--p-rule-strong);box-shadow:var(--p-shadow)}
+  .pad{padding:22px 24px 24px}
+
+  .masthead{padding:22px 24px 20px;border-top:3px solid var(--p-accent)}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--p-muted);margin-bottom:8px}
+  h1{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:clamp(34px,6.5vw,54px);line-height:.95;letter-spacing:.01em;text-transform:uppercase;margin:0;text-wrap:balance}
+  .sub{font-size:clamp(14.5px,2.2vw,17px);color:var(--p-ink-2);margin-top:6px;max-width:62ch}
+  .specline{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));margin-top:16px;border-top:1px solid var(--p-rule)}
+  .spec{padding:11px 0 2px;border-right:1px solid var(--p-rule);padding-right:14px;margin-right:14px}
+  .spec:last-child{border-right:none}
+  .spec dt{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--p-muted)}
+  .spec dd{margin:2px 0 0;font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:20px}
+  .stamp{display:inline-block;margin-top:14px;border:1.5px solid var(--p-accent);color:var(--p-accent);background:var(--p-accent-soft);font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:5px 11px}
+
+  h2{font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:15px;letter-spacing:.05em;text-transform:uppercase;color:var(--p-ink);margin:0 0 14px;padding-bottom:9px;border-bottom:1px solid var(--p-rule)}
+  p{margin:0 0 11px;color:var(--p-ink-2)}
+  .lede{font-size:15.5px}
+  ul{margin:0;padding-left:18px}
+  li{margin-bottom:8px;color:var(--p-ink-2)}
+  li b{color:var(--p-ink)}
+
+  .note{border-left:3px solid var(--p-accent);background:var(--p-accent-soft);padding:13px 16px;font-size:13.5px;color:var(--p-ink-2)}
+  .note b{color:var(--p-ink)}
+  .note.hot{border-left-color:var(--p-hot);background:var(--p-hot-soft)}
+  .note.cool{border-left-color:var(--p-cool);background:var(--p-cool-soft)}
+  .note.warn{border-left-color:var(--p-warn);background:var(--p-warn-soft)}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:8px 10px 8px 0;border-bottom:1px solid var(--p-rule)}
+  th{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--p-muted);font-weight:500}
+  td.n,th.n{text-align:right;padding-right:0;font-variant-numeric:tabular-nums}
+  tr:last-child td{border-bottom:none}
+  .total-row td{border-top:2px solid var(--p-rule-strong);border-bottom:none;padding-top:10px;font-weight:700;font-family:"Big Shoulders Display",sans-serif;font-size:16px}
+  .scroll{overflow-x:auto}
+  .scroll table{min-width:560px}
+  .bar{display:block;height:6px;background:var(--p-rule);width:100%}
+  .bar i{display:block;height:100%;background:var(--p-accent)}
+
+  .tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border:1px solid currentColor;white-space:nowrap}
+  .t-hot{color:var(--p-hot);background:var(--p-hot-soft)}
+  .t-cool{color:var(--p-cool);background:var(--p-cool-soft)}
+  .t-warn{color:var(--p-warn);background:var(--p-warn-soft)}
+
+  .scen{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--p-rule-strong)}
+  @media (max-width:800px){ .scen{grid-template-columns:1fr} }
+  .scen>div{padding:16px 17px 18px;border-right:1px solid var(--p-rule);background:var(--p-panel)}
+  .scen>div:last-child{border-right:none}
+  @media (max-width:800px){ .scen>div{border-right:none;border-bottom:1px solid var(--p-rule)} .scen>div:last-child{border-bottom:none} }
+  .scen-hd{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:8px}
+  .scen-name{font-family:"Big Shoulders Display",sans-serif;font-weight:700;font-size:16px;letter-spacing:.02em;text-transform:uppercase}
+  .scen p{margin:0 0 8px;font-size:13px;color:var(--p-ink-2)}
+  .scen .lv{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--p-ink);border-top:1px dashed var(--p-rule);padding-top:8px;margin-top:2px}
+
+  .lvl-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1px;background:var(--p-rule);border:1px solid var(--p-rule)}
+  .lvl{background:var(--p-panel);padding:10px 12px}
+  .lvl b{display:block;font-family:"JetBrains Mono",monospace;font-size:15px}
+  .lvl span{font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--p-muted)}
+
+  .gate{border:1px solid var(--p-warn);background:var(--p-warn-soft);padding:15px 18px}
+  .gate .score{font-family:"Big Shoulders Display",sans-serif;font-weight:800;font-size:32px;color:var(--p-warn)}
+
+  footer{border-top:1px solid var(--p-rule-strong);padding-top:14px;font-size:12px;color:var(--p-muted);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+  .disc{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.03em;line-height:1.7;max-width:62ch}
+
+  .compliance-notice{
+    max-width:880px;
+    margin:0 auto 20px;
+    padding:16px 20px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-dim);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    color:var(--text-dim);
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+  .compliance-notice strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Edukasi<span>Trader</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Beranda</a>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Privasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="max-width: 960px;">
+
+    <div class="compliance-notice">
+      <strong>Bukan ajakan bertransaksi.</strong> Konten di bawah ini adalah catatan analisis pasar pribadi yang kami bagikan sebagai referensi publik — berisi opini terhadap data makro dan level teknikal saat disusun, bukan sinyal trading resmi, rekomendasi personal, atau ajakan untuk membuka posisi tertentu. Pasar bisa bergerak sangat berbeda dari skenario yang dibahas. Selalu lakukan riset dan pertimbangan risiko sendiri.
+    </div>
+
+    <div class="ad-slot">
+      <script>
+        atOptions = {
+          'key' : '95130429aa13b28790da6b9e46158bfc',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/95130429aa13b28790da6b9e46158bfc/invoke.js"></script>
+    </div>
+
+    <div class="poster-container">
+
+<div class="sheet">
+
+  <!-- MASTHEAD -->
+  <header class="card masthead">
+    <div class="eyebrow">JOLTS (Agustus) + CB Consumer Confidence (September) &middot; 29 September 2026</div>
+    <h1>Help Wanted</h1>
+    <div class="sub">Data lowongan kerja &amp; sentimen konsumen pertama sejak FOMC 17 September &mdash; menguji apakah narasi "ekonomi masih kuat" yang mendasari sikap hawkish Fed masih berdiri.</div>
+    <dl class="specline">
+      <div class="spec"><dt>Rilis</dt><dd class="num">21:00 WIB</dd></div>
+      <div class="spec"><dt>Tier</dt><dd>2 + 3</dd></div>
+      <div class="spec"><dt>Spot</dt><dd class="num">$4.129</dd></div>
+      <div class="spec"><dt>7-Wk Low</dt><dd class="num" style="color:var(--p-hot)">$4.110,90</dd></div>
+      <div class="spec"><dt>Confidence</dt><dd class="num">5/10</dd></div>
+    </dl>
+    <div class="stamp">Pending</div>
+  </header>
+
+  <!-- BACKDROP UPDATE -->
+  <section class="card pad" style="border-color:var(--p-hot)">
+    <h2 style="color:var(--p-hot);border-color:var(--p-hot)">Update Backdrop &mdash; 12 Hari Sejak FOMC</h2>
+    <p class="lede">Rebound short-covering pasca-FOMC ($4.276 &rarr; $4.362) <b>gagal bertahan</b>. Eskalasi Iran/Selat Hormuz mendorong minyak naik lagi, memperkuat kekhawatiran inflasi, dan mendorong odds hike Oktober naik tajam &mdash; gold jatuh &gt;3% dalam satu hari ke level terendah 7 minggu.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th></th><th class="n" style="padding-right:16px">17 Sep (final FOMC)</th><th class="n" style="padding-right:16px">29 Sep (sekarang)</th><th>Arah</th></tr></thead>
+        <tbody>
+          <tr><td>XAUUSD</td><td class="n mono" style="padding-right:16px">$4.276 &rarr; sempat $4.362</td><td class="n mono" style="padding-right:16px">$4.129</td><td><span class="tag t-hot">Breakdown lanjut</span></td></tr>
+          <tr><td>DXY</td><td class="n mono" style="padding-right:16px">100,18</td><td class="n mono" style="padding-right:16px">101,27</td><td><span class="tag t-hot">Menguat</span></td></tr>
+          <tr><td>UST10Y</td><td class="n mono" style="padding-right:16px">4,951%</td><td class="n mono" style="padding-right:16px">5,255%</td><td><span class="tag t-hot">Rekor baru</span></td></tr>
+          <tr><td>UST02Y</td><td class="n mono" style="padding-right:16px">4,685%</td><td class="n mono" style="padding-right:16px">4,951%</td><td><span class="tag t-hot">Price-in hike Okt</span></td></tr>
+          <tr><td>Odds hike Oktober</td><td class="n mono" style="padding-right:16px">&mdash;</td><td class="n mono" style="padding-right:16px">54-70%</td><td><span class="tag t-hot">Isu baru</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px;font-size:13px;color:var(--p-muted)">Rapat FOMC berikutnya: 28 Oktober 2026.</p>
+  </section>
+
+  <!-- FORECAST -->
+  <section class="card pad">
+    <h2>Forecast vs Previous</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Data</th><th>Forecast</th><th>Prior</th><th>Catatan</th></tr></thead>
+        <tbody>
+          <tr><td><b>JOLTS Job Openings</b> (Agt)</td><td class="n mono">7,24M</td><td class="n mono">7,271M</td><td>Sedikit lebih rendah — moderat</td></tr>
+          <tr><td>JOLTS Job Quits</td><td class="n mono">&mdash;</td><td class="n mono">3,056M</td><td>Tanpa forecast; indikator kepercayaan diri pekerja</td></tr>
+          <tr><td><b>CB Consumer Confidence</b> (Sep)</td><td class="n mono">90</td><td class="n mono">89,4</td><td>Ekspektasi rebound tipis</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note warn" style="margin-top:12px">
+      <b>Divergensi sumber (Rule 10):</b> beberapa riset independen kasih forecast jauh berbeda &mdash; Consumer Confidence 88-90,1, JOLTS Openings serendah 6,9M. Widget kalender dipakai sebagai acuan utama, tapi dispersi ini sendiri tanda ketidakpastian tinggi malam ini.
+    </div>
+  </section>
+
+  <!-- MARKET BIAS ENGINE -->
+  <section class="card pad">
+    <h2>Market Bias Engine &mdash; 7 Pilar (Rebuild, Rule 15c)</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Pilar</th><th class="n">Bobot</th><th class="n">Skor</th><th style="width:90px">&nbsp;</th><th class="n">Kontrib.</th></tr></thead>
+        <tbody>
+          <tr><td>Kebijakan Fed</td><td class="n">20%</td><td class="n">27%</td><td><span class="bar"><i style="width:27%"></i></span></td><td class="n">5,40</td></tr>
+          <tr><td>Inflasi</td><td class="n">20%</td><td class="n">22%</td><td><span class="bar"><i style="width:22%"></i></span></td><td class="n">4,40</td></tr>
+          <tr><td>Tenaga Kerja</td><td class="n">15%</td><td class="n">35%</td><td><span class="bar"><i style="width:35%"></i></span></td><td class="n">5,25</td></tr>
+          <tr><td>Pertumbuhan &amp; Konsumsi</td><td class="n">15%</td><td class="n">25%</td><td><span class="bar"><i style="width:25%"></i></span></td><td class="n">3,75</td></tr>
+          <tr><td>Treasury Yield</td><td class="n">15%</td><td class="n"><b>6%</b></td><td><span class="bar"><i style="width:6%"></i></span></td><td class="n">0,90</td></tr>
+          <tr><td>DXY</td><td class="n">10%</td><td class="n">13%</td><td><span class="bar"><i style="width:13%"></i></span></td><td class="n">1,30</td></tr>
+          <tr><td>Struktur Teknikal</td><td class="n">5%</td><td class="n">9%</td><td><span class="bar"><i style="width:9%"></i></span></td><td class="n">0,45</td></tr>
+          <tr class="total-row"><td>Total</td><td class="n">100%</td><td class="n">&mdash;</td><td>&nbsp;</td><td class="n">21,45</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:14px">
+      <b>Hasil: ~21% Bullish / 79% Bearish.</b> Pilar Tenaga Kerja dan Pertumbuhan &amp; Konsumsi akan diuji LANGSUNG oleh rilis malam ini.
+    </div>
+    <div class="note warn" style="margin-top:10px">
+      <b>&#9888; Catatan Rule 12 (sama seperti audit FOMC):</b> Fed + Yield + DXY (45% bobot) lagi-lagi bergerak searah tanpa divergensi, didorong satu narasi yang sama (Iran/minyak &rarr; inflasi &rarr; hawkish). Baca 79% ini sebagai ukuran backdrop yang sudah crowded, bukan probabilitas reaksi presisi malam ini.
+    </div>
+  </section>
+
+  <!-- SCENARIOS -->
+  <section>
+    <h2 style="border:none;margin-bottom:12px;padding-bottom:0">Tiga Skenario &mdash; Fokus JOLTS Openings + Quits</h2>
+    <div class="scen">
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-hot)">Beat</span></div>
+        <p>Openings &gt;7,3M, Quits naik &mdash; pasar kerja masih kuat, menguatkan kasus hike Oktober.</p>
+        <div class="lv">Bearish lanjut &rarr; uji $4.110 &rarr; cari low baru</div>
+      </div>
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-muted)">In-line</span></div>
+        <p>~7,2-7,3M &mdash; netral, fokus pindah ke Consumer Confidence.</p>
+        <div class="lv">Netral-bearish tipis</div>
+      </div>
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-cool)">Miss</span></div>
+        <p>Openings &lt;7,0M, Quits turun &mdash; retak pertama di narasi "ekonomi kuat".</p>
+        <div class="lv">Bounce ke $4.180-4.229 &mdash; waspada gagal bertahan (pola sudah 2x)</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECHNICAL -->
+  <section class="card pad">
+    <h2>Technical &mdash; Breakdown Penuh</h2>
+    <p class="lede">D1 breakdown dari puncak $4.399,59 ke low baru <b>$4.110,90</b> &mdash; turun &gt;6% dalam ~10 hari. Semua support lama sudah jadi resistance.</p>
+    <div class="lvl-list">
+      <div class="lvl"><span>Resistance lama</span><b>$4.253-4.229</b></div>
+      <div class="lvl"><span>Resistance dekat</span><b>$4.180</b></div>
+      <div class="lvl"><span>Spot</span><b style="color:var(--p-hot)">$4.129</b></div>
+      <div class="lvl"><span>Low siklus</span><b>$4.110,90</b></div>
+    </div>
+  </section>
+
+  <!-- TRADING PLAN -->
+  <section class="card pad">
+    <h2>Setup Quality Gate</h2>
+    <div class="gate">
+      <div style="display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-bottom:10px">
+        <b style="font-family:'Big Shoulders Display',sans-serif;letter-spacing:.04em;text-transform:uppercase;font-size:15px">Tidak ada posisi pra-rilis</b>
+      </div>
+      <p style="margin:0;font-size:13.5px">Dispersi forecast tinggi + backdrop sudah ekstrem crowded (Rule 12). Tunggu reaksi terkonfirmasi, baru cari entry di level yang sudah dipetakan &mdash; bukan candle pertama.</p>
+    </div>
+  </section>
+
+  <!-- CONFIDENCE -->
+  <section class="card pad">
+    <h2>Confidence Score &mdash; 5/10</h2>
+    <ul style="font-size:13.5px">
+      <li><b>Fundamental ★★★☆☆</b> &mdash; arah backdrop jelas bearish, tapi dispersi forecast JOLTS/Consumer Confidence lebar antar sumber.</li>
+      <li><b>Teknikal ★★★★☆</b> &mdash; downtrend D1 jelas dan intact, breakdown terkonfirmasi berkali-kali.</li>
+      <li><b>Sentimen ★★☆☆☆</b> &mdash; skor 79% berisiko sama seperti FOMC (triple-counting Fed/Yield/DXY yang searah).</li>
+    </ul>
+  </section>
+
+  <!-- CONCLUSION -->
+  <section class="card pad">
+    <h2>Kesimpulan Sistem</h2>
+    <ul>
+      <li><b>Backdrop tetap dominan bearish</b>, dan breakdown 12 hari terakhir memvalidasi verdict FOMC kita (BENAR). Malam ini bukan event pembalik arah.</li>
+      <li><b>JOLTS Job Openings</b> paling penting untuk dibaca duluan (Rule 8) &mdash; leading indicator sebelum Consumer Confidence yang bobotnya lebih kecil.</li>
+      <li>Kecuali ada miss besar yang genuinely mengejutkan, rilis ini kemungkinan cuma <b>konfirmasi tambahan</b> ke arah yang sudah berjalan, bukan katalis baru.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <div class="disc">
+      <b>NOT FINANCIAL ADVICE.</b> Lembar ini catatan riset dan evaluasi sistem pribadi, bukan rekomendasi transaksi untuk siapapun. Trading emas dan forex berisiko tinggi dan dapat mengakibatkan kerugian total.
+    </div>
+    <div class="mono" style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;text-align:right">
+      Disusun 29 Sep 2026, sebelum rilis 21:00 WIB<br>
+      Harga &amp; struktur: TradingView<br>
+      VANTAGE:XAUUSD &middot; TVC:DXY &middot; TVC:US10Y &middot; TVC:US02Y
+    </div>
+  </footer>
+
+</div>
+
+    </div>
+
+    <div class="ad-slot">
+      <script async="async" data-cfasync="false" src="https://pl30756138.effectivecpmnetwork.com/4a3f1dc3807941e53dfe4463a21a0e4e/invoke.js"></script>
+      <div id="container-4a3f1dc3807941e53dfe4463a21a0e4e"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Kebijakan Privasi</a>
+      <a href="https://www.effectivecpmnetwork.com/setnp40u3t?key=fe8199ed8dd693be00f1924c13a1b7ec" target="_blank" rel="noopener sponsored">Rekomendasi</a>
+    </div>
+    <div>&copy; 2026 EdukasiTrader.</div>
+  </div>
+</footer>
+
+</body>
+</html>
