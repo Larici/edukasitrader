@@ -4,8 +4,8 @@ Pakai kata "saya", **register teknis** (analis), tanpa kata "ATH". Angka dibuka 
 
 **Timing:** ADP Employment 19:15 WIB (di luar fokus utama), Core PCE + GDP Final (Q2, estimasi ke-3) + Personal Income/Spending 19:30 WIB.
 
-**Sumber:** `posters/PCECLUSTER2-2026-09-30.html` (tema "Preferred Gauge")
-**Jumlah post:** 9 (post utama + 8 balasan)
+**Sumber:** `posters/PCECLUSTER2-2026-09-30.html` (tema "Preferred Gauge", v2 sudah termasuk update Rule 12b + 6-timeframe)
+**Jumlah post:** 11 (post utama + 10 balasan)
 
 ---
 
@@ -33,8 +33,14 @@ Tiga skenario saya: **Panas merata** (Core PCE ≥3,4%, 3+ data sekunder di atas
 ### Post 8 (balasan)
 Tidak ada posisi pra-rilis. Rule 7 penuh berlaku tanpa pengecualian — mengingat riwayat saya di kategori rilis ini, saya tidak akan terburu-buru menyimpulkan arah begitu angka pertama keluar.
 
-### Post 9 (balasan, CTA + disclaimer)
-Analisa lengkap — tabel 15 data, checklist Rule 15, breakdown 7 pilar — ada di poster, link di bio.
+### Post 9 (balasan, UPDATE dini hari — Rule 12b)
+**Update pasca-JOLTS**: saya baru perbaiki metode kalibrasi sistem saya secara struktural. Sebelumnya, skor 79% Bearish itu "ditambal" manual tiap kali terlihat ekstrem. Sekarang ada prosedur wajib: cek divergensi Fed/Yield/DXY (45% bobot causally-linked), lalu diskon otomatis kalau tidak ada divergensi.
+
+### Post 10 (balasan)
+Hasilnya malam ini: Yield & DXY sama-sama ekstrem, tapi Fed masih moderat — jadi "2 dari 3 ekstrem" → diskon 35% terhadap deviasi dari netral. **Skor terkalibrasi: ~26,6% Bullish / 73,4% Bearish** (dari 79% Bearish mentah). Plus saya jalankan teknikal 6-timeframe penuh (D1→M1): resistance $4.175,17 baru ditolak keras di H1, teknikal dan fundamental sekarang **sejalan** — beda dari kondisi tarik-tambang sebelum JOLTS kemarin.
+
+### Post 11 (balasan, CTA + disclaimer)
+Analisa lengkap — tabel 15 data, checklist Rule 15, breakdown 7 pilar, perhitungan Rule 12b — ada di poster, link di bio.
 
 ⚠️ **Not financial advice.** Bukan ajakan membeli atau menjual apapun. Ini catatan riset dan evaluasi sistem pribadi, bukan rekomendasi untuk siapa pun. Trading emas dan forex berisiko tinggi dan bisa membuat modal habis — keputusan dan risiko sepenuhnya di tangan masing-masing.
 
