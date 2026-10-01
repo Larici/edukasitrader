@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XAUUSD Briefing — NFP 2 Oktober 2026 — EdukasiTrader</title>
+<meta name="description" content="Forecast NFP dipangkas tajam ke 90K dari 162K, tapi tiga sinyal hiring minggu ini (ADP, ISM, S&P Global) semuanya beat — bar yang rendah ini mungkin terlalu rendah.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  /* Layout: wire-bulletin — banner masthead with hero number, ticker-style data rows, flash stamp.
+     Color: signal orange-red on crisp white (breaking-bulletin energy), not the muted editorial tone of the rest of the series.
+     Type: Oswald (condensed headline/wire voice) / Work Sans (body) / JetBrains Mono (data). */
+  :root{
+    --p-ground:#FAFAF8; --p-panel:#FFFFFF; --p-panel-2:#F3F3F0;
+    --p-ink:#121212; --p-ink-2:#3A3A38; --p-muted:#7A7A76;
+    --p-rule:#E4E4E0; --p-rule-strong:#C8C8C2;
+    --p-accent:#FF4714; --p-accent-soft:#FFE4DA;
+    --p-hot:#D62839; --p-hot-soft:#FBE1E2;
+    --p-cool:#0E8F6B; --p-cool-soft:#DFF3EA;
+    --p-warn:#A8690A; --p-warn-soft:#FBEBD6;
+    --p-shadow:0 1px 0 rgba(18,18,18,.05), 0 3px 16px rgba(18,18,18,.07);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --p-ground:#121212; --p-panel:#1C1C1A; --p-panel-2:#222220;
+      --p-ink:#F2F2EE; --p-ink-2:#C9C9C2; --p-muted:#8F8F88;
+      --p-rule:#333331; --p-rule-strong:#46463F;
+      --p-accent:#FF6B45; --p-accent-soft:#3A2218;
+      --p-hot:#E8606C; --p-hot-soft:#341C1E;
+      --p-cool:#4FC79A; --p-cool-soft:#12342A;
+      --p-warn:#D9A54A; --p-warn-soft:#332411;
+      --p-shadow:0 1px 0 rgba(0,0,0,.4), 0 3px 20px rgba(0,0,0,.45);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --p-ground:#121212; --p-panel:#1C1C1A; --p-panel-2:#222220;
+    --p-ink:#F2F2EE; --p-ink-2:#C9C9C2; --p-muted:#8F8F88;
+    --p-rule:#333331; --p-rule-strong:#46463F;
+    --p-accent:#FF6B45; --p-accent-soft:#3A2218;
+    --p-hot:#E8606C; --p-hot-soft:#341C1E;
+    --p-cool:#4FC79A; --p-cool-soft:#12342A;
+    --p-warn:#D9A54A; --p-warn-soft:#332411;
+    --p-shadow:0 1px 0 rgba(0,0,0,.4), 0 3px 20px rgba(0,0,0,.45);
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box}
+  .poster-container{
+    background:var(--p-ground); color:var(--p-ink);
+    font-family:"Work Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    font-size:15px; line-height:1.6; -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+  .num{font-variant-numeric:tabular-nums}
+  .disp{font-family:"Oswald",sans-serif;text-transform:uppercase}
+  .sheet{max-width:1040px;margin:0 auto;padding:0 0 60px;display:flex;flex-direction:column;gap:18px}
+
+  /* MASTHEAD — wire bulletin banner */
+  .masthead{background:var(--p-ink);color:var(--p-ground);padding:0;overflow:hidden}
+  .flash-bar{background:var(--p-accent);color:#fff;display:flex;align-items:center;gap:10px;padding:7px 20px;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  .flash-dot{width:7px;height:7px;border-radius:50%;background:#fff;flex:0 0 auto}
+  .mast-.poster-container{padding:28px 24px 26px}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#C9C9C2;margin-bottom:10px}
+  h1{font-family:"Oswald",sans-serif;font-weight:700;font-size:clamp(40px,8vw,66px);line-height:.92;letter-spacing:.005em;text-transform:uppercase;margin:0;color:#fff;text-wrap:balance}
+  .sub{font-size:clamp(14.5px,2.2vw,17px);color:#D6D6D0;margin-top:10px;max-width:62ch}
+  .hero-row{display:flex;flex-wrap:wrap;gap:0;margin-top:22px;border-top:1px solid #333331}
+  .hero-stat{flex:1 1 150px;padding:14px 18px 4px;border-right:1px solid #333331}
+  .hero-stat:last-child{border-right:none}
+  .hero-stat dt{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#9A9A94}
+  .hero-stat dd{margin:4px 0 0;font-family:"Oswald",sans-serif;font-weight:600;font-size:26px;color:#fff;letter-spacing:.01em}
+  .hero-stat dd.accent{color:var(--p-accent)}
+
+  .card{background:var(--p-panel);border:1px solid var(--p-rule-strong);box-shadow:var(--p-shadow)}
+  .pad{padding:24px 24px 26px}
+
+  h2{font-family:"Oswald",sans-serif;font-weight:600;font-size:16px;letter-spacing:.04em;text-transform:uppercase;color:var(--p-ink);margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid var(--p-ink)}
+  h2.accent-h{border-bottom-color:var(--p-accent);color:var(--p-accent)}
+  p{margin:0 0 11px;color:var(--p-ink-2)}
+  .lede{font-size:15.5px}
+  ul{margin:0;padding-left:18px}
+  li{margin-bottom:8px;color:var(--p-ink-2)}
+  li b{color:var(--p-ink)}
+  ol{margin:0;padding-left:20px}
+
+  .note{border-left:4px solid var(--p-accent);background:var(--p-accent-soft);padding:14px 17px;font-size:13.5px;color:var(--p-ink-2)}
+  .note b{color:var(--p-ink)}
+  .note.hot{border-left-color:var(--p-hot);background:var(--p-hot-soft)}
+  .note.cool{border-left-color:var(--p-cool);background:var(--p-cool-soft)}
+  .note.warn{border-left-color:var(--p-warn);background:var(--p-warn-soft)}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px 9px 0;border-bottom:1px solid var(--p-rule)}
+  th{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--p-muted);font-weight:500}
+  td.n,th.n{text-align:right;padding-right:14px;font-variant-numeric:tabular-nums}
+  tr:last-child td{border-bottom:none}
+  .total-row td{border-top:2px solid var(--p-ink);border-bottom:none;padding-top:11px;font-weight:700;font-family:"Oswald",sans-serif;font-size:17px;text-transform:uppercase}
+  .scroll{overflow-x:auto}
+  .scroll table{min-width:600px}
+  .bar{display:block;height:7px;background:var(--p-rule);width:100%}
+  .bar i{display:block;height:100%;background:var(--p-accent)}
+
+  .tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border:1px solid currentColor;white-space:nowrap}
+  .t-hot{color:var(--p-hot);background:var(--p-hot-soft)}
+  .t-cool{color:var(--p-cool);background:var(--p-cool-soft)}
+  .t-warn{color:var(--p-warn);background:var(--p-warn-soft)}
+
+  .chainlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;background:var(--p-rule-strong);border:1px solid var(--p-rule-strong)}
+  .chk{background:var(--p-panel-2);padding:14px 16px;display:flex;gap:10px;align-items:flex-start}
+  .chk .box{width:16px;height:16px;flex:0 0 auto;margin-top:2px;background:var(--p-accent)}
+  .chk .box.weak{background:var(--p-rule-strong)}
+  .chk .t{font-size:13px;color:var(--p-ink-2)}
+  .chk .t b{color:var(--p-ink);font-family:"JetBrains Mono",monospace}
+
+  .scen{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--p-rule-strong);border:1px solid var(--p-rule-strong)}
+  @media (max-width:800px){ .scen{grid-template-columns:1fr} }
+  .scen>div{padding:18px 18px 20px;background:var(--p-panel)}
+  .scen-hd{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:9px}
+  .scen-name{font-family:"Oswald",sans-serif;font-weight:600;font-size:18px;letter-spacing:.02em;text-transform:uppercase}
+  .scen p{margin:0 0 9px;font-size:13px;color:var(--p-ink-2)}
+  .scen .lv{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--p-ink);border-top:1px dashed var(--p-rule);padding-top:9px;margin-top:3px}
+
+  .lvl-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:2px;background:var(--p-rule-strong);border:1px solid var(--p-rule-strong)}
+  .lvl{background:var(--p-panel);padding:11px 13px}
+  .lvl b{display:block;font-family:"JetBrains Mono",monospace;font-size:16px}
+  .lvl span{font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--p-muted)}
+
+  footer{border-top:1px solid var(--p-rule-strong);padding-top:14px;font-size:12px;color:var(--p-muted);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;margin:0 24px 0}
+  .disc{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.03em;line-height:1.7;max-width:62ch}
+  .outer{padding:26px 18px 0}
+
+  .compliance-notice{
+    max-width:880px;
+    margin:0 auto 20px;
+    padding:16px 20px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-dim);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    color:var(--text-dim);
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+  .compliance-notice strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Edukasi<span>Trader</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Beranda</a>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Privasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="max-width: 960px;">
+
+    <div class="compliance-notice">
+      <strong>Bukan ajakan bertransaksi.</strong> Konten di bawah ini adalah catatan analisis pasar pribadi yang kami bagikan sebagai referensi publik — berisi opini terhadap data makro dan level teknikal saat disusun, bukan sinyal trading resmi, rekomendasi personal, atau ajakan untuk membuka posisi tertentu. Pasar bisa bergerak sangat berbeda dari skenario yang dibahas. Selalu lakukan riset dan pertimbangan risiko sendiri.
+    </div>
+
+    <div class="ad-slot">
+      <script>
+        atOptions = {
+          'key' : '95130429aa13b28790da6b9e46158bfc',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/95130429aa13b28790da6b9e46158bfc/invoke.js"></script>
+    </div>
+
+    <div class="poster-container">
+
+<div class="sheet">
+  <div class="outer" style="padding-bottom:0;display:flex;flex-direction:column;gap:18px">
+
+  <!-- MASTHEAD -->
+  <header class="masthead">
+    <div class="flash-bar"><span class="flash-dot"></span>FLASH &middot; TIER 1 &middot; RILIS 19:30 WIB, 2 OKTOBER</div>
+    <div class="mast-body">
+      <div class="eyebrow">Non-Farm Payrolls + Unemployment Rate + Average Hourly Earnings</div>
+      <h1>Jobs Print</h1>
+      <div class="sub">Forecast dipangkas tajam ke 90K dari 162K — tapi tiga sinyal hiring minggu ini (ADP, ISM Employment, S&amp;P Global Employment) semuanya menguat. Bar yang rendah ini mungkin terlalu rendah.</div>
+      <dl class="hero-row">
+        <div class="hero-stat"><dt>Spot</dt><dd>$4.169</dd></div>
+        <div class="hero-stat"><dt>Backdrop Mentah</dt><dd>76% Bearish</dd></div>
+        <div class="hero-stat"><dt>Terkalibrasi (12b)</dt><dd class="accent">64,6% Bearish</dd></div>
+        <div class="hero-stat"><dt>Confidence</dt><dd>5/10</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <!-- RISK CALLOUT -->
+  <section class="card pad" style="border-top:4px solid var(--p-accent)">
+    <h2 class="accent-h">Risiko Utama — Forecast 90K Mungkin Terlalu Rendah</h2>
+    <p class="lede">Konsensus NFP dipangkas tajam dari 162K ke 90K. Tapi per Confirmation Chaining: tiga dari empat indikator hiring minggu ini justru menunjukkan kekuatan, bukan pelemahan.</p>
+    <div class="chainlist">
+      <div class="chk"><span class="box"></span><span class="t">ADP Private Payrolls (30 Sep) <b>90K vs fc 70K</b> — beat</span></div>
+      <div class="chk"><span class="box"></span><span class="t">ISM Manufacturing Employment (1 Okt) <b>52,7 vs prior 51,2</b> — naik</span></div>
+      <div class="chk"><span class="box"></span><span class="t">S&amp;P Global Mfg Employment (1 Okt) <b>tercepat sejak 2009</b> — beat besar</span></div>
+      <div class="chk"><span class="box weak"></span><span class="t">JOLTS Job Openings (29 Sep) <b>7,079M vs fc 7,23M</b> — miss (permintaan, bukan hiring aktual)</span></div>
+    </div>
+    <div class="note" style="margin-top:16px">
+      <b>3 sinyal hiring aktual vs 1 sinyal permintaan ke depan.</b> Forecast serendah ini berisiko sama seperti forecast setinggi PCE Cluster kemarin — sudah dipangkas duluan, jadi kejutan dua arah genuinely mungkin, condong ke kemungkinan BEAT.
+    </div>
+  </section>
+
+  <!-- FORECAST TABLE -->
+  <section class="card pad">
+    <h2>Forecast vs Previous</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Data</th><th class="n">Forecast</th><th class="n">Prior</th><th>Catatan</th></tr></thead>
+        <tbody>
+          <tr><td><b>Non-Farm Payrolls</b></td><td class="n mono">90K</td><td class="n mono">162K</td><td><span class="tag t-warn">Rentang analis 60-100K</span></td></tr>
+          <tr><td><b>Unemployment Rate</b></td><td class="n mono">4,1%</td><td class="n mono">4,1%</td><td><span class="tag t-warn">Flat</span></td></tr>
+          <tr><td>Average Hourly Earnings MoM</td><td class="n mono">~0,2-0,3%</td><td class="n mono">—</td><td><span class="tag t-warn">Estimasi beragam</span></td></tr>
+          <tr><td>Average Hourly Earnings YoY</td><td class="n mono">~3,0-3,1%</td><td class="n mono">—</td><td><span class="tag t-warn">3,0% = terlemah sejak Mei 2021</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px;font-size:13px;color:var(--p-muted)">Tidak ada angka forecast tunggal resmi di widget untuk AHE — estimasi dari survei analis (Reuters, Bank of America, dsb), dengan dispersi lebar.</p>
+  </section>
+
+  <!-- BACKDROP -->
+  <section class="card pad">
+    <h2>Backdrop</h2>
+    <ul style="font-size:13.5px">
+      <li><b>DXY 101,83</b> — terus menguat sepanjang hari (101,40 → 101,57 → 101,83)</li>
+      <li><b>US10Y 5,298%</b> — sempat sentuh 5,342% intraday, rekor baru lagi</li>
+      <li><b>US02Y 4,841%</b></li>
+      <li><b>Fed</b>: Desember 95% odds hike masih berdiri (CME FedWatch). Goolsbee &amp; Kashkari tetap bernada hawkish — tidak ada perubahan dari kemarin.</li>
+    </ul>
+  </section>
+
+  <!-- MARKET BIAS ENGINE -->
+  <section class="card pad">
+    <h2>Market Bias Engine — 7 Pilar (Tier 1, Bangun Penuh)</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Pilar</th><th class="n">Bobot</th><th class="n">Skor</th><th style="width:90px">&nbsp;</th><th class="n">Kontrib.</th></tr></thead>
+        <tbody>
+          <tr><td>Kebijakan Fed</td><td class="n">20%</td><td class="n">15%</td><td><span class="bar"><i style="width:15%"></i></span></td><td class="n">3,00</td></tr>
+          <tr><td>Inflasi</td><td class="n">20%</td><td class="n">40%</td><td><span class="bar"><i style="width:40%"></i></span></td><td class="n">8,00</td></tr>
+          <tr><td><b>Tenaga Kerja</b></td><td class="n">15%</td><td class="n">40%</td><td><span class="bar"><i style="width:40%"></i></span></td><td class="n">6,00</td></tr>
+          <tr><td>Pertumbuhan & Konsumsi</td><td class="n">15%</td><td class="n">20%</td><td><span class="bar"><i style="width:20%"></i></span></td><td class="n">3,00</td></tr>
+          <tr><td>Treasury Yield</td><td class="n">15%</td><td class="n">5%</td><td><span class="bar"><i style="width:5%"></i></span></td><td class="n">0,75</td></tr>
+          <tr><td>DXY</td><td class="n">10%</td><td class="n">12%</td><td><span class="bar"><i style="width:12%"></i></span></td><td class="n">1,20</td></tr>
+          <tr><td>Struktur Teknikal</td><td class="n">5%</td><td class="n">40%</td><td><span class="bar"><i style="width:40%"></i></span></td><td class="n">2,00</td></tr>
+          <tr class="total-row"><td>Total Mentah</td><td class="n">100%</td><td class="n">—</td><td>&nbsp;</td><td class="n">23,95</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:16px">
+      <b>Hasil mentah: ~23,95% Bullish / 76,05% Bearish.</b> Pilar <b>Tenaga Kerja</b> (dicetak tebal) sengaja diskor netral 40%, bukan condong sepihak — lihat Risiko Utama di atas. Pilar ini akan diuji LANGSUNG malam ini.
+    </div>
+  </section>
+
+  <!-- RULE 12b -->
+  <section class="card pad" style="border-top:4px solid var(--p-accent)">
+    <h2 class="accent-h">Rule 12b — Diskon Korelasi Terstruktur</h2>
+    <p class="lede">Cluster Fed+Yield+DXY (45% bobot) causally-linked — cek divergensi sebelum lapor total akhir.</p>
+    <ol style="padding-left:20px;font-size:13.5px;color:var(--p-ink-2)">
+      <li style="margin-bottom:8px"><b>Cek divergensi</b>: Kebijakan Fed (15%), Treasury Yield (5%), DXY (12%) — <b>ketiganya ≤20%, tanpa divergensi sama sekali</b>. Pola ketiga berturut-turut minggu ini (ISM Manufacturing, dan sekarang NFP) — kondisi struktural yang persisten.</li>
+      <li style="margin-bottom:8px"><b>Diskon yang berlaku</b>: "Ketiganya ekstrem, tanpa divergensi" → diskon <b>65%</b> (titik tengah band 60-70%).</li>
+      <li style="margin-bottom:8px"><b>Perhitungan</b>: kontrib mentah cluster = 3,00+0,75+1,20 = 4,95 → deviasi dari netral (22,5) = 17,55 → didiskon 65% → 6,14 → kontrib terkalibrasi = 22,5−6,14 = <b>16,36</b>.</li>
+    </ol>
+    <div class="scroll">
+      <table>
+        <thead><tr><th></th><th class="n">Nilai</th></tr></thead>
+        <tbody>
+          <tr><td>Skor mentah (backdrop)</td><td class="n mono" style="color:var(--p-hot)"><b>~23,95% Bullish / 76,05% Bearish</b></td></tr>
+          <tr><td>Skor terkalibrasi (prediksi reaksi)</td><td class="n mono" style="color:var(--p-accent)"><b>~35,4% Bullish / 64,6% Bearish</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- TECHNICAL -->
+  <section class="card pad">
+    <h2>Technical — 6 Timeframe</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>TF</th><th>Struktur</th><th>Bias</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">D1</td><td>Ranging $4.139-4.219, dua hari sideways</td><td><span class="tag t-warn">Netral</span></td></tr>
+          <tr><td class="mono">H4</td><td>Choppy $4.149-4.193, tanpa trend jelas</td><td><span class="tag t-warn">Netral</span></td></tr>
+          <tr><td class="mono">H1</td><td>Sempat ke $4.183-4.187, pullback ke $4.165-4.169</td><td><span class="tag t-hot">Netral-bearish tipis</span></td></tr>
+          <tr><td class="mono">M15</td><td>Konsolidasi, nyaris flat</td><td><span class="tag t-warn">Netral</span></td></tr>
+          <tr><td class="mono">M5</td><td>Pullback kecil dari $4.189</td><td><span class="tag t-hot">Netral-bearish tipis</span></td></tr>
+          <tr><td class="mono">M1</td><td>Flat choppy $4.163-4.170</td><td><span class="tag t-warn">Netral</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:16px">
+      <b>Pasar sedang diam — pola klasik pra-NFP.</b> Tidak ada bias teknikal kuat ke arah manapun menjelang rilis besok.
+    </div>
+    <div class="lvl-list" style="margin-top:16px">
+      <div class="lvl"><span>Resistance</span><b>$4.219-4.229</b></div>
+      <div class="lvl"><span>Zona Tengah</span><b style="color:var(--p-warn)">$4.175-4.193</b></div>
+      <div class="lvl"><span>Spot</span><b style="color:var(--p-accent)">$4.169</b></div>
+      <div class="lvl"><span>Support</span><b>$4.139</b></div>
+      <div class="lvl"><span>Low Siklus</span><b>$4.110,90</b></div>
+    </div>
+  </section>
+
+  <!-- SCENARIOS -->
+  <section>
+    <h2 style="border:none;margin-bottom:12px;padding-bottom:0">Tiga Skenario</h2>
+    <div class="scen">
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-cool)">Lemah</span></div>
+        <p>NFP ≤70K, Unemployment &gt;4,1%, AHE soft — konfirmasi pelemahan genuin.</p>
+        <div class="lv">Bullish gold kuat → uji $4.219+ bahkan lebih tinggi</div>
+      </div>
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-muted)">Sesuai Forecast</span></div>
+        <p>NFP 80-100K, Unemployment 4,1% flat — sudah ter-price-in pasar.</p>
+        <div class="lv">Choppy lanjut di $4.139-4.219</div>
+      </div>
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-accent)">Beat Mengejutkan</span></div>
+        <p>NFP &gt;120K, Unemployment turun, AHE panas — skenario under-priced menurut saya.</p>
+        <div class="lv">Bearish gold → risiko breakdown $4.139 → $4.110,90</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONFIDENCE -->
+  <section class="card pad">
+    <h2>Confidence Score — 5/10</h2>
+    <ul style="font-size:13.5px">
+      <li><b>Fundamental ★★★☆☆</b> — Tier 1, tapi dispersi forecast lebar (60-100K) membuat arah genuinely tidak pasti.</li>
+      <li><b>Teknikal ★★★☆☆</b> — ranging tanpa bias kuat, pasar menunggu katalis.</li>
+      <li><b>Sentimen ★★★☆☆</b> — backdrop terkalibrasi 64,6% Bearish konsisten 2 hari terakhir, tapi pilar Tenaga Kerja sengaja netral karena risiko confirming-data di atas.</li>
+    </ul>
+  </section>
+
+  <section class="card pad">
+    <h2>Kesimpulan Sistem</h2>
+    <ul>
+      <li><b>Backdrop terkalibrasi ~64,6% Bearish</b> — konsisten dengan 2 hari terakhir, cluster Fed/Yield/DXY masih ekstrem tanpa divergensi untuk ketiga kalinya berturut-turut minggu ini.</li>
+      <li><b>Tapi pilar paling relevan malam ini sengaja diskor netral</b>: forecast NFP 90K kontras dengan 3 sinyal hiring aktual (ADP, ISM Employment, S&amp;P Global Employment) yang semuanya beat minggu ini. Risiko kejutan condong ke arah BEAT, bukan miss.</li>
+      <li><b>Kalau NFP beat</b>: menguatkan arah backdrop bearish. <b>Kalau NFP benar-benar lemah</b>: kontradiksi dengan 3 data lain, baca sebagai sinyal campuran bukan tren bersih.</li>
+      <li><b>Rule 7 berlaku penuh</b> — tunggu minimal 3-4 jam pasca-rilis sebelum finalisasi BENAR/SALAH/WHIPSAW.</li>
+    </ul>
+  </section>
+
+  </div>
+
+  <footer>
+    <div class="disc">
+      <b>NOT FINANCIAL ADVICE.</b> Lembar ini catatan riset dan evaluasi sistem pribadi, bukan rekomendasi transaksi untuk siapapun. Trading emas dan forex berisiko tinggi dan dapat mengakibatkan kerugian total.
+    </div>
+    <div class="mono" style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;text-align:right">
+      Disusun 1 Oktober 2026, sebelum rilis 2 Oktober 19:30 WIB<br>
+      Harga &amp; struktur: TradingView<br>
+      VANTAGE:XAUUSD &middot; TVC:DXY &middot; TVC:US10Y &middot; TVC:US02Y
+    </div>
+  </footer>
+
+</div>
+
+    </div>
+
+    <div class="ad-slot">
+      <script async="async" data-cfasync="false" src="https://pl30756138.effectivecpmnetwork.com/4a3f1dc3807941e53dfe4463a21a0e4e/invoke.js"></script>
+      <div id="container-4a3f1dc3807941e53dfe4463a21a0e4e"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Kebijakan Privasi</a>
+      <a href="https://www.effectivecpmnetwork.com/setnp40u3t?key=fe8199ed8dd693be00f1924c13a1b7ec" target="_blank" rel="noopener sponsored">Rekomendasi</a>
+    </div>
+    <div>&copy; 2026 EdukasiTrader.</div>
+  </div>
+</footer>
+
+</body>
+</html>
