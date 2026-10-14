@@ -28,7 +28,7 @@ Klaim 4 jam (verdict resmi): backdrop terkalibrasi 61,2% Bearish, dan arah net d
 Dari 3 skenario Core MoM, yang terjadi adalah **Panas, yang saya beri 29%**, bukan skenario terbanyak (In-line, 48%). Itu bukan kegagalan probabilitas, tapi satu observasi tidak cukup untuk menilai kalibrasi. Dan run-up +$13 di 30 menit sebelum rilis ternyata tidak memprediksi apa-apa.
 
 ### Post 7 (balasan)
-Pelajaran praktis: run-up $13 di 30 menit sebelum rilis tidak memprediksi arah, jadi pergerakan sebelum rilis tidak saya baca sebagai sinyal. Rekor sistem sekarang: 21 benar, 2 salah, 1 whipsaw dari 24 rilis (akurasi arah 91,30%).
+Catatan angka: NFP dan CPI menunjukkan candle M15 pertama rilis Tier 1 bisa bergerak $40-60, di atas kisaran yang saya tulis, tapi kisarannya tidak saya ubah. Dan run-up $13 di 30 menit sebelum rilis tidak memprediksi arah. Rekor sistem sekarang: 21 benar, 2 salah, 1 whipsaw dari 24 rilis (akurasi arah 91,30%).
 
 ### Post 8 (balasan, CTA + disclaimer)
 Analisa lengkap, termasuk dua koreksi yang saya buat sendiri sebelum rilis, ada di poster, link di bio.
