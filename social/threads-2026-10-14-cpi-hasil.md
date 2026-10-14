@@ -19,7 +19,7 @@ Datanya: Core MoM 0,3% (prior 0,3%), Core YoY 2,6% (prior 2,4%), headline MoM 0,
 Harga per jam dari acuan $4.152,81: candle M15 pertama −$59,55, jam ke-1 −$62,61, jam ke-2 −$55,64, jam ke-3 −$60,06, jam ke-4 −$72,58. Rebound tertinggi cuma $4.107,59, dan harga tidak pernah kembali di atas $4.108. Low $4.073,47, sekitar $7 dari low siklus $4.066,50.
 
 ### Post 4 (balasan)
-Klaim reaksi-awal yang saya tulis sebelum rilis: Core MoM 0,3% atau lebih → gold turun. **Arahnya cocok.** Tapi saya menulis kisaran besaran ±$15-50, dan kenyataannya −$59,55. **Besaran meleset.** Itu kelemahan klaim ini yang harus diperbaiki.
+Klaim reaksi-awal yang saya tulis sebelum rilis: Core MoM 0,3% atau lebih → gold turun. **Arahnya cocok.** Tapi saya menulis kisaran besaran ±$15-50, dan kenyataannya −$59,55. **Besaran meleset.** Saya catat apa adanya.
 
 ### Post 5 (balasan)
 Klaim 4 jam (verdict resmi): backdrop terkalibrasi 61,2% Bearish, dan arah net di titik 4 jam memang turun. Berbeda dengan ISM dan NFP, **tidak ada fork kriteria**: kriteria jam pertama dan kriteria 4 jam sama-sama bearish. Tidak ada fade total, tidak ada spike yang berbalik.
@@ -28,7 +28,7 @@ Klaim 4 jam (verdict resmi): backdrop terkalibrasi 61,2% Bearish, dan arah net d
 Dari 3 skenario Core MoM, yang terjadi adalah **Panas, yang saya beri 29%**, bukan skenario terbanyak (In-line, 48%). Itu bukan kegagalan probabilitas, tapi satu observasi tidak cukup untuk menilai kalibrasi. Dan run-up +$13 di 30 menit sebelum rilis ternyata tidak memprediksi apa-apa.
 
 ### Post 7 (balasan)
-Pelajaran praktis: kisaran besaran M15 pertama perlu dilebarkan. NFP dan CPI menunjukkan rilis Tier 1 bisa menggerakkan $40-60 di candle pertama. Saya usul ±$20-70 dengan ekor $110, tapi ini masih hipotesis dari dua observasi, belum jadi aturan. Rekor sistem sekarang: 21 benar, 2 salah, 1 whipsaw dari 24 rilis (akurasi arah 91,30%).
+Pelajaran praktis: run-up $13 di 30 menit sebelum rilis tidak memprediksi arah, jadi pergerakan sebelum rilis tidak saya baca sebagai sinyal. Rekor sistem sekarang: 21 benar, 2 salah, 1 whipsaw dari 24 rilis (akurasi arah 91,30%).
 
 ### Post 8 (balasan, CTA + disclaimer)
 Analisa lengkap, termasuk dua koreksi yang saya buat sendiri sebelum rilis, ada di poster, link di bio.

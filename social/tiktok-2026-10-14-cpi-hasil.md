@@ -19,7 +19,7 @@ Pola "Update Hasil" — **bahasa teknis** (register analis), angka dibuka penuh.
 > Dan beda sama NFP dan ISM, kali ini nggak ada fork kriteria: jam pertama sama empat jam sama-sama bearish."
 >
 > **[CTA — 0:40–0:55]**
-> "Rekor gue sekarang 21 benar, 2 salah, 1 whipsaw dari 24 rilis. Pelajarannya: kisaran besaran menit awal perlu dilebarin. Analisa lengkapnya ada di poster, link di bio."
+> "Rekor gue sekarang 21 benar, 2 salah, 1 whipsaw dari 24 rilis. Analisa lengkapnya ada di poster, link di bio."
 
 ### Caption
 Verdict CPI September: BENAR. Core MoM 0,3% (fc 0,2%), Core YoY 2,6% (fc 2,5%). XAUUSD dari $4.152,81 turun ke $4.080,23 di titik 4 jam (−$72,58, −1,75%), tidak pernah kembali di atas $4.108. Klaim reaksi-awal: arah cocok, besaran meleset (−$59,55 vs kisaran ±$15-50). Tidak ada fork kriteria, jam pertama dan 4 jam sama-sama bearish. Rekor: 21 benar, 2 salah, 1 whipsaw dari 24 rilis (91,30%).
