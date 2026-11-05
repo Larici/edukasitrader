@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XAUUSD Briefing — FOMC 28-29 Oktober 2026 (HASIL FINAL) — EdukasiTrader</title>
+<meta name="description" content="HASIL: Fed hold 3,75-4,00% dengan vote 10-2, gold naik $28,16 di titik 4 jam. Verdict SALAH. Klaim menit awal: tanpa klaim.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap");
+  /* Layout: wire-bulletin series (same family as Pump Price and Jobs Print): dark banner masthead, claim-first section, ticker-style tables.
+     Color: violet accent on a violet-tinted white, distinct from teal (CPI), orange (NFP), amber (FOMC Sep).
+     Type: Oswald (headline voice) / Work Sans (body) / JetBrains Mono (data). */
+  :root{
+    --p-ground:#F8F7FA; --p-panel:#FFFFFF; --p-panel-2:#F0EEF4;
+    --p-ink:#14121A; --p-ink-2:#3A3646; --p-muted:#6F6985;
+    --p-rule:#E3E0EA; --p-rule-strong:#C8C3D4;
+    --p-accent:#5B3FA6; --p-accent-soft:#E8E2F6;
+    --p-hot:#D62839; --p-hot-soft:#FBE1E2;
+    --p-cool:#0E8F6B; --p-cool-soft:#DFF3EA;
+    --p-warn:#A8690A; --p-warn-soft:#FBEBD6;
+    --p-shadow:0 1px 0 rgba(20,18,26,.05), 0 3px 16px rgba(20,18,26,.07);
+    color-scheme: light;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --p-ground:#100F15; --p-panel:#191720; --p-panel-2:#201E29;
+      --p-ink:#EFEDF5; --p-ink-2:#C5C1D2; --p-muted:#8D879F;
+      --p-rule:#2F2C3B; --p-rule-strong:#47435A;
+      --p-accent:#A794E8; --p-accent-soft:#241C3D;
+      --p-hot:#E8606C; --p-hot-soft:#341C1E;
+      --p-cool:#4FC79A; --p-cool-soft:#12342A;
+      --p-warn:#D9A54A; --p-warn-soft:#332411;
+      --p-shadow:0 1px 0 rgba(0,0,0,.4), 0 3px 20px rgba(0,0,0,.45);
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"]{
+    --p-ground:#100F15; --p-panel:#191720; --p-panel-2:#201E29;
+    --p-ink:#EFEDF5; --p-ink-2:#C5C1D2; --p-muted:#8D879F;
+    --p-rule:#2F2C3B; --p-rule-strong:#47435A;
+    --p-accent:#A794E8; --p-accent-soft:#241C3D;
+    --p-hot:#E8606C; --p-hot-soft:#341C1E;
+    --p-cool:#4FC79A; --p-cool-soft:#12342A;
+    --p-warn:#D9A54A; --p-warn-soft:#332411;
+    --p-shadow:0 1px 0 rgba(0,0,0,.4), 0 3px 20px rgba(0,0,0,.45);
+    color-scheme: dark;
+  }
+  *{box-sizing:border-box}
+  .poster-container{background:var(--p-ground);color:var(--p-ink);font-family:"Work Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .mono{font-family:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace}
+  .sheet{max-width:1040px;margin:0 auto;padding-block:26px 60px;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px));display:flex;flex-direction:column;gap:18px}
+
+  .masthead{background:#14121A;color:#fff;overflow:hidden}
+  .flash-bar{background:var(--p-accent);color:#fff;display:flex;align-items:center;gap:10px;padding:7px 20px;font-family:"JetBrains Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  :root[data-theme="dark"] .flash-bar{color:#14121A}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .flash-bar{color:#14121A}}
+  .flash-dot{width:7px;height:7px;border-radius:50%;background:currentColor;flex:0 0 auto}
+  .mast-body{padding:28px 24px 26px}
+  .eyebrow{font-family:"JetBrains Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:#C5C1D2;margin-bottom:10px}
+  .sheet h1{font-family:"Oswald",sans-serif;font-weight:700;font-size:clamp(40px,8vw,66px);line-height:.92;letter-spacing:.005em;text-transform:uppercase;margin:0;color:#fff;text-wrap:balance}
+  .sub{font-size:clamp(14.5px,2.2vw,17px);color:#D6D2E2;margin-top:10px;max-width:62ch}
+  .hero-row{display:flex;flex-wrap:wrap;margin:22px 0 0;border-top:1px solid #34304A}
+  .hero-stat{flex:1 1 150px;padding:14px 18px 4px;border-right:1px solid #34304A}
+  .hero-stat:last-child{border-right:none}
+  .hero-stat dt{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:#9A94B0}
+  .hero-stat dd{margin:4px 0 0;font-family:"Oswald",sans-serif;font-weight:600;font-size:26px;color:#fff;letter-spacing:.01em}
+  .hero-stat dd.accent{color:#B9A9F2}
+
+  .pcard{background:var(--p-panel);border:1px solid var(--p-rule-strong);box-shadow:var(--p-shadow)}
+  .pad{padding:24px 24px 26px}
+  .top{border-top:4px solid var(--p-accent)}
+  .label{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--p-muted)}
+
+  h2{font-family:"Oswald",sans-serif;font-weight:600;font-size:16px;letter-spacing:.04em;text-transform:uppercase;color:var(--p-ink);margin:0 0 16px;padding-bottom:10px;border-bottom:2px solid var(--p-ink);text-wrap:balance}
+  h2.accent-h{border-bottom-color:var(--p-accent);color:var(--p-accent)}
+  .sheet p{margin:0 0 11px;color:var(--p-ink-2)}
+  .lede{font-size:15.5px}
+  .sheet ul{margin:0;padding-left:18px}
+  .sheet li{margin-bottom:8px;color:var(--p-ink-2)}
+  .sheet li b{color:var(--p-ink)}
+  .sheet ol{margin:0;padding-left:20px}
+  .sheet a{color:var(--p-accent)}
+
+  .note{border-left:4px solid var(--p-accent);background:var(--p-accent-soft);padding:14px 17px;font-size:13.5px;color:var(--p-ink-2)}
+  .note b{color:var(--p-ink)}
+  .note.hot{border-left-color:var(--p-hot);background:var(--p-hot-soft)}
+  .note.warn{border-left-color:var(--p-warn);background:var(--p-warn-soft)}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px}
+  th,td{text-align:left;padding:9px 10px 9px 0;border-bottom:1px solid var(--p-rule);vertical-align:top}
+  th{font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--p-muted);font-weight:500}
+  td.n,th.n{text-align:right;padding-right:14px;font-variant-numeric:tabular-nums}
+  tr:last-child td{border-bottom:none}
+  .total-row td{border-top:2px solid var(--p-ink);border-bottom:none;padding-top:11px;font-weight:700;font-family:"Oswald",sans-serif;font-size:17px;text-transform:uppercase}
+  .scroll{overflow-x:auto}
+  .scroll table{min-width:620px}
+  .bar{display:block;height:7px;background:var(--p-rule);width:100%}
+  .bar i{display:block;height:100%;background:var(--p-accent)}
+
+  .tag{display:inline-block;font-family:"JetBrains Mono",monospace;font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border:1px solid currentColor;white-space:nowrap}
+  .t-hot{color:var(--p-hot);background:var(--p-hot-soft)}
+  .t-cool{color:var(--p-cool);background:var(--p-cool-soft)}
+  .t-warn{color:var(--p-warn);background:var(--p-warn-soft)}
+  .t-acc{color:var(--p-accent);background:var(--p-accent-soft)}
+
+  .ifthen{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--p-rule-strong);border:1px solid var(--p-rule-strong)}
+  @media (max-width:760px){.ifthen{grid-template-columns:1fr}}
+  .ifthen>div{background:var(--p-panel);padding:16px 17px 18px;min-width:0}
+  .cond{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--p-muted);letter-spacing:.04em;margin-bottom:6px}
+  .arrow{font-family:"Oswald",sans-serif;font-weight:700;font-size:30px;line-height:1;text-transform:uppercase;letter-spacing:.01em}
+  .up{color:var(--p-cool)} .down{color:var(--p-hot)} .none{color:var(--p-muted)}
+  .why{font-size:12.5px;color:var(--p-ink-2);margin-top:8px}
+  .facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:2px;background:var(--p-rule-strong);border:1px solid var(--p-rule-strong);margin-top:14px}
+  .fact{background:var(--p-panel-2);padding:11px 14px;min-width:0}
+  .fact b{display:block;font-family:"JetBrains Mono",monospace;font-size:13.5px}
+  .probbar{display:flex;height:28px;margin-top:8px;border:1px solid var(--p-rule-strong)}
+  .probbar span{display:flex;align-items:center;justify-content:center;font-family:"JetBrains Mono",monospace;font-size:11px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden}
+  .duo{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--p-rule-strong);border:1px solid var(--p-rule-strong);margin-top:18px}
+  @media (max-width:760px){.duo{grid-template-columns:1fr}}
+  .duo>div{background:var(--p-panel);padding:14px 16px;min-width:0}
+  .duo .t{font-family:"Oswald",sans-serif;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase}
+  .duo p{margin:4px 0 0;font-size:13px}
+  .result{margin-top:18px;border:1px solid var(--p-rule-strong);background:var(--p-accent-soft);padding:14px 16px;display:flex;flex-wrap:wrap;gap:10px 22px;align-items:center;font-size:13.5px;color:var(--p-ink-2)}
+  .result b{font-family:"JetBrains Mono",monospace;color:var(--p-ink)}
+
+  .scen{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--p-rule-strong);border:1px solid var(--p-rule-strong)}
+  @media (max-width:800px){.scen{grid-template-columns:1fr}}
+  .scen>div{padding:18px 18px 20px;background:var(--p-panel);min-width:0}
+  .scen-hd{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:9px}
+  .scen-name{font-family:"Oswald",sans-serif;font-weight:600;font-size:18px;letter-spacing:.02em;text-transform:uppercase}
+  .scen-p{font-family:"JetBrains Mono",monospace;font-size:12px;font-weight:700;color:var(--p-muted)}
+  .scen p{margin:0 0 9px;font-size:13px;color:var(--p-ink-2)}
+  .scen .lv{font-family:"JetBrains Mono",monospace;font-size:11px;color:var(--p-ink);border-top:1px dashed var(--p-rule);padding-top:9px;margin-top:3px}
+
+  .lvl-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:2px;background:var(--p-rule-strong);border:1px solid var(--p-rule-strong)}
+  .lvl{background:var(--p-panel);padding:11px 13px;min-width:0}
+  .lvl b{display:block;font-family:"JetBrains Mono",monospace;font-size:15px}
+  .lvl span{font-family:"JetBrains Mono",monospace;font-size:9px;letter-spacing:.09em;text-transform:uppercase;color:var(--p-muted)}
+
+  .lessons{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:2px;background:var(--p-rule-strong);border:1px solid var(--p-rule-strong)}
+  .lesson{background:var(--p-panel-2);padding:14px 16px;font-size:13px;color:var(--p-ink-2);min-width:0}
+  .lesson b{display:block;font-family:"Oswald",sans-serif;font-weight:600;font-size:13px;letter-spacing:.05em;text-transform:uppercase;color:var(--p-ink);margin-bottom:4px}
+
+  .poster-foot{border-top:1px solid var(--p-rule-strong);padding-top:14px;font-size:12px;color:var(--p-muted);display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between}
+  .poster-foot>div{min-width:0}
+  .disc{font-family:"JetBrains Mono",monospace;font-size:10px;letter-spacing:.03em;line-height:1.7;max-width:62ch}
+  .srcs{font-size:11.5px;line-height:1.7;max-width:62ch}
+
+  .compliance-notice{
+    max-width:880px;
+    margin:0 auto 20px;
+    padding:16px 20px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-dim);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    color:var(--text-dim);
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+  .compliance-notice strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Edukasi<span>Trader</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Beranda</a>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Privasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="max-width: 960px;">
+
+    <div class="compliance-notice">
+      <strong>Bukan ajakan bertransaksi.</strong> Konten di bawah ini adalah catatan analisis pasar pribadi yang kami bagikan sebagai referensi publik — berisi opini terhadap data makro dan level teknikal saat disusun, bukan sinyal trading resmi, rekomendasi personal, atau ajakan untuk membuka posisi tertentu. Pasar bisa bergerak sangat berbeda dari skenario yang dibahas. Selalu lakukan riset dan pertimbangan risiko sendiri.
+    </div>
+
+    <div class="ad-slot">
+      <script>
+        atOptions = {
+          'key' : '95130429aa13b28790da6b9e46158bfc',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/95130429aa13b28790da6b9e46158bfc/invoke.js"></script>
+    </div>
+
+    <div class="poster-container">
+
+<div class="sheet">
+
+  <header class="masthead">
+    <div class="flash-bar"><span class="flash-dot"></span>FINAL &middot; TIER 1 &middot; FOMC OKTOBER &middot; DIRILIS 29 OKT 01:00 WIB &middot; VERDICT: SALAH</div>
+    <div class="mast-body">
+      <div class="eyebrow">Keputusan suku bunga &middot; Statement &middot; Press conference Warsh &middot; Hasil</div>
+      <h1>Dissent Watch</h1>
+      <div class="sub">Fed hold dengan vote 10-2, Cook dan Hammack minta hike, Warsh tidak berkomitmen untuk Desember. Gold naik $28,16 di titik 4 jam, berlawanan dengan klaim backdrop 65,6% Bearish.</div>
+      <dl class="hero-row">
+        <div class="hero-stat"><dt>Pra-Rilis (open M15)</dt><dd>$4.040,57</dd></div>
+        <div class="hero-stat"><dt>4 Jam Pasca (05:00)</dt><dd>$4.068,73</dd></div>
+        <div class="hero-stat"><dt>Selisih</dt><dd class="accent">+$28,16</dd></div>
+        <div class="hero-stat"><dt>Klaim 4 Jam</dt><dd>65,6% Bearish</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <section class="pcard pad top">
+    <h2 class="accent-h">Verdict: SALAH. Hold yang Sudah Dihargai Dibaca Pasar sebagai Lega</h2>
+    <p class="lede">Fed hold di 3,75&ndash;4,00%. Gold bergerak dari $4.040,57 (open M15 01:00) ke $4.068,73 di titik 4 jam, <b>+$28,16 (+0,70%)</b>, sementara klaim resmi saya adalah backdrop terkalibrasi 65,6% Bearish. Rule 7 terpenuhi: dicek &plusmn;9 jam 50 menit pasca-rilis, kriteria arah net terhadap acuan pra-rilis, dikunci sebelum rilis.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Waktu WIB</th><th class="n">XAUUSD</th><th class="n">vs Pra-Rilis</th><th>Catatan</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">01:00 (rilis)</td><td class="n mono">$4.040,57</td><td class="n mono">&mdash;</td><td><span class="tag t-warn">Acuan (open M15)</span></td></tr>
+          <tr><td class="mono">M15 pertama close</td><td class="n mono">$4.034,03</td><td class="n mono">&minus;$6,54</td><td><span class="tag t-hot">Low $4.030,39</span></td></tr>
+          <tr><td class="mono">Candle presser 01:30</td><td class="n mono">$4.055,04</td><td class="n mono">+$14,47</td><td><span class="tag t-acc">Range $42,58: $4.025,00&ndash;4.067,58</span></td></tr>
+          <tr><td class="mono">02:00 (1 jam)</td><td class="n mono">$4.033,14</td><td class="n mono">&minus;$7,43</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td class="mono">03:00 (2 jam)</td><td class="n mono">$4.075,27</td><td class="n mono">+$34,70</td><td><span class="tag t-cool">Bullish, high $4.082,73</span></td></tr>
+          <tr><td class="mono">04:00 (3 jam)</td><td class="n mono">$4.068,81</td><td class="n mono">+$28,24</td><td><span class="tag t-cool">Bullish</span></td></tr>
+          <tr><td class="mono"><b>05:00 (4 jam)</b></td><td class="n mono"><b>$4.068,73</b></td><td class="n mono"><b>+$28,16</b></td><td><span class="tag t-cool">Bullish net</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px;font-size:13px;color:var(--p-muted)">Pasar punya jeda 04:00&ndash;05:00 WIB tanpa candle, jadi titik 4 jam memakai open candle M15 05:00. Selisihnya dengan close terakhir sebelum jeda hanya $0,08.</p>
+    <div class="facts">
+      <div class="fact"><span class="label">DXY (acuan 102,320)</span><b>102,126 (&minus;0,194)</b></div>
+      <div class="fact"><span class="label">UST10Y (00:45 5,034%)</span><b>5,003% (&minus;3,1bp)</b></div>
+      <div class="fact"><span class="label">Window high / low</span><b>$4.082,73 / $4.025,00</b></div>
+      <div class="fact"><span class="label">&plusmn;10:45 WIB</span><b>$4.042,98 (+$2,41)</b></div>
+    </div>
+    <div class="note warn" style="margin-top:16px">
+      <b>Choppy atau tidak?</b> Jam pertama memang choppy: dari $4.025,00 ke $4.067,58 lalu kembali ke $4.033, tanpa arah. Tapi dari 02:00 sampai &plusmn;07:15 setiap close M15 berada di atas acuan, lebih dari 5 jam, dan titik 2, 3, dan 4 jam semuanya bullish. WHIPSAW butuh hasil akhir netral atau ambigu, bukan sekadar jalan harga yang choppy; margin preseden $4-5, di sini $28,16. Kenaikan memudar menjadi +$2,41 pada &plusmn;10:45, tetapi itu informasi, bukan dasar verdict. <b>Keputusan 29 Okt: verdict tetap SALAH.</b>
+    </div>
+    <div class="note" style="margin-top:12px">
+      <b>Fork kriteria.</b> Kriteria jam pertama (&minus;$7,43) searah klaim, tapi kriteria itu hanya dipakai sekali untuk ISMMFG atas keputusan user dan tidak berlaku di sini. Titik 2, 3, dan 4 jam bullish.
+    </div>
+  </section>
+
+  <section class="pcard pad top">
+    <h2 class="accent-h">Klaim Reaksi-Awal: Menit 0-15 (Ditulis 28 Okt, Sebelum Rilis)</h2>
+    <p class="lede">Karena rate diperkirakan hold, arah ditentukan oleh <b>selisih antara hasil dan apa yang sudah dihargai</b>: jumlah dissenter, kalimat statement, dan nada presser. Dinilai dari close candle M15 pertama (01:00 WIB), dicatat sebagai informasi di luar Scoreboard.</p>
+    <div class="ifthen">
+      <div>
+        <div class="cond">Lebih hawkish dari ekspektasi, atau hike</div>
+        <div class="arrow down">Gold turun</div>
+        <div class="why">Tiga dissent, Desember ditegaskan, atau bicara 50bp. Yield dan USD naik.</div>
+      </div>
+      <div style="background:var(--p-accent-soft)">
+        <div class="cond">Sesuai ekspektasi &#10003; TERJADI</div>
+        <div class="arrow none">Tanpa klaim</div>
+        <div class="why">Dua sampai tiga dissent dan Warsh tidak berkomitmen. Terjadi: dua dissent (Cook, Hammack), tanpa forward guidance.</div>
+      </div>
+      <div>
+        <div class="cond">Lebih lunak dari ekspektasi</div>
+        <div class="arrow up">Gold naik</div>
+        <div class="why">Satu dissent atau kurang, atau nada "ada waktu menunggu". Yield dan USD turun, posisi short ditutup.</div>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="fact"><span class="label">Besaran</span><b>&plusmn;$15-50 (close M15)</b></div>
+      <div class="fact"><span class="label">Ekor</span><b>hingga ~$110 (preseden)</b></div>
+      <div class="fact"><span class="label">Acuan</span><b>Open M15 01:00 WIB</b></div>
+      <div class="fact"><span class="label">Estimasi turunan</span><b>P(close naik) &asymp; 46%</b></div>
+    </div>
+    <div style="margin-top:16px">
+      <span class="label">Probabilitas skenario (Rule 16b)</span>
+      <div class="probbar">
+        <span style="width:30%;background:var(--p-hot)">Hawkish &middot; 30%</span>
+        <span style="width:46%;background:var(--p-muted)">Sesuai &middot; 46% &#10003;</span>
+        <span style="width:16%;background:var(--p-cool)">Lunak &middot; 16%</span>
+        <span style="width:8%;background:var(--p-warn)">Hike</span>
+      </div>
+    </div>
+    <div class="duo">
+      <div><div class="t">Klaim 0-15 menit</div><p>Dari selisih hasil terhadap ekspektasi. Informasi, tidak masuk Scoreboard.</p></div>
+      <div><div class="t">Klaim 4 jam: verdict resmi</div><p>Backdrop terkalibrasi 65,6% Bearish, dinilai di 05:00 WIB (Rule 7).</p></div>
+    </div>
+    <div class="result">
+      <span class="tag t-acc">Tanpa klaim</span>
+      <span>Skenario <b>sesuai ekspektasi</b> (vote <b>10-2</b>, Warsh tanpa forward guidance)</span>
+      <span>M15 pertama: <b>$4.040,57 &rarr; $4.034,03 (&minus;$6,54)</b></span>
+    </div>
+    <div class="note" style="margin-top:12px">
+      <b>Tidak dinilai, dan tepat begitu.</b> Candle M15 pertama kecil dan arahnya tidak mewakili hasil akhir. FOMC bergerak di candle presser 01:30 (range $42,58, spike +$27,01 lalu &minus;$22 di candle berikutnya), bukan di candle statement.
+    </div>
+  </section>
+
+  <section class="pcard pad">
+    <h2>Apa yang Terjadi di FOMC</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Hal</th><th>Hasil</th><th>Arah</th></tr></thead>
+        <tbody>
+          <tr><td><b>Keputusan</b></td><td>Actual <b>4</b> / Forecast 4 / Previous 4: hold di 3,75&ndash;4,00% (kalender TradingView)</td><td><span class="tag t-warn">In-line</span></td></tr>
+          <tr><td><b>Vote</b></td><td><b>10-2</b>. Lisa Cook dan Beth Hammack dissent minta hike 25bp. Dissent Cook pertama dalam lebih dari empat tahun; Hammack juga dissent pada April dan Juli.</td><td><span class="tag t-hot">Hawkish, sesuai jumlah yang diperkirakan</span></td></tr>
+          <tr><td><b>Statement</b></td><td>Pendek, tanpa forward guidance. Satu perbandingan menyebut pertumbuhan dinaikkan dari "solid" ke "strong" (satu sumber, tidak dikonfirmasi).</td><td><span class="tag t-warn">Belum pasti</span></td></tr>
+          <tr><td><b>Presser Warsh</b></td><td>Tidak berkomitmen untuk Desember: "I don't believe in forward guidance absent exigent circumstances", "I also don't believe in pre-judging meetings". Target 2% prioritas utama, hike September disebut awal tindakan. Sebagian analis membaca isyarat hike lanjutan dengan besaran moderat.</td><td><span class="tag t-cool">Tanpa komitmen</span></td></tr>
+          <tr><td><b>Struktur</b></td><td>Tahun depan tujuh keputusan rate, satu rapat khusus strategi.</td><td><span class="tag t-acc">Informasi</span></td></tr>
+          <tr><td><b>Pasar</b></td><td>Hike Desember ~83&ndash;85% (berita), kontrak Desember 21bp turun dari 23&ndash;24bp. Rapat berikut 8&ndash;9 Des dengan proyeksi baru. DXY dan UST10Y turun di titik 4 jam.</td><td><span class="tag t-cool">Sedikit lebih lunak</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px;font-size:13px;color:var(--p-muted)">Sumber: berita web (lihat footer) dan screenshot kalender TradingView dari user. Angka web belum dicocokkan dengan panel Calendar TradingView (Rule 10).</p>
+  </section>
+
+  <section>
+    <h2 style="border:none;margin-bottom:12px;padding-bottom:0">Empat Skenario: Mana yang Terjadi</h2>
+    <div class="scen">
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-hot)">Hold + lebih hawkish</span><span class="scen-p">30%</span></div>
+        <p>Tiga dissent, Desember ditegaskan, atau bicara 50bp.</p>
+        <div class="lv">Tidak terjadi: dua dissent, tanpa komitmen Desember</div>
+      </div>
+      <div style="background:var(--p-accent-soft)">
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-muted)">Hold sesuai ekspektasi &#10003; TERJADI</span><span class="scen-p">46%</span></div>
+        <p>Dua sampai tiga dissent, Warsh tidak berkomitmen. Choppy dan whipsaw, tanpa klaim menit awal.</p>
+        <div class="lv">Terjadi: vote 10-2, tanpa forward guidance. Gold choppy sampai 02:00, lalu +$28,16 di titik 4 jam</div>
+      </div>
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-cool)">Hold + lebih lunak</span><span class="scen-p">16%</span></div>
+        <p>Satu dissent atau kurang, "ada waktu menunggu".</p>
+        <div class="lv">Sebagian: Warsh tidak berkomitmen, DXY dan yield turun, tapi ada dua dissent hawkish</div>
+      </div>
+      <div>
+        <div class="scen-hd"><span class="scen-name" style="color:var(--p-warn)">Hike mengejutkan</span><span class="scen-p">8%</span></div>
+        <p>Actual di atas forecast.</p>
+        <div class="lv">Tidak terjadi</div>
+      </div>
+    </div>
+    <p style="margin-top:10px;font-size:13px;color:var(--p-muted)">Skenario terbanyak (46%) yang terjadi. Tapi angka mesin 65,6% Bearish lebih bearish dari pohon skenario saya sendiri, di mana skenario bearish hanya 38%, netral 46%, dan bullish 16%.</p>
+  </section>
+
+  <section class="pcard pad">
+    <h2>Pelajaran yang Diterapkan</h2>
+    <div class="lessons">
+      <div class="lesson"><b>Backdrop vs reaksi event</b>Ketiga kalinya (PCE 26 Agt, PCE 30 Sep, FOMC ini) backdrop bearish berseberangan dengan reaksi event. Rekomendasi memisahkan keduanya tetap keputusan user.</div>
+      <div class="lesson"><b>Angka lebih bearish dari pohon</b>Mesin 65,6% Bearish, pohon skenario saya 38% bearish. Peringatan crowding di Section 9 tidak masuk ke angka.</div>
+      <div class="lesson"><b>Gap vs yang dihargai</b>Hold, dissent, dan tanpa forward guidance sudah dihargai: DXY &minus;0,19, UST10Y &minus;3bp, gold +$28. Pola FOMC Minutes 19 Agustus.</div>
+      <div class="lesson"><b>Identitas dissenter</b>Cook yang mengejutkan, tapi pasar menghitung totalnya (dua), bukan siapanya.</div>
+      <div class="lesson"><b>Tanpa klaim itu tepat</b>Candle M15 pertama hanya &minus;$6,54. FOMC bergerak di candle presser.</div>
+      <div class="lesson"><b>Kenaikan memudar</b>+$28,16 di titik 4 jam menjadi +$2,41 pada &plusmn;10:45: bacaan short covering, bukan perubahan arah.</div>
+    </div>
+  </section>
+
+  <section class="pcard pad">
+    <h2>Apa yang Sudah Dihargai Pasar (Pra-Rilis)</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Hal</th><th>Posisi pasar</th><th>Catatan</th></tr></thead>
+        <tbody>
+          <tr><td><b>Rate Oktober</b></td><td class="mono">Hold ~88&ndash;93%, hike ~7%</td><td>CME 27&ndash;28 Okt. Pada 22 Okt hike masih ~16%.</td></tr>
+          <tr><td><b>Hike Desember</b></td><td class="mono">&gt;70% (CNBC &gt;80%)</td><td>Survei Reuters: 100 dari 100 ekonom memperkirakan hike Desember.</td></tr>
+          <tr><td><b>Dissenter</b></td><td class="mono">Logan, Hammack, Kashkari</td><td>Diperkirakan kembali minta hike. Hasilnya: Cook dan Hammack.</td></tr>
+          <tr><td><b>Cenderung sabar</b></td><td class="mono">Williams, Jefferson, Waller, Bowman</td><td>"Ada waktu menunggu", tanpa urgensi.</td></tr>
+          <tr><td><b>Cenderung hawkish</b></td><td class="mono">Hammack, Logan</td><td>Hammack: perlu pengetatan lagi. Logan: +50bp atau lebih.</td></tr>
+          <tr><td><b>Warsh (16 Okt)</b></td><td class="mono">Menolak memberi sinyal</td><td>Menyebut Oktober dan Desember sebagai titik keputusan.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="pcard pad">
+    <h2>Rilis 24 Jam Sebelum FOMC (Pra-Rilis)</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Data</th><th class="n">Actual</th><th class="n">Forecast</th><th class="n">Prior</th><th>Arah</th></tr></thead>
+        <tbody>
+          <tr><td><b>CB Consumer Confidence (Okt)</b></td><td class="n mono"><b>91,7</b></td><td class="n mono">81,2</td><td class="n mono">84,2</td><td><span class="tag t-hot">Beat terbesar</span></td></tr>
+          <tr><td>New Home Sales (Sep)</td><td class="n mono">676K</td><td class="n mono">651K</td><td class="n mono">680K</td><td><span class="tag t-hot">Beat</span></td></tr>
+          <tr><td>S&amp;P/CS HPI 20 YoY (Agu)</td><td class="n mono">2,7%</td><td class="n mono">2,6%</td><td class="n mono">2,5%</td><td><span class="tag t-hot">Beat tipis</span></td></tr>
+          <tr><td>Durable Goods (Sep)</td><td class="n mono">1,8%</td><td class="n mono">2,0%</td><td class="n mono">0,1%</td><td><span class="tag t-cool">Miss tipis</span></td></tr>
+          <tr><td>Core Durable Goods (Sep)</td><td class="n mono">0,5%</td><td class="n mono">0,6%</td><td class="n mono">0,3%</td><td><span class="tag t-cool">Miss tipis</span></td></tr>
+          <tr><td>Building Permits (Sep)</td><td class="n mono">1,398M</td><td class="n mono">1,400M</td><td class="n mono">1,403M</td><td><span class="tag t-warn">In-line</span></td></tr>
+          <tr><td>Atlanta Fed GDPNow Q3</td><td class="n mono">3,4%</td><td class="n mono">&mdash;</td><td class="n mono">3,5%</td><td><span class="tag t-hot">Kuat</span></td></tr>
+          <tr><td>Goods Trade Balance (Sep)</td><td class="n mono">&minus;134,9B</td><td class="n mono">&minus;130,4B</td><td class="n mono">&minus;132,07B</td><td><span class="tag t-warn">Defisit melebar</span></td></tr>
+          <tr><td>Lelang 2Y / 5Y</td><td class="n mono">4,708% / 4,708%</td><td class="n mono">&mdash;</td><td class="n mono">4,787% / 5,033%</td><td><span class="tag t-acc">Yield lebih rendah</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px;font-size:13px;color:var(--p-muted)">Waktu rilis dikonversi dari Investing.com (GMT+8) ke WIB. Sumber: Investing.com Economic Calendar; belum dicocokkan dengan panel Calendar TradingView (Rule 10).</p>
+  </section>
+
+  <section class="pcard pad">
+    <h2>Data Makro Sebelumnya (Pra-Rilis)</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Data</th><th>Hasil terakhir</th><th>Forecast</th><th>Sinyal emas</th></tr></thead>
+        <tbody>
+          <tr><td><b>FOMC</b></td><td>Hike 25bp 16 Sep (12-0); Minutes 7 Okt: satu hike lagi</td><td class="mono">&mdash;</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td><b>CPI Sep (14 Okt)</b></td><td>Headline 0,6% / 3,7% YoY; <b>Core 0,3% / 2,6%</b></td><td class="mono">Core 0,2% / 2,5%</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td><b>PPI Sep (15 Okt)</b></td><td><b>+1,3% MoM / 6,3% YoY</b> (core 0,5% / 5,0%, satu sumber)</td><td class="mono">5,3% YoY</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td>Core PCE Agu (30 Sep)</td><td>0,2% MoM / 3,0% YoY</td><td class="mono">0,3% / 3,3%</td><td><span class="tag t-cool">Bullish</span></td></tr>
+          <tr><td>PCE Agu</td><td>0,3% MoM / 3,4% YoY</td><td class="mono">0,4% / 3,7%</td><td><span class="tag t-cool">Bullish</span></td></tr>
+          <tr><td><b>NFP Sep (2 Okt)</b></td><td><b>29K</b>, UR 4,2%, AHE YoY 3,0%</td><td class="mono">90K</td><td><span class="tag t-cool">Bullish</span></td></tr>
+          <tr><td>JOLTS Agu (29 Sep)</td><td><b>7,079M</b>, terendah 5 bulan</td><td class="mono">7,225M</td><td><span class="tag t-cool">Bullish</span></td></tr>
+          <tr><td>ADP Sep (30 Sep)</td><td>90K (dari entry DB, panel TradingView)</td><td class="mono">70K</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td>ISM Mfg / Services Sep</td><td>54,5 / 54,9 (prices 77,9 / 74,0)</td><td class="mono">&mdash;</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td>Retail Sales Sep</td><td>Headline +0,8% (&gt;70% bensin); <b>control group +0,1%</b></td><td class="mono">0,3% / 0,3%</td><td><span class="tag t-warn">Campuran</span></td></tr>
+          <tr><td>GDP Q2 final</td><td>2,2%</td><td class="mono">1,5%</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td>Beige Book (14 Okt)</td><td>Aktivitas campuran, pekerjaan flat, <b>harga melebar</b> (3 distrik "robust")</td><td class="mono">&mdash;</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td>Treasury Yield</td><td>UST10Y 4,993%, UST02Y 4,743%</td><td class="mono">&mdash;</td><td><span class="tag t-hot">Bearish, melonggar</span></td></tr>
+          <tr><td>DXY</td><td>102,32, dekat puncak 102,61</td><td class="mono">&mdash;</td><td><span class="tag t-hot">Bearish</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note warn" style="margin-top:16px">
+      <b>Sintesis pra-rilis: data tidak kompak.</b> Harga (CPI, PPI, Beige Book, minyak) dan konsumsi rumah tangga kuat, hawkish. NFP, JOLTS, PCE Agustus, dan control group retail dingin. Risiko whipsaw naik, jadi Confidence diturunkan ke 4/10.
+    </div>
+    <div class="note" style="margin-top:12px">
+      <b>Minyak adalah faktor risiko tersendiri.</b> Pada 22 Okt gold jatuh $115 sementara yield dan dolar turun. Penyebabnya oil shock (Brent hampir $112, serangan kapal di Hormuz): dana pindah ke obligasi, emas dijual karena takut inflasi dan higher-for-longer. Sumber: CNBC dan Kitco 22 Okt.
+    </div>
+  </section>
+
+  <section class="pcard pad">
+    <h2>Market Bias Engine: 7 Pilar (Pra-Rilis, Tier 1, Bangun Penuh)</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>Pilar</th><th class="n">Bobot</th><th class="n">Skor</th><th style="width:90px">&nbsp;</th><th class="n">Kontrib.</th><th>Arah dan data primer</th></tr></thead>
+        <tbody>
+          <tr><td>Kebijakan Fed</td><td class="n">20%</td><td class="n">18%</td><td><span class="bar"><i style="width:18%"></i></span></td><td class="n">3,60</td><td>Bearish emas. Hold ~90%, Desember &gt;70%, Minutes: satu hike lagi</td></tr>
+          <tr><td><b>Inflasi</b></td><td class="n">20%</td><td class="n">22%</td><td><span class="bar"><i style="width:22%"></i></span></td><td class="n">4,40</td><td>Bearish emas. Core CPI 0,3 / 2,6; PPI 6,3% vs 5,3%; Beige Book harga melebar</td></tr>
+          <tr><td>Tenaga Kerja</td><td class="n">15%</td><td class="n">58%</td><td><span class="bar"><i style="width:58%"></i></span></td><td class="n">8,70</td><td>Bullish. NFP 29K, JOLTS 7,08M (terendah 5 bulan); claims &lt;200K mengimbangi</td></tr>
+          <tr><td>Pertumbuhan &amp; Konsumsi</td><td class="n">15%</td><td class="n">24%</td><td><span class="bar"><i style="width:24%"></i></span></td><td class="n">3,60</td><td>Bearish emas. CB 91,7, GDPNow 3,4%, New Home Sales beat; control group +0,1% menahan</td></tr>
+          <tr><td>Treasury Yield</td><td class="n">15%</td><td class="n">15%</td><td><span class="bar"><i style="width:15%"></i></span></td><td class="n">2,25</td><td>Bearish emas, melonggar. UST10Y 4,993%</td></tr>
+          <tr><td>DXY</td><td class="n">10%</td><td class="n">10%</td><td><span class="bar"><i style="width:10%"></i></span></td><td class="n">1,00</td><td>Bearish emas. 102,32, dekat tertinggi 18 bulan</td></tr>
+          <tr><td>Struktur Teknikal</td><td class="n">5%</td><td class="n">30%</td><td><span class="bar"><i style="width:30%"></i></span></td><td class="n">1,50</td><td>Bearish. Tembus $4.066,50, bounce tertahan di bawahnya</td></tr>
+          <tr class="total-row"><td>Total Mentah</td><td class="n">100%</td><td class="n">&mdash;</td><td>&nbsp;</td><td class="n">25,05</td><td>&nbsp;</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:16px">
+      <b>Mentah: ~25,05% Bullish / 74,95% Bearish.</b> Perubahan vs 14 Okt (Rule 14b): Inflasi 42 &rarr; 22 (CPI dan PPI panas masuk), Tenaga Kerja 55 &rarr; 58 (JOLTS miss), Pertumbuhan 25 &rarr; 24 (control group), Yield 10 &rarr; 15 (10Y turun dari 5,181%), Fed 17 &rarr; 18 (odds hike Oktober turun ke ~7%), Teknikal 50 &rarr; 30 (breakdown 22&ndash;23 Okt). DXY tidak berubah.
+    </div>
+  </section>
+
+  <section class="pcard pad top">
+    <h2 class="accent-h">Rule 12b: Diskon Korelasi</h2>
+    <ol style="font-size:13.5px;color:var(--p-ink-2)">
+      <li style="margin-bottom:8px"><b>Cek divergensi</b>: Fed 18%, Yield 15%, DXY 10%, ketiganya &le;20%. Ada divergensi ringan (yield melonggar dari 5,365% sementara DXY bertahan dekat puncak).</li>
+      <li style="margin-bottom:8px"><b>Diskon</b>: 60% (ujung bawah band 60&ndash;70%), sama seperti 14 Okt.</li>
+      <li style="margin-bottom:8px"><b>Hitung</b>: kontrib mentah cluster 6,85 &rarr; deviasi dari netral (22,5) = 15,65 &rarr; &times;0,4 = 6,26 &rarr; kontrib terkalibrasi = <b>16,24</b>. Total = 25,05 &minus; 6,85 + 16,24 = 34,44.</li>
+    </ol>
+    <div class="scroll" style="margin-top:12px">
+      <table>
+        <thead><tr><th></th><th class="n">Nilai</th></tr></thead>
+        <tbody>
+          <tr><td>Skor mentah (backdrop)</td><td class="n mono" style="color:var(--p-hot)"><b>~25,05% Bullish / 74,95% Bearish</b></td></tr>
+          <tr><td>Skor terkalibrasi (klaim 4 jam)</td><td class="n mono" style="color:var(--p-accent)"><b>~34,4% Bullish / 65,6% Bearish</b></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px;font-size:13px;color:var(--p-muted)">Hasil: gold +$28,16 di titik 4 jam, jadi klaim 65,6% Bearish salah arah. Pandangan kasar saya di awal (~55/45) ditulis sebelum mesin dijalankan; angka resmi untuk verdict adalah angka mesin.</p>
+  </section>
+
+  <section class="pcard pad">
+    <h2>Technical: 6 Timeframe (Pra-Rilis, TradingView &plusmn;20:15 WIB)</h2>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>TF</th><th>Struktur</th><th>Bias</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">D1</td><td>BOS bearish di $4.066,50 (22 Okt, &minus;$115, low $4.021,18), low siklus $3.975,66 (23 Okt). Tiga close naik (4.017 &rarr; 4.061 &rarr; ~4.052) tertahan tepat di bawah level yang patah</td><td><span class="tag t-hot">Bearish</span></td></tr>
+          <tr><td class="mono">H4</td><td>Low naik 3.975,66 &rarr; 3.978,21 &rarr; 3.989,24 &rarr; 4.028,13; high tertahan $4.065,71&ndash;4.070,86</td><td><span class="tag t-warn">Range menanjak</span></td></tr>
+          <tr><td class="mono">H1</td><td>Rally 3.989 &rarr; 4.065, koreksi ke 4.028, bounce ke 4.060. Rejection $4.060&ndash;4.066 berulang</td><td><span class="tag t-warn">Netral</span></td></tr>
+          <tr><td class="mono">M15</td><td>Kompresi $4.044&ndash;4.060, close terakhir $4.054,47</td><td><span class="tag t-warn">Netral</span></td></tr>
+          <tr><td class="mono">M5</td><td>Low 4.044,35 &rarr; high 4.060,16 &rarr; retest 4.050,46 &rarr; bounce 4.057,88</td><td><span class="tag t-warn">Netral</span></td></tr>
+          <tr><td class="mono">M1</td><td>Choppy $4.050&ndash;4.058</td><td><span class="tag t-warn">Netral</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:16px">
+      <b>Hasil terhadap peta level:</b> zona flip $4.066&ndash;4.071 ditembus ke atas (high $4.082,73 pukul 03:00) lalu ditolak dan kembali ke $4.063 (05:00). Target bullish $4.104 tidak tersentuh. Support $4.028 dan low candle presser $4.025,00 bertahan, low siklus $3.975,66 tidak tersentuh. Per Rule 13, teknikal berfungsi sebagai tujuan dan level, bukan penentu arah.
+    </div>
+    <div class="lvl-list" style="margin-top:16px">
+      <div class="lvl"><span>Target bullish</span><b>$4.104&ndash;4.123</b></div>
+      <div class="lvl"><span>Zona flip</span><b>$4.066&ndash;4.071</b></div>
+      <div class="lvl"><span>Spot pra-rilis</span><b style="color:var(--p-accent)">$4.054,47</b></div>
+      <div class="lvl"><span>Support</span><b>$4.028,13</b></div>
+      <div class="lvl"><span>Support</span><b>$4.003,88</b></div>
+      <div class="lvl"><span>Low siklus</span><b>$3.975,66</b></div>
+    </div>
+  </section>
+
+  <section class="pcard pad">
+    <h2>Trading Plan (Pra-Rilis)</h2>
+    <div class="note hot">
+      <b>Setup Quality &asymp; 28/50, di bawah ambang 35. Tidak ada posisi pra-rilis.</b> Bias TF 7, struktur 5, level 6, likuiditas 5, risiko waktu 5.
+    </div>
+    <div class="scroll" style="margin-top:14px">
+      <table>
+        <thead><tr><th>Fase</th><th>Rencana</th></tr></thead>
+        <tbody>
+          <tr><td class="mono">Sebelum (sampai 00:55)</td><td>Tidak entry. Pantau BoC ~20:45, minyak, dan sesi NY.</td></tr>
+          <tr><td class="mono">Saat (01:00&ndash;01:30)</td><td>Tunggu statement dan presser. Jangan entry di spike pertama.</td></tr>
+          <tr><td class="mono">Sesudah, bearish</td><td>Jual di bawah $4.066&ndash;4.071 atau pullback, SL di atas $4.072, TP $4.028 &rarr; $4.004 &rarr; $3.975,66. Invalidasi: body close H1 di atas $4.071.</td></tr>
+          <tr><td class="mono">Sesudah, bullish</td><td>Butuh body close H1 di atas $4.071. TP $4.104 &rarr; $4.123, SL di bawah $4.044. Invalidasi: kembali di bawah $4.044.</td></tr>
+          <tr><td class="mono">Sesudah, netral</td><td>Tunggu konfirmasi, tanpa posisi.</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="pcard pad">
+    <h2>Confidence Score: 4/10</h2>
+    <ul style="font-size:13.5px">
+      <li><b>Fundamental ★★★☆☆</b>. Data terbelah: harga dan konsumsi hawkish, tenaga kerja dan PCE Agustus dingin. Backdrop bearish ternyata tidak menentukan arah reaksi event.</li>
+      <li><b>Teknikal ★★★☆☆</b>. Level pra-rilis berfungsi sebagai tujuan: zona flip ditembus lalu ditolak, support bertahan.</li>
+      <li><b>Sentimen ★★☆☆☆</b>. Hold dan dissent sudah dihargai, tanpa dot plot. Confidence rendah sudah tepat.</li>
+    </ul>
+  </section>
+
+  <section class="pcard pad">
+    <h2>Kesimpulan Sistem</h2>
+    <ul>
+      <li><b>Verdict resmi: SALAH.</b> Klaim 4 jam (65,6% Bearish) berlawanan dengan +$28,16 di titik 4 jam. Margin jauh di atas margin whipsaw ($4-5). Kriteria jam pertama (&minus;$7,43) hanya informasi.</li>
+      <li><b>Klaim reaksi-awal:</b> tanpa klaim (skenario sesuai ekspektasi). M15 pertama &minus;$6,54; gerakan besar ada di candle presser 01:30. Dicatat di Rekor Reaksi-Awal, di luar Scoreboard.</li>
+      <li><b>Probabilitas skenario:</b> skenario terbanyak "sesuai ekspektasi" (46%) yang terjadi.</li>
+      <li><b>Pola yang berulang:</b> ketiga SALAH sistem (PCE 26 Agt, PCE 30 Sep, FOMC 28 Okt) adalah backdrop makro bearish melawan reaksi event yang bullish. Memisahkan "backdrop" dari "reaksi-rilis" tetap keputusan user.</li>
+      <li><b>Rule 6a:</b> GDP Q3 dan PCE Sep rilis Kamis 19:30 WIB, di luar jendela 4 jam.</li>
+      <li><b>Rekor sistem:</b> 21 Benar, 3 Salah, 1 Whipsaw dari 25 entry final (akurasi 87,50%, whipsaw dikecualikan).</li>
+    </ul>
+    <div class="note warn" style="margin-top:14px">
+      <b>Belum terverifikasi:</b> harga WTI (chart minyak TradingView tidak bisa dimuat), persentase persis odds Desember pasca-rapat (sumber 83&ndash;85%), apakah statement menaikkan pertumbuhan dari "solid" ke "strong" (satu sumber), Core PPI 0,5% / 5,0% (satu sumber), ADP bulanan (hanya dari entry DB), dan pencocokan angka web ke panel Calendar TradingView (Rule 10).
+    </div>
+  </section>
+
+  <div class="poster-foot">
+    <div class="disc">
+      <b>NOT FINANCIAL ADVICE.</b> Lembar ini catatan riset dan evaluasi sistem pribadi, bukan rekomendasi transaksi untuk siapapun. Trading emas dan forex berisiko tinggi dan dapat mengakibatkan kerugian total.
+    </div>
+    <div class="srcs">
+      Sumber web:
+      <a href="https://www.cnbc.com/2026/10/28/fed-interest-rate-decision-october-2026.html" target="_blank" rel="noopener">CNBC 28 Okt</a>,
+      <a href="https://investinglive.com/central-banks/recap-fed-holds-at-3-75-4-in-10-2-vote-as-cook-dissents-for-a-hike-december-move-in-focus/" target="_blank" rel="noopener">Investinglive recap</a>,
+      <a href="https://www.cnn.com/2026/10/28/business/live-news/federal-reserve-interest-rate-october" target="_blank" rel="noopener">CNN</a>,
+      <a href="https://www.fxstreet.com/analysis/fed-review-fed-pauses-but-tightening-cycle-is-not-over-202610282252" target="_blank" rel="noopener">FXStreet</a>,
+      <a href="https://www.benzinga.com/markets/macro-economic-events/26/10/62672193/warsh-december-hike-bond-market-tightening-credit-spreads" target="_blank" rel="noopener">Benzinga</a>,
+      <a href="https://news.futunn.com/en/post/1002650412/wall-street-parses-warsh-s-remarks-hints-at-further-rate" target="_blank" rel="noopener">Futu</a>,
+      <a href="https://www.cnbc.com/2026/10/27/federal-reserve-rates-kevin-warsh.html" target="_blank" rel="noopener">CNBC 27 Okt</a>,
+      <a href="https://www.cnbc.com/2026/10/22/gold-drops-over-1percent-as-oil-rally-reinforces-higher-for-longer-rate-outlook.html" target="_blank" rel="noopener">CNBC 22 Okt</a>,
+      <a href="https://www.kitco.com/news/article/2026-10-27/fomc-rate-decision-could-mark-return-dissenters-offer-clues-december" target="_blank" rel="noopener">Kitco dissenter</a>,
+      <a href="https://investinglive.com/news/us-september-ppi-6-3-vs-5-3-expected/" target="_blank" rel="noopener">Investinglive PPI</a>,
+      <a href="https://investinglive.com/news/jolts-job-openings-7-079m-vs-7-225m-estimate/" target="_blank" rel="noopener">Investinglive JOLTS</a>,
+      <a href="https://www.investing.com/economic-calendar" target="_blank" rel="noopener">Investing.com Economic Calendar</a>.
+    </div>
+    <div class="mono" style="font-size:10px;letter-spacing:.06em;text-transform:uppercase;text-align:right">
+      Disusun 28 Oktober 2026, final 29 Oktober &plusmn;10:50 WIB (&plusmn;9j50m pasca-rilis)<br>
+      Harga &amp; struktur: TradingView<br>
+      VANTAGE:XAUUSD &middot; TVC:DXY &middot; TVC:US10Y &middot; TVC:US02Y
+    </div>
+  </div>
+
+</div>
+
+    </div>
+
+    <div class="ad-slot">
+      <script async="async" data-cfasync="false" src="https://pl30756138.effectivecpmnetwork.com/4a3f1dc3807941e53dfe4463a21a0e4e/invoke.js"></script>
+      <div id="container-4a3f1dc3807941e53dfe4463a21a0e4e"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Kebijakan Privasi</a>
+      <a href="https://www.effectivecpmnetwork.com/setnp40u3t?key=fe8199ed8dd693be00f1924c13a1b7ec" target="_blank" rel="noopener sponsored">Rekomendasi</a>
+    </div>
+    <div>&copy; 2026 EdukasiTrader.</div>
+  </div>
+</footer>
+
+</body>
+</html>

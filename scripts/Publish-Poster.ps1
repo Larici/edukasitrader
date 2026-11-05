@@ -149,7 +149,7 @@ foreach ($old in $classRenames.Keys) {
 
 # 3c. Ganti selector top-level "body{" jadi ".poster-container{" supaya
 #     tidak menimpa background/layout <body> situs utama.
-$styleBlock = [regex]::Replace($styleBlock, '\bbody\{', '.poster-container{')
+$styleBlock = [regex]::Replace($styleBlock, '(?<![\w-])body\{', '.poster-container{')
 
 # ---------------------------------------------------------------------------
 # 4. Susun halaman akhir dari template
