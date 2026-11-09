@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XAUUSD Papan Berangkat — Kalender News November 2026 — EdukasiTrader</title>
+<meta name="description" content="Setelah NFP, tersisa enam rilis besar AS di November: CPI 10 Nov, PPI 13 Nov, Retail Sales 17 Nov, risalah FOMC 19 Nov dini hari WIB, serta PCE dan GDP 25 Nov. Jadwal dalam WIB lengkap dengan titik verdict 4 jam dan hari libur AS.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&family=Overpass+Mono:wght@400;700&display=swap');
+/* Layout: Swiss-rail departure poster. Yellow sheet, black ink, one red for what is pending. Month grid on top, timetable below, notes at the foot. */
+:root{
+  --p-paper:#FFD91A;
+  --p-paper-2:#FFE766;
+  --p-ink:#111008;
+  --p-ink-soft:#4A4100;
+  --p-rule:#111008;
+  --p-red:#D3241B;
+  --p-red-ink:#FFF4D6;
+  --p-done:#8A7500;
+  --p-f-display:"Archivo","Arial Narrow",Arial,sans-serif;
+  --p-f-mono:"Overpass Mono","Courier New",monospace;
+  color-scheme:light;
+}
+.poster-container{
+  background:var(--p-paper);color:var(--p-ink);
+  font-family:var(--p-f-display);font-stretch:100%;
+  padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));
+  padding-block:28px 40px;line-height:1.35;
+}
+.sheet{max-width:1040px;margin:0 auto;display:grid;gap:28px}
+.mono{font-family:var(--p-f-mono)}
+
+/* header */
+.head{display:grid;grid-template-columns:1fr auto;gap:16px 32px;align-items:end;border-bottom:6px solid var(--p-rule);padding-bottom:14px}
+.head h1{margin:0;font-size:clamp(46px,11vw,112px);line-height:.86;font-weight:900;font-stretch:62%;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance}
+.head .pmeta{font-family:var(--p-f-mono);font-size:12px;text-align:right;line-height:1.55;text-transform:uppercase;letter-spacing:.04em}
+.head .pmeta b{display:block;font-size:22px;letter-spacing:0;font-weight:700}
+.sub{margin:10px 0 0;font-size:15px;font-weight:600;max-width:60ch}
+
+/* month grid */
+.cal{display:grid;grid-template-columns:repeat(7,1fr);border-top:3px solid var(--p-rule);border-left:1px solid var(--p-rule)}
+.cal .dow{font-family:var(--p-f-mono);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:6px 8px;border-right:1px solid var(--p-rule);border-bottom:3px solid var(--p-rule)}
+.cal .d{min-height:86px;padding:6px 8px;border-right:1px solid var(--p-rule);border-bottom:1px solid var(--p-rule);display:flex;flex-direction:column;gap:3px;min-width:0}
+.cal .d .n{font-weight:900;font-stretch:75%;font-size:22px;line-height:1}
+.cal .d.off{background:transparent}
+.cal .d.off .n{color:var(--p-done);font-weight:600}
+.cal .d.has{background:var(--p-paper-2)}
+.cal .d.hol{background:repeating-linear-gradient(135deg,transparent 0 6px,rgba(17,16,8,.12) 6px 8px)}
+.cal .d.pend{background:var(--p-red);color:var(--p-red-ink)}
+.ptag{font-family:var(--p-f-mono);font-size:10.5px;line-height:1.25;font-weight:700;text-transform:uppercase;overflow-wrap:anywhere}
+.ptag.big{font-size:11.5px;background:var(--p-ink);color:var(--p-paper);padding:2px 4px;align-self:flex-start}
+.ptag.done{text-decoration:line-through;color:var(--p-done);font-weight:400}
+.pend .ptag.big{background:var(--p-red-ink);color:var(--p-red)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 18px;font-family:var(--p-f-mono);font-size:11px;text-transform:uppercase;margin-top:10px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:14px;height:14px;border:1px solid var(--p-rule);display:inline-block}
+
+/* timetable */
+.sec-h{display:flex;justify-content:space-between;align-items:baseline;gap:12px;border-top:6px solid var(--p-rule);padding-top:8px;margin:0 0 4px}
+.sec-h h2{margin:0;font-size:28px;font-weight:900;font-stretch:70%;text-transform:uppercase}
+.sec-h p{margin:0;font-family:var(--p-f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.tt{border-top:3px solid var(--p-rule)}
+.tt .row,.tt .hd{display:grid;grid-template-columns:78px 78px 1.7fr 1.1fr 1.1fr 92px;gap:0 14px;padding:10px 0;border-bottom:1px solid var(--p-rule);align-items:center}
+.tt .hd{font-family:var(--p-f-mono);font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;padding:6px 0;border-bottom:3px solid var(--p-rule)}
+.tt .day{display:flex;align-items:baseline;gap:6px}
+.tt .day b{font-size:40px;line-height:.9;font-weight:900;font-stretch:70%}
+.tt .day span{font-family:var(--p-f-mono);font-size:11px;font-weight:700;text-transform:uppercase}
+.tt .time{font-family:var(--p-f-mono);font-size:21px;font-weight:700;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.tt .what b{display:block;font-size:20px;font-weight:800;font-stretch:80%;text-transform:uppercase;line-height:1.05}
+.tt .what small{display:block;font-size:12.5px;color:var(--p-ink-soft);margin-top:2px}
+.tt .cell{font-size:13px;font-weight:600;min-width:0}
+.tt .cell em{display:block;font-style:normal;font-family:var(--p-f-mono);font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--p-ink-soft);margin-bottom:1px}
+.tt .cell .mono{font-size:12.5px;font-variant-numeric:tabular-nums}
+.chip{font-family:var(--p-f-mono);font-size:10.5px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;padding:4px 6px;text-align:center;border:2px solid var(--p-ink);justify-self:end;width:86px}
+.chip.next{background:var(--p-ink);color:var(--p-paper)}
+.chip.pend{background:var(--p-red);border-color:var(--p-red);color:var(--p-red-ink)}
+.chip.done{border-color:var(--p-done);color:var(--p-done)}
+.chip.low{border-style:dashed}
+.row.is-done .what b{text-decoration:line-through;text-decoration-thickness:2px}
+.row.is-done{color:var(--p-done)}
+.row.is-done .what small,.row.is-done .cell em{color:var(--p-done)}
+.row.is-pend{background:var(--p-paper-2);box-shadow:inset 6px 0 0 var(--p-red);padding-left:12px;margin-left:-12px}
+.row.is-low .what b{font-size:16px;font-weight:700}
+.row.warn .time::after{content:" ?";color:var(--p-red)}
+
+/* notes */
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px 28px}
+.note{border-top:3px solid var(--p-rule);padding-top:8px}
+.note h3{margin:0 0 6px;font-family:var(--p-f-mono);font-size:12px;text-transform:uppercase;letter-spacing:.07em}
+.note ul{margin:0;padding-left:18px;display:grid;gap:5px;font-size:14px}
+.note li::marker{color:var(--p-ink)}
+.note.alert{background:var(--p-red);color:var(--p-red-ink);padding:10px 12px;border-top-color:var(--p-red)}
+.note.alert li::marker{color:var(--p-red-ink)}
+.foot{border-top:6px solid var(--p-rule);padding-top:10px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font-family:var(--p-f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.04em}
+.foot a{color:inherit}
+
+@media (max-width:760px){
+  .head{grid-template-columns:1fr}
+  .head .pmeta{text-align:left}
+  .cal .d{min-height:62px;padding:4px 5px}
+  .cal .d .n{font-size:16px}
+  .ptag{font-size:9px}.ptag.big{font-size:9.5px}
+  .tt .hd{display:none}
+  .tt .row{grid-template-columns:62px 1fr auto;grid-template-areas:"day what chip" "time what chip" "pilar pilar pilar" "verdict verdict verdict";gap:4px 12px;padding:12px 0}
+  .tt .row .day{grid-area:day}.tt .row .time{grid-area:time;font-size:17px}
+  .tt .row .what{grid-area:what}.tt .row .pilar{grid-area:pilar}.tt .row .verdict{grid-area:verdict}
+  .tt .row .chip{grid-area:chip;align-self:start;width:78px}
+  .tt .cell{display:flex;gap:8px;align-items:baseline}
+  .tt .cell em{margin:0;min-width:90px}
+  .tt .day b{font-size:34px}
+  .row.is-pend{margin-left:-8px;padding-left:8px}
+}
+@media (max-width:420px){
+  .ptag.big{padding:1px 2px}
+  .cal .dow{padding:4px 3px;font-size:9px;letter-spacing:0}
+}
+
+  .compliance-notice{
+    max-width:880px;
+    margin:0 auto 20px;
+    padding:16px 20px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-dim);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    color:var(--text-dim);
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+  .compliance-notice strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Edukasi<span>Trader</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Beranda</a>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Privasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="max-width: 960px;">
+
+    <div class="compliance-notice">
+      <strong>Bukan ajakan bertransaksi.</strong> Konten di bawah ini adalah catatan analisis pasar pribadi yang kami bagikan sebagai referensi publik — berisi opini terhadap data makro dan level teknikal saat disusun, bukan sinyal trading resmi, rekomendasi personal, atau ajakan untuk membuka posisi tertentu. Pasar bisa bergerak sangat berbeda dari skenario yang dibahas. Selalu lakukan riset dan pertimbangan risiko sendiri.
+    </div>
+
+    <div class="ad-slot">
+      <script>
+        atOptions = {
+          'key' : '95130429aa13b28790da6b9e46158bfc',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/95130429aa13b28790da6b9e46158bfc/invoke.js"></script>
+    </div>
+
+    <div class="poster-container">
+
+<div class="sheet">
+
+<header>
+  <div class="head">
+    <h1>Papan<br>Berangkat<br>November</h1>
+    <div class="pmeta">
+      Kalender berita high impact
+      <b>XAUUSD · 2026</b>
+      Semua jam WIB (UTC+7)<br>
+      DST AS berakhir 1 Nov<br>
+      08:30 ET = 20:30 WIB
+    </div>
+  </div>
+  <p class="sub">Setelah NFP, tersisa enam rilis besar AS bulan ini: CPI, PPI, Retail Sales, risalah FOMC, PCE, dan GDP. Jam tiap rilis sudah dikonversi, lengkap dengan titik verdict 4 jam sesuai Rule 7.</p>
+</header>
+
+<section aria-label="Kalender bulan November 2026">
+  <div class="cal" role="table">
+    <div class="dow">Sen</div><div class="dow">Sel</div><div class="dow">Rab</div><div class="dow">Kam</div><div class="dow">Jum</div><div class="dow">Sab</div><div class="dow">Min</div>
+
+    <div class="d off"></div><div class="d off"></div><div class="d off"></div><div class="d off"></div><div class="d off"></div><div class="d off"></div>
+    <div class="d off"><span class="n">1</span></div>
+
+    <div class="d off"><span class="n">2</span><span class="ptag done">ISM Mfg</span></div>
+    <div class="d off"><span class="n">3</span><span class="ptag done">JOLTS</span></div>
+    <div class="d off"><span class="n">4</span></div>
+    <div class="d off"><span class="n">5</span></div>
+    <div class="d pend"><span class="n">6</span><span class="ptag big">NFP</span></div>
+    <div class="d off"><span class="n">7</span><span class="ptag">verdict 00:30</span></div>
+    <div class="d off"><span class="n">8</span></div>
+
+    <div class="d off"><span class="n">9</span></div>
+    <div class="d has"><span class="n">10</span><span class="ptag big">CPI</span></div>
+    <div class="d hol"><span class="n">11</span><span class="ptag">Libur obligasi</span></div>
+    <div class="d has"><span class="n">12</span><span class="ptag">Claims</span></div>
+    <div class="d has"><span class="n">13</span><span class="ptag big">PPI</span></div>
+    <div class="d off"><span class="n">14</span></div>
+    <div class="d off"><span class="n">15</span></div>
+
+    <div class="d has"><span class="n">16</span></div>
+    <div class="d has"><span class="n">17</span><span class="ptag big">Retail</span></div>
+    <div class="d off"><span class="n">18</span></div>
+    <div class="d has"><span class="n">19</span><span class="ptag big">Risalah FOMC</span><span class="ptag">Claims</span></div>
+    <div class="d off"><span class="n">20</span></div>
+    <div class="d off"><span class="n">21</span></div>
+    <div class="d off"><span class="n">22</span></div>
+
+    <div class="d off"><span class="n">23</span><span class="ptag">PCE? (1 sumber)</span></div>
+    <div class="d off"><span class="n">24</span></div>
+    <div class="d has"><span class="n">25</span><span class="ptag big">PCE</span><span class="ptag big">GDP</span></div>
+    <div class="d hol"><span class="n">26</span><span class="ptag">Thanksgiving</span></div>
+    <div class="d hol"><span class="n">27</span><span class="ptag">Tutup awal</span></div>
+    <div class="d off"><span class="n">28</span></div>
+    <div class="d off"><span class="n">29</span></div>
+
+    <div class="d off"><span class="n">30</span></div>
+  </div>
+  <div class="legend">
+    <span><i style="background:var(--p-red)"></i>Pending verdict</span>
+    <span><i style="background:var(--p-paper-2)"></i>Hari rilis</span>
+    <span><i style="background:repeating-linear-gradient(135deg,transparent 0 3px,rgba(17,16,8,.35) 3px 4px)"></i>Libur AS, likuiditas tipis</span>
+    <span><i style="background:var(--p-ink)"></i>Rilis utama</span>
+  </div>
+</section>
+
+<section aria-label="Jadwal rilis">
+  <div class="sec-h"><h2>Jadwal rilis</h2><p>Urut waktu · WIB</p></div>
+  <div class="tt">
+    <div class="hd"><span>Tanggal</span><span>Jam</span><span>Rilis</span><span>Pilar sistem</span><span>Titik verdict 4 jam</span><span style="text-align:right">Status</span></div>
+
+    <div class="row is-done">
+      <div class="day"><b>2</b><span>Sen</span></div>
+      <div class="time">22:00</div>
+      <div class="what"><b>ISM Manufacturing</b><small>Oktober · PMI 55,5 vs 54,6</small></div>
+      <div class="cell pilar"><em>Pilar</em>Pertumbuhan &amp; Konsumsi</div>
+      <div class="cell verdict"><em>Verdict</em><span class="mono">Sel 3 Nov, 02:00</span></div>
+      <div class="chip done">Final · Benar</div>
+    </div>
+
+    <div class="row is-done is-low">
+      <div class="day"><b>3</b><span>Sel</span></div>
+      <div class="time">22:00</div>
+      <div class="what"><b>JOLTS</b><small>September</small></div>
+      <div class="cell pilar"><em>Pilar</em>Tenaga Kerja</div>
+      <div class="cell verdict"><em>Verdict</em><span class="mono">-</span></div>
+      <div class="chip done low">Rilis</div>
+    </div>
+
+    <div class="row is-pend">
+      <div class="day"><b>6</b><span>Jum</span></div>
+      <div class="time">20:30</div>
+      <div class="what"><b>Nonfarm Payrolls</b><small>Oktober · aktual 165K vs ±56–65K · UR 4,1%</small></div>
+      <div class="cell pilar"><em>Pilar</em>Tenaga Kerja</div>
+      <div class="cell verdict"><em>Verdict</em><span class="mono">Sab 7 Nov, 00:30</span></div>
+      <div class="chip pend">Menunggu verdict</div>
+    </div>
+
+    <div class="row">
+      <div class="day"><b>10</b><span>Sel</span></div>
+      <div class="time">20:30</div>
+      <div class="what"><b>CPI &amp; Core CPI</b><small>Oktober · inflasi konsumen</small></div>
+      <div class="cell pilar"><em>Pilar</em>Inflasi</div>
+      <div class="cell verdict"><em>Verdict</em><span class="mono">Rab 11 Nov, 00:30</span></div>
+      <div class="chip next">Berikutnya</div>
+    </div>
+
+    <div class="row is-low">
+      <div class="day"><b>12</b><span>Kam</span></div>
+      <div class="time">20:30</div>
+      <div class="what"><b>Initial Claims</b><small>Mingguan</small></div>
+      <div class="cell pilar"><em>Pilar</em>Tenaga Kerja</div>
+      <div class="cell verdict"><em>Verdict</em><span class="mono">-</span></div>
+      <div class="chip low">Mingguan</div>
+    </div>
+
+    <div class="row">
+      <div class="day"><b>13</b><span>Jum</span></div>
+      <div class="time">20:30</div>
+      <div class="what"><b>PPI</b><small>Oktober · harga produsen</small></div>
+      <div class="cell pilar"><em>Pilar</em>Inflasi</div>
+      <div class="cell verdict"><em>Verdict</em><span class="mono">Sab 14 Nov, 00:30</span></div>
+      <div class="chip">Terjadwal</div>
+    </div>
+
+    <div class="row">
+      <div class="day"><b>17</b><span>Sel</span></div>
+      <div class="time">20:30</div>
+      <div class="what"><b>Retail Sales</b><small>Oktober · penjualan ritel</small></div>
+      <div class="cell pilar"><em>Pilar</em>Pertumbuhan &amp; Konsumsi</div>
+      <div class="cell verdict"><em>Verdict</em><span class="mono">Rab 18 Nov, 00:30</span></div>
+      <div class="chip">Terjadwal</div>
+    </div>
+
+    <div class="row">
+      <div class="day"><b>19</b><span>Kam</span></div>
+      <div class="time">02:00</div>
+      <div class="what"><b>Risalah FOMC</b><small>Rapat 27–28 Okt · Rabu 18 Nov 14:00 ET</small></div>
+      <div class="cell pilar"><em>Pilar</em>Fed</div>
+      <div class="cell verdict"><em>Verdict</em><span class="mono">Kam 19 Nov, 06:00</span></div>
+      <div class="chip">Terjadwal</div>
+    </div>
+
+    <div class="row is-low">
+      <div class="day"><b>19</b><span>Kam</span></div>
+      <div class="time">20:30</div>
+      <div class="what"><b>Initial Claims</b><small>Mingguan</small></div>
+      <div class="cell pilar"><em>Pilar</em>Tenaga Kerja</div>
+      <div class="cell verdict"><em>Verdict</em><span class="mono">-</span></div>
+      <div class="chip low">Mingguan</div>
+    </div>
+
+    <div class="row warn">
+      <div class="day"><b>25</b><span>Rab</span></div>
+      <div class="time">20:30</div>
+      <div class="what"><b>PCE &amp; Core PCE</b><small>Oktober · tanggal 25 Nov (1 sumber menulis 23 Nov)</small></div>
+      <div class="cell pilar"><em>Pilar</em>Inflasi</div>
+      <div class="cell verdict"><em>Verdict</em><span class="mono">Kam 26 Nov, 00:30</span></div>
+      <div class="chip">Cek tanggal</div>
+    </div>
+
+    <div class="row">
+      <div class="day"><b>25</b><span>Rab</span></div>
+      <div class="time">20:30</div>
+      <div class="what"><b>GDP</b><small>Q3 · estimasi kedua · jam sama dengan PCE</small></div>
+      <div class="cell pilar"><em>Pilar</em>Pertumbuhan &amp; Konsumsi</div>
+      <div class="cell verdict"><em>Verdict</em><span class="mono">Kam 26 Nov, 00:30</span></div>
+      <div class="chip">Terjadwal</div>
+    </div>
+
+    <div class="row is-low">
+      <div class="day"><b>25</b><span>Rab</span></div>
+      <div class="time">20:30</div>
+      <div class="what"><b>Initial Claims</b><small>Biasanya dimajukan karena Thanksgiving 26 Nov</small></div>
+      <div class="cell pilar"><em>Pilar</em>Tenaga Kerja</div>
+      <div class="cell verdict"><em>Verdict</em><span class="mono">-</span></div>
+      <div class="chip low">Belum pasti</div>
+    </div>
+  </div>
+</section>
+
+<section class="notes" aria-label="Catatan">
+  <div class="note alert">
+    <h3>Perhatikan</h3>
+    <ul>
+      <li><b>Rabu 25 Nov</b> paling padat: PCE, GDP, dan kemungkinan Claims jatuh pada menit yang sama, 20:30 WIB. Satu candle M15 akan menanggung tiga rilis.</li>
+      <li><b>Tanggal PCE</b> belum dikonfirmasi di situs BEA. Dua sumber menulis 25 Nov, Guggenheim menulis 23 Nov.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h3>Libur AS</h3>
+    <ul>
+      <li>Rab 11 Nov, Veterans Day: pasar obligasi tutup, yield tidak diperdagangkan penuh.</li>
+      <li>Kam 26 Nov, Thanksgiving: bursa tutup, likuiditas gold tipis.</li>
+      <li>Jum 27 Nov: biasanya tutup lebih awal.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h3>Belum masuk papan</h3>
+    <ul>
+      <li>Pidato pejabat Fed, S&amp;P Global Flash PMI, Michigan final, Durable Goods: tanggal dan jam belum diverifikasi.</li>
+      <li>Awal Desember: ISM Manufacturing Sel 1 Des (22:00 WIB), ADP Rab 2 Des.</li>
+    </ul>
+  </div>
+  <div class="note">
+    <h3>Cara membaca</h3>
+    <ul>
+      <li>Titik verdict = 4 jam setelah rilis (Rule 7). Acuan harga: open M15 pada menit rilis.</li>
+      <li>Initial Claims tidak diberi verdict; datanya dipakai sebagai konteks Tenaga Kerja.</li>
+      <li>Jadwal belum disilangkan dengan panel Economic Calendar TradingView (Rule 10). Cek ulang beberapa hari sebelum rilis.</li>
+    </ul>
+  </div>
+</section>
+
+<div class="foot">
+  <span>Sumber: FedRateCalc · BLS · Census · BEA · Federal Reserve</span>
+  <span>Disusun 6 Nov 2026 · Bukan saran investasi (NFA)</span>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="ad-slot">
+      <script async="async" data-cfasync="false" src="https://pl30756138.effectivecpmnetwork.com/4a3f1dc3807941e53dfe4463a21a0e4e/invoke.js"></script>
+      <div id="container-4a3f1dc3807941e53dfe4463a21a0e4e"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Kebijakan Privasi</a>
+      <a href="https://www.effectivecpmnetwork.com/setnp40u3t?key=fe8199ed8dd693be00f1924c13a1b7ec" target="_blank" rel="noopener sponsored">Rekomendasi</a>
+    </div>
+    <div>&copy; 2026 EdukasiTrader.</div>
+  </div>
+</footer>
+
+</body>
+</html>
