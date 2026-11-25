@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XAUUSD Seismogram Emas — PCE + GDP 25 November 2026 (PRA-RILIS) — EdukasiTrader</title>
+<meta name="description" content="Catatan riset pra-rilis Core PCE Oktober dan GDP Q3: klaim 4 jam 30,6% Bullish / 69,4% Bearish dengan Confidence 4/10 (kategori PCE di sistem 0 dari 2), tiga skenario, 16 data makro, dan level teknikal emas. Bukan ajakan bertransaksi.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@500;800&family=Spline+Sans:wght@400;600;700&family=Spline+Sans+Mono:wght@400;600&display=swap");
+/* Layout: seismograph drum paper. A big amplitude trace of gold's fall and first rebound sits on top; data blocks hang below on a ruled grid. Red ink = amplitude and bearish, blue = bullish, amber = what has not happened yet. */
+:root{
+  --p-paper:#E4ECEE;
+  --p-paper2:#D5E1E4;
+  --p-ink:#0F2B33;
+  --p-soft:#4A6872;
+  --p-grid:#B4C8CE;
+  --p-red:#D2392D;
+  --p-blue:#1F6F9E;
+  --p-amber:#E9A91A;
+  --p-hi:#FBE7A6;
+  --p-f-display:"Unbounded","Arial Black",sans-serif;
+  --p-f-body:"Spline Sans","Segoe UI",Arial,sans-serif;
+  --p-f-mono:"Spline Sans Mono","Courier New",monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--p-paper:#0C1A1F;--p-paper2:#13262D;--p-ink:#DDEAED;--p-soft:#8FAAB3;--p-grid:#25414A;--p-red:#F0604F;--p-blue:#5BB0DE;--p-amber:#F2B93B;--p-hi:#3A3317;color-scheme:dark}
+}
+:root[data-theme="dark"]{--p-paper:#0C1A1F;--p-paper2:#13262D;--p-ink:#DDEAED;--p-soft:#8FAAB3;--p-grid:#25414A;--p-red:#F0604F;--p-blue:#5BB0DE;--p-amber:#F2B93B;--p-hi:#3A3317;color-scheme:dark}
+*{box-sizing:border-box}
+.poster-container{
+  background:var(--p-paper);color:var(--p-ink);font-family:var(--p-f-body);font-size:15px;line-height:1.45;
+  padding-inline:max(16px,env(safe-area-inset-left,0px)) max(16px,env(safe-area-inset-right,0px));
+  padding-block:28px 56px;
+  background-image:linear-gradient(var(--p-grid) 1px,transparent 1px),linear-gradient(90deg,var(--p-grid) 1px,transparent 1px);
+  background-size:100% 24px,24px 100%;background-attachment:local;
+}
+.seis-wrap{max-width:1040px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr);gap:26px}
+.mono{font-family:var(--p-f-mono)}
+.soft{color:var(--p-soft)}
+.neg{color:var(--p-red)} .pos{color:var(--p-blue)}
+b{font-weight:700}
+
+.panel{background:var(--p-paper);border:2px solid var(--p-ink);padding:16px 18px}
+.panel > h2{margin:0 0 10px;font-family:var(--p-f-display);font-weight:800;font-size:17px;letter-spacing:.01em;text-transform:uppercase;display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline;text-wrap:balance}
+.panel > h2 small{font-family:var(--p-f-mono);font-weight:400;font-size:11px;letter-spacing:.04em;color:var(--p-soft);text-transform:none}
+.note{margin:8px 0 0;font-size:13px;color:var(--p-soft)}
+
+/* header */
+.head{display:grid;grid-template-columns:1fr auto;gap:14px 28px;align-items:end;border:2px solid var(--p-ink);background:var(--p-paper);padding:20px 22px}
+.head > *{min-width:0}
+.head .kicker{font-family:var(--p-f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--p-soft)}
+.head h1{margin:6px 0 6px;font-family:var(--p-f-display);font-weight:800;font-size:clamp(24px,7.4vw,70px);line-height:1;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance;overflow-wrap:anywhere}
+.head h1 em{font-style:normal;color:var(--p-red)}
+.head p{margin:0;max-width:62ch}
+.stamp{font-family:var(--p-f-mono);font-size:12px;line-height:1.6;border:2px solid var(--p-ink);padding:10px 14px;text-align:left}
+.stamp b{display:block;font-family:var(--p-f-display);font-size:clamp(16px,5vw,22px);font-weight:800;letter-spacing:0}
+.stamp .st{color:var(--p-red);font-weight:600}
+
+/* seismogram */
+.seis{width:100%;height:auto;display:block}
+.seis text{font-family:var(--p-f-mono);fill:var(--p-ink)}
+.seis .s{fill:var(--p-soft)}
+.legend{display:flex;flex-wrap:wrap;gap:6px 20px;font-family:var(--p-f-mono);font-size:11px;margin-top:6px}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{display:inline-block;width:14px;height:3px;background:var(--p-red)}
+.legend i.d{background:none;border-top:3px dashed var(--p-amber);height:0}
+
+/* chips + tables */
+.row3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.rel-card{border:2px solid var(--p-ink);padding:12px 14px;background:var(--p-paper2)}
+.rel-card .t{font-family:var(--p-f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--p-soft)}
+.rel-card .v{font-family:var(--p-f-display);font-weight:800;font-size:28px;line-height:1.1;margin:2px 0}
+.rel-card .d{font-size:13px}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:6px 10px 6px 0;border-bottom:1px solid var(--p-grid);vertical-align:top}
+th{font-family:var(--p-f-mono);font-weight:600;font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--p-soft);border-bottom:2px solid var(--p-ink);white-space:nowrap}
+td.n,th.n{text-align:right;font-family:var(--p-f-mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+td.m{font-family:var(--p-f-mono);font-variant-numeric:tabular-nums}
+tr.tot td{border-top:2px solid var(--p-ink);font-weight:700}
+.pill{display:inline-block;font-family:var(--p-f-mono);font-size:10.5px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;padding:2px 6px;border:1.5px solid var(--p-ink);white-space:nowrap}
+.pill.bear{background:var(--p-red);border-color:var(--p-red);color:#fff}
+.pill.mix{background:var(--p-paper2)}
+
+/* bars */
+.bar{display:flex;height:20px;border:2px solid var(--p-ink);margin:8px 0 4px;background:var(--p-grid)}
+.bar i{display:block;height:100%}
+.bar .b{background:var(--p-blue)} .bar .r{background:var(--p-red)}
+.split{display:flex;justify-content:space-between;gap:12px;font-family:var(--p-f-mono);font-size:12px;font-weight:600}
+.big{font-family:var(--p-f-display);font-weight:800;font-size:clamp(34px,8vw,56px);line-height:1}
+.sc{display:grid;grid-template-columns:74px 1fr 46px;gap:2px 10px;align-items:center;margin-top:8px}
+.sc .nm{font-family:var(--p-f-mono);font-weight:600;font-size:12px;text-transform:uppercase}
+.sc .tr{height:16px;border:2px solid var(--p-ink);background:var(--p-grid)}
+.sc .tr i{display:block;height:100%}
+.sc .p{text-align:right;font-family:var(--p-f-mono);font-weight:600}
+.sc .tx{grid-column:2 / 4;font-size:13px;color:var(--p-soft);margin-bottom:6px}
+
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px}
+@media (max-width:860px){.two{grid-template-columns:minmax(0,1fr)}.head{grid-template-columns:minmax(0,1fr)}}
+.ladder{width:100%;height:auto;display:block}
+.ladder text{font-family:var(--p-f-mono);fill:var(--p-ink)}
+.ladder .s{fill:var(--p-soft)}
+.foot{font-family:var(--p-f-mono);font-size:11.5px;color:var(--p-soft);display:grid;gap:6px}
+ul.tight{margin:0;padding-left:18px;display:grid;gap:4px;font-size:13.5px}
+
+  .compliance-notice{
+    max-width:880px;
+    margin:0 auto 20px;
+    padding:16px 20px;
+    background:var(--bg-alt);
+    border:1px solid var(--accent-dim);
+    border-left:4px solid var(--accent);
+    border-radius:8px;
+    color:var(--text-dim);
+    font-size:0.88rem;
+    line-height:1.6;
+  }
+  .compliance-notice strong{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="../index.html" class="logo">Edukasi<span>Trader</span></a>
+    <nav class="main-nav">
+      <a href="../index.html">Beranda</a>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Privasi</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="wrap" style="max-width: 960px;">
+
+    <div class="compliance-notice">
+      <strong>Bukan ajakan bertransaksi.</strong> Konten di bawah ini adalah catatan analisis pasar pribadi yang kami bagikan sebagai referensi publik — berisi opini terhadap data makro dan level teknikal saat disusun, bukan sinyal trading resmi, rekomendasi personal, atau ajakan untuk membuka posisi tertentu. Pasar bisa bergerak sangat berbeda dari skenario yang dibahas. Selalu lakukan riset dan pertimbangan risiko sendiri.
+    </div>
+
+    <div class="ad-slot">
+      <script>
+        atOptions = {
+          'key' : '95130429aa13b28790da6b9e46158bfc',
+          'format' : 'iframe',
+          'height' : 250,
+          'width' : 300,
+          'params' : {}
+        };
+      </script>
+      <script src="https://www.highperformanceformat.com/95130429aa13b28790da6b9e46158bfc/invoke.js"></script>
+    </div>
+
+    <div class="poster-container">
+
+<div class="seis-wrap">
+
+<header class="head">
+  <div>
+    <div class="kicker">XAUUSD · PCE Oktober + GDP Q3 estimasi kedua · pra-rilis</div>
+    <h1>Seismogram<br><em>Emas</em></h1>
+    <p>Gold turun ±14,6% (close ke close) dalam sembilan sesi, memantul $99 pada Senin, lalu Selasa menghapus seluruh pantulan: low $3.559,07, hanya $4,5 di atas HL D1 $3.554,57. Kategori PCE Cluster 0/2, jadi klaim ditulis dua arah. Harga per Selasa 24 Nov ±23:30 WIB; konsensus kalender diperbarui Rabu 25 Nov ±08:10 WIB.</p>
+  </div>
+  <div class="stamp">
+    RILIS<b>25 NOV 20:30</b>
+    VERDICT 4 JAM<b>26 NOV 00:30</b>
+    <span class="st">STATUS: PENDING</span><br>
+    PCE CLUSTER: 0/2 · CONF 4/10<br>
+    Kamis: bursa AS tutup
+  </div>
+</header>
+
+<!-- seismogram -->
+<section class="panel" aria-label="Seismogram harga harian XAUUSD">
+  <h2>Amplitudo harian <small>XAUUSD D1 · garis = high-low, titik = close</small></h2>
+  <svg class="seis" viewBox="0 0 740 372" role="img" aria-label="Rentang harian XAUUSD 6 sampai 24 November 2026: turun dari 4.148 ke 3.503, lalu memantul ke 3.690 dan kembali ke 3.565 pada 24 November, dengan area proyeksi sampai 25 November">
+    <g stroke="var(--p-grid)" stroke-width="1">
+      <line x1="50" y1="30" x2="720" y2="30"/><line x1="50" y1="70" x2="720" y2="70"/><line x1="50" y1="110" x2="720" y2="110"/><line x1="50" y1="150" x2="720" y2="150"/>
+      <line x1="50" y1="190" x2="720" y2="190"/><line x1="50" y1="230" x2="720" y2="230"/><line x1="50" y1="270" x2="720" y2="270"/><line x1="50" y1="310" x2="720" y2="310"/>
+    </g>
+    <g font-size="10" text-anchor="end" class="s">
+      <text x="44" y="33">4.200</text><text x="44" y="73">4.100</text><text x="44" y="113">4.000</text><text x="44" y="153">3.900</text><text x="44" y="193">3.800</text><text x="44" y="233">3.700</text><text x="44" y="273">3.600</text><text x="44" y="313">3.500</text>
+    </g>
+    <rect x="625" y="30" width="95" height="300" fill="var(--p-amber)" fill-opacity=".16"/>
+    <rect x="625" y="30" width="95" height="300" fill="none" stroke="var(--p-amber)" stroke-width="2" stroke-dasharray="6 5"/>
+    <text x="630" y="46" font-size="10" font-weight="600" style="fill:var(--p-ink)">BELUM TERJADI</text>
+    <g stroke="var(--p-ink)" stroke-width="1.5" stroke-dasharray="3 3">
+      <line x1="142" y1="26" x2="142" y2="336"/><line x1="418" y1="26" x2="418" y2="336"/><line x1="648" y1="26" x2="648" y2="336"/>
+    </g>
+    <g font-size="10" font-weight="600">
+      <text x="148" y="22">10 NOV CPI 0,4 / 0,3</text>
+      <text x="424" y="22">18 NOV RISALAH + WALLER 50bp</text>
+      <text x="654" y="60" style="fill:var(--p-ink)">25 NOV</text><text x="654" y="72" style="fill:var(--p-ink)">PCE + GDP</text>
+    </g>
+    <polyline fill="none" stroke="var(--p-ink)" stroke-width="1.6" points="50,81.4 96,53.6 142,96.7 188,114.9 234,158.8 280,157.3 326,167.6 372,170.2 418,220.2 464,259.9 510,295.1 556,255.6 602,284.1"/>
+    <g stroke="var(--p-red)" stroke-width="3" stroke-linecap="round">
+      <line x1="50" y1="67.2" x2="50" y2="98.8"/><line x1="96" y1="50.6" x2="96" y2="88.2"/><line x1="142" y1="51.3" x2="142" y2="104.5"/>
+      <line x1="188" y1="83.2" x2="188" y2="116.9"/><line x1="234" y1="109.8" x2="234" y2="169"/><line x1="280" y1="140.7" x2="280" y2="162.9"/>
+      <line x1="326" y1="149.5" x2="326" y2="177"/><line x1="372" y1="153.6" x2="372" y2="175.2"/><line x1="418" y1="167" x2="418" y2="222"/>
+      <line x1="464" y1="206.6" x2="464" y2="262"/><line x1="510" y1="255.3" x2="510" y2="308.8"/>
+      <line x1="556" y1="234.1" x2="556" y2="288.2"/><line x1="602" y1="238.7" x2="602" y2="286.4"/>
+    </g>
+    <g fill="var(--p-ink)">
+      <circle cx="50" cy="81.4" r="3.5"/><circle cx="96" cy="53.6" r="3.5"/><circle cx="142" cy="96.7" r="3.5"/><circle cx="188" cy="114.9" r="3.5"/><circle cx="234" cy="158.8" r="3.5"/><circle cx="280" cy="157.3" r="3.5"/>
+      <circle cx="326" cy="167.6" r="3.5"/><circle cx="372" cy="170.2" r="3.5"/><circle cx="418" cy="220.2" r="3.5"/><circle cx="464" cy="259.9" r="3.5"/><circle cx="510" cy="295.1" r="3.5"/>
+      <circle cx="556" cy="255.6" r="3.5"/><circle cx="602" cy="284.1" r="3.5"/>
+    </g>
+    <line x1="602" y1="284.1" x2="720" y2="284.1" stroke="var(--p-amber)" stroke-width="2" stroke-dasharray="6 5"/>
+    <g font-size="10.5" font-weight="600">
+      <text x="102" y="48">4.148,58</text>
+      <text x="430" y="326">3.502,91 low</text>
+      <text x="505" y="228">3.689,66</text>
+      <text x="716" y="302" text-anchor="end">3.564,80 kini</text>
+      <text x="612" y="262" class="s">24 NOV −$75</text>
+      <text x="424" y="238" class="s">close −$125 · −$99 · −$88</text>
+      <text x="506" y="212" class="s">23 NOV +$99</text>
+    </g>
+    <g font-size="10" text-anchor="middle" class="s">
+      <text x="50" y="352">6</text><text x="96" y="352">9</text><text x="142" y="352">10</text><text x="188" y="352">11</text><text x="234" y="352">12</text><text x="280" y="352">13</text><text x="326" y="352">16</text><text x="372" y="352">17</text><text x="418" y="352">18</text><text x="464" y="352">19</text><text x="510" y="352">20</text><text x="556" y="352">23</text><text x="602" y="352">24*</text><text x="648" y="352">25</text><text x="694" y="352">26 libur</text>
+    </g>
+    <text x="50" y="366" font-size="10" class="s">NOVEMBER 2026 · *24 Nov belum selesai (±23:30 WIB)</text>
+  </svg>
+  <div class="legend"><span><i></i>high-low harian</span><span><b>●</b> close</span><span><i class="d"></i>harga terakhir, ke depan</span></div>
+  <p class="note">Hari terbesar: 20 Nov, range $133,8 dengan volume tick 944.647. Rebound Senin 23 Nov digerakkan ekuitas (Nasdaq +6,51%, S&amp;P +4,73%), bukan data. HL D1 pertama $3.554,57, tetapi high $3.689,66 masih di bawah $3.758,56. Selasa 24 Nov: high $3.678,30 (LH), low $3.559,07, sementara $3.564,80; candle H1 22:00 WIB jatuh $53, bertepatan dengan CB Consumer Confidence 103,3 vs 92,5 (sebab-akibat belum terbukti). Rabu 08:09 WIB: $3.538, HL D1 jebol.</p>
+</section>
+
+<!-- release strip -->
+<section class="row3" aria-label="Rilis Rabu 25 November">
+  <div class="rel-card"><div class="t">20:30 WIB · Tier 1 ★8/10</div><div class="v">Core PCE</div><div class="d">MoM <b>0,3</b> (prev 0,3; TD 0,26) · YoY <b>3,2</b> (prev 3,1). RBC dan Bowman 3,3.</div></div>
+  <div class="rel-card"><div class="t">20:30 WIB · Tier 2 ★6/10</div><div class="v">GDP Q3</div><div class="d">Estimasi kedua <b>3,5%</b> (advance 3,4%; Continuum 3,6%). Indeks harga GDP 2,3%.</div></div>
+  <div class="rel-card"><div class="t">Bersamaan</div><div class="v">+ 4 data</div><div class="d">Personal Income <b>0,4</b>, Personal Spending <b>0,4</b>, Durable Goods <b>0,6</b>, Initial Claims <b>200K</b> (dimajukan karena Thanksgiving). Beige Book 02:00 WIB Kamis, di luar jendela.</div></div>
+</section>
+
+<!-- forecast + claims -->
+<div class="two">
+  <section class="panel">
+    <h2>Forecast vs previous</h2>
+    <div class="scroll"><table>
+      <tr><th>Data</th><th class="n">Prev</th><th class="n">Fc</th><th>Catatan</th></tr>
+      <tr><td><b>Core PCE MoM</b></td><td class="n">0,3</td><td class="n"><b>0,3</b></td><td>TD 0,26 · Oxford 0,27 · MS 0,29 · GS 0,30 · Pantheon 0,31</td></tr>
+      <tr><td><b>Core PCE YoY</b></td><td class="n">3,1</td><td class="n"><b>3,2</b></td><td>MS 3,22 · RBC dan Bowman 3,3</td></tr>
+      <tr><td>PCE MoM</td><td class="n">0,5</td><td class="n">0,3</td><td>RBC, Oxford, nowcast Cleveland</td></tr>
+      <tr><td>PCE YoY</td><td class="n">3,6</td><td class="n">3,8</td><td>RBC, Oxford, nowcast Cleveland</td></tr>
+      <tr><td>Real PCE</td><td class="n">0,0</td><td class="n">+0,1</td><td>Survei Bloomberg</td></tr>
+      <tr><td><b>GDP Q3</b></td><td class="n">1,5</td><td class="n"><b>3,5</b></td><td>Prior = Q2. Advance Q3 3,4 (29 Okt)</td></tr>
+      <tr><td>GDP Price Index</td><td class="n">6,4</td><td class="n">2,3</td><td>QoQ estimasi kedua</td></tr>
+      <tr><td><b>Personal Income</b></td><td class="n">0,2</td><td class="n"><b>0,4</b></td><td>Cek data sekunder</td></tr>
+      <tr><td><b>Personal Spending</b></td><td class="n">0,5</td><td class="n"><b>0,4</b></td><td>Cek data sekunder</td></tr>
+      <tr><td>Durable Goods</td><td class="n">1,8</td><td class="n">0,6</td><td>Ex transportasi 0,5 (prev 0,5)</td></tr>
+      <tr><td>Initial Claims</td><td class="n">203K</td><td class="n">200K</td><td>Rata-rata 4 minggu 197,75K</td></tr>
+    </table></div>
+    <p class="note">Klaster core MoM 0,26–0,31 duduk di bucket 0,3 (TD paling dekat batas 0,25). Yang sensitif adalah YoY: 3,22 (MS) vs 3,3 (RBC) berada di dua sisi batas 3,25.</p>
+  </section>
+
+  <section class="panel">
+    <h2>Dua klaim <small>pra-rilis</small></h2>
+    <p style="margin:0 0 4px"><b>Klaim menit 0–15</b> <span class="mono soft">acuan open M15 20:30</span></p>
+    <ul class="tight">
+      <li>Core PCE MoM <b>≥0,4</b> → gold <b class="neg">TURUN</b></li>
+      <li>Core PCE MoM <b>≤0,2</b> → gold <b class="pos">NAIK</b></li>
+      <li>Core PCE MoM <b>0,3</b> → tanpa klaim</li>
+      <li>Pengubah: YoY ≥3,3 atau GDP ≥3,7 hawkish; YoY ≤3,1 dovish. Besaran ±$15–50.</li>
+    </ul>
+    <p style="margin:12px 0 0"><b>Klaim titik 4 jam</b> <span class="mono soft">verdict resmi · 26 Nov 00:30</span></p>
+    <div class="bar" role="img" aria-label="30,6 persen bullish, 69,4 persen bearish"><i class="b" style="width:30.6%"></i><i class="r" style="width:69.4%"></i></div>
+    <div class="split"><span class="pos">30,6% BULLISH</span><span class="neg">69,4% BEARISH</span></div>
+    <p class="note">Mentah 19,4 / 80,6. Rule 12b diskon 65% (Fed, yield, dan DXY ketiganya ekstrem dan searah). Rentang 60–70%: 29,8–31,5% Bullish. Backdrop NFP 6 Nov meleset $0,80, jadi ini bukan keyakinan. <b>Rule 6a:</b> kategori PCE Cluster 0/2 dengan arah berlawanan, jadi reaksi bisa berlawanan dengan klaim ini.</p>
+  </section>
+</div>
+
+<!-- scenarios -->
+<section class="panel">
+  <h2>Tiga skenario <small>Core PCE MoM, pembulatan, vs 0,3</small></h2>
+  <div class="sc">
+    <span class="nm neg">Panas</span><span class="tr"><i style="width:7%;background:var(--p-red)"></i></span><span class="p">7%</span>
+    <span class="tx">≥0,4. Hike 50bp hidup lagi, dolar dan yield naik. Net 4 jam −$40 s/d −$100.</span>
+    <span class="nm">In-line</span><span class="tr"><i style="width:71%;background:var(--p-ink)"></i></span><span class="p">71%</span>
+    <span class="tx">0,3. Konfirmasi 25bp. Arah ditentukan YoY (3,2 vs 3,3), GDP, dan ekuitas; ±$40.</span>
+    <span class="nm pos">Dingin</span><span class="tr"><i style="width:22%;background:var(--p-blue)"></i></span><span class="p">22%</span>
+    <span class="tx">≤0,2. Argumen 50bp melemah. Net 4 jam +$40 s/d +$100.</span>
+  </div>
+  <p class="note">Klaster ±0,285 dengan galat ±0,045 (asumsi, belum diuji). Core YoY (asumsi): ≥3,3 35% · 3,2 55% · ≤3,1 10%. GDP (asumsi): ≥3,7 25% · 3,4–3,6 55% · ≤3,3 20%. Estimasi besaran belum andal.</p>
+</section>
+
+<!-- 16 data -->
+<section class="panel">
+  <h2>16 data <small>P / F / A · terverifikasi 24 Nov</small></h2>
+  <div class="scroll"><table>
+    <tr><th>#</th><th>Data</th><th>P / F / A</th><th>Sinyal</th></tr>
+    <tr><td class="m">1</td><td>FOMC</td><td>Hold 10–2; risalah: hike lagi; Des ±92–96%, 50bp nyaris tak dihargai</td><td><span class="pill bear">Bearish</span></td></tr>
+    <tr><td class="m">2</td><td>CPI Okt</td><td>MoM 0,6 / 0,3 / <b>0,4</b> · YoY resmi tidak terbit</td><td><span class="pill bear">Bearish</span></td></tr>
+    <tr><td class="m">3</td><td>Core CPI Okt</td><td>MoM 0,3 / 0,2 / <b>0,3</b> · supercore 0,40</td><td><span class="pill bear">Bearish</span></td></tr>
+    <tr><td class="m">4</td><td>PCE Sep</td><td>YoY 3,6 · MoM 0,5 (Okt = rilis ini)</td><td><span class="pill bear">Bearish</span></td></tr>
+    <tr><td class="m">5</td><td>Core PCE Sep</td><td>YoY 3,1 · MoM 0,3 (Okt = rilis ini)</td><td><span class="pill mix">Netral</span></td></tr>
+    <tr><td class="m">6</td><td>NFP Okt</td><td>29K / 65K / <b>165K</b> · UR 4,1 · revisi +84K (NFP Nov RBC 67K, 4 Des)</td><td><span class="pill bear">Bearish</span></td></tr>
+    <tr><td class="m">7</td><td>ADP Okt</td><td>86K / 67K / 86K</td><td><span class="pill bear">Bearish</span></td></tr>
+    <tr><td class="m">8</td><td>JOLTS Sep</td><td>7,190M / 7,150M / 7,523M</td><td><span class="pill bear">Bearish</span></td></tr>
+    <tr><td class="m">9</td><td>ISM Mfg Okt</td><td>54,5 / 54,6 / 55,5</td><td><span class="pill mix">Campuran</span></td></tr>
+    <tr><td class="m">10</td><td>ISM Services Okt</td><td>54,9 / 54,8 / 54,5</td><td><span class="pill mix">Netral</span></td></tr>
+    <tr><td class="m">11</td><td>Initial Claims</td><td>202K / 197K / <b>203K</b> (pekan 14 Nov) · rata-rata 4 mgg 197,75K</td><td><span class="pill mix">Netral</span></td></tr>
+    <tr><td class="m">12</td><td>PPI Okt</td><td>MoM 1,3 / 0,4 / <b>0,3</b>; core 0,3 in-line</td><td><span class="pill mix">Netral</span></td></tr>
+    <tr><td class="m">13</td><td>Retail Sales Okt</td><td>0,8 / 0,1–0,2 / <b>0,2</b> · ex-autos 0,6 vs 0,4</td><td><span class="pill mix">Campuran</span></td></tr>
+    <tr><td class="m">14</td><td>GDP Q3 adv</td><td>1,5 / 3,2 / 3,4</td><td><span class="pill bear">Bearish</span></td></tr>
+    <tr><td class="m">15</td><td>Treasury Yield</td><td>10Y <b>4,936%</b> · 2Y <b>4,687%</b> · 2Y riil &gt;2,4%</td><td><span class="pill bear">Bearish</span></td></tr>
+    <tr><td class="m">16</td><td>DXY</td><td><b>104,344</b> (high 104,53, ±19 bulan)</td><td><span class="pill bear">Bearish</span></td></tr>
+  </table></div>
+  <p class="note"><b>Sintesis:</b> 10 bearish, 6 campuran/netral, 0 bullish. Harga Senin digerakkan ekuitas dan berhentinya likuidasi, bukan data. Tambahan: Flash PMI komposit 54,6 dari 55,9, Michigan final 51,5, WTI $80,13 (−21% sebulan).</p>
+</section>
+
+<!-- engine -->
+<section class="panel">
+  <h2>Mesin bias <small>7 pilar · skor = % bullish emas</small></h2>
+  <div class="scroll"><table>
+    <tr><th>Pilar</th><th class="n">Bobot</th><th class="n">Skor</th><th class="n">Kontrib.</th><th>Data primer dan alasan perubahan (vs 21 Nov)</th></tr>
+    <tr><td>Kebijakan Fed</td><td class="n">20%</td><td class="n neg">10</td><td class="n">2,00</td><td>Des ±92–96%, 50bp nyaris tak dihargai. 8→10: odds turun dari ±98%, Williams menolak 50bp.</td></tr>
+    <tr><td>Inflasi</td><td class="n">20%</td><td class="n">32</td><td class="n">6,40</td><td>Core PCE 3,2–3,3 vs WTI $80,1 dan Michigan membaik. 30→32: minyak turun lagi.</td></tr>
+    <tr><td>Tenaga Kerja</td><td class="n">15%</td><td class="n neg">18</td><td class="n">2,70</td><td>Claims 203K, rata-rata 4 mgg 197,75K, UR 4,1%. Tidak berubah.</td></tr>
+    <tr><td>Pertumbuhan &amp; Konsumsi</td><td class="n">15%</td><td class="n neg">24</td><td class="n">3,60</td><td>GDP 3,4 → 3,5; PMI komposit 54,6 dari 55,9. 22→24.</td></tr>
+    <tr><td>Treasury Yield</td><td class="n">15%</td><td class="n neg">18</td><td class="n">2,70</td><td>10Y 4,936%, 2Y 4,687%. Tidak berubah.</td></tr>
+    <tr><td>DXY</td><td class="n">10%</td><td class="n neg">5</td><td class="n">0,50</td><td>104,344, high baru ±19 bulan. 6→5.</td></tr>
+    <tr><td>Struktur Teknikal</td><td class="n">5%</td><td class="n">30</td><td class="n">1,50</td><td>HL D1 $3.554,57 diuji ($3.559,07), LH $3.678,30. Skor tetap 30 (bobot 5%).</td></tr>
+    <tr class="tot"><td>Total mentah</td><td></td><td></td><td class="n">19,40</td><td>Terkalibrasi (diskon 65%): <b>30,6% Bullish / 69,4% Bearish</b></td></tr>
+  </table></div>
+</section>
+
+<!-- entry areas -->
+<section class="panel">
+  <h2>Area entry <small>catatan riset, bukan rekomendasi · diperbarui 24 Nov malam · refresh Rabu sore</small></h2>
+  <div class="two" style="gap:20px">
+    <svg class="ladder" viewBox="0 0 420 330" role="img" aria-label="Tangga level dan zona entry XAUUSD antara 3.490 dan 3.705, harga kini 3.564,80">
+      <line x1="30" y1="20" x2="30" y2="320" stroke="var(--p-ink)" stroke-width="2"/>
+      <rect x="30" y="45.5" width="110" height="18.2" fill="var(--p-red)" fill-opacity=".35"/>
+      <rect x="30" y="132.6" width="110" height="11.7" fill="var(--p-red)" fill-opacity=".3"/>
+      <rect x="30" y="162.5" width="110" height="14.3" fill="var(--p-red)" fill-opacity=".3"/>
+      <rect x="30" y="266.5" width="110" height="22.2" fill="var(--p-blue)" fill-opacity=".3"/>
+      <line x1="22" y1="208.3" x2="400" y2="208.3" stroke="var(--p-amber)" stroke-width="2.5" stroke-dasharray="6 4"/>
+      <g stroke="var(--p-ink)" stroke-width="1.2">
+        <line x1="22" y1="26" x2="140" y2="26"/><line x1="22" y1="110.5" x2="140" y2="110.5"/><line x1="22" y1="221.6" x2="140" y2="221.6"/><line x1="22" y1="305.5" x2="140" y2="305.5"/>
+      </g>
+      <g font-size="11">
+        <text x="150" y="30" font-weight="600">3.705</text><text x="196" y="30" class="s">SL SELL mayor</text>
+        <text x="150" y="58" font-weight="600">3.676–3.690</text><text x="240" y="58" class="s">SELL mayor (high 24 Nov 3.678)</text>
+        <text x="150" y="114" font-weight="600">3.640</text><text x="196" y="114" class="s">SL SELL minor</text>
+        <text x="150" y="141" font-weight="600">3.614–3.623</text><text x="240" y="141" class="s">SELL minor · SL retest</text>
+        <text x="150" y="172" font-weight="600">3.589–3.600</text><text x="240" y="172" class="s">SELL retest (pemicu lama)</text>
+        <text x="150" y="212" font-weight="700" style="fill:var(--p-amber)">3.564,80</text><text x="228" y="212" font-weight="700" style="fill:var(--p-amber)">KINI</text>
+        <text x="150" y="225" font-weight="600">3.554,57</text><text x="226" y="225" class="s">HL D1 (selisih $10)</text>
+        <text x="150" y="270" font-weight="600">3.520</text><text x="196" y="270" class="s">TP SELL · atas zona BUY</text>
+        <text x="150" y="288" font-weight="600">3.503–3.520</text><text x="240" y="288" class="s">BUY pasca-sapuan (low 20 Nov 3.502,91)</text>
+        <text x="150" y="309" font-weight="600">3.490</text><text x="196" y="309" class="s">SL BUY</text>
+      </g>
+    </svg>
+    <div class="scroll"><table>
+      <tr><th>#</th><th>Setup dan syarat</th><th class="n">SL</th><th>TP</th></tr>
+      <tr><td class="m">1</td><td><b class="neg">SELL retest</b> $3.589–3.600. Harga memantul ke zona, penolakan M15 + CHoCH M5.</td><td class="n">3.614</td><td class="m">3.565 / 3.555 / 3.520</td></tr>
+      <tr><td class="m">2</td><td><b class="neg">SELL minor</b> $3.614–3.623. Pantulan lebih dalam, penolakan M15.</td><td class="n">3.640</td><td class="m">3.589 / 3.565 / 3.555</td></tr>
+      <tr><td class="m">3</td><td><b class="neg">SELL mayor</b> $3.676–3.690. Sapuan di atas, lalu M15 close &lt; $3.665.</td><td class="n">3.705</td><td class="m">3.640 / 3.614 / 3.589</td></tr>
+      <tr><td class="m">4</td><td><b class="pos">BUY pasca-sapuan</b> $3.503–3.520. Hanya setelah sapuan di bawah $3.554,57, lalu M15 CHoCH. Melawan tren.</td><td class="n">3.490</td><td class="m">3.555 / 3.589 / 3.614</td></tr>
+    </table></div>
+  </div>
+  <ul class="tight" style="margin-top:12px">
+    <li><b>Rabu 08:09 WIB:</b> harga $3.538, HL D1 $3.554,57 sudah jebol (kini jadi resistance terdekat). Syarat sapuan BUY mulai relevan, belum terpenuhi tanpa zona $3.503–3.520 dan M15 CHoCH. Tangga di atas memakai harga 24 Nov malam.</li>
+    <li>Setup Quality (dinilai 24 Nov malam) ≈ <b>25/50</b> (Fund 6, Tek 5, Lik 5, Mom 4, Sent 5), turun dari 27. Itu penilaian saya, bukan rumus. Di bawah ambang 35: belum ada entry.</li>
+    <li>Lot untuk SL $20 (akun cent 50.600, 1 lot = 1 oz): grade B <b>0,06</b> · A <b>0,09</b> · A+ <b>0,12</b>. Setup dengan SL lebih lebar dari $20 dikecilkan proporsional. Breakeven wajib di +1R.</li>
+    <li>Jangan masuk: sebelum atau di candle M15 pertama PCE/GDP, mengejar breakdown di $3.565 setelah candle H1 impuls $53 (&gt;1 ATR), atau di tengah range $3.565–3.589.</li>
+    <li>Batal: body close H1 &gt; $3.640 menggugurkan SELL retest dan minor; &gt; $3.705 menggugurkan SELL mayor; &lt; $3.490 menggugurkan BUY.</li>
+  </ul>
+</section>
+
+<!-- technical + confidence -->
+<div class="two">
+  <section class="panel">
+    <h2>Enam timeframe <small>baca manual · 24 Nov ±23:20 WIB</small></h2>
+    <ul class="tight">
+      <li><b>D1</b> Senin $3.566,84 → $3.635,97. Selasa high $3.678,30 (LH di bawah $3.689,66), low $3.559,07, sementara $3.564,80 (−$75). Low hanya $4,5 di atas HL D1 $3.554,57.</li>
+      <li><b>H4</b> candle terakhir −$60 ($3.622,10 → $3.562,63). Harga kembali di bawah $3.595,20, level CHoCH bullish Senin.</li>
+      <li><b>H1</b> impuls turun $53 ($3.622,10 → $3.568,97), melewati 1 ATR. Sebelumnya range $3.607–3.646.</li>
+      <li><b>M15</b> empat candle merah berturut-turut ($3.622 → $3.567), volume stabil ±12 ribu. <b>M5</b> lower highs 3.594 → 3.588 → 3.572 → 3.569. <b>M1</b> konsolidasi $3.559–3.569.</li>
+      <li><b>Premium/discount</b> 9,6% (leg $4.148,58–3.502,91): diskon dalam; 50% = $3.825,75. Harga &gt;$500 di bawah EMA21 D1 per 10 Nov ($4.073,65, nilai lama).</li>
+    </ul>
+  </section>
+  <section class="panel">
+    <h2>Confidence <small>kualitatif, tanpa rumus</small></h2>
+    <div class="big">4/10</div>
+    <p class="mono" style="margin:4px 0 8px;font-size:12px">Fund ★★★☆☆ · Tek ★★☆☆☆ · Sent ★★☆☆☆ · turun dari 5</p>
+    <p class="note" style="margin-top:0"><b>Rule 6a:</b> kategori PCE Cluster 0/2, keduanya SALAH dengan arah berlawanan (26 Agt: backdrop 54% Bullish, harga bearish. 30 Sep: backdrop 73,4% Bearish, harga +$16,91 di 4 jam). Harga sudah berlari searah backdrop sebelum rilis (−$590 dari high 9 Nov), pola yang sama sebelum dua kesalahan itu (hipotesis, bukan aturan). Rilis sangat ter-forecast, tiga rilis serempak, likuiditas Thanksgiving tipis. Bahasa dua arah (Rule 16d): lanjutan turun dan pantulan setelah rilis sama-sama mungkin.</p>
+  </section>
+</div>
+
+<footer class="panel foot">
+  <div><b>Sudah dicek di TradingView, Rabu 25 Nov ±08:20 WIB:</b> jadwal 25 Nov 20:30 dan konsensus kalender; GDP Q3 advance 3,4% (forecast 3,2%, Q2 1,5%); CB Consumer Confidence 103,3 vs 92,5 rilis 22:00 WIB, saat harga mulai jatuh; DXY 103,88 · 10Y 4,920% · 2Y 4,673% · WTI $81,59. Skor dan klaim tidak diubah.</div>
+  <div><b>Dari sumber berita dan situs Fed:</b> Reuters (24 Nov) mengaitkan penurunan gold dengan sinyal hawkish Fed, ekspektasi hike Desember, dan likuidasi ekuitas; Kitco (dikutip IndexBox) menunjuk Consumer Confidence yang kuat. Kalender Federal Reserve: Bowman bicara Rabu 19:25 WIB (video rekaman, topik pengawasan bank), Beige Book Kamis 02:00 WIB.</div>
+  <div><b>Masih berbeda antar sumber:</b> odds hike Desember. Reuters 24 Nov: 25bp dihargai penuh, 50bp 2%; laporan lain 22–23 Nov: 93–96%.</div>
+  <div><b>Penilaian saya, bukan fakta:</b> diskon 65%, probabilitas skenario, galat ±0,045, Confidence, dan Setup Quality.</div>
+  <div>Klaim pra-rilis tercatat sebagai entry PCEGDP-2026-11-25 (PENDING). Verdict menyusul setelah 26 Nov 00:30 WIB.</div>
+  <div><b>Not financial advice.</b> Bukan ajakan membeli atau menjual apapun. Catatan riset dan evaluasi sistem pribadi, bukan rekomendasi untuk siapa pun. Trading emas dan forex berisiko tinggi; keputusan dan risikonya di tangan masing-masing.</div>
+</footer>
+
+</div>
+
+    </div>
+
+    <div class="ad-slot">
+      <script async="async" data-cfasync="false" src="https://pl30756138.effectivecpmnetwork.com/4a3f1dc3807941e53dfe4463a21a0e4e/invoke.js"></script>
+      <div id="container-4a3f1dc3807941e53dfe4463a21a0e4e"></div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div>
+      <a href="../about.html">Tentang</a>
+      <a href="../contact.html">Kontak</a>
+      <a href="../privacy.html">Kebijakan Privasi</a>
+      <a href="https://www.effectivecpmnetwork.com/setnp40u3t?key=fe8199ed8dd693be00f1924c13a1b7ec" target="_blank" rel="noopener sponsored">Rekomendasi</a>
+    </div>
+    <div>&copy; 2026 EdukasiTrader.</div>
+  </div>
+</footer>
+
+</body>
+</html>
