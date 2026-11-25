@@ -50,8 +50,9 @@ b{font-weight:700}
 /* header */
 .head{display:grid;grid-template-columns:1fr auto;gap:14px 28px;align-items:end;border:2px solid var(--p-ink);background:var(--p-paper);padding:20px 22px}
 .head > *{min-width:0}
+.head > div:first-child{container-type:inline-size}
 .head .kicker{font-family:var(--p-f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--p-soft)}
-.head h1{margin:6px 0 6px;font-family:var(--p-f-display);font-weight:800;font-size:clamp(24px,7.4vw,70px);line-height:1;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance;overflow-wrap:anywhere}
+.head h1{margin:6px 0 6px;font-family:var(--p-f-display);font-weight:800;font-size:clamp(18px,10.4cqw,70px);line-height:1;letter-spacing:-.01em;text-transform:uppercase;text-wrap:balance;overflow-wrap:anywhere}
 .head h1 em{font-style:normal;color:var(--p-red)}
 .head p{margin:0;max-width:62ch}
 .stamp{font-family:var(--p-f-mono);font-size:12px;line-height:1.6;border:2px solid var(--p-ink);padding:10px 14px;text-align:left}
@@ -162,7 +163,7 @@ ul.tight{margin:0;padding-left:18px;display:grid;gap:4px;font-size:13.5px}
   <div>
     <div class="kicker">XAUUSD · PCE Oktober + GDP Q3 estimasi kedua · pra-rilis</div>
     <h1>Seismogram<br><em>Emas</em></h1>
-    <p>Gold turun ±14,6% (close ke close) dalam sembilan sesi, memantul $99 pada Senin, lalu Selasa menghapus seluruh pantulan: low $3.559,07, hanya $4,5 di atas HL D1 $3.554,57. Kategori PCE Cluster 0/2, jadi klaim ditulis dua arah. Harga per Selasa 24 Nov ±23:30 WIB; konsensus kalender diperbarui Rabu 25 Nov ±08:10 WIB.</p>
+    <p>Gold turun ±14,6% (close ke close) dalam sembilan sesi, memantul $99 pada Senin, lalu pantulan itu hampir seluruhnya terhapus. Rabu 25 Nov 08:09 WIB harga $3.538 dan HL D1 $3.554,57 sudah jebol. Kategori PCE Cluster 0/2, jadi klaim ditulis dua arah. Grafik di bawah memakai harga Selasa 24 Nov malam; konsensus kalender diperbarui Rabu pagi.</p>
   </div>
   <div class="stamp">
     RILIS<b>25 NOV 20:30</b>
@@ -213,7 +214,7 @@ ul.tight{margin:0;padding-left:18px;display:grid;gap:4px;font-size:13.5px}
       <text x="102" y="48">4.148,58</text>
       <text x="430" y="326">3.502,91 low</text>
       <text x="505" y="228">3.689,66</text>
-      <text x="716" y="302" text-anchor="end">3.564,80 kini</text>
+      <text x="716" y="302" text-anchor="end">3.564,80 (24/11)</text>
       <text x="612" y="262" class="s">24 NOV −$75</text>
       <text x="424" y="238" class="s">close −$125 · −$99 · −$88</text>
       <text x="506" y="212" class="s">23 NOV +$99</text>
@@ -346,7 +347,7 @@ ul.tight{margin:0;padding-left:18px;display:grid;gap:4px;font-size:13.5px}
         <text x="150" y="114" font-weight="600">3.640</text><text x="196" y="114" class="s">SL SELL minor</text>
         <text x="150" y="141" font-weight="600">3.614–3.623</text><text x="240" y="141" class="s">SELL minor · SL retest</text>
         <text x="150" y="172" font-weight="600">3.589–3.600</text><text x="240" y="172" class="s">SELL retest (pemicu lama)</text>
-        <text x="150" y="212" font-weight="700" style="fill:var(--p-amber)">3.564,80</text><text x="228" y="212" font-weight="700" style="fill:var(--p-amber)">KINI</text>
+        <text x="150" y="212" font-weight="700" style="fill:var(--p-amber)">3.564,80</text><text x="228" y="212" font-weight="700" style="fill:var(--p-amber)">24 NOV</text>
         <text x="150" y="225" font-weight="600">3.554,57</text><text x="226" y="225" class="s">HL D1 (selisih $10)</text>
         <text x="150" y="270" font-weight="600">3.520</text><text x="196" y="270" class="s">TP SELL · atas zona BUY</text>
         <text x="150" y="288" font-weight="600">3.503–3.520</text><text x="240" y="288" class="s">BUY pasca-sapuan (low 20 Nov 3.502,91)</text>
